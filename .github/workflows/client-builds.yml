@@ -73,15 +73,27 @@ jobs:
           PYTHON_VERSION: "3.12"
         run: |
           set -euo pipefail
-          export PATH="$HOME/.local/bin:$PATH"
+          export PATH="/usr/local/bin:$HOME/.local/bin:$PATH"
+          echo "/usr/local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           if ! command -v uv >/dev/null 2>&1; then
             curl -LsSf https://astral.sh/uv/install.sh | sh
+            export PATH="$HOME/.local/bin:$PATH"
           fi
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          uv python install "$PYTHON_VERSION"
+          # Prefer CPython preinstalled on gh-runner-g5
+          # (/usr/local/bin/python3.11 and python3.12). Fall back to uv.
+          PY=""
+          if [ -x "/usr/local/bin/python${PYTHON_VERSION}" ]; then
+            PY="/usr/local/bin/python${PYTHON_VERSION}"
+          elif command -v "python${PYTHON_VERSION}" >/dev/null 2>&1; then
+            PY="$(command -v "python${PYTHON_VERSION}")"
+          else
+            uv python install "$PYTHON_VERSION"
+            PY="$(uv python find "$PYTHON_VERSION")"
+          fi
           VENV="$RUNNER_TEMP/python"
           # --seed installs pip/setuptools/wheel; uv venvs omit pip by default.
-          uv venv --seed --python "$PYTHON_VERSION" "$VENV"
+          uv venv --seed --python "$PY" "$VENV"
           echo "$VENV/bin" >> "$GITHUB_PATH"
           "$VENV/bin/python" --version
           "$VENV/bin/python" -m pip install --upgrade pip
