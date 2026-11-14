@@ -96,3 +96,29 @@ When we add Espresso / Compose UI tests against the rebranded tree, keep them un
 - Explicit `@Ignore("needs device biometrics")` on biometric cases so CI stays honest
 
 Until those tests land, `android-e2e-check.sh` + `android-instrumentation.sh` + this checklist are the harness.
+
+## In-app Wi-Fi self-update
+
+The fdroid debug (and release) APK built by `mobile/android-build.sh` includes Settings → About → Check for updates after `android_rebrand.py` runs. Desktop already used `KOMBOE_UPDATE_FEED`; Android uses `https://downloads.komboe.com/android/latest.json` (override `komboe_update_feed_url` at build time). This section does **not** claim a device run happened.
+
+### Publish a feed entry
+
+1. Build: `bash mobile/android-build.sh` and note the fdroid debug APK path.
+2. Record `versionName`, `versionCode` (`aapt dump badging` or `dumpsys package io.komboe.android`), and `sha256sum` of the APK.
+3. Host the APK and a `latest.json` like `distribution/android/latest.example.json` at an https origin. The default is `https://downloads.komboe.com/android/`. `apkUrl` must be https on that same host.
+4. Until that host exists, point a debug build at a staging URL you already control by editing `mobile/self-update/komboe_update_strings.xml` before the build.
+
+### Fold5 manual E2E (do not mark OTA done until these pass)
+
+Use a build that already contains this feature. An older sideload cannot update itself until that first build is installed over USB once.
+
+- [ ] On Wi-Fi, open Komboe → Settings → About.
+- [ ] Confirm the current version row, then tap **Check for updates**.
+- [ ] When the hosted `versionCode` is not newer: the app says it is up to date.
+- [ ] Publish a higher `versionCode` on the feed. Tap **Check for updates** again on Wi-Fi. The app downloads the APK, verifies sha256, and shows the system install prompt. Complete it. After upgrade, About shows the new version.
+- [ ] Leave “Allow updates on mobile data” off, disable Wi-Fi, and tap **Check for updates**. The app refuses and tells you to use Wi-Fi.
+- [ ] Turn the toggle on, stay on mobile data, and confirm a newer feed still installs (optional).
+- [ ] A bad sha256 in the feed must not install. A non-https `apkUrl` or a different host than the feed must be rejected.
+- [ ] No Bitwarden Inc. branding in the new About rows.
+
+A second USB sideload is still required once for phones that were installed before this build.
