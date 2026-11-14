@@ -18,14 +18,15 @@ import java.util.concurrent.Executors
 import com.x8bit.bitwarden.R
 
 /**
- * In-app Wi-Fi OTA for io.komboe.android. There is no Play Store and no USB after the first sideload.
+ * In-app OTA for io.komboe.android. There is no Play Store and no USB after the first sideload.
  * The default feed is https://downloads.komboe.com/android/latest.json (override the string resource
  * komboe_update_feed_url at build time). APK bytes must be https on the same host, and sha256 must match.
+ * Checks and downloads run on Wi-Fi or mobile data unless the person turns on “Restrict updates to Wi-Fi”.
  */
 object KomboeSelfUpdate {
     const val ACTION_INSTALL_STATUS = "io.komboe.android.update.INSTALL_STATUS"
     private const val PREFS = "komboe_self_update"
-    private const val KEY_METERED = "allow_metered"
+    private const val KEY_WIFI_ONLY = "wifi_only"
     private const val KEY_LAST_CHECK = "last_check_ms"
     private const val PERIOD_MS = 24L * 60 * 60 * 1000
     private const val CONNECT_TIMEOUT_MS = 20_000
@@ -33,13 +34,13 @@ object KomboeSelfUpdate {
     private val io = Executors.newSingleThreadExecutor()
     private val main = Handler(Looper.getMainLooper())
 
-    fun allowMetered(context: Context): Boolean =
-        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getBoolean(KEY_METERED, false)
+    fun wifiOnly(context: Context): Boolean =
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getBoolean(KEY_WIFI_ONLY, false)
 
-    fun setAllowMetered(context: Context, allowed: Boolean) {
+    fun setWifiOnly(context: Context, wifiOnly: Boolean) {
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             .edit()
-            .putBoolean(KEY_METERED, allowed)
+            .putBoolean(KEY_WIFI_ONLY, wifiOnly)
             .apply()
     }
 
@@ -50,18 +51,18 @@ object KomboeSelfUpdate {
         val app = context.applicationContext
         val last = app.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getLong(KEY_LAST_CHECK, 0L)
         if (System.currentTimeMillis() - last < PERIOD_MS) return
-        io.execute { runCheck(app, promptIfUpToDate = false, userInitiated = false) }
+        io.execute { runCheck(app, promptIfUpToDate = false) }
     }
 
     fun checkNow(context: Context) {
         val app = context.applicationContext
         toast(app, app.getString(R.string.komboe_update_checking))
-        io.execute { runCheck(app, promptIfUpToDate = true, userInitiated = true) }
+        io.execute { runCheck(app, promptIfUpToDate = true) }
     }
 
-    private fun runCheck(context: Context, promptIfUpToDate: Boolean, userInitiated: Boolean) {
+    private fun runCheck(context: Context, promptIfUpToDate: Boolean) {
         try {
-            if (!canDownload(context, userInitiated)) {
+            if (!canDownload(context)) {
                 toast(context, context.getString(R.string.komboe_update_wifi_required))
                 return
             }
@@ -92,7 +93,7 @@ object KomboeSelfUpdate {
         }
     }
 
-    private fun canDownload(context: Context, userInitiated: Boolean): Boolean {
+    private fun canDownload(context: Context): Boolean {
         val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val network = cm.activeNetwork ?: return false
         val caps = cm.getNetworkCapabilities(network) ?: return false
@@ -100,8 +101,8 @@ object KomboeSelfUpdate {
         val wifi = caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
             caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)
         if (wifi) return true
-        // Cellular or other networks only when the user asked and opted into metered updates.
-        return userInitiated && allowMetered(context)
+        // Cellular and other networks are allowed unless the person restricted updates to Wi-Fi.
+        return !wifiOnly(context)
     }
 
     private fun installedVersionCode(context: Context): Long {

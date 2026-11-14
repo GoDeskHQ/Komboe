@@ -182,15 +182,15 @@ def inject_self_update(src, root):
                 .testTag(tag = "KomboeCheckForUpdatesRow"),
         )
         BitwardenSwitch(
-            label = stringResource(id = com.x8bit.bitwarden.R.string.komboe_updates_on_metered),
-            contentDescription = stringResource(id = com.x8bit.bitwarden.R.string.komboe_updates_on_metered),
-            isChecked = io.komboe.android.update.KomboeSelfUpdate.allowMetered(updateContext),
-            onCheckedChange = { io.komboe.android.update.KomboeSelfUpdate.setAllowMetered(updateContext, it) },
+            label = stringResource(id = com.x8bit.bitwarden.R.string.komboe_updates_wifi_only),
+            contentDescription = stringResource(id = com.x8bit.bitwarden.R.string.komboe_updates_wifi_only),
+            isChecked = io.komboe.android.update.KomboeSelfUpdate.wifiOnly(updateContext),
+            onCheckedChange = { io.komboe.android.update.KomboeSelfUpdate.setWifiOnly(updateContext, it) },
             cardStyle = CardStyle.Middle(),
             modifier = Modifier
                 .standardHorizontalMargin()
                 .fillMaxWidth()
-                .testTag(tag = "KomboeUpdatesOnMeteredRow"),
+                .testTag(tag = "KomboeUpdatesWifiOnlyRow"),
         )
         CopyRow(
 '''

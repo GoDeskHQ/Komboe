@@ -97,7 +97,7 @@ When we add Espresso / Compose UI tests against the rebranded tree, keep them un
 
 Until those tests land, `android-e2e-check.sh` + `android-instrumentation.sh` + this checklist are the harness.
 
-## In-app Wi-Fi self-update
+## In-app self-update
 
 The fdroid debug (and release) APK built by `mobile/android-build.sh` includes Settings → About → Check for updates after `android_rebrand.py` runs. Desktop already used `KOMBOE_UPDATE_FEED`; Android uses `https://downloads.komboe.com/android/latest.json` (override `komboe_update_feed_url` at build time). This section does **not** claim a device run happened.
 
@@ -112,12 +112,13 @@ The fdroid debug (and release) APK built by `mobile/android-build.sh` includes S
 
 Use a build that already contains this feature. An older sideload cannot update itself until that first build is installed over USB once.
 
+- [ ] Confirm “Restrict updates to Wi-Fi” is off (the default).
 - [ ] On Wi-Fi, open Komboe → Settings → About.
 - [ ] Confirm the current version row, then tap **Check for updates**.
 - [ ] When the hosted `versionCode` is not newer: the app says it is up to date.
-- [ ] Publish a higher `versionCode` on the feed. Tap **Check for updates** again on Wi-Fi. The app downloads the APK, verifies sha256, and shows the system install prompt. Complete it. After upgrade, About shows the new version.
-- [ ] Leave “Allow updates on mobile data” off, disable Wi-Fi, and tap **Check for updates**. The app refuses and tells you to use Wi-Fi.
-- [ ] Turn the toggle on, stay on mobile data, and confirm a newer feed still installs (optional).
+- [ ] Publish a higher `versionCode` on the feed. On mobile data, with the Wi-Fi-only toggle still off, start the app or tap **Check for updates**. The app downloads the APK, verifies sha256, and shows the system install prompt. Complete it. After upgrade, About shows the new version.
+- [ ] Turn “Restrict updates to Wi-Fi” on, disable Wi-Fi, and tap **Check for updates**. The app refuses and tells you updates are set to Wi-Fi only.
+- [ ] Turn the toggle off, stay on mobile data, and confirm a newer feed still installs.
 - [ ] A bad sha256 in the feed must not install. A non-https `apkUrl` or a different host than the feed must be rejected.
 - [ ] No Bitwarden Inc. branding in the new About rows.
 

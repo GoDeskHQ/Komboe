@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Android in-app Wi-Fi OTA: feed shape, rebrand hooks, and injection into the pinned tree."""
+"""Android in-app OTA: feed shape, rebrand hooks, and injection into the pinned tree."""
 from __future__ import annotations
 
 import importlib.util
@@ -98,15 +98,29 @@ def test_overlay_and_docs_present():
     assert "REQUEST_INSTALL_PACKAGES" not in kotlin  # permission lives in the manifest hook
     assert "PackageInstaller" in kotlin
     assert "TRANSPORT_WIFI" in kotlin
+    assert "fun wifiOnly" in kotlin
+    assert 'getBoolean(KEY_WIFI_ONLY, false)' in kotlin
+    assert "userInitiated &&" not in kotlin
+    assert "allowMetered" not in kotlin
+    assert "return !wifiOnly(context)" in kotlin
     assert "sha256" in (OVERLAY / "KomboeSelfUpdateManifest.kt").read_text()
     strings = (OVERLAY / "komboe_update_strings.xml").read_text()
     assert "https://downloads.komboe.com/android/latest.json" in strings
+    assert "Restrict updates to Wi-Fi" in strings
+    assert "Allow updates on mobile data" not in strings
     running = (ROOT / "docs/RUNNING.md").read_text()
     assert "downloads.komboe.com/android" in running
+    assert "Wi-Fi or mobile data" in running
+    assert "Restrict updates to Wi-Fi" in running
     e2e = (ROOT / "mobile/ANDROID-E2E.md").read_text()
     assert "Check for updates" in e2e
+    assert "Restrict updates to Wi-Fi" in e2e
+    assert "Allow updates on mobile data" not in e2e
     compose = (ROOT / "docker-compose.yml").read_text()
     assert "SMTP_FROM: donotreply@komboe.com" in compose
+    rebrand = (ROOT / "mobile/android_rebrand.py").read_text()
+    assert "KomboeSelfUpdate.wifiOnly" in rebrand
+    assert "KomboeUpdatesWifiOnlyRow" in rebrand
 
 
 def test_injects_into_pinned_tree_snippets():
