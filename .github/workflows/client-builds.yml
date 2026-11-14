@@ -4,9 +4,13 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   desktop-linux:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, godesk]
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -58,10 +62,13 @@ jobs:
           path: clients/upstream/apps/desktop/dist/*.exe
 
   android-release:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, godesk]
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -112,7 +119,7 @@ jobs:
   download-manifest:
     needs: [desktop-linux, desktop-windows, android-release]
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, godesk]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
