@@ -14,9 +14,25 @@ jobs:
     runs-on: [self-hosted, godesk]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      # actions/setup-python has no Debian 13 builds. Install CPython 3.12
+      # with uv into a venv (uv-managed interpreters reject ensurepip/pip).
+      - name: Set up Python 3.12
+        env:
+          PYTHON_VERSION: "3.12"
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.local/bin:$PATH"
+          if ! command -v uv >/dev/null 2>&1; then
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+          fi
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          uv python install "$PYTHON_VERSION"
+          VENV="$RUNNER_TEMP/python"
+          # --seed installs pip/setuptools/wheel; uv venvs omit pip by default.
+          uv venv --seed --python "$PYTHON_VERSION" "$VENV"
+          echo "$VENV/bin" >> "$GITHUB_PATH"
+          "$VENV/bin/python" --version
+          "$VENV/bin/python" -m pip install --upgrade pip
       - name: Sender, backup, and update checks
         run: |
           set -eu
@@ -55,9 +71,25 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      # actions/setup-python has no Debian 13 builds. Install CPython 3.12
+      # with uv into a venv (uv-managed interpreters reject ensurepip/pip).
+      - name: Set up Python 3.12
+        env:
+          PYTHON_VERSION: "3.12"
+        run: |
+          set -euo pipefail
+          export PATH="$HOME/.local/bin:$PATH"
+          if ! command -v uv >/dev/null 2>&1; then
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+          fi
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          uv python install "$PYTHON_VERSION"
+          VENV="$RUNNER_TEMP/python"
+          # --seed installs pip/setuptools/wheel; uv venvs omit pip by default.
+          uv venv --seed --python "$PYTHON_VERSION" "$VENV"
+          echo "$VENV/bin" >> "$GITHUB_PATH"
+          "$VENV/bin/python" --version
+          "$VENV/bin/python" -m pip install --upgrade pip
       - uses: dtolnay/rust-toolchain@1.99.0
       - run: sudo apt-get update && sudo apt-get install -y pkg-config libssl-dev
       - uses: Swatinem/rust-cache@v2
@@ -71,7 +103,27 @@ jobs:
           node-version: "22"
       - run: npm ci
         working-directory: apps/web-marketing
-      - run: npx playwright install --with-deps chromium
+      - name: Install Playwright Chromium
+        run: |
+          set -euo pipefail
+          # Debian 13 is not in Playwright's official dependency matrix.
+          # --with-deps falls back to Ubuntu 20.04 packages and fails.
+          # Passwordless sudo on these runners covers apt only.
+          sudo apt-get update
+          pkgs=(
+            libnss3 libnspr4 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1
+            libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2
+            libx11-6 libx11-xcb1 libxcb1 libxext6 libxshmfence1 ca-certificates
+          )
+          for base in libatk1.0-0 libatk-bridge2.0-0 libcups2 libasound2 libatspi2.0-0 libgtk-3-0; do
+            if apt-cache show "${base}t64" >/dev/null 2>&1; then
+              pkgs+=("${base}t64")
+            else
+              pkgs+=("$base")
+            fi
+          done
+          sudo apt-get install -y --no-install-recommends "${pkgs[@]}"
+          npx playwright install chromium
         working-directory: apps/web-marketing
       - run: bash e2e/run.sh
         working-directory: apps/web-marketing
@@ -121,9 +173,26 @@ jobs:
       - name: Install Playwright
         working-directory: apps/web-marketing
         run: |
-          set -eu
+          set -euo pipefail
           npm ci
-          npx playwright install --with-deps chromium
+          # Debian 13 is not in Playwright's official dependency matrix.
+          # --with-deps falls back to Ubuntu 20.04 packages and fails.
+          # Passwordless sudo on these runners covers apt only.
+          sudo apt-get update
+          pkgs=(
+            libnss3 libnspr4 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1
+            libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2
+            libx11-6 libx11-xcb1 libxcb1 libxext6 libxshmfence1 ca-certificates
+          )
+          for base in libatk1.0-0 libatk-bridge2.0-0 libcups2 libasound2 libatspi2.0-0 libgtk-3-0; do
+            if apt-cache show "${base}t64" >/dev/null 2>&1; then
+              pkgs+=("${base}t64")
+            else
+              pkgs+=("$base")
+            fi
+          done
+          sudo apt-get install -y --no-install-recommends "${pkgs[@]}"
+          npx playwright install chromium
       - name: Unlock a real encrypted cipher with PIN and pattern
         env:
           KOMBOE_BIN: server/upstream/target/debug/vaultwarden
