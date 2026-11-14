@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="komboe_update_feed_url" translatable="false">https://downloads.komboe.com/android/latest.json</string>
+    <string name="komboe_check_for_updates">Check for updates</string>
+    <string name="komboe_updates_wifi_only">Restrict updates to Wi-Fi</string>
+    <string name="komboe_update_checking">Checking for a Komboe update…</string>
+    <string name="komboe_update_wifi_required">Updates are set to Wi-Fi only. Turn off “Restrict updates to Wi-Fi”, or connect to Wi-Fi.</string>
+    <string name="komboe_update_current">Komboe is up to date (%1$s).</string>
+    <string name="komboe_update_downloading">Downloading Komboe %1$s…</string>
+    <string name="komboe_update_installed">Komboe was updated.</string>
+    <string name="komboe_update_install_failed">The update could not be installed.</string>
+    <string name="komboe_update_failed">The update check failed.</string>
+    <string name="komboe_update_min_sdk">This update needs Android API %1$d.</string>
+</resources>
