@@ -279,11 +279,34 @@ def _brand_end(text: str, end: int) -> int | None:
     return end
 
 
+def _span_replace(text: str, spans) -> str:
+    """Replace non-overlapping spans. A matched host becomes komboe.com."""
+    pieces = []
+    cursor = 0
+    for start, end in sorted(spans):
+        if start < cursor:
+            continue
+        chunk = text[start:end]
+        pieces.append(text[cursor:start])
+        if "." in chunk:
+            pieces.append("komboe.com")
+        else:
+            pieces.append("Komboe")
+        cursor = end
+    pieces.append(text[cursor:])
+    return "".join(pieces)
+
+
 def _rename(text: str) -> str:
+    from brand_names import fuzzy_spans, transliteration_spans
+
     text = re.sub(r"(?i)©\s*bit\s*ward(?:en)?(?:\s+inc\.?)?", "© Komboe", text)
     # Example hosts in user-facing copy. Protocol hosts (api., vault., identity.) are not this shape.
     text = re.sub(r"(?i)(https?://)bitwarden\.", r"\1komboe.", text)
-    text = re.sub(r"(?i)bitwarden\.\s*com", "komboe.com", text)
+    # Bare bitwarden.com in copy. Leave api/identity/vault.bitwarden.com alone.
+    text = re.sub(r"(?i)(?<![A-Za-z0-9.])bitwarden\.\s*com", "komboe.com", text)
+    text = re.sub(r"(?i)bitwarden_export", "komboe_export", text)
+    text = _span_replace(text, transliteration_spans(text))
     pieces = []
     cursor = 0
     for match in BRAND_NAME.finditer(text):
@@ -295,6 +318,7 @@ def _rename(text: str) -> str:
         cursor = end
     pieces.append(text[cursor:])
     text = "".join(pieces)
+    text = _span_replace(text, fuzzy_spans(text))
     text = re.sub(r"(?<![A-Za-z0-9_@./])Vaultwarden(?![A-Za-z0-9_])", "Komboe", text)
     return text
 
@@ -314,6 +338,8 @@ UPSTREAM_SHIELD_FRAGMENTS = (
     "M18.7697 12.9217",
     "M22.01 17.055V4.135",
     "M75.971 26.765",
+    # Notification-bar header shield in the extension autofill iframe.
+    "M13.469.2A.647.647",
 )
 
 # Product wordmarks and the account-switcher shield. Filenames stay so imports keep working.
@@ -392,8 +418,9 @@ def _remember_replaced(old_blobs):
     data["sha256"] = sorted(hashes)
     data["shield_paths"] = sigs
     data["note"] = (
-        "Hashes of upstream Bitwarden artwork, including the illustrations and shared "
-        "wordmark SVGs still byte-identical after the first rebrand. Import-format labels are not images."
+        "Hashes of upstream Bitwarden artwork, including toolbar icons, the download QR, "
+        "the Secrets Manager screenshot, illustrations, and shared wordmark SVGs. "
+        "Import-format labels are not images."
     )
     open(deny_path, "w", encoding="utf-8").write(json.dumps(data, indent=2) + "\n")
 
@@ -411,8 +438,60 @@ def _illustration_paths():
     return found
 
 
+def _baked_mark_path() -> str:
+    text = open(os.path.join(KIT, "01-master", "komboe-mark-mono-black.svg"), encoding="utf-8").read()
+    match = re.search(r"<path\b([^>]*)/?>", text)
+    if not match:
+        sys.exit("official mark SVG has no path")
+    attrs = match.group(1)
+    path = re.search(r'd="([^"]+)"', attrs)
+    transform = re.search(r'transform="([^"]+)"', attrs)
+    baked = _bake_path(path.group(1), transform.group(1) if transform else None)
+    if not baked or '"' in baked:
+        sys.exit("could not bake the official mark path")
+    return baked
+
+
+def _toolbar_icon(size, name):
+    """Official mark at the toolbar bitmap's exact pixel size."""
+    Image, _ = require_pil()
+    muted = "gray" in name or "locked" in name
+    im = mark_png(size, "mono-black" if muted else "navy")
+    if muted:
+        red, green, blue, alpha = im.split()
+        factor = 0.45 if "gray" in name else 0.72
+        alpha = alpha.point(lambda pixel, scale=factor: int(pixel * scale))
+        im = Image.merge("RGBA", (red, green, blue, alpha))
+    return im
+
+
+def _qr_png(size) -> bytes:
+    """QR for https://komboe.com/downloads, letterboxed to the previous bitmap."""
+    try:
+        import segno
+    except ImportError:
+        sys.exit("segno is required to regenerate the download QR")
+    Image, _ = require_pil()
+    code = segno.make("https://komboe.com/downloads", error="m")
+    modules = code.symbol_size(border=2)[0]
+    scale = max(1, min(size) // modules)
+    buf = io.BytesIO()
+    code.save(buf, kind="png", scale=scale, border=2, dark="#0B1B33", light="#F0ECE7")
+    im = Image.open(io.BytesIO(buf.getvalue())).convert("RGBA")
+    if im.size != size:
+        canvas = Image.new("RGBA", size, OFFWHITE)
+        fitted = im.resize((min(size), min(size)) if size[0] == size[1] else im.size, Image.Resampling.NEAREST)
+        if fitted.size[0] > size[0] or fitted.size[1] > size[1]:
+            fitted.thumbnail(size, Image.Resampling.NEAREST)
+        canvas.paste(fitted, ((size[0] - fitted.width) // 2, (size[1] - fitted.height) // 2))
+        im = canvas
+    out = io.BytesIO()
+    im.save(out, "PNG", optimize=True)
+    return out.getvalue()
+
+
 def replace_leftover_branding():
-    """Illustrations and shared wordmarks the first artwork pass did not touch."""
+    """Illustrations, toolbar icons, and shared wordmarks the first artwork pass did not touch."""
     require_pil()
     Image, _ = require_pil()
     changed = []
@@ -424,10 +503,73 @@ def replace_leftover_branding():
         old = open(path, "rb").read() if os.path.isfile(path) else b""
         if old == new:
             return
-        if old:
+        image_ext = os.path.splitext(path)[1].lower() in {
+            ".png", ".webp", ".jpg", ".jpeg", ".bmp", ".svg", ".gif", ".ico",
+        }
+        if old and image_ext:
             old_blobs.append(old)
         if _write_bytes(path, new):
             changed.append(os.path.relpath(path, ROOT))
+
+    images = os.path.join(CLIENTS, "apps/browser/src/images")
+    for name in sorted(os.listdir(images)):
+        if not name.endswith(".png"):
+            continue
+        if not (name.startswith("berry") or name.startswith("icon")):
+            continue
+        path = os.path.join(images, name)
+        buf = io.BytesIO()
+        _toolbar_icon(Image.open(path).size, name).save(buf, "PNG", optimize=True)
+        stage(path, buf.getvalue())
+    qr_path = os.path.join(images, "download-qr.png")
+    stage(qr_path, _qr_png(Image.open(qr_path).size))
+    shield_ts = os.path.join(CLIENTS, "apps/browser/src/autofill/content/components/icons/shield.ts")
+    shield_text = open(shield_ts, encoding="utf-8").read()
+    # Re-running used to insert another fill-rule on every pass.
+    if "M13.469.2A.647.647" in shield_text or shield_text.count('fill-rule="evenodd"') != 1:
+        shield_text = shield_text.replace(' fill-rule="evenodd"', "")
+        shield_text = re.sub(r'viewBox="[^"]+"', 'viewBox="0 0 1024 1024"', shield_text, count=1)
+        shield_text = re.sub(
+            r'd="[^"]+"',
+            'fill-rule="evenodd" d="' + _baked_mark_path() + '"',
+            shield_text,
+            count=1,
+        )
+    if "M13.469.2A.647.647" in shield_text or shield_text.count('fill-rule="evenodd"') != 1:
+        sys.exit("notification shield rewrite did not settle")
+    stage(shield_ts, shield_text)
+    webp = os.path.join(CLIENTS, "apps/web/src/images/sm.webp")
+    if os.path.isfile(webp):
+        buf = io.BytesIO()
+        plate(Image.open(webp).size, dark=False).convert("RGB").save(buf, "WEBP", quality=82, method=4)
+        stage(webp, buf.getvalue())
+    # Copies of the same upstream bitmaps live in the desktop iconset and the server favicon.
+    deny_hashes = set(json.loads(open(os.path.join(ROOT, "scripts", "branding_denylist.json"), encoding="utf-8").read())["sha256"])
+    for root in (CLIENTS, os.path.join(ROOT, "server", "upstream", "src", "static"), os.path.join(ROOT, "apps", "web-marketing")):
+        if not os.path.isdir(root):
+            continue
+        for dirpath, dirnames, filenames in os.walk(root):
+            dirnames[:] = [d for d in dirnames if d not in {"node_modules", "dist", "build", ".git"}]
+            for name in filenames:
+                if os.path.splitext(name)[1].lower() not in {".png", ".webp", ".jpg", ".jpeg", ".bmp"}:
+                    continue
+                path = os.path.join(dirpath, name)
+                blob = open(path, "rb").read()
+                if hashlib.sha256(blob).hexdigest() not in deny_hashes:
+                    continue
+                size = Image.open(io.BytesIO(blob)).size
+                ext = os.path.splitext(name)[1].lower()
+                buf = io.BytesIO()
+                image = mark_png(size, "navy")
+                if ext == ".webp":
+                    image.convert("RGB").save(buf, "WEBP", quality=82, method=4)
+                elif ext in {".jpg", ".jpeg"}:
+                    image.convert("RGB").save(buf, "JPEG", quality=90)
+                elif ext == ".bmp":
+                    image.convert("RGB").save(buf, "BMP")
+                else:
+                    image.save(buf, "PNG", optimize=True)
+                stage(path, buf.getvalue())
 
     for path in _illustration_paths():
         dark = ".dark." in os.path.basename(path)

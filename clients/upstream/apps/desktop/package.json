@@ -1,7 +1,7 @@
 {
   "name": "@bitwarden/desktop",
   "description": "Komboe: a secure, self-hosted password manager for all of your devices.",
-  "version": "2026.11.15",
+  "version": "2026.11.16",
   "keywords": [
     "komboe",
     "password",

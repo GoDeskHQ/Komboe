@@ -4058,7 +4058,7 @@
     "message": "A kérelem jóváhagyása után értesítés érkezik."
   },
   "needAnotherOption": {
-    "message": "Az eszközzel történő bejelentkezést a Biwarden mobilalkalmazás beállításaiban kell beállítani. Másik opcióra van szükség?"
+    "message": "Az eszközzel történő bejelentkezést a Komboe mobilalkalmazás beállításaiban kell beállítani. Másik opcióra van szükség?"
   },
   "viewAllLogInOptions": {
     "message": "Összes bejelentkezési opció megtekintése"

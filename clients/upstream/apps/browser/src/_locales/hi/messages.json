@@ -3,10 +3,10 @@
     "message": "Komboe"
   },
   "appLogoLabel": {
-    "message": "बिटवार्डन लोगो"
+    "message": "Komboe लोगो"
   },
   "extName": {
-    "message": "बिटवार्डन पासवर्ड मैनेजर",
+    "message": "Komboe पासवर्ड मैनेजर",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extNameBeta": {
@@ -14,7 +14,7 @@
     "description": "Extension name for the beta channel, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "घर पर, काम पर या चलते-फिरते, बिटवर्डन आपके सभी पासवर्ड, पासकी और संवेदनशील जानकारी को आसानी से सुरक्षित रखता है",
+    "message": "घर पर, काम पर या चलते-फिरते, Komboe आपके सभी पासवर्ड, पासकी और संवेदनशील जानकारी को आसानी से सुरक्षित रखता है",
     "description": "Extension description, MUST be less than 112 characters (Safari restriction)"
   },
   "loginOrCreateNewAccount": {
@@ -27,7 +27,7 @@
     "message": "Create Account"
   },
   "newToBitwarden": {
-    "message": "बिटवार्डन का परिचय"
+    "message": "Komboe का परिचय"
   },
   "logInWithPasskey": {
     "message": "पासकी से लॉग इन करें"
@@ -356,7 +356,7 @@
     "message": "Log Out"
   },
   "aboutBitwarden": {
-    "message": "बिटवार्डन का परिचय"
+    "message": "Komboe का परिचय"
   },
   "about": {
     "message": "जानकारी"
@@ -392,7 +392,7 @@
     "message": "मुफ्त Komboe Families"
   },
   "freeBitwardenFamiliesPageDesc": {
-    "message": "आप फ्री बिटवर्डन फैमिलीज़ के लिए एलिजिबल हैं। इस ऑफर को आज ही वेब ऐप में रिडीम करें।"
+    "message": "आप फ्री Komboe फैमिलीज़ के लिए एलिजिबल हैं। इस ऑफर को आज ही वेब ऐप में रिडीम करें।"
   },
   "version": {
     "message": "संस्करण"
@@ -458,13 +458,13 @@
     "message": "Help & Feedback"
   },
   "helpCenter": {
-    "message": "बिटवॉर्डेन सहायता केंद्र"
+    "message": "Komboe सहायता केंद्र"
   },
   "communityForums": {
     "message": "Komboe सामुदायिक मंचों का अन्वेषण करें"
   },
   "contactSupport": {
-    "message": "बिटवॉर्डेन सहायता से संपर्क करें"
+    "message": "Komboe सहायता से संपर्क करें"
   },
   "sync": {
     "message": "सिंक"
@@ -1160,7 +1160,7 @@
     "message": "Two-step login makes your account more secure by requiring you to enter a security code from an authenticator app whenever you log in. Two-step login can be enabled on the komboe.com web vault. Do you want to visit the website now?"
   },
   "twoStepLoginConfirmationContent": {
-    "message": "बिटवर्डन वेब ऐप में दो-चरणीय लॉगिन सेट करके अपने खाते को अधिक सुरक्षित बनाएं।"
+    "message": "Komboe वेब ऐप में दो-चरणीय लॉगिन सेट करके अपने खाते को अधिक सुरक्षित बनाएं।"
   },
   "twoStepLoginConfirmationTitle": {
     "message": "वेब ऐप पर जाएं?"
@@ -1451,7 +1451,7 @@
     "message": "नई पासकी सहेजने के लिए कहें या अपनी तिजोरी में संग्रहीत पासकी से लॉग इन करें। सभी लॉग इन किए गए खातों पर लागू होता है।"
   },
   "notificationChangeDesc": {
-    "message": "क्या आप बिटवर्डन में इस पासवर्ड को अपडेट करना चाहते हैं?"
+    "message": "क्या आप Komboe में इस पासवर्ड को अपडेट करना चाहते हैं?"
   },
   "notificationChangeSave": {
     "message": "Yes, Update Now"
@@ -1637,7 +1637,7 @@
     "message": "यह आपके खाते की एन्क्रिप्शन कुंजी का उपयोग करके आपके डेटा को एन्क्रिप्ट करता है।यदि आप कभी भी अपने खाते की एन्क्रिप्शन कुंजी को खोते हैं तो आपको फिर से निर्यात करना चाहिए क्योंकि आप इस निर्यात फ़ाइल को डिक्रिप्ट करने में सक्षम नहीं होंगे।"
   },
   "encExportAccountWarningDesc": {
-    "message": "खाता एन्क्रिप्शन कुंजी प्रत्येक बिटवर्डन उपयोगकर्ता खाते के लिए अद्वितीय हैं, इसलिए आप एन्क्रिप्टेड निर्यात को किसी अन्य खाते में आयात नहीं कर सकते हैं।"
+    "message": "खाता एन्क्रिप्शन कुंजी प्रत्येक Komboe उपयोगकर्ता खाते के लिए अद्वितीय हैं, इसलिए आप एन्क्रिप्टेड निर्यात को किसी अन्य खाते में आयात नहीं कर सकते हैं।"
   },
   "exportMasterPassword": {
     "message": "अपने वॉल्ट डेटा को निर्यात करने के लिए अपना मास्टर पासवर्ड दर्ज करें।"
@@ -3021,7 +3021,7 @@
     "message": "Weak Master Password"
   },
   "weakMasterPasswordDesc": {
-    "message": "आपके द्वारा चुना गया मास्टर पासवर्ड कमजोर है। आपको अपने बिटवर्डन खाते की ठीक से सुरक्षा के लिए एक मजबूत मास्टर पासवर्ड (या पासवाफ्रेज़) का उपयोग करना चाहिए।क्या आप सुनिश्चित हैं कि आप इस मास्टर पासवर्ड का उपयोग करना चाहते हैं?"
+    "message": "आपके द्वारा चुना गया मास्टर पासवर्ड कमजोर है। आपको अपने Komboe खाते की ठीक से सुरक्षा के लिए एक मजबूत मास्टर पासवर्ड (या पासवाफ्रेज़) का उपयोग करना चाहिए।क्या आप सुनिश्चित हैं कि आप इस मास्टर पासवर्ड का उपयोग करना चाहते हैं?"
   },
   "rotateAccountEncKey": {
     "message": "मेरे खाते की एन्क्रिप्शन कुंजी भी रोटेट करें"
@@ -3061,7 +3061,7 @@
     "message": "पिन सेट करें"
   },
   "setYourPinCode": {
-    "message": "बिटवर्डन को अनलॉक करने के लिए अपना पिन कोड सेट करें यदि आप कभी भी आवेदन से पूरी तरह लॉग आउट करते हैं तो आपकी पिन सेटिंग्स रीसेट हो जाएंगी।"
+    "message": "Komboe को अनलॉक करने के लिए अपना पिन कोड सेट करें यदि आप कभी भी आवेदन से पूरी तरह लॉग आउट करते हैं तो आपकी पिन सेटिंग्स रीसेट हो जाएंगी।"
   },
   "setPinCode": {
     "message": "आप इस PIN का उपयोग Komboe को अनलॉक करने के लिए कर सकते हैं। यदि आप कभी ऐप से पूरी तरह लॉग आउट करते हैं तो आपका PIN रीसेट हो जाएगा।"
@@ -3311,13 +3311,13 @@
     "message": "ब्राउज़र एकीकरण सक्षम नहीं है"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "ब्राउज़र एकीकरण बिटवर्डन डेस्कटॉप एप्लिकेशन में सक्षम नहीं है।कृपया इसे डेस्कटॉप एप्लिकेशन के भीतर सेटिंग्स में सक्षम करें।"
+    "message": "ब्राउज़र एकीकरण Komboe डेस्कटॉप एप्लिकेशन में सक्षम नहीं है।कृपया इसे डेस्कटॉप एप्लिकेशन के भीतर सेटिंग्स में सक्षम करें।"
   },
   "startDesktopTitle": {
-    "message": "बिटवर्डन डेस्कटॉप एप्लिकेशन शुरू करें"
+    "message": "Komboe डेस्कटॉप एप्लिकेशन शुरू करें"
   },
   "startDesktopDesc": {
-    "message": "इस फ़ंक्शन का उपयोग करने से पहले बिटवर्डन डेस्कटॉप एप्लिकेशन को शुरू करने की आवश्यकता है।"
+    "message": "इस फ़ंक्शन का उपयोग करने से पहले Komboe डेस्कटॉप एप्लिकेशन को शुरू करने की आवश्यकता है।"
   },
   "errorEnableBiometricTitle": {
     "message": "बॉयोमीट्रिक्स सक्षम करने में असमर्थ"
@@ -3414,7 +3414,7 @@
     "message": "बहिष्कृत डोमेन"
   },
   "excludedDomainsDesc": {
-    "message": "बिटवर्डन इन डोमेन के लिए लॉगिन विवरण सहेजने के लिए नहीं कहेगा।परिवर्तनों को प्रभावी बनाने के लिए आपको पृष्ठ को ताज़ा करना होगा |"
+    "message": "Komboe इन डोमेन के लिए लॉगिन विवरण सहेजने के लिए नहीं कहेगा।परिवर्तनों को प्रभावी बनाने के लिए आपको पृष्ठ को ताज़ा करना होगा |"
   },
   "blockedDomainsDesc": {
     "message": "इन वेबसाइटों के लिए ऑटोफ़िल और अन्य संबंधित सुविधाएँ प्रदान नहीं की जाएंगी। परिवर्तन प्रभावी होने के लिए आपको पेज रीफ़्रेश करना होगा।"
@@ -3553,7 +3553,7 @@
     "description": "Description of the generate password slide on the at-risk password page carousel"
   },
   "generatePasswordSlideImgAltPeriod": {
-    "message": "उत्पन्न पासवर्ड प्रदर्शित करने वाले बिटवर्डन स्वतः भरण मेनू का चित्रण।"
+    "message": "उत्पन्न पासवर्ड प्रदर्शित करने वाले Komboe स्वतः भरण मेनू का चित्रण।"
   },
   "updateInBitwarden": {
     "message": "Komboe में अपडेट करें"
@@ -3563,7 +3563,7 @@
     "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
-    "message": "उपयोगकर्ता को लॉगिन अपडेट करने के लिए प्रेरित करने वाली बिटवर्डन की अधिसूचना का चित्रण।"
+    "message": "उपयोगकर्ता को लॉगिन अपडेट करने के लिए प्रेरित करने वाली Komboe की अधिसूचना का चित्रण।"
   },
   "turnOnAutofill": {
     "message": "ऑटोफ़िल चालू करें"

@@ -102,14 +102,23 @@ def main(src):
         rw(p, rewrite_strings)
     def rewrite_kotlin_literals(t):
         from komboe_brand import rewrite_visible
+        from brand_names import fuzzy_spans, transliteration_spans
         def repl(match):
             inner = match.group(1)
-            if re.search(r"(?i)(?:api|identity|vault|icons|events|notifications|send|gw)\.bitwarden", inner):
-                return match.group(0)
-            if "bitwarden-gov" in inner.lower() and " " not in inner:
-                return match.group(0)
-            if " " not in inner and "©" not in inner and "http" not in inner.lower():
-                return match.group(0)
+            # Export filenames and non-Latin names have no spaces, so they must be
+            # rewritten before the identifier skip below.
+            named = (
+                "bitwarden_export" in inner.lower()
+                or next(transliteration_spans(inner), None) is not None
+                or next(fuzzy_spans(inner), None) is not None
+            )
+            if not named:
+                if re.search(r"(?i)(?:api|identity|vault|icons|events|notifications|send|gw)\.bitwarden", inner):
+                    return match.group(0)
+                if "bitwarden-gov" in inner.lower() and " " not in inner:
+                    return match.group(0)
+                if " " not in inner and "©" not in inner and "http" not in inner.lower():
+                    return match.group(0)
             return '"' + rewrite_visible(inner) + '"'
         return re.sub(r'"([^"\n]*)"', repl, t)
     for p in glob.glob(f"{S}/**/*.kt", recursive=True):

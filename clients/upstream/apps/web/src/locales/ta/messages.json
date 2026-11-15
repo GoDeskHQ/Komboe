@@ -21,7 +21,7 @@
     "message": "அனைத்து முக்கியமான செயலிகள்"
   },
   "appLogoLabel": {
-    "message": "பிட்வார்டன் லோகோ"
+    "message": "Komboe லோகோ"
   },
   "criticalApplications": {
     "message": "முக்கியமான பயன்பாடுகள்"
@@ -5769,7 +5769,7 @@
     "message": "Komboe வெப் வால்ட்"
   },
   "bitSecretsManager": {
-    "message": "பிட்வார்டன் ரகசியங்களின் மேலாளர்"
+    "message": "Komboe ரகசியங்களின் மேலாளர்"
   },
   "loggedIn": {
     "message": "உள்நுழைந்தது"
@@ -14291,11 +14291,11 @@
     "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Komboe using the implementation guide for your Identity Provider"
   },
   "scimIntegrationDescEnd": {
-    "message": "(குறுக்கு-டொமைன் அடையாள மேலாண்மை அமைப்பு) உங்கள் அடையாள வழங்குநருக்கான செயல்படுத்தல் வழிகாட்டியைப் பயன்படுத்தி பிட்வார்டனுக்கு பயனர்களையும் குழுக்களையும் தானாகவே வழங்க.",
+    "message": "(குறுக்கு-டொமைன் அடையாள மேலாண்மை அமைப்பு) உங்கள் அடையாள வழங்குநருக்கான செயல்படுத்தல் வழிகாட்டியைப் பயன்படுத்தி Komboe பயனர்களையும் குழுக்களையும் தானாகவே வழங்க.",
     "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Komboe using the implementation guide for your Identity Provider"
   },
   "bwdc": {
-    "message": "பிட்வார்டன் டைரக்டரி இணைப்பான்"
+    "message": "Komboe டைரக்டரி இணைப்பான்"
   },
   "bwdcDesc": {
     "message": "உங்கள் அடையாள வழங்குநருக்கான செயல்முறை வழிகாட்டியைப் பயன்படுத்தி பயனர்களையும் குழுக்களையும் தானாகவே வழங்குவதற்கு Komboe Directory Connector-ஐக் கட்டமைக்கவும்."

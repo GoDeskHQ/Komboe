@@ -4921,11 +4921,11 @@
     "description": "Page title for the iframe containing the overlay button"
   },
   "toggleBitwardenVaultOverlay": {
-    "message": "החלף מצב תפריט מילוי אוטומטי של Bitwaden",
+    "message": "החלף מצב תפריט מילוי אוטומטי של Komboe",
     "description": "Screen reader and tool tip label for the overlay button"
   },
   "bitwardenVault": {
-    "message": "תפריט מילוי אוטומטי של Bitwaden",
+    "message": "תפריט מילוי אוטומטי של Komboe",
     "description": "Page title in overlay"
   },
   "unlockYourAccountToViewMatchingLogins": {
@@ -6189,7 +6189,7 @@
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
-    "message": "הפוך את Bitwaren למנהל הסיסמאות ברירת המחדל שלך",
+    "message": "הפוך את Komboe למנהל הסיסמאות ברירת המחדל שלך",
     "description": "Label for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerCalloutTitle": {

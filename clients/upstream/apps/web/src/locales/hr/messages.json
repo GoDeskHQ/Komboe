@@ -14547,7 +14547,7 @@
     "message": "Nastavi postavljanje Komboe Secrets Managera"
   },
   "continueSettingUpFreeTrialSecretsManager": {
-    "message": "Nastavi s postavljanjem besplatne probe Btwarden Secrets Managera"
+    "message": "Nastavi s postavljanjem besplatne probe Komboe Secrets Managera"
   },
   "enterTeamsOrgInfo": {
     "message": "Unesi podatke za organizaciju Timovi"
@@ -15647,7 +15647,7 @@
     }
   },
   "resellerRenewalWarningMsgV2": {
-    "message": "Tvoja će se pretplata uskoro obnoviti. Za neprekinutu uslugu, kontaktiraj svog davatelja usluga Birwarden za potvrdu obnove prije $RENEWAL_DATE$.",
+    "message": "Tvoja će se pretplata uskoro obnoviti. Za neprekinutu uslugu, kontaktiraj svog davatelja usluga Komboe za potvrdu obnove prije $RENEWAL_DATE$.",
     "placeholders": {
       "renewal_date": {
         "content": "$1",
