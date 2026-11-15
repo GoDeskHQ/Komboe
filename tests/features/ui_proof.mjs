@@ -119,8 +119,19 @@ try {
   if (dashText !== email) throw new Error(`dashboard email ${dashText}`);
   await page.screenshot({ path: path.join(shots, "signed-in-vault.png"), fullPage: true });
 
-  await page.goto(`http://127.0.0.1:${webPort}/downloads.html`);
-  await page.locator("[data-testid='downloads-manifest-empty']").waitFor();
+  await page.goto(`http://127.0.0.1:${webPort}/downloads`);
+  await page.waitForURL(/\/downloads\/?$/);
+  await page.locator("[data-testid='marketing-download-android']").waitFor();
+  await page.locator("[data-testid='marketing-download-cli']").waitFor();
+  await page.locator("[data-testid='marketing-download-extension-safari']").waitFor();
+  const empty = page.locator("[data-testid='downloads-manifest-empty']");
+  const android = page.locator("[data-testid='marketing-download-android']");
+  const androidText = await android.innerText();
+  if (androidText.includes("Not available.")) {
+    if (await empty.count()) await empty.waitFor();
+  } else {
+    if (!/SHA-256|sha256/i.test(androidText)) throw new Error("published android card missing sha256");
+  }
   await page.screenshot({ path: path.join(shots, "dashboard-downloads.png"), fullPage: false });
 
   const unlock = await browser.newPage({ viewport: { width: 900, height: 800 } });

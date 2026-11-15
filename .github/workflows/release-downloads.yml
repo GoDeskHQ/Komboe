@@ -124,7 +124,7 @@ jobs:
             --artifacts dist \
             --out dist/komboe-downloads.json \
             --publish-dir dist/upload \
-            --url-prefix "https://github.com/${GITHUB_REPOSITORY}/releases/download/${tag}/" \
+            --url-prefix "https://komboe.com/downloads/" \
             --revision "${{ github.sha }}"
           cp dist/komboe-downloads.json dist/upload/komboe-downloads.json
           gh release upload "$tag" dist/upload/* --clobber
@@ -137,9 +137,13 @@ jobs:
           published = [a for a in manifest["assets"] if a["status"] == "published"]
           print("published", [(a["id"], a["sha256"], a["url"]) for a in published])
           for asset in published:
-              assert asset["url"].startswith("https://github.com/")
+              assert asset["url"].startswith("https://komboe.com/downloads/")
+              assert "downloads.komboe.com" not in asset["url"]
               assert asset["sha256"]
-              blob = Path("dist/upload") / asset["filename"]
+              rel = asset["url"].split("/downloads/", 1)[1]
+              blob = Path("dist/upload") / rel
+              if not blob.is_file():
+                  blob = Path("dist/upload") / (asset["filename"] or "")
               digest = hashlib.sha256(blob.read_bytes()).hexdigest()
               if digest != asset["sha256"]:
                   raise SystemExit(f"published bytes do not match the manifest: {asset['id']}")

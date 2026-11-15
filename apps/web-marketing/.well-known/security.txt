@@ -1,4 +1,4 @@
 Contact: mailto:security@komboe.com
-Expires: 2027-11-08T00:00:00Z
+Expires: 2027-11-15T00:00:00Z
 Preferred-Languages: en
 Canonical: https://komboe.com/.well-known/security.txt

@@ -8,3 +8,6 @@ target/
 tests/playwright/fixtures.local.json
 __pycache__/
 *.pyc
+
+# Release binaries are published to the server volume, not git.
+*.apk

@@ -1,16 +1,38 @@
 #!/usr/bin/env python3
-"""Serve the marketing site with a strict CSP. --api proxies /api and /identity."""
+"""Serve the marketing site with a strict CSP. --api proxies /api and /identity.
+
+/downloads and /downloads/ serve the downloads page. Files under a mounted
+directory (KOMBOE_DOWNLOADS_DIR or --downloads-dir, default /var/komboe-downloads
+when present) overlay /downloads/* so release APKs and latest.json can be
+updated without rebuilding the image. /downloads.html redirects to /downloads.
+"""
 import argparse
-import http.server
+import mimetypes
+import os
 import urllib.error
+import urllib.parse
 import urllib.request
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 API = None
+DOWNLOADS_DIR = None
 HOP = {
     "content-type", "accept", "authorization", "device-type",
     "bitwarden-client-name", "bitwarden-client-version",
+}
+
+# APK and installer types the stdlib does not always know.
+EXTRA_TYPES = {
+    ".apk": "application/vnd.android.package-archive",
+    ".apks": "application/vnd.android.package-archive",
+    ".aab": "application/octet-stream",
+    ".deb": "application/vnd.debian.binary-package",
+    ".AppImage": "application/octet-stream",
+    ".exe": "application/vnd.microsoft.portable-executable",
+    ".dmg": "application/x-apple-diskimage",
+    ".zip": "application/zip",
 }
 
 
@@ -30,7 +52,18 @@ def proxied(path):
     return path.startswith("/api/") or path.startswith("/identity/") or path in ("/api", "/identity", "/alive")
 
 
-class Handler(http.server.SimpleHTTPRequestHandler):
+def safe_under(root: Path, rel: str) -> Path | None:
+    if not root or not rel:
+        return None
+    candidate = (root / rel).resolve()
+    try:
+        candidate.relative_to(root.resolve())
+    except ValueError:
+        return None
+    return candidate
+
+
+class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
@@ -46,20 +79,71 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # Path only. Request bodies are never written here.
         super().log_message("%s", args[0] if args else fmt)
 
+    def guess_type(self, path):
+        suffix = Path(path).suffix
+        if suffix in EXTRA_TYPES:
+            return EXTRA_TYPES[suffix]
+        if suffix == ".json":
+            return "application/json; charset=utf-8"
+        return super().guess_type(path)
+
+    def _redirect(self, location, status=301):
+        body = f'<a href="{location}">{location}</a>\n'.encode()
+        self.send_response(status)
+        self.send_header("Location", location)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _send_file(self, path: Path):
+        data = path.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", self.guess_type(str(path)))
+        self.send_header("Content-Length", str(len(data)))
+        if path.suffix.lower() in {".apk", ".zip", ".deb", ".exe", ".dmg", ".appimage"}:
+            self.send_header("Content-Disposition", f'attachment; filename="{path.name}"')
+            self.send_header("Cache-Control", "public, max-age=300")
+        elif path.suffix.lower() == ".json":
+            self.send_header("Cache-Control", "public, max-age=60")
+        self.end_headers()
+        self.wfile.write(data)
+
     def do_GET(self):
-        if API and proxied(self.path.split("?", 1)[0]):
+        parsed = urllib.parse.urlparse(self.path)
+        path = urllib.parse.unquote(parsed.path)
+        query = f"?{parsed.query}" if parsed.query else ""
+        if API and proxied(path):
             self._proxy("GET")
             return
+        if path == "/downloads.html":
+            self._redirect("/downloads" + query)
+            return
+        if path == "/downloads":
+            self._redirect("/downloads/" + query)
+            return
+        if path == "/downloads/":
+            index = ROOT / "downloads" / "index.html"
+            if index.is_file():
+                self._send_file(index)
+                return
+        if path.startswith("/downloads/"):
+            rel = path[len("/downloads/"):]
+            if rel and DOWNLOADS_DIR is not None:
+                overlay = safe_under(DOWNLOADS_DIR, rel)
+                if overlay is not None and overlay.is_file():
+                    self._send_file(overlay)
+                    return
         super().do_GET()
 
     def do_POST(self):
-        if API and proxied(self.path.split("?", 1)[0]):
+        if API and proxied(urllib.parse.urlparse(self.path).path):
             self._proxy("POST")
             return
         self._drop(405)
 
     def do_PUT(self):
-        if API and proxied(self.path.split("?", 1)[0]):
+        if API and proxied(urllib.parse.urlparse(self.path).path):
             self._proxy("PUT")
             return
         self._drop(405)
@@ -92,15 +176,33 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(payload)
 
 
+def resolve_downloads_dir(explicit: str) -> Path | None:
+    candidates = []
+    if explicit:
+        candidates.append(Path(explicit))
+    env = os.environ.get("KOMBOE_DOWNLOADS_DIR")
+    if env:
+        candidates.append(Path(env))
+    candidates.append(Path("/var/komboe-downloads"))
+    for path in candidates:
+        if path.is_dir():
+            return path
+    return None
+
+
 def main():
-    global API
+    global API, DOWNLOADS_DIR
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=4173)
     parser.add_argument("--api", default="")
+    parser.add_argument("--downloads-dir", default="")
     args = parser.parse_args()
     API = args.api.rstrip("/") or None
-    http.server.ThreadingHTTPServer((args.host, args.port), Handler).serve_forever()
+    DOWNLOADS_DIR = resolve_downloads_dir(args.downloads_dir)
+    httpd = ThreadingHTTPServer((args.host, args.port), Handler)
+    print(f"serving {ROOT} on {args.host}:{args.port} downloads={DOWNLOADS_DIR or '(site tree only)'}", flush=True)
+    httpd.serve_forever()
 
 
 if __name__ == "__main__":

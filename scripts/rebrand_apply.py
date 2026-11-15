@@ -251,7 +251,7 @@ def ebuilder2(t):
         d["snap"]["summary"] = "Komboe is a secure, self-hosted password manager for all of your devices."
         d["snap"]["description"] = "Password Manager\n**Installation**\nKomboe requires access to the `password-manager-service`. Run `sudo snap connect komboe:password-manager-service` after installation."
     if isinstance(d.get("publish"), dict) and "bitwarden.com" in d["publish"].get("url", ""):
-        d["publish"]["url"] = "https://downloads.komboe.com/desktop"   # never pull Bitwarden auto-updates
+        d["publish"]["url"] = "https://komboe.com/downloads/desktop"   # never pull Bitwarden auto-updates
     for pr in d.get("protocols", []):
         pr["name"] = "Komboe"; pr["schemes"] = ["komboe"]
     return json.dumps(d, indent=2, ensure_ascii=False) + "\n"

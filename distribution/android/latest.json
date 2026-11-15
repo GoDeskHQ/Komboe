@@ -1,0 +1,10 @@
+{
+  "versionName": "2026.11.15.2",
+  "versionCode": 2026111502,
+  "apkUrl": "https://komboe.com/downloads/android/io.komboe.android-2026.11.15.2.apk",
+  "sha256": "e1142f1a9a8664c962c894c8a1968653729ae7434c6f93df6be3b767306c6da8",
+  "minSdk": 29,
+  "releaseNotes": "The in-app updater now reads https://komboe.com/downloads/android/latest.json. The same APK is listed on the Komboe downloads page with version, size, and SHA-256. After the first sideload, updates run over Wi-Fi or mobile data.",
+  "releasedAt": "2026-11-15T02:26:00Z",
+  "size": 90366164
+}

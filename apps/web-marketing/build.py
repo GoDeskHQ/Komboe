@@ -1,6 +1,6 @@
 """Generates static pages (shared header/footer). Run: python3 build.py"""
 import os, json, re, html as H, datetime as _d
-NAV = [("index.html", "Home"), ("features.html", "Features"), ("security.html", "Security"), ("pricing.html", "Pricing"), ("downloads.html", "Downloads"), ("developers.html", "Developers")]
+NAV = [("index.html", "Home"), ("features.html", "Features"), ("security.html", "Security"), ("pricing.html", "Pricing"), ("downloads/", "Downloads"), ("developers.html", "Developers")]
 BASE = "https://komboe.com"
 STAGING = os.environ.get("KOMBOE_ENV", "staging") != "production"
 LOCALES = ["en"]
@@ -15,8 +15,17 @@ def ld_script(pre, name):
     return f'<script type="application/ld+json" src="{pre}assets/ld/{name}.json"></script>'
 
 def page(fn, title, body, pre="", desc="", crumbs=None, extra=()):
-    nav = "".join(f'<a href="{pre}{h}"{" class=on aria-current=page" if h == fn else ""}>{t}</a>' for h, t in NAV)
-    path = "/" if fn == "index.html" else "/" + fn
+    def _current(h):
+        if h.rstrip("/") == "downloads":
+            return fn in ("downloads.html", "downloads/index.html") or fn.rstrip("/").endswith("downloads")
+        return h == fn
+    nav = "".join(f'<a href="{pre}{h}"{" class=on aria-current=page" if _current(h) else ""}>{t}</a>' for h, t in NAV)
+    if fn == "index.html":
+        path = "/"
+    elif fn in ("downloads.html", "downloads/index.html"):
+        path = "/downloads"
+    else:
+        path = "/" + fn
     url = BASE + path
     desc = desc or "Komboe is an open-source, zero-knowledge password manager."
     full = f"{title} · Komboe" if fn != "index.html" else f"Komboe — {title}"
@@ -43,7 +52,7 @@ def page(fn, title, body, pre="", desc="", crumbs=None, extra=()):
 <aside id="assistant" class="card glass assistant wrap" aria-label="Komboe assistant"><h2>Komboe assistant</h2><p class="fine">Asks your Komboe agent after you sign in. It can explain a feature, suggest next steps, or generate a password. It never reads vault items.</p>
 <form id="assistant-form"><label class="field">Feature <input id="assistant-q" name="feature" maxlength="80" placeholder="passkeys"></label><div class="row"><button class="btn p" type="submit">Explain</button><button class="btn" id="assistant-password" type="button">Generate a password</button><button class="btn" id="assistant-steps" type="button">Suggest next steps</button></div></form>
 <pre id="assistant-out" class="out"></pre></aside>
-<footer><div class="wrap"><div><b>Komboe</b> · Zero-knowledge password manager</div><nav aria-label="Footer"><a href="{pre}features.html">Features</a> · <a href="{pre}security.html">Security</a> · <a href="{pre}pricing.html">Pricing</a> · <a href="{pre}downloads.html">Downloads</a> · <a href="{pre}developers.html">Developers</a> · <a href="{pre}features.html#open-source">Source</a> · <a href="{pre}privacy.html">Privacy</a> · <a href="{pre}terms.html">Terms</a></nav><div>{"© 2026 GODESK IO LLC" if fn in ("privacy.html", "terms.html") else "© 2026 Komboe"}</div></div></footer>
+<footer><div class="wrap"><div><b>Komboe</b> · Zero-knowledge password manager</div><nav aria-label="Footer"><a href="{pre}features.html">Features</a> · <a href="{pre}security.html">Security</a> · <a href="{pre}pricing.html">Pricing</a> · <a href="{pre}downloads/">Downloads</a> · <a href="{pre}developers.html">Developers</a> · <a href="{pre}features.html#open-source">Source</a> · <a href="{pre}privacy.html">Privacy</a> · <a href="{pre}terms.html">Terms</a></nav><div>{"© 2026 GODESK IO LLC" if fn in ("privacy.html", "terms.html") else "© 2026 Komboe"}</div></div></footer>
 <script src="{pre}assets/vendor/argon2.js" defer></script><script src="{pre}assets/app.js" defer></script>
 <script src="{pre}assets/auth.js" type="module"></script><script src="{pre}assets/agent.js" type="module"></script><script src="{pre}assets/vault.js" type="module"></script>
 </body></html>""")
@@ -95,7 +104,7 @@ SIGNIN = '''<div class="card glass signin" id="signin"><h2>Sign in</h2>
 </div>'''
 home = f'''<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><img class="logo" src="assets/img/logo-240.webp" width="96" height="96" alt="Komboe padlock-K logo" fetchpriority="high">
 <h1>Your secrets.<br><span class="grad">Only yours.</span></h1><p>Komboe is a zero-knowledge password manager. Your master password stays on this device, and there is no backdoor and no admin password reset.</p>
-<div class="cta"><a class="btn" href="downloads.html">Download Komboe</a></div></div>{SIGNIN}</div></section>
+<div class="cta"><a class="btn" href="downloads/">Download Komboe</a></div></div>{SIGNIN}</div></section>
 <section><div class="wrap"><h2>Everything in one vault</h2><p class="lead">One encrypted home for every login, passkey and secret, on every device you use.</p>{cards(FEAT[:4])}<p class="sso"><a href="features.html">See all features</a></p></div></section>
 <section class="band"><div class="wrap split"><div><h2>Zero-knowledge by design</h2><p class="lead">Your master password never leaves your device. Vault contents are encrypted before upload. Account metadata is described in the <a href="privacy.html">Privacy Policy</a>.</p><a class="btn" href="security.html">How Komboe protects you</a></div>
 {cards([("🚫", "No backdoor", "There is no master key and no way for Komboe to decrypt your data."), ("🔁", "No admin reset", "Admins cannot reset your master password. Keep your recovery kit safe.")])}</div></section>
@@ -155,31 +164,60 @@ import html as _html
 import json as _json
 from pathlib import Path as _Path
 _MANIFEST = _json.loads((_Path(__file__).resolve().parents[2] / "distribution" / "komboe-downloads.json").read_text(encoding="utf-8"))
-_OS = {"desktop-windows": "windows", "desktop-macos": "macos", "desktop-linux-deb": "linux", "desktop-linux-appimage": "linux", "android": "android", "ios": "ios", "extension-chromium-mv3": "ext-chrome ext-edge ext-brave", "extension-firefox": "ext-firefox"}
+_OS = {"desktop-windows": "windows", "desktop-macos": "macos", "desktop-linux-deb": "linux", "desktop-linux-appimage": "linux", "android": "android", "ios": "ios", "extension-chromium-mv3": "ext-chrome ext-edge ext-brave", "extension-firefox": "ext-firefox", "extension-safari": "ext-safari", "cli": "linux", "wear-os": "android", "apple-watch": "ios"}
+
+def _human_size(n):
+    if not n:
+        return ""
+    n = int(n)
+    if n >= 1024 * 1024:
+        return f"{n / (1024 * 1024):.1f} MB ({n:,} bytes)"
+    if n >= 1024:
+        return f"{n / 1024:.1f} KB ({n:,} bytes)"
+    return f"{n} bytes"
+
+def _meta_rows(asset):
+    rows = []
+    if asset.get("version"):
+        rows.append(f'<div class="fine"><span>Version</span> {_html.escape(str(asset["version"]))}</div>')
+    if asset.get("size"):
+        rows.append(f'<div class="fine"><span>Size</span> {_html.escape(_human_size(asset["size"]))}</div>')
+    if asset.get("sha256"):
+        rows.append(f'<div class="fine sha"><span>SHA-256</span> <code>{_html.escape(asset["sha256"])}</code></div>')
+    if asset.get("releasedAt"):
+        rows.append(f'<div class="fine"><span>Released</span> {_html.escape(str(asset["releasedAt"]))}</div>')
+    return "".join(rows)
 
 def _manifest_card(asset):
     name = _html.escape(asset["name"])
     platforms = _html.escape(", ".join(asset["platforms"]))
     os_attr = _html.escape(_OS.get(asset["id"], asset["id"]))
     url = asset.get("url") or ""
-    if asset.get("status") == "published" and url.startswith(("https://", "http://")):
-        body = f'<p><strong>Unsigned testing build</strong></p><p><a class="btn p" href="{_html.escape(url, quote=True)}">Download {_html.escape(asset.get("filename") or "file")}</a></p>'
-        if asset.get("sha256"):
-            body += f'<p class="fine">sha256 {_html.escape(asset["sha256"])}</p>'
+    install = asset.get("install") or ""
+    if asset.get("status") == "published" and url.startswith(("https://", "http://", "/")):
+        channel = _html.escape(asset.get("channel") or "release")
+        body = f'<p><strong>{channel.replace("-", " ")}</strong></p>'
+        body += _meta_rows(asset)
+        body += f'<p><a class="btn p" href="{_html.escape(url, quote=True)}">Download {_html.escape(asset.get("filename") or "file")}</a></p>'
+        if install:
+            body += f'<p class="fine">{_html.escape(install)}</p>'
     else:
-        body = f'<p><strong>Not available.</strong> {_html.escape(asset.get("reason") or "")}</p>'
-    docs = f'<p><a href="{_html.escape(asset["docsUrl"], quote=True)}">Instructions</a></p>'
-    return f'<article class="card glass" data-os="{os_attr}" data-testid="marketing-download-{_html.escape(asset["id"], quote=True)}"><h3>{name}</h3><p>{platforms}</p>{body}{docs}</article>'
+        body = _meta_rows(asset)
+        body += f'<p><strong>Not available.</strong> {_html.escape(asset.get("reason") or "")}</p>'
+        if install:
+            body += f'<p class="fine">{_html.escape(install)}</p>'
+    docs = f'<p><a href="{_html.escape(asset["docsUrl"], quote=True)}" rel="noopener noreferrer" target="_blank">Instructions</a></p>'
+    return f'<article class="card glass dl" data-os="{os_attr}" data-testid="marketing-download-{_html.escape(asset["id"], quote=True)}"><h3>{name}</h3><p>{platforms}</p>{body}{docs}</article>'
 
 _manifest_cards = "".join(_manifest_card(asset) for asset in _MANIFEST["assets"])
 _empty = "" if any(asset.get("status") == "published" and str(asset.get("url") or "").startswith(("https://", "http://")) for asset in _MANIFEST["assets"]) else '<p data-testid="downloads-manifest-empty">No installer file is in this manifest. There is no download link and no QR code.</p>'
 downloads = (
     '<section class="hero"><div class="wrap"><h1>Download Komboe</h1>'
-    '<p>Installers come from the same release manifest as the signed-in vault. This browser looks like: <b id="detected">this device</b></p>'
-    '<p class="sso">A link appears only when that manifest has a real file. Store listings for other password managers are not Komboe.</p></div></section>'
-    '<section class="tight" id="release-manifest"><div class="wrap"><h2>Release manifest</h2>'
+    '<p>Every Komboe client is listed here: Android, desktop, browser extensions, CLI, and watch apps. This browser looks like: <b id="detected">this device</b></p>'
+    '<p class="sso">A download link appears only when this page has a real file. Version, size, SHA-256, and the release date are shown for each published build. Store listings for other password managers are not Komboe.</p></div></section>'
+    '<section class="tight" id="release-manifest"><div class="wrap"><h2>All downloads</h2>'
     + _empty
-    + f'<div class="grid">{_manifest_cards}</div></div></section>'
+    + f'<div class="grid" id="downloads-grid">{_manifest_cards}</div></div></section>'
     + '<section class="tight"><div class="wrap"><h2>Web vault</h2><div class="grid">'
     + '<div class="card glass dl" data-os="web"><div class="ic">🌐</div><h3>Web vault</h3><p>No install. Sign in on the home page.</p><a class="btn p full" href="index.html#signin">Sign in</a></div>'
     + '</div><p class="lead">Check the SHA-256 checksum of a download before installing. '
@@ -218,7 +256,7 @@ META = {
     "features.html": ("Features", "Every Komboe feature, with links to other products that offer the same idea.", "Features"),
     "security.html": ("Security and zero-knowledge", "How Komboe keeps your vault zero-knowledge: on-device encryption, no backdoor and no admin password reset.", "Security"),
     "pricing.html": ("Pricing", "Komboe plans for individuals, families and businesses. The free tier is available now.", "Pricing"),
-    "downloads.html": ("Downloads", "Komboe downloads follow the release manifest. An installer link appears only when a build published that file.", "Downloads"),
+    "downloads.html": ("Downloads", "Download Komboe for Android, desktop, browser extensions, the command line, and watch apps. Each file shows its version, size, SHA-256, and release date.", "Downloads"),
     "developers.html": ("Developers", "Komboe developer resources: source, self-hosting, command line, the assistant and security disclosure.", "Developers"),
     "login.html": ("Log in", "Sign in to Komboe from the home page. One account for every Komboe app.", "Log in"),
     "signup.html": ("Sign up", "Create your Komboe account with your email and master password.", "Sign up"),
@@ -238,7 +276,11 @@ for fn, (t, b) in pages.items():
 open("404.html", "w").write(page("404.html", "Page not found", '<section class="hero"><div class="wrap"><h1>Page not found</h1><p>That page does not exist.</p><div class="cta"><a class="btn p" href="/index.html">Home</a><a class="btn" href="/features.html">Features</a></div></div></section>', "/", "Page not found."))
 
 def u(f):
-    return BASE + ("/" if f == "index.html" else "/" + f)
+    if f == "index.html":
+        return BASE + "/"
+    if f == "downloads.html":
+        return BASE + "/downloads"
+    return BASE + "/" + f
 
 open("sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{u(f)}</loc></url>\n" for f in pages if f not in ("privacy.html", "terms.html")) + "</urlset>\n")
 open("robots.txt", "w").write("User-agent: *\nDisallow: /\n" if STAGING else f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
@@ -257,4 +299,17 @@ os.makedirs(".well-known", exist_ok=True)
 open(".well-known/security.txt", "w").write("Contact: mailto:security@komboe.com\nExpires: " + (_d.datetime.now(_d.timezone.utc) + _d.timedelta(days=365)).strftime("%Y-%m-%dT00:00:00Z") + "\nPreferred-Languages: en\nCanonical: " + BASE + "/.well-known/security.txt\n")
 open("llms.txt", "w").write("# Komboe\n\n> Komboe is an open-source, zero-knowledge password manager. The master password stays on the device. There is no backdoor and no admin password reset.\n\n## Pages\n" + "".join(f"- [{META[f][0]}]({u(f)}): {META[f][1]}\n" for f in pages) + "\n")
 open("komboe-downloads.json", "w").write(_json.dumps(_MANIFEST, indent=2) + "\n")
-print("built", len(pages), "pages")
+os.makedirs("downloads", exist_ok=True)
+title, desc, cr = META["downloads.html"]
+dl_page = page("downloads/index.html", title, downloads, "../", desc, cr, EXTRA.get("downloads.html", ()))
+# Root-relative script for the directory URL so the manifest can refresh the cards.
+if "assets/downloads.js" not in dl_page:
+    dl_page = dl_page.replace("</body>", '<script src="../assets/downloads.js" defer></script></body>')
+open("downloads/index.html", "w").write(dl_page)
+open("downloads/komboe-downloads.json", "w").write(_json.dumps(_MANIFEST, indent=2) + "\n")
+# Keep downloads.html in sync and add a hint for users who open the old path.
+html_page = page("downloads.html", title, downloads, "", desc, cr, EXTRA.get("downloads.html", ()))
+if "assets/downloads.js" not in html_page:
+    html_page = html_page.replace("</body>", '<script src="assets/downloads.js" defer></script></body>')
+open("downloads.html", "w").write(html_page)
+print("built", len(pages), "pages plus /downloads")

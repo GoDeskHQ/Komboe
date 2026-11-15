@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="komboe_update_feed_url" translatable="false">https://downloads.komboe.com/android/latest.json</string>
+    <string name="komboe_update_feed_url" translatable="false">https://komboe.com/downloads/android/latest.json</string>
     <string name="komboe_check_for_updates">Check for updates</string>
     <string name="komboe_updates_wifi_only">Restrict updates to Wi-Fi</string>
     <string name="komboe_update_checking">Checking for a Komboe update…</string>

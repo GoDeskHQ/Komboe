@@ -18,6 +18,7 @@ jobs:
           python3 tests/features/backup_restore.py
           python3 tests/features/self_update.py
           python3 tests/features/coolify_pull.py
+          python3 tests/features/downloads_manifest.py
           python3 tests/features/email_interval.py
       - uses: actions/setup-node@v4
         with:
@@ -30,6 +31,7 @@ jobs:
         env:
           KOMBOE_SERVER_DIGEST: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           KOMBOE_CLIENTS_DIGEST: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+          KOMBOE_MARKETING_DIGEST: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
           ADMIN_TOKEN: ci-admin-token
           SMTP_PASSWORD: ci-smtp-password
         run: |
@@ -38,6 +40,7 @@ jobs:
           printf '%s\n' "$out"
           printf '%s\n' "$out" | grep -F "ghcr.io/godeskio/komboe-server@sha256:${KOMBOE_SERVER_DIGEST}"
           printf '%s\n' "$out" | grep -F "ghcr.io/godeskio/komboe-clients@sha256:${KOMBOE_CLIENTS_DIGEST}"
+          printf '%s\n' "$out" | grep -F "ghcr.io/godeskio/komboe-marketing@sha256:${KOMBOE_MARKETING_DIGEST}"
           printf '%s\n' "$out" | grep -F "donotreply@komboe.com"
           if printf '%s\n' "$out" | grep -Eq '^[[:space:]]*build:'; then
             echo "pull compose rendered a build block" >&2
@@ -255,7 +258,10 @@ jobs:
           print("clients image revision", manifest["revision"])
           PY
           publish_one komboe-clients -f docker/Dockerfile.clients --build-arg KOMBOE_REVISION="${IMAGE_SHA}" --build-context komboe_root=. clients/upstream
-          for name in komboe-server komboe-clients; do
+          # Rebuild the marketing HTML from the committed manifest, then publish the image.
+          ( cd apps/web-marketing && KOMBOE_ENV=production python3 build.py )
+          publish_one komboe-marketing -f docker/Dockerfile.marketing apps/web-marketing
+          for name in komboe-server komboe-clients komboe-marketing; do
             gh api --method PUT "/orgs/${GITHUB_REPOSITORY_OWNER}/packages/container/${name}" -f visibility=public \
               || echo "package ${name} stayed private; Coolify needs a read token to pull it"
           done

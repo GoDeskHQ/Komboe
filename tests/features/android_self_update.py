@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OVERLAY = ROOT / "mobile/self-update"
 EXAMPLE = ROOT / "distribution/android/latest.example.json"
 SHA64 = "a" * 64
-FEED = "https://downloads.komboe.com/android/latest.json"
+FEED = "https://komboe.com/downloads/android/latest.json"
 
 
 def parse_manifest(raw: str, feed_url: str) -> dict:
@@ -57,7 +57,7 @@ def test_example_feed_parses():
     parsed = parse_manifest(EXAMPLE.read_text(), FEED)
     assert parsed["versionName"] == data["versionName"]
     assert parsed["versionCode"] == data["versionCode"]
-    assert parsed["apkUrl"].startswith("https://downloads.komboe.com/android/")
+    assert parsed["apkUrl"].startswith("https://komboe.com/downloads/android/")
     assert re.fullmatch(r"[0-9a-f]{64}", parsed["sha256"])
 
 
@@ -65,7 +65,7 @@ def test_rejects_bad_feeds():
     good = {
         "versionName": "2026.11.1",
         "versionCode": 2026110101,
-        "apkUrl": "https://downloads.komboe.com/android/app.apk",
+        "apkUrl": "https://komboe.com/downloads/android/app.apk",
         "sha256": SHA64,
     }
     def fails(obj=None, feed=FEED, **overrides):
@@ -77,12 +77,12 @@ def test_rejects_bad_feeds():
             return
         raise AssertionError(f"expected failure for {overrides or feed}")
 
-    fails(apkUrl="http://downloads.komboe.com/android/app.apk")
+    fails(apkUrl="http://komboe.com/downloads/android/app.apk")
     fails(sha256="deadbeef")
     fails(versionCode=0)
     fails(versionName="  ")
     fails(apkUrl="https://evil.example/app.apk")
-    fails(feed="http://downloads.komboe.com/android/latest.json")
+    fails(feed="http://komboe.com/downloads/android/latest.json")
 
 
 def test_overlay_and_docs_present():
@@ -105,11 +105,11 @@ def test_overlay_and_docs_present():
     assert "return !wifiOnly(context)" in kotlin
     assert "sha256" in (OVERLAY / "KomboeSelfUpdateManifest.kt").read_text()
     strings = (OVERLAY / "komboe_update_strings.xml").read_text()
-    assert "https://downloads.komboe.com/android/latest.json" in strings
+    assert "https://komboe.com/downloads/android/latest.json" in strings
     assert "Restrict updates to Wi-Fi" in strings
     assert "Allow updates on mobile data" not in strings
     running = (ROOT / "docs/RUNNING.md").read_text()
-    assert "downloads.komboe.com/android" in running
+    assert "komboe.com/downloads/android" in running
     assert "Wi-Fi or mobile data" in running
     assert "Restrict updates to Wi-Fi" in running
     e2e = (ROOT / "mobile/ANDROID-E2E.md").read_text()

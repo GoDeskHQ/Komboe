@@ -1,8 +1,9 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-08T03:19:43Z",
+  "revision": null,
+  "generatedAt": "2026-11-15T01:27:19Z",
   "generator": "scripts/build-downloads-manifest.py",
-  "note": "A download URL is present only when the named file was in the artifact directory and copied to the publish directory. Store listings are not used. komboe-android-debug.apk is refused.",
+  "note": "A download URL is present only when the named file was in the artifact directory and copied to the publish directory. Store listings are not used. komboe-android-debug.apk is refused. Public files are served from https://komboe.com/downloads/ .",
   "refused": [],
   "assets": [
     {
@@ -23,6 +24,7 @@
       "channel": "unsigned-testing",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe/blob/main/docs/BROWSER-EXTENSIONS.md",
       "install": "No extension store listing. Unzip the file and load it unpacked (chrome://extensions, edge://extensions, or the Chromium equivalent). The same zip is what Edge, Brave, Opera, Vivaldi, and Cerebro load.",
@@ -43,10 +45,31 @@
       "channel": "unsigned-testing",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe/blob/main/docs/BROWSER-EXTENSIONS.md",
       "install": "No add-ons listing. Load the zip as a temporary add-on from about:debugging.",
       "reason": "No komboe-firefox.zip is in the release artifacts.",
+      "qr": false
+    },
+    {
+      "id": "extension-safari",
+      "name": "Browser extension (Safari)",
+      "platforms": [
+        "Safari"
+      ],
+      "kind": "extension",
+      "filename": "komboe-safari.zip",
+      "version": null,
+      "status": "unavailable",
+      "channel": "unavailable",
+      "sha256": null,
+      "size": null,
+      "releasedAt": null,
+      "url": null,
+      "docsUrl": "https://github.com/GoDeskio/Komboe/blob/main/docs/BROWSER-EXTENSIONS.md",
+      "install": "Safari requires a macOS + Xcode build. There is no Linux CI artifact.",
+      "reason": "No Safari extension build. A macOS + Xcode build is required and is not set up.",
       "qr": false
     },
     {
@@ -62,6 +85,7 @@
       "channel": "unsigned-testing",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe",
       "install": "Unsigned testing installer. Windows SmartScreen will warn.",
@@ -81,9 +105,10 @@
       "channel": "unsigned-testing",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe",
-      "install": "Unsigned testing package.",
+      "install": "Unsigned testing package. Install with your package manager, then set the Komboe server URL.",
       "reason": "No verified current Linux .deb. Older unsigned builds are not offered.",
       "qr": false
     },
@@ -100,9 +125,10 @@
       "channel": "unsigned-testing",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe",
-      "install": "Unsigned testing AppImage.",
+      "install": "Unsigned testing AppImage. Make it executable and run it, then set the Komboe server URL.",
       "reason": "No verified current Linux AppImage. Older unsigned builds are not offered.",
       "qr": false
     },
@@ -119,6 +145,7 @@
       "channel": "unavailable",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe",
       "install": "",
@@ -132,17 +159,18 @@
         "Android"
       ],
       "kind": "mobile",
-      "filename": "komboe-android.apk",
-      "version": null,
-      "status": "unavailable",
-      "channel": "unavailable",
-      "sha256": null,
-      "size": null,
-      "url": null,
+      "filename": "io.komboe.android-2026.11.15.2.apk",
+      "version": "2026.11.15.2",
+      "status": "published",
+      "channel": "sideload",
+      "sha256": "e1142f1a9a8664c962c894c8a1968653729ae7434c6f93df6be3b767306c6da8",
+      "size": 90366164,
+      "releasedAt": "2026-11-15T02:26:00Z",
+      "url": "https://komboe.com/downloads/android/io.komboe.android-2026.11.15.2.apk",
       "docsUrl": "https://github.com/GoDeskio/Komboe/tree/main/mobile",
-      "install": "",
-      "reason": "No production Android APK. An internal debug APK exists on a build machine and is not published: device login, autofill, PIN, and biometric are unverified.",
-      "qr": false
+      "install": "Sideload this APK and allow installs from this source if Android asks. After the first install, the app checks for updates from this page over Wi-Fi or mobile data. Settings \u2192 About \u2192 Check for updates also works. It is signed with the Komboe debug key, so it upgrades the existing sideload.",
+      "reason": null,
+      "qr": true
     },
     {
       "id": "ios",
@@ -157,10 +185,71 @@
       "channel": "unavailable",
       "sha256": null,
       "size": null,
+      "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe",
       "install": "",
       "reason": "No iOS build, App Store listing, or TestFlight. There is no QR code.",
+      "qr": false
+    },
+    {
+      "id": "cli",
+      "name": "Command line (Linux x64)",
+      "platforms": [
+        "Linux"
+      ],
+      "kind": "cli",
+      "filename": "komboe-cli-linux-x64.zip",
+      "version": null,
+      "status": "unavailable",
+      "channel": "unsigned-testing",
+      "sha256": null,
+      "size": null,
+      "releasedAt": null,
+      "url": null,
+      "docsUrl": "https://github.com/GoDeskio/Komboe",
+      "install": "Unzip and put `komboe` on your PATH. Set the server URL before signing in. The CLI update command only contacts a host when KOMBOE_CLI_RELEASES_URL is set.",
+      "reason": "No CLI zip is in the release artifacts.",
+      "qr": false
+    },
+    {
+      "id": "wear-os",
+      "name": "Wear OS",
+      "platforms": [
+        "Wear OS"
+      ],
+      "kind": "wear",
+      "filename": "komboe-wearos.apk",
+      "version": null,
+      "status": "unavailable",
+      "channel": "unavailable",
+      "sha256": null,
+      "size": null,
+      "releasedAt": null,
+      "url": null,
+      "docsUrl": "https://github.com/GoDeskio/Komboe/tree/main/clients/wearos",
+      "install": "The Wear OS companion is a scaffold. The phone app stays the vault authority. A watch build is not published.",
+      "reason": "No Wear OS APK. The companion is a scaffold and is not published.",
+      "qr": false
+    },
+    {
+      "id": "apple-watch",
+      "name": "Apple Watch",
+      "platforms": [
+        "watchOS"
+      ],
+      "kind": "wear",
+      "filename": null,
+      "version": null,
+      "status": "unavailable",
+      "channel": "unavailable",
+      "sha256": null,
+      "size": null,
+      "releasedAt": null,
+      "url": null,
+      "docsUrl": "https://github.com/GoDeskio/Komboe",
+      "install": "",
+      "reason": "No Apple Watch app. A watchOS build is not set up.",
       "qr": false
     }
   ]

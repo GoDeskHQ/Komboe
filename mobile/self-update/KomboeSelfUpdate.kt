@@ -19,7 +19,7 @@ import com.x8bit.bitwarden.R
 
 /**
  * In-app OTA for io.komboe.android. There is no Play Store and no USB after the first sideload.
- * The default feed is https://downloads.komboe.com/android/latest.json (override the string resource
+ * The default feed is https://komboe.com/downloads/android/latest.json (override the string resource
  * komboe_update_feed_url at build time). APK bytes must be https on the same host, and sha256 must match.
  * Checks and downloads run on Wi-Fi or mobile data unless the person turns on “Restrict updates to Wi-Fi”.
  */

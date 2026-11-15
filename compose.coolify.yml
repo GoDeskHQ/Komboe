@@ -1,5 +1,6 @@
 # Coolify sandbox deploy for https://sandbox.komboe.com
 # StackMail SMTP via Coolify env (not mailpit). Builds web vault then server.
+# marketing serves https://komboe.com/downloads (HA Caddy routes /downloads* to port 4173).
 services:
   clients:
     build:
@@ -49,7 +50,26 @@ services:
       retries: 5
       start_period: 30s
 
+  marketing:
+    build:
+      context: ./apps/web-marketing
+      dockerfile: ../../docker/Dockerfile.marketing
+    image: komboe-marketing:sandbox
+    expose:
+      - "4173"
+    environment:
+      KOMBOE_DOWNLOADS_DIR: /var/komboe-downloads
+    volumes:
+      - komboe-downloads:/var/komboe-downloads
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:4173/downloads"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
 volumes:
   web-vault:
   extension:
   komboe-data:
+  komboe-downloads:

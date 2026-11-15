@@ -41,7 +41,7 @@ export class UpdaterMain {
   ) {
     autoUpdater.logger = log;
 
-    // Opt-in feed. KOMBOE_UPDATE_URL replaces the build-time downloads.komboe.com
+    // Opt-in feed. KOMBOE_UPDATE_URL replaces the build-time komboe.com/downloads
     // URL with a generic feed the operator hosts. Setting the URL does not
     // contact it; checks stay off until KOMBOE_UPDATE_FEED=1.
     const updateUrl = process.env.KOMBOE_UPDATE_URL;
@@ -284,7 +284,7 @@ export class UpdaterMain {
   }
 
   private userDisabledUpdates(): boolean {
-    // A self-hosted desktop build does not check downloads.komboe.com, or any
+    // A self-hosted desktop build does not check komboe.com/downloads, or any
     // other feed, unless the operator opts in. Linux already cannot auto-update.
     if (process.env.KOMBOE_UPDATE_FEED !== "1") {
       return true;

@@ -15,6 +15,9 @@ def main():
     assert "pull_policy:" not in text
     assert "ghcr.io/godeskio/komboe-server@sha256:${KOMBOE_SERVER_DIGEST:?set to the digest printed by the main image job}" in text
     assert "ghcr.io/godeskio/komboe-clients@sha256:${KOMBOE_CLIENTS_DIGEST:?set to the digest printed by the main image job}" in text
+    assert "ghcr.io/godeskio/komboe-marketing@sha256:${KOMBOE_MARKETING_DIGEST:?set to the digest printed by the main image job}" in text
+    assert "komboe-downloads:/var/komboe-downloads" in text
+    assert "4173" in text
     assert 'restart: "no"' in text
     assert "komboe-data:/data" in text
     assert "web-vault:/web-vault" in text
@@ -46,6 +49,8 @@ def main():
     assert "containerimage.digest" in workflow
     assert "docker/Dockerfile.server" in workflow
     assert "docker/Dockerfile.clients" in workflow
+    assert "docker/Dockerfile.marketing" in workflow
+    assert "marketing:" in sandbox
     print("COOLIFY PULL PASS")
 
 

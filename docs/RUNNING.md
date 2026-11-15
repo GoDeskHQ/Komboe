@@ -60,13 +60,13 @@ A server started with the defaults does not call komboe.com, Bitwarden, GitHub, 
 | `SSO_ENABLED` | false | Your OIDC issuer (`SSO_AUTHORITY`) or SAML IdP. |
 | `SMTP_HOST` | unset | Your mail server. No mail is sent until this is set. |
 
-Desktop update checks stay off unless `KOMBOE_UPDATE_FEED=1`. `KOMBOE_UPDATE_URL` points that check at an https feed you host; otherwise the build-time feed is `https://downloads.komboe.com/desktop`. The CLI `update` command contacts a host only when `KOMBOE_CLI_RELEASES_URL` is a GitHub-compatible releases API you host. The master-password breach checkbox is unchecked, so a password change does not call `api.pwnedpasswords.com` until the person checks it. The exposed-passwords report and the per-login check button still call that k-anonymity API when someone runs them. The web vault served by this server uses its own origin. An extension, desktop app, CLI, or Android app that has not saved a server URL still has the upstream Bitwarden cloud hosts compiled in as the unset-server default; the server picker does not offer those regions.
+Desktop update checks stay off unless `KOMBOE_UPDATE_FEED=1`. `KOMBOE_UPDATE_URL` points that check at an https feed you host; otherwise the build-time feed is `https://komboe.com/downloads/desktop`. The CLI `update` command contacts a host only when `KOMBOE_CLI_RELEASES_URL` is a GitHub-compatible releases API you host. The master-password breach checkbox is unchecked, so a password change does not call `api.pwnedpasswords.com` until the person checks it. The exposed-passwords report and the per-login check button still call that k-anonymity API when someone runs them. The web vault served by this server uses its own origin. An extension, desktop app, CLI, or Android app that has not saved a server URL still has the upstream Bitwarden cloud hosts compiled in as the unset-server default; the server picker does not offer those regions.
 
 ## Android in-app updates
 
 After the first sideload, the Android app (`io.komboe.android`) checks an HTTPS feed and can install a newer APK automatically on Wi-Fi or mobile data. It checks once every 24 hours when the app starts, and also from Settings → About → Check for updates. “Restrict updates to Wi-Fi” is off by default.
 
-The default feed is `https://downloads.komboe.com/android/latest.json`. Override it at build time by changing `komboe_update_feed_url` in `mobile/self-update/komboe_update_strings.xml` before running `mobile/android-build.sh`. `android_rebrand.py` copies that file and the OTA Kotlin sources into the pinned Bitwarden Android tree.
+The default feed is `https://komboe.com/downloads/android/latest.json`. Override it at build time by changing `komboe_update_feed_url` in `mobile/self-update/komboe_update_strings.xml` before running `mobile/android-build.sh`. `android_rebrand.py` copies that file and the OTA Kotlin sources into the pinned Bitwarden Android tree.
 
 Feed shape (see `distribution/android/latest.example.json`):
 
@@ -74,14 +74,14 @@ Feed shape (see `distribution/android/latest.example.json`):
 {
   "versionName": "2026.11.1",
   "versionCode": 2026110101,
-  "apkUrl": "https://downloads.komboe.com/android/io.komboe.android-2026.11.1.apk",
+  "apkUrl": "https://komboe.com/downloads/android/io.komboe.android-2026.11.1.apk",
   "sha256": "64 lowercase hex characters of the APK",
   "minSdk": 29,
   "releaseNotes": "optional"
 }
 ```
 
-Rules: the feed and `apkUrl` must be https, `apkUrl` must be on the same host as the feed, and the downloaded bytes must match `sha256`. Publish a new APK by building with `mobile/android-build.sh`, hashing the fdroid debug (or release) APK, and hosting both the APK and `latest.json` on that host. This repository does not create the `downloads.komboe.com` DNS record or upload artifacts.
+Rules: the feed and `apkUrl` must be https, `apkUrl` must be on the same host as the feed, and the downloaded bytes must match `sha256`. Publish a new APK by building with `mobile/android-build.sh`, hashing the fdroid debug (or release) APK, and hosting both the APK and `latest.json` on that host. Host the APK and `latest.json` on the komboe.com downloads volume (`/var/komboe-downloads`) with `scripts/publish-downloads.py`. Richard copies the tree onto the server. Do not create a downloads.komboe.com DNS record.
 
 A first sideload of a build that includes this code is still required before in-app OTA works on a device that already has an older APK.
 
