@@ -413,7 +413,7 @@
   },
   "deletionDateDescV2": {
     "message": "Senda data honetan ezabatuko da betirako.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "fileToShare": {
     "message": "Partekatzeko fitxategia"
@@ -446,7 +446,7 @@
   },
   "sendDetails": {
     "message": "Senda xehetasunak",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeTextToShare": {
     "message": "Partekatzeko testua"
@@ -469,7 +469,7 @@
   },
   "deleteSendPermanentConfirmation": {
     "message": "Ziur zaude Send hau betirako ezabatu nahi duzula?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewItemHeaderLoginSentenceCase": {
     "message": "Ikusi saio-hasiera",
@@ -1710,7 +1710,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Sartu autentifikazio-aplikazio batek sortutako kodea, adibidez Komboe Authenticator.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Yubico OTP segurtasun-gakoa"
@@ -2622,7 +2622,7 @@
   },
   "show": {
     "message": "Erakutsi",
-    "description": "Tray menu item that brings the Bitwarden window to the foreground."
+    "description": "Tray menu item that brings the Komboe window to the foreground."
   },
   "hideToTray": {
     "message": "Ezkutatu erretilura"
@@ -3192,11 +3192,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "allSends": {
     "message": "Send guztiak",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Sends' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Fitxategia"
@@ -3206,11 +3206,11 @@
   },
   "searchSends": {
     "message": "Send-ak bilatu",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Editatu Send-a",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "me": {
     "message": "Ni"
@@ -3226,14 +3226,14 @@
   },
   "deletionDateDesc": {
     "message": "Send-a betiko ezabatuko da zehaztutako datan eta orduan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Iraungitze data"
   },
   "expirationDateDesc": {
     "message": "Hala ezartzen bada, Send honetarako sarbidea zehaztutako egunean eta orduan amaituko da.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Sarbide kopuru maximoa",
@@ -3241,61 +3241,61 @@
   },
   "maxAccessCountDesc": {
     "message": "Hala ezartzen bada, erabiltzaileak ezin izango dira Send honetara sartu gehienezko sarbide kopurura iritsi ondoren.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Uneko sarbide kopurua"
   },
   "disableSend": {
     "message": "Desgaitu Send hau inor sar ez dadin.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Nahi izanez gero, pasahitza eskatu erabiltzaileak bidalketa honetara sar daitezen.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Send honi buruzko ohar pribatuak.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Send esteka",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "Bidali esteka",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "Send-era sartzean, ezkutatu testua modu lehenetsian",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send-a sortua",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Send-a editatua",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletedSend": {
     "message": "Send-a ezabatua",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Pasahitz berria"
   },
   "whatTypeOfSend": {
     "message": "Zein Send mota da hau?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSend": {
     "message": "Sortu Send-a",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Sortu Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Bidali nahi duzun testua."
@@ -3320,26 +3320,26 @@
   },
   "deleteSendConfirmation": {
     "message": "Ziur al zaude Send hau ezabatu nahi duzula?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLink": {
     "message": "Kopiatu Send esteka",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Kopiatu Send esteka arbelean",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "Gordetzean kopiatu Send honen esteka arbelean, ondoren partekatzeko."
   },
   "sendDisabled": {
     "message": "Send-a desgaitua",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Enpresa-politika baten ondorioz, lehendik dagoen Send-a bakarrik ezaba dezakezu.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copyLink": {
     "message": "Kopiatu esteka"
@@ -4004,7 +4004,7 @@
   },
   "vault": {
     "message": "Kutxa gotorra",
-    "description": "'Vault' is a noun and refers to the Bitwarden Vault feature."
+    "description": "'Vault' is a noun and refers to the Komboe Vault feature."
   },
   "rememberEmail": {
     "message": "Emaila gogoratu"
@@ -5540,7 +5540,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "URI bat-etortzearen detekzioa da Komboe-ek autobetetze iradokizunak identifikatzeko modua.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"Adierazpen erregularra\" aukera aurreratua da, kredentzialak agerian uzteko arrisku handiagoa duena.",
@@ -5579,7 +5579,7 @@
   },
   "bitwardenSupport": {
     "message": "Komboe laguntza",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "Deskargatu"
@@ -5921,14 +5921,14 @@
   },
   "sendsTitleNoItems": {
     "message": "Bidali informazio sentikorra modu seguruan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsTitleNoSearchResults": {
     "message": "Ez da bilaketaren emaitzarik itzuli"
   },
   "sendsBodyNoItems": {
     "message": "Partekatu fitxategiak eta datuak modu seguruan edonorekin, edozein plataformatan. Zure informazioa muturretik muturrera enkriptatuta egongo da, esposizioa mugatuz.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoSearchResults": {
     "message": "Garbitu iragazkiak edo saiatu beste bilaketa-termino batekin"
@@ -6693,7 +6693,7 @@
   },
   "sendPasswordHelperText": {
     "message": "Pertsona bakoitzak pasahitza sartu behar du Send hau ikusteko",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "emailProtected": {
     "message": "Helbide elektronikoa babestuta"
@@ -6759,7 +6759,7 @@
   },
   "sendTypes": {
     "message": "Send motak",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "any": {
     "message": "Edonolakoa"
@@ -6899,7 +6899,7 @@
   },
   "sendHasUnsavedEdits": {
     "message": "Send-ek gorde gabeko aldaketak ditu. Ziur zaude irten nahi duzula?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewTextSendHeader": {
     "message": "Ikusi testua"
@@ -6909,7 +6909,7 @@
   },
   "sendCreated": {
     "message": "Send sortuta",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "Sarrerak zenbakizkoa izan behar du"
@@ -6936,23 +6936,23 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Ez da zure erakundearen Send politikarekin bat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "Send hau editatzeko, egin kopia bat. Send hau ezarritako ezabapen-data iraungi ahal bada, ez da ekintzarik behar",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowTextSends": {
     "message": "Testu Send-ak ez dira onartzen zure erakundean",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "Fitxategi Send-ak ez dira onartzen zure erakundean",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Send hau automatikoki iraungiko da ezarritako ezabapen-datan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Egin kopia bat"
@@ -7050,7 +7050,7 @@
   },
   "confirmPasskeyRegistrationMfaMacOS": {
     "message": "create a new $RPID$ passkey for $USERNAME$. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7064,7 +7064,7 @@
   },
   "confirmPasskeyOverwriteMfaMacOS": {
     "message": "overwrite a $RPID$ passkey for $USERNAME$. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7078,7 +7078,7 @@
   },
   "confirmPasskeyAssertionMfaMacOS": {
     "message": "sign in as $USERNAME$ with your $RPID$ passkey. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",

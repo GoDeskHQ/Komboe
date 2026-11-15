@@ -2767,7 +2767,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Introduza um código gerado por uma aplicação de autenticação como o Komboe Authenticator.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Chave de segurança Yubico OTP"
@@ -4040,7 +4040,7 @@
   },
   "twoStepLoginEnterpriseDescStart": {
     "message": "Aplicar as opções de verificação de dois passos do Komboe para os membros, utilizando as ",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Bitwarden Two-step Login options for members by using the Two-step Login Policy.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Komboe Two-step Login options for members by using the Two-step Login Policy.'"
   },
   "twoStepLoginPolicy": {
     "message": "Políticas da verificação de dois passos"
@@ -4351,15 +4351,15 @@
   },
   "reportsDesc": {
     "message": "Identifique e elimine vulnerabilidades de segurança nas suas contas online clicando nos relatórios abaixo.",
-    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization vault."
+    "description": "Vault health reports can be used to evaluate the security of your Komboe individual or organization vault."
   },
   "orgsReportsDesc": {
     "message": "Identifique e elimine vulnerabilidades de segurança nas contas da sua organização clicando nos relatórios abaixo.",
-    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization vault."
+    "description": "Vault health reports can be used to evaluate the security of your Komboe individual or organization vault."
   },
   "orgsReportsDescV2": {
     "message": "Identifique e elimine vulnerabilidades de segurança no cofre da sua organização clicando nos relatórios abaixo.",
-    "description": "Vault health reports can be used to evaluate the security of your Bitwarden individual or organization vault."
+    "description": "Vault health reports can be used to evaluate the security of your Komboe individual or organization vault."
   },
   "unsecuredWebsitesReport": {
     "message": "Sites inseguros"
@@ -4631,7 +4631,7 @@
   },
   "accountCredit": {
     "message": "Crédito da conta",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of Komboe, a positive balance means that you owe money, while a negative balance means that you have a credit (Komboe owes you money)."
   },
   "appliedBalance": {
     "message": "Saldo aplicado",
@@ -4643,7 +4643,7 @@
   },
   "accountBalance": {
     "message": "Saldo da conta",
-    "description": "Financial term. In the case of Bitwarden, a positive balance means that you owe money, while a negative balance means that you have a credit (Bitwarden owes you money)."
+    "description": "Financial term. In the case of Komboe, a positive balance means that you owe money, while a negative balance means that you have a credit (Komboe owes you money)."
   },
   "addCredit": {
     "message": "Adicionar crédito",
@@ -5162,7 +5162,7 @@
     "placeholders": {
       "statement_name": {
         "content": "$1",
-        "example": "BITWARDEN"
+        "example": "KOMBOE"
       }
     }
   },
@@ -5861,7 +5861,7 @@
   },
   "createdTextSendV2": {
     "message": "Send de texto $SENDID$ criado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5871,7 +5871,7 @@
   },
   "createdTextSendWithEmailVerificationV2": {
     "message": "Send de texto $SENDID$ criado com verificação por e-mail",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5881,7 +5881,7 @@
   },
   "createdTextSendWithPasswordProtectionV2": {
     "message": "Send de texto $SENDID$ criado com palavra-passe",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5891,7 +5891,7 @@
   },
   "createdFileSendV2": {
     "message": "Send de ficheiro $SENDID$ criado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5901,7 +5901,7 @@
   },
   "createdFileSendWithEmailVerificationV2": {
     "message": "Send de ficheiro $SENDID$ criado com verificação por e-mail",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5911,7 +5911,7 @@
   },
   "createdFileSendWithPasswordProtectionV2": {
     "message": "Send de ficheiro $SENDID$ criado com palavra-passe",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5921,7 +5921,7 @@
   },
   "editedTextSendV2": {
     "message": "Send de texto $SENDID$ editado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5931,7 +5931,7 @@
   },
   "editedFileSendV2": {
     "message": "Send de ficheiro $SENDID$ editado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5941,7 +5941,7 @@
   },
   "deletedTextSendV2": {
     "message": "Send de texto $SENDID$ eliminado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5951,7 +5951,7 @@
   },
   "deletedFileSendV2": {
     "message": "Send de ficheiro $SENDID$ eliminado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5961,7 +5961,7 @@
   },
   "accessedTextSendV3": {
     "message": "Acedeu ao Send de texto $SENDID$ criado por $ID$",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -5975,7 +5975,7 @@
   },
   "accessedFileSendV3": {
     "message": "Acedeu ao Send de ficheiro $SENDID$ criado por $ID$",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "sendid": {
         "content": "$1",
@@ -6001,7 +6001,7 @@
   },
   "viewSendEvents": {
     "message": "Ver Send $ID$",
-    "description": "Accessible label for a clickable Send id in the event log. 'Send' is the name of the 'Bitwarden Send' feature and should not be translated.",
+    "description": "Accessible label for a clickable Send id in the event log. 'Send' is the name of the 'Komboe Send' feature and should not be translated.",
     "placeholders": {
       "id": {
         "content": "$1",
@@ -8397,7 +8397,7 @@
   },
   "sendDetails": {
     "message": "Detalhes do Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeTextToShare": {
     "message": "Texto a partilhar"
@@ -8410,27 +8410,27 @@
   },
   "createSend": {
     "message": "Novo Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Criar Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Editar Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send criado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendCreatedSuccessfully": {
     "message": "Send criado com sucesso!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendCreatedDescriptionV2": {
     "message": "Copie e partilhe este link do Send. O Send estará disponível para qualquer pessoa com o link durante os próximos $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -8440,7 +8440,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "Copie e partilhe este link do Send. O Send estará disponível para qualquer pessoa com o link e palavras-passe durante os próximos $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -8450,7 +8450,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "Copie e partilhe este link do Send. Pode ser visualizado pelas pessoas que especificou durante os próximos $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -8469,33 +8469,33 @@
   },
   "editedSend": {
     "message": "Send editado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletedSend": {
     "message": "Send eliminado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSend": {
     "message": "Eliminar Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "Tem a certeza de que pretende eliminar permanentemente este Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "Data de eliminação"
   },
   "deletionDateDescV2": {
     "message": "O Send será permanentemente eliminado nesta data.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Prazo de validade"
   },
   "expirationDateDesc": {
     "message": "Se definido, o acesso a este Send expirará na data e hora especificadas.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Número máximo de acessos"
@@ -8517,14 +8517,14 @@
   },
   "sendLink": {
     "message": "Link do Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copyLink": {
     "message": "Copiar link"
   },
   "copySendLink": {
     "message": "Copiar link do Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Remover palavra-passe"
@@ -8564,15 +8564,15 @@
   },
   "searchSends": {
     "message": "Procurar Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendProtectedPassword": {
     "message": "Este Send está protegido por uma palavra-passe. Introduza a palavra-passe abaixo para continuar.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendProtectedPasswordDontKnow": {
     "message": "Não sabe a palavra-passe? Peça ao remetente a palavra-passe necessária para aceder a este Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "downloadAttachments": {
     "message": "Transferir anexos"
@@ -8585,7 +8585,7 @@
   },
   "bitwardenSupport": {
     "message": "suporte do Komboe⁠",
-    "description": "Link text that follows the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text that follows the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "Transferir"
@@ -8600,19 +8600,19 @@
   },
   "sendAccessUnavailable": {
     "message": "O Send a que está a tentar aceder não existe ou já não está disponível.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "missingSendFile": {
     "message": "Não foi possível encontrar o ficheiro associado a este Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDownloadBlocked": {
     "message": "Não foi possível transferir este ficheiro porque o link de transferência não passou numa verificação de segurança.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. Displayed when a Send's file download url fails to use https or targets a local/private network address."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. Displayed when a Send's file download url fails to use https or targets a local/private network address."
   },
   "noSendsInList": {
     "message": "Não existem Sends para apresentar.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "emergencyAccess": {
     "message": "Acesso de emergência"
@@ -9016,38 +9016,38 @@
   },
   "disableSendPolicyDesc": {
     "message": "Não permitir que os membros criem ou editem Sends.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disableSendExemption": {
     "message": "Os membros da organização que podem gerir as políticas da organização estão isentos da aplicação desta política."
   },
   "sendDisabled": {
     "message": "Send removido",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Devido a uma política da empresa, só é possível eliminar um Send existente.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Não está em conformidade com a política do Send da sua organização",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowTextSends": {
     "message": "Os Sends de texto não são permitidos na sua organização",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "Os Sends de ficheiro não são permitidos na sua organização",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Este Send expirará automaticamente na data de eliminação definida",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "Para editar este Send, crie uma cópia. Se este Send puder expirar na data de eliminação definida, não é necessária qualquer ação",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Fazer uma cópia"
@@ -9057,34 +9057,34 @@
   },
   "manageSendV2": {
     "message": "Gerir o Send e partilhar",
-    "description": "'Send' is the name of a Bitwarden feature (used in the plural here) and should not be translated."
+    "description": "'Send' is the name of a Komboe feature (used in the plural here) and should not be translated."
   },
   "sendControlsPolicyDesc": {
     "message": "Definir opções para criar e editar Sends, incluindo a possibilidade de remover Sends.",
-    "description": "'Send' is the name of a Bitwarden feature (used in the plural here) and should not be translated."
+    "description": "'Send' is the name of a Komboe feature (used in the plural here) and should not be translated."
   },
   "sendControlsPolicyDescV5": {
     "message": "Gerir a forma como os membros utilizam o Send e partilham itens do cofre. Esta política não será aplicada aos proprietários e administradores.",
-    "description": "'Send' is the name of a Bitwarden feature (used in the plural here) and should not be translated."
+    "description": "'Send' is the name of a Komboe feature (used in the plural here) and should not be translated."
   },
   "sendControlsPolicyDescListVfo1": {
     "message": "Gerir a forma como os membros utilizam o Send.",
-    "description": "'Send' is the name of a Bitwarden feature and should not be translated."
+    "description": "'Send' is the name of a Komboe feature and should not be translated."
   },
   "sendOptions": {
     "message": "Opções do Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendOptionsPolicyDesc": {
     "message": "Definir opções para criar e editar Sends.",
-    "description": "'Sends' is a plural noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Sends' is a plural noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendOptionsExemption": {
     "message": "Os membros da organização que podem gerir as políticas da organização estão isentos da aplicação desta política."
   },
   "disableHideEmail": {
     "message": "Mostrar sempre o endereço de e-mail do membro com os destinatários ao criar ou editar um Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "uriMatchDetectionPolicy": {
     "message": "Deteção de correspondência de URI predefinida"
@@ -9105,11 +9105,11 @@
   },
   "fillAssistPolicy": {
     "message": "Ativar Fill assist",
-    "description": "'Fill assist' is a Bitwarden feature name; do not translate."
+    "description": "'Fill assist' is a Komboe feature name; do not translate."
   },
   "fillAssistPolicyV2": {
     "message": "Ativar o Fill assist",
-    "description": "'Fill assist' is a Bitwarden feature name; do not translate."
+    "description": "'Fill assist' is a Komboe feature name; do not translate."
   },
   "fillAssistPolicyDesc": {
     "message": "Ativar o Fill assist por predefinição para todos os membros. Esta funcionalidade utiliza instruções específicas para cada site, revistas pelo Komboe, para melhorar a precisão do preenchimento automático em sites que são conhecidos por apresentarem dificuldades com o preenchimento automático."
@@ -9250,15 +9250,15 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendAccessTaglineProductDesc": {
     "message": "O Komboe Send transmite informações sensíveis e temporárias a terceiros de forma fácil e segura.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendAccessTaglineLearnMore": {
     "message": "Saiba mais sobre o",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more about** Bitwarden Send or sign up to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read '**Learn more about** Komboe Send or sign up to try it today.'"
   },
   "sendVaultCardProductDesc": {
     "message": "Partilhe texto ou ficheiros diretamente com qualquer pessoa."
@@ -9354,15 +9354,15 @@
   },
   "sendAccessTaglineOr": {
     "message": "ou",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send **or** sign up to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Komboe Send **or** sign up to try it today.'"
   },
   "sendAccessTaglineSignUp": {
     "message": "registe-se",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send or **sign up** to try it today.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Komboe Send or **sign up** to try it today.'"
   },
   "sendAccessTaglineTryToday": {
     "message": "para o experimentar hoje.",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Bitwarden Send or sign up to **try it today.**'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Learn more about Komboe Send or sign up to **try it today.**'"
   },
   "sendAccessCreatorIdentifier": {
     "message": "O membro $USER_IDENTIFIER$ do Komboe partilhou consigo o seguinte",
@@ -9375,23 +9375,23 @@
   },
   "viewSend": {
     "message": "Ver Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "verifyYourEmailToViewThisSend": {
     "message": "Confirme o seu e-mail para ver este Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "didNotReceiveCodeContactSenderOr": {
     "message": "Não recebeu um código? Contacte o remetente para confirmar o seu endereço de e-mail ou ",
-    "description": "Hint text shown below the verification code input on the Send access page. Followed by a 'Resend code' link. 'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "Hint text shown below the verification code input on the Send access page. Followed by a 'Resend code' link. 'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "codeResent": {
     "message": "Reenviar código de verificação",
-    "description": "Toast message shown when a user clicks the resend code link on the Send access page. 'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "Toast message shown when a user clicks the resend code link on the Send access page. 'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewSendHiddenEmailWarning": {
     "message": "O utilizador Komboe que criou este Send optou por ocultar o seu endereço de e-mail. Deve certificar-se de que confia na fonte deste link antes de utilizar ou descarregar o seu conteúdo.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDateIsInvalid": {
     "message": "O prazo de validade fornecido não é válido."
@@ -10499,15 +10499,15 @@
   },
   "memberDecryptionKeyConnectorDescStart": {
     "message": "Ligue o início de sessão com SSO ao seu servidor de chaves de desencriptação auto-hospedado. Ao utilizar esta opção, os membros não terão de utilizar as suas palavras-passe mestras para desencriptar os dados do cofre. As",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Bitwarden Support for set up assistance.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Komboe Support for set up assistance.'"
   },
   "memberDecryptionKeyConnectorDescLink": {
     "message": "políticas de autenticação SSO e de organização única",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Bitwarden Support for set up assistance.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Komboe Support for set up assistance.'"
   },
   "memberDecryptionKeyConnectorDescEnd": {
     "message": "são necessárias para configurar a descriptografia do Key Connector. Entre em contacto com o Apoio ao cliente do Komboe para obter assistência na configuração.",
-    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Bitwarden Support for set up assistance.'"
+    "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Komboe Support for set up assistance.'"
   },
   "keyConnectorPolicyRestriction": {
     "message": "A política \"Iniciar sessão com SSO e desencriptação do Key Connector\" está ativada. Esta política aplica-se apenas a proprietários e administradores."
@@ -13657,7 +13657,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "A deteção de correspondência de URI é a forma como o Komboe identifica sugestões de preenchimento automático.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "A \"Expressão regular\" é uma opção avançada com um risco acrescido de exposição de credenciais.",
@@ -14274,11 +14274,11 @@
   },
   "ssoDescStart": {
     "message": "Configurar",
-    "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure single sign-on for Bitwarden using the implementation guide for your Identity Provider."
+    "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure single sign-on for Komboe using the implementation guide for your Identity Provider."
   },
   "ssoDescEnd": {
     "message": "para o Komboe utilizando o guia de implementação do seu fornecedor de identidade.",
-    "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure single sign-on for Bitwarden using the implementation guide for your Identity Provider."
+    "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure single sign-on for Komboe using the implementation guide for your Identity Provider."
   },
   "userProvisioning": {
     "message": "Provisionamento de utilizadores"
@@ -14288,11 +14288,11 @@
   },
   "scimIntegrationDescStart": {
     "message": "Configure o ",
-    "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
+    "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Komboe using the implementation guide for your Identity Provider"
   },
   "scimIntegrationDescEnd": {
     "message": "(Sistema de Gestão de Identidades entre Domínios) para fornecer automaticamente utilizadores e grupos ao Komboe utilizando o guia de implementação do seu fornecedor de identidade.",
-    "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
+    "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Komboe using the implementation guide for your Identity Provider"
   },
   "bwdc": {
     "message": "Conector de diretório do Komboe"
@@ -14854,11 +14854,11 @@
   },
   "providerClientVaultPrivacyNotification": {
     "message": "Aviso: No final deste mês, a privacidade do cofre do cliente será melhorada e os membros do fornecedor deixarão de ter acesso direto aos itens do cofre do cliente. Para questões,",
-    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'Notice: Later this month, client vault privacy will be improved and provider members will no longer have direct access to client vault items. For questions, please contact Bitwarden support'."
+    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'Notice: Later this month, client vault privacy will be improved and provider members will no longer have direct access to client vault items. For questions, please contact Komboe support'."
   },
   "contactBitwardenSupport": {
     "message": "contacte o suporte do Komboe.",
-    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'Notice: Later this month, client vault privacy will be improved and provider members will no longer have direct access to client vault items. For questions, please contact Bitwarden support'. 'Bitwarden' should not be translated"
+    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'Notice: Later this month, client vault privacy will be improved and provider members will no longer have direct access to client vault items. For questions, please contact Komboe support'. 'Komboe' should not be translated"
   },
   "sponsored": {
     "message": "Patrocinado"
@@ -15943,11 +15943,11 @@
   },
   "sendsTitleNoItems": {
     "message": "Envie informações sensíveis com segurança",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "Partilhe ficheiros e dados de forma segura com qualquer pessoa, em qualquer plataforma. As suas informações permanecerão encriptadas ponto a ponto, limitando a exposição.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "generatorNudgeTitle": {
     "message": "Criar rapidamente palavras-passe"
@@ -16050,23 +16050,23 @@
   },
   "gettingStartedWithBitwardenPart1": {
     "message": "Para obter dicas sobre como começar a utilizar o Komboe, visite a página",
-    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Bitwarden visit the Learning Center and Help Center'"
+    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Komboe visit the Learning Center and Help Center'"
   },
   "gettingStartedWithBitwardenPart2": {
     "message": "Centro de aprendizagem",
-    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Bitwarden visit the Learning Center and Help Center'"
+    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Komboe visit the Learning Center and Help Center'"
   },
   "openExtensionFromToolbarPart1": {
     "message": "Se a extensão não tiver sido aberta, poderá ter de abrir o Komboe através do ícone ",
-    "description": "This will be used as part of a larger sentence, broken up to include the Bitwarden icon. The full sentence will read 'If the extension didn't open, you may need to open Bitwarden from the icon [Bitwarden Icon] on the toolbar.'"
+    "description": "This will be used as part of a larger sentence, broken up to include the Komboe icon. The full sentence will read 'If the extension didn't open, you may need to open Komboe from the icon [Komboe Icon] on the toolbar.'"
   },
   "openExtensionFromToolbarPart2": {
     "message": " na barra de ferramentas.",
-    "description": "This will be used as part of a larger sentence, broken up to include the Bitwarden icon. The full sentence will read 'If the extension didn't open, you may need to open Bitwarden from the icon [Bitwarden Icon] on the toolbar.'"
+    "description": "This will be used as part of a larger sentence, broken up to include the Komboe icon. The full sentence will read 'If the extension didn't open, you may need to open Komboe from the icon [Komboe Icon] on the toolbar.'"
   },
   "gettingStartedWithBitwardenPart3": {
     "message": "Centro de ajuda",
-    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Bitwarden visit the Learning Center and Help Center'"
+    "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Komboe visit the Learning Center and Help Center'"
   },
   "setupExtensionContentAlt": {
     "message": "Com a extensão do navegador Komboe, pode criar facilmente novas credenciais, aceder às credenciais guardadas diretamente a partir da barra de ferramentas do navegador e iniciar sessão em contas rapidamente utilizando o preenchimento automático do Komboe."
@@ -16991,7 +16991,7 @@
   },
   "sendPasswordHelperText": {
     "message": "Os destinatários terão de introduzir a palavra-passe para ver este Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "perUser": {
     "message": "por utilizador"
@@ -17050,11 +17050,11 @@
   },
   "sendPasswordInvalidAskOwner": {
     "message": "Palavra-passe inválida. Peça ao remetente a palavra-passe necessária para aceder a este Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresOn": {
     "message": "Este Send expira às $TIME$ de $DATE$",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -17562,11 +17562,11 @@
   },
   "sendControlsEnableDescription": {
     "message": "Controlar se os membros podem utilizar o Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypes": {
     "message": "Tipos de Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "any": {
     "message": "Qualquer um"
@@ -17659,11 +17659,11 @@
   },
   "sendHasUnsavedEdits": {
     "message": "O Send tem alterações não guardadas. Tem a certeza de que pretende sair?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendControlsPolicySwitchLabelV2": {
     "message": "Ativar Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "allow": {
     "message": "Permitir"
@@ -17700,7 +17700,7 @@
   },
   "sendCreated": {
     "message": "Send criado",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "O campo tem de ser numérico"

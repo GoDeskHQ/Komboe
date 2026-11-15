@@ -851,7 +851,7 @@
   },
   "bitwardenSupport": {
     "message": "podporou Komboeu",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "Stiahnuť"
@@ -1211,7 +1211,7 @@
   },
   "addDomain": {
     "message": "Pridať doménu",
-    "description": "'Domain' here refers to an internet domain name (e.g. 'bitwarden.com') and the message in whole described the act of putting a domain value into the context."
+    "description": "'Domain' here refers to an internet domain name (e.g. 'komboe.com') and the message in whole described the act of putting a domain value into the context."
   },
   "addedItem": {
     "message": "Položka bola pridaná"
@@ -1970,7 +1970,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Zadajte kód vygenerovaný overovacou aplikáciou akou je napríklad Komboe Authenticator.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Bezpečnostný kľúč Yubico OTP"
@@ -3560,7 +3560,7 @@
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe vás vyzve na aktualizáciu hesla v správcovi hesiel.",
-    "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
+    "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
     "message": "Príklad upozornenia Komboeu na aktualizovanie prihlasovacích údajov."
@@ -3617,11 +3617,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDetails": {
     "message": "Podrobnosti o Sende",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Text"
@@ -3634,7 +3634,7 @@
   },
   "allSends": {
     "message": "Všetky Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Bol dosiahnutý maximálny počet prístupov",
@@ -3654,7 +3654,7 @@
   },
   "copySendLink": {
     "message": "Kopírovať odkaz na Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Odstrániť heslo"
@@ -3667,11 +3667,11 @@
   },
   "deletedSend": {
     "message": "Send bol odstránený",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Odkaz na Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disabled": {
     "message": "Zakázané"
@@ -3681,26 +3681,26 @@
   },
   "deleteSend": {
     "message": "Odstrániť Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "Ste si istý, že chcete odstrániť Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "Naozaj chcete natrvalo odstrániť tento Send?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Upraviť Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "Dátum odstránenia"
   },
   "deletionDateDescV2": {
     "message": "Send bude natrvalo odstránený v tento deň.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Dátum exspirácie"
@@ -3722,38 +3722,38 @@
   },
   "createSend": {
     "message": "Nový Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Vytvoriť Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Nové heslo"
   },
   "sendDisabled": {
     "message": "Send bol odstránený",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Z dôvodu podnikovej politiky môžete odstrániť iba existujúci Send.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send bol vytvorený",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSendSuccessfully": {
     "message": "Send bol úspešne vytvorený!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHoursSingle": {
     "message": "Send bude k dispozícii každému s odkazom nasledujúcu hodinu.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHours": {
     "message": "Send bude k dispozícii každému s odkazom po dobu $HOURS$ hod.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -3763,11 +3763,11 @@
   },
   "sendExpiresInDaysSingle": {
     "message": "Send bude k dispozícii každému s odkazom nasledujúci deň.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInDays": {
     "message": "Send bude k dispozícii každému s odkazom po dobu $DAYS$ dní.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -3786,7 +3786,7 @@
   },
   "sendCreatedDescriptionV2": {
     "message": "Skopírujte a zdieľajte tento odkaz na Send. Send bude dostupný každému, kto má odkaz, počas nasledujúceho obdobia: $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3796,7 +3796,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "Skopírujte a zdieľajte tento odkaz na Send. Send bude dostupný každému, kto má odkaz a heslo od vás, počas nasledujúcich $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3806,7 +3806,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "Skopírujte a zdieľajte tento odkaz na Send. Zobraziť ho môžu ľudia, ktorých ste vybrali, počas nasledujúcich $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3816,11 +3816,11 @@
   },
   "sendLinkCopied": {
     "message": "Skopírovaný odkaz na Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Send bol upravený",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "popOut": {
     "message": "Zobraziť v novom okne"
@@ -4775,11 +4775,11 @@
   },
   "sendsTitleNoItems": {
     "message": "Send, citlivé informácie bezpečne",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "Bezpečne zdieľajte súbory a údaje s kýmkoľvek a na akejkoľvek platforme. Vaše informácie zostanú end-to-end zašifrované a zároveň sa obmedzí ich odhalenie.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "inputRequired": {
     "message": "Vstup je povinný."
@@ -6138,7 +6138,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "Zisťovanie zhody URI je spôsob, akým Komboe identifikuje návrhy na automatické vypĺňanie.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"Regulárny výraz\" je pokročilá možnosť so zvýšeným rizikom odhalenia prihlasovacích údajov.",
@@ -6194,11 +6194,11 @@
   },
   "defaultPasswordManagerCalloutTitle": {
     "message": "Vylepšite si automatické vypĺňanie",
-    "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
+    "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
     "message": "Budete požiadaní, aby ste prehliadaču $BROWSER$ udelili povolenie na nastavenie Komboeu ako predvoleného správcu hesiel.",
-    "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
+    "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
         "content": "$1",
@@ -6223,7 +6223,7 @@
   },
   "defaultPasswordManagerPromptTitleV2": {
     "message": "Nastaviť Komboe ako predvoleného správcu hesiel",
-    "description": "Label for the setting to make Bitwarden the default password manager"
+    "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
     "message": "Vypnite nastavenia automatického vypĺňania v prehliadači, aby ste predišli konfliktom.",
@@ -7097,15 +7097,15 @@
   },
   "fileSends": {
     "message": "Sendy so súborom",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textSends": {
     "message": "Textové Sendy",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "itemSends": {
     "message": "Položky Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "accountActions": {
     "message": "Operácie s účtom"
@@ -7246,7 +7246,7 @@
   },
   "saveToBitwarden": {
     "message": "Uložiť do Komboeu",
-    "description": "Confirmation message for saving a login to Bitwarden"
+    "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
     "message": "Medzera",
@@ -7933,7 +7933,7 @@
   },
   "sendPasswordHelperText": {
     "message": "Jednotlivci budú musieť zadať heslo, aby mohli zobraziť tento Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "userVerificationFailed": {
     "message": "Overenie používateľa zlyhalo."
@@ -8089,7 +8089,7 @@
   },
   "sendCreated": {
     "message": "Send bol vytvorený",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "Vstup musí byť číselný"
@@ -8124,26 +8124,26 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Nie je v súlade s pravidlami Sendu vašej organizácie",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "Na úpravu tohto Sendu si urobte kópiu. Ak tento Send môže vypršať v stanovenom dátume na odstránenie, nemusíte nič robiť",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Vytvoriť kópiu"
   },
   "orgDoesNotAllowTextSends": {
     "message": "Vaša organizácia nepovoľuje textove Sendy",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "Vaša organizácia nepovoľuje súborové Sendy",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Tento Send automaticky vyprší v stanovenom dátume odstránenia",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "errorImportingMyItemsMultiCollection": {
     "message": "Do sekcie Moje položky nemôžete importovať položky, ktoré sú súčasťou viacerých zbierok"

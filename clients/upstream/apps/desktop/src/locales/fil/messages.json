@@ -413,7 +413,7 @@
   },
   "deletionDateDescV2": {
     "message": "Permanenteng mabubura ang Send sa petsang ito.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "fileToShare": {
     "message": "File na ibabahagi"
@@ -446,7 +446,7 @@
   },
   "sendDetails": {
     "message": "Mga detalye ng Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeTextToShare": {
     "message": "Tekstong ibabahagi"
@@ -469,7 +469,7 @@
   },
   "deleteSendPermanentConfirmation": {
     "message": "Sigurado ka bang gusto mong permanenteng burahin ang Send na ito?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewItemHeaderLoginSentenceCase": {
     "message": "Tingnan ang login",
@@ -1710,7 +1710,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Ilagay ang code na nabuo ng authenticator app tulad ng Komboe Authenticator.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Yubico OTP security key"
@@ -2622,7 +2622,7 @@
   },
   "show": {
     "message": "Ipakita",
-    "description": "Tray menu item that brings the Bitwarden window to the foreground."
+    "description": "Tray menu item that brings the Komboe window to the foreground."
   },
   "hideToTray": {
     "message": "Magtago sa tray"
@@ -3192,11 +3192,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "allSends": {
     "message": "Lahat ng Mga Padala",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Sends' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Mag-file"
@@ -3206,11 +3206,11 @@
   },
   "searchSends": {
     "message": "Maghanap ng Mga Padala",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "I-edit ang Ipadala",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "me": {
     "message": "Ako"
@@ -3226,14 +3226,14 @@
   },
   "deletionDateDesc": {
     "message": "Ang Ipadala ay tatanggalin nang permanente sa tinukoy na petsa at oras.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Petsa ng pag-expire"
   },
   "expirationDateDesc": {
     "message": "Kung nakatakda, ang access sa Send na ito ay mag-expire sa tinukoy na petsa at oras.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maximum na bilang ng access",
@@ -3241,61 +3241,61 @@
   },
   "maxAccessCountDesc": {
     "message": "Kung nakatakda, ang mga user ay hindi na maaaring ma-access ang Send na ito pagkatapos makarating sa maximum access count.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Kasalukuyang access count"
   },
   "disableSend": {
     "message": "Deactivate ang Send na ito para walang maka access dito.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Maipapayo na mag-require ng password para sa mga user na ma-access ang Send na ito.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Pribadong mga tala tungkol sa Send na ito.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Magpadala ng link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "Magpadala ng link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "Kapag na access ang Ipadala, itago ang teksto sa pamamagitan ng default",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Magpadala ng idinagdag",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Ipadala na nai-save",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletedSend": {
     "message": "Ipadala ang tinanggal",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Bagong password"
   },
   "whatTypeOfSend": {
     "message": "Anong type ng Send ito",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSend": {
     "message": "Bagong Ipadala",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Lumikha ng Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "Ang teksto na nais mong ipadala."
@@ -3320,26 +3320,26 @@
   },
   "deleteSendConfirmation": {
     "message": "Sigurado ka bang gusto mo na i-delete ang Ipadala na ito?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLink": {
     "message": "Kopyahin ang Send link",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Kopyahin Ipadala ang link sa clipboard",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "Kopyahin ang link upang ibahagi ito Ipadala sa aking clipboard sa save."
   },
   "sendDisabled": {
     "message": "Ipadala ang tinanggal",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Dahil sa isang enterprise policy, ikaw ay magagawang lamang na tanggalin ang umiiral na Ipadala.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copyLink": {
     "message": "Kopyahin ang link"
@@ -4004,7 +4004,7 @@
   },
   "vault": {
     "message": "Ayos",
-    "description": "'Vault' is a noun and refers to the Bitwarden Vault feature."
+    "description": "'Vault' is a noun and refers to the Komboe Vault feature."
   },
   "rememberEmail": {
     "message": "Tandaan ang email"
@@ -5540,7 +5540,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "Ang URI match detection ay kung paano tinutukoy ng Komboe ang mga mungkahi sa autofill.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "Ang \"Regular expression\" ay isang advanced na opsyon na may mas mataas na panganib na mailantad ang mga kredensyal.",
@@ -5579,7 +5579,7 @@
   },
   "bitwardenSupport": {
     "message": "Suporta ng Komboe",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "I-download"
@@ -5921,14 +5921,14 @@
   },
   "sendsTitleNoItems": {
     "message": "Ligtas na magpadala ng sensitibong impormasyon",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsTitleNoSearchResults": {
     "message": "Walang resulta ng paghahanap na naibalik"
   },
   "sendsBodyNoItems": {
     "message": "Ibahagi ang mga file at data nang ligtas sa kahit sino, sa anumang platform. Ang iyong impormasyon ay mananatiling end-to-end encrypted habang nililimitahan ang pagkakalantad.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoSearchResults": {
     "message": "I-clear ang mga filter o subukan ang ibang termino sa paghahanap"
@@ -6693,7 +6693,7 @@
   },
   "sendPasswordHelperText": {
     "message": "Kailangan ng mga indibidwal na ilagay ang password upang tingnan ang Send na ito",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "emailProtected": {
     "message": "Protektado ang email"
@@ -6759,7 +6759,7 @@
   },
   "sendTypes": {
     "message": "Mga uri ng Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "any": {
     "message": "Anuman"
@@ -6899,7 +6899,7 @@
   },
   "sendHasUnsavedEdits": {
     "message": "Ang Send ay may mga hindi na-save na pag-edit. Sigurado ka bang gusto mong umalis?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewTextSendHeader": {
     "message": "Tingnan ang teksto"
@@ -6909,7 +6909,7 @@
   },
   "sendCreated": {
     "message": "Nagawa ang Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "Ang input ay dapat na numeric"
@@ -6936,23 +6936,23 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Hindi sumusunod sa patakaran ng Send ng iyong organisasyon",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "Upang i-edit ang Send na ito, gumawa ng kopya. Kung ang Send na ito ay maaaring mag-expire sa itinakdang petsa ng pagbura, walang aksyon na kailangan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowTextSends": {
     "message": "Hindi pinapayagan ang mga Text Send para sa iyong organisasyon",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "Hindi pinapayagan ang mga File Send para sa iyong organisasyon",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Ang Send na ito ay awtomatikong mag-expire sa itinakdang petsa ng pagbura",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Gumawa ng kopya"
@@ -7050,7 +7050,7 @@
   },
   "confirmPasskeyRegistrationMfaMacOS": {
     "message": "create a new $RPID$ passkey for $USERNAME$. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7064,7 +7064,7 @@
   },
   "confirmPasskeyOverwriteMfaMacOS": {
     "message": "overwrite a $RPID$ passkey for $USERNAME$. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7078,7 +7078,7 @@
   },
   "confirmPasskeyAssertionMfaMacOS": {
     "message": "sign in as $USERNAME$ with your $RPID$ passkey. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",

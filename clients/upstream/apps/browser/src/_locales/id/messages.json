@@ -851,7 +851,7 @@
   },
   "bitwardenSupport": {
     "message": "Dukungan Komboe",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "Unduh"
@@ -1211,7 +1211,7 @@
   },
   "addDomain": {
     "message": "Tambah domain",
-    "description": "'Domain' here refers to an internet domain name (e.g. 'bitwarden.com') and the message in whole described the act of putting a domain value into the context."
+    "description": "'Domain' here refers to an internet domain name (e.g. 'komboe.com') and the message in whole described the act of putting a domain value into the context."
   },
   "addedItem": {
     "message": "Item yang Ditambahkan"
@@ -1970,7 +1970,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Masukkan kode yang dihasilkan dari aplikasi pengotentikasi seperti Pengotentikasi Komboe.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Kunci Keamanan OTP Yubico"
@@ -3560,7 +3560,7 @@
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe akan meminta Anda untuk memperbarui kata sandi di pengelola sandi.",
-    "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
+    "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
     "message": "Gambaran dari pemberitahuan Komboe yang meminta pengguna untuk memperbarui info masuk."
@@ -3617,11 +3617,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDetails": {
     "message": "Rincian Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Teks"
@@ -3634,7 +3634,7 @@
   },
   "allSends": {
     "message": "Semua Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Jumlah akses maksimum tercapai",
@@ -3654,7 +3654,7 @@
   },
   "copySendLink": {
     "message": "Salin tautan Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Hapus Kata Sandi"
@@ -3667,11 +3667,11 @@
   },
   "deletedSend": {
     "message": "Send Dihapus",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Tautan Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disabled": {
     "message": "Dinonaktifkan"
@@ -3681,26 +3681,26 @@
   },
   "deleteSend": {
     "message": "Hapus Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "Anda yakin ingin menghapus Send ini?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "Apakah Anda yakin ingin menghapus Send ini selamanya?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Edit Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "Tanggal Penghapusan"
   },
   "deletionDateDescV2": {
     "message": "Send akan dihapus selamanya pada tanggal ini.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Tanggal habis tempo"
@@ -3722,38 +3722,38 @@
   },
   "createSend": {
     "message": "Buat Send Baru",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Buat Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Kata Sandi baru"
   },
   "sendDisabled": {
     "message": "Send Dinonaktifkan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Karena kebijakan perusahaan, Anda hanya dapat menghapus Send yang sudah ada.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send Dibuat ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSendSuccessfully": {
     "message": "Send berhasil dibuat!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHoursSingle": {
     "message": "Send akan tersedia ke setiap orang yang memiliki tautan untuk 1 jam ke depan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHours": {
     "message": "Send akan tersedia ke setiap orang yang memiliki tautan untuk $HOURS$ jam ke depan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -3763,11 +3763,11 @@
   },
   "sendExpiresInDaysSingle": {
     "message": "Send akan tersedia ke setiap orang yang memiliki tautan untuk 1 hari ke depan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInDays": {
     "message": "Send akan tersedia ke setiap orang yang memiliki tautan untuk $DAYS$ hari ke depan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -3786,7 +3786,7 @@
   },
   "sendCreatedDescriptionV2": {
     "message": "Salin dan bagikan tautan Send ini. Send akan tersedia bagi siapa pun yang memiliki tautan selama $TIME$ berikutnya.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3796,7 +3796,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "Salin dan bagikan tautan Send ini. Send akan tersedia bagi siapa pun yang memiliki tautan dan kata sandi yang Anda tetapkan selama $TIME$ berikutnya.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3806,7 +3806,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "Salin dan bagikan tautan Send ini. Ini dapat dilihat oleh orang yang Anda tentukan selama $TIME$ berikutnya.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3816,11 +3816,11 @@
   },
   "sendLinkCopied": {
     "message": "Tautan Send disalin",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Send diedit",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "popOut": {
     "message": "Sembulkan"
@@ -4775,11 +4775,11 @@
   },
   "sendsTitleNoItems": {
     "message": "Kirim informasi sensitif dengan aman",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "Bagikan berkas-berkas dan data secara aman dengan siapa saja, pada platform apa pun. Informasi Anda akan tetap terenkripsi dari ujung ke ujung sembari membatasi paparan.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "inputRequired": {
     "message": "Masukan ini harus diisi."
@@ -6138,7 +6138,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "Komboe mengenali saran isi otomatis menggunakan deteksi kecocokan URI.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"Ekspresi regular\" adalah opsi lanjutan dengan risiko lebih besar untuk menyingkapkan identitas anda.",
@@ -6194,11 +6194,11 @@
   },
   "defaultPasswordManagerCalloutTitle": {
     "message": "Tingkatkan pengalaman isi otomatis Anda",
-    "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
+    "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
     "message": "Anda akan diminta memberikan izin browser $BROWSER$ untuk menjadikan Komboe sebagai manajer kata sandi default Anda.",
-    "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
+    "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
         "content": "$1",
@@ -6223,7 +6223,7 @@
   },
   "defaultPasswordManagerPromptTitleV2": {
     "message": "Jadikan Komboe sebagai manajer kata sandi default Anda",
-    "description": "Label for the setting to make Bitwarden the default password manager"
+    "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
     "message": "Matikan pengaturan isi otomatis browser untuk menghindari konflik.",
@@ -7097,15 +7097,15 @@
   },
   "fileSends": {
     "message": "Berkas-berkas Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textSends": {
     "message": "Teks Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "itemSends": {
     "message": "Item Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "accountActions": {
     "message": "Tindakan akun"
@@ -7246,7 +7246,7 @@
   },
   "saveToBitwarden": {
     "message": "Simpan ke Komboe",
-    "description": "Confirmation message for saving a login to Bitwarden"
+    "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
     "message": "Spasi",
@@ -7933,7 +7933,7 @@
   },
   "sendPasswordHelperText": {
     "message": "Individu perlu memasukkan kata sandi untuk melihat Send ini",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "userVerificationFailed": {
     "message": "Verifikasi pengguna gagal."
@@ -8089,7 +8089,7 @@
   },
   "sendCreated": {
     "message": "Send dibuat",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "Input harus berupa angka"
@@ -8124,26 +8124,26 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Tidak sesuai dengan kebijakan Send organisasi Anda",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "Untuk mengedit Send ini, buat salinan. Jika Send ini dapat kedaluwarsa pada tanggal penghapusan yang ditetapkan, tidak ada tindakan yang diperlukan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Buat salinan"
   },
   "orgDoesNotAllowTextSends": {
     "message": "Text Send tidak diizinkan untuk organisasi Anda",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "File Send tidak diizinkan untuk organisasi Anda",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Send ini akan otomatis kedaluwarsa pada tanggal penghapusan yang ditetapkan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "errorImportingMyItemsMultiCollection": {
     "message": "Anda tidak dapat mengimpor item ke Item Saya yang merupakan bagian dari beberapa koleksi"

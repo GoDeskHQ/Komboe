@@ -413,7 +413,7 @@
   },
   "deletionDateDescV2": {
     "message": "Send यस मितिमा स्थायी रूपमा मेटिनेछ।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "fileToShare": {
     "message": "साझेदारी गर्न फाइल"
@@ -446,7 +446,7 @@
   },
   "sendDetails": {
     "message": "Send विवरणहरू",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeTextToShare": {
     "message": "साझेदारी गर्न पाठ"
@@ -469,7 +469,7 @@
   },
   "deleteSendPermanentConfirmation": {
     "message": "के तपाईं निश्चित रूपमा यो Send स्थायी रूपमा मेट्न चाहनुहुन्छ?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewItemHeaderLoginSentenceCase": {
     "message": "लगइन हेर्नुहोस्",
@@ -1710,7 +1710,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Komboe Authenticator जस्ता प्रमाणीकरण एपद्वारा उत्पन्न गरिएको कोड प्रविष्ट गर्नुहोस्।",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Yubico OTP सुरक्षा कुञ्जी"
@@ -2622,7 +2622,7 @@
   },
   "show": {
     "message": "देखाउनुहोस्",
-    "description": "Tray menu item that brings the Bitwarden window to the foreground."
+    "description": "Tray menu item that brings the Komboe window to the foreground."
   },
   "hideToTray": {
     "message": "ट्रेमा लुकाउनुहोस्"
@@ -3192,11 +3192,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "allSends": {
     "message": "सबै Send",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Sends' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "फाइल"
@@ -3206,11 +3206,11 @@
   },
   "searchSends": {
     "message": "Send खोज्नुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Send सम्पादन गर्नुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "me": {
     "message": "म"
@@ -3226,14 +3226,14 @@
   },
   "deletionDateDesc": {
     "message": "Send निर्दिष्ट मिति र समयमा स्थायी रूपमा मेटिनेछ।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "म्याद सकिने मिति"
   },
   "expirationDateDesc": {
     "message": "सेट गरिएमा, यस Send मा पहुँच निर्दिष्ट मिति र समयमा म्याद सकिनेछ।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "अधिकतम पहुँच संख्या",
@@ -3241,61 +3241,61 @@
   },
   "maxAccessCountDesc": {
     "message": "सेट गरिएमा, अधिकतम पहुँच संख्यामा पुगेपछि प्रयोगकर्ताहरूले यस Send मा पहुँच गर्न सक्ने छैनन्।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "हालको पहुँच संख्या"
   },
   "disableSend": {
     "message": "यस Send लाई निष्क्रिय गर्नुहोस् ताकि कसैले पनि यसलाई पहुँच गर्न नसकोस्।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "वैकल्पिक रूपमा प्रयोगकर्ताहरूलाई यस Send पहुँच गर्न पासवर्ड आवश्यक पर्ने।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "यस Send को बारेमा निजी नोटहरू।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Send लिङ्क",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "Send लिङ्क",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "Send पहुँच गर्दा, पूर्वनिर्धारित रूपमा पाठ लुकाउनुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send थपियो",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Send सुरक्षित गरियो",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletedSend": {
     "message": "Send मेटियो",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "नयाँ पासवर्ड"
   },
   "whatTypeOfSend": {
     "message": "यो कस्तो प्रकारको Send हो?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSend": {
     "message": "नयाँ Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Send सिर्जना गर्नुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "तपाईं पठाउन चाहनुहुने पाठ।"
@@ -3320,26 +3320,26 @@
   },
   "deleteSendConfirmation": {
     "message": "के तपाईं निश्चित रूपमा यो Send मेट्न चाहनुहुन्छ?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLink": {
     "message": "Send लिङ्क प्रतिलिपि गर्नुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Send लिङ्क क्लिपबोर्डमा प्रतिलिपि गर्नुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "यो Send साझेदारी गर्न लिङ्क सुरक्षित गर्दा मेरो क्लिपबोर्डमा प्रतिलिपि गर्नुहोस्।"
   },
   "sendDisabled": {
     "message": "Send हटाइयो",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "उद्यम नीतिको कारणले, तपाईं केवल अवस्थित Send मेट्न सक्षम हुनुहुन्छ।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copyLink": {
     "message": "लिङ्क प्रतिलिपि गर्नुहोस्"
@@ -4004,7 +4004,7 @@
   },
   "vault": {
     "message": "भल्ट",
-    "description": "'Vault' is a noun and refers to the Bitwarden Vault feature."
+    "description": "'Vault' is a noun and refers to the Komboe Vault feature."
   },
   "rememberEmail": {
     "message": "इमेल सम्झनुहोस्"
@@ -5540,7 +5540,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "URI मिलान पत्ता लगाउने भनेको Komboe ले स्वत: भर्ने सुझावहरू कसरी पहिचान गर्छ।",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"नियमित अभिव्यक्ति\" एउटा उन्नत विकल्प हो जसमा प्रमाणहरू खुलासा हुने जोखिम बढी हुन्छ।",
@@ -5579,7 +5579,7 @@
   },
   "bitwardenSupport": {
     "message": "Komboe समर्थन",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "डाउनलोड गर्नुहोस्"
@@ -5921,14 +5921,14 @@
   },
   "sendsTitleNoItems": {
     "message": "संवेदनशील जानकारी सुरक्षित रूपमा पठाउनुहोस्",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsTitleNoSearchResults": {
     "message": "कुनै खोजी परिणामहरू फर्किएनन्"
   },
   "sendsBodyNoItems": {
     "message": "कुनै पनि प्लेटफर्ममा, जो कोसँग पनि फाइल र डाटा सुरक्षित रूपमा साझेदारी गर्नुहोस्। तपाईंको जानकारी एक्सपोजर सीमित गर्दै एन्ड-टु-एन्ड इन्क्रिप्टेड रहनेछ।",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoSearchResults": {
     "message": "फिल्टरहरू खाली गर्नुहोस् वा अर्को खोजी शब्द प्रयास गर्नुहोस्"
@@ -6693,7 +6693,7 @@
   },
   "sendPasswordHelperText": {
     "message": "व्यक्तिहरूले यो Send हेर्न पासवर्ड प्रविष्ट गर्न आवश्यक पर्नेछ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "emailProtected": {
     "message": "इमेल सुरक्षित"
@@ -6759,7 +6759,7 @@
   },
   "sendTypes": {
     "message": "Send प्रकारहरू",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "any": {
     "message": "कुनै पनि"
@@ -6899,7 +6899,7 @@
   },
   "sendHasUnsavedEdits": {
     "message": "Send मा नसुरक्षित सम्पादनहरू छन्। के तपाईं निश्चित रूपमा छोड्न चाहनुहुन्छ?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewTextSendHeader": {
     "message": "पाठ हेर्नुहोस्"
@@ -6909,7 +6909,7 @@
   },
   "sendCreated": {
     "message": "Send सिर्जना गरियो",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "इनपुट संख्यात्मक हुनुपर्छ"
@@ -6936,23 +6936,23 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "तपाईंको संगठनको Send नीतिसँग अनुरूप छैन",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "यो Send सम्पादन गर्न, प्रतिलिपि बनाउनुहोस्। यदि यो Send सेट गरिएको मेटाउने मितिमा म्याद सकिन सक्छ भने, कुनै कार्य आवश्यक छैन",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowTextSends": {
     "message": "तपाईंको संगठनको लागि पाठ Send अनुमति छैन",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "तपाईंको संगठनको लागि फाइल Send अनुमति छैन",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "यो Send सेट गरिएको मेटाउने मितिमा स्वचालित रूपमा म्याद सकिनेछ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "प्रतिलिपि बनाउनुहोस्"
@@ -7050,7 +7050,7 @@
   },
   "confirmPasskeyRegistrationMfaMacOS": {
     "message": "create a new $RPID$ passkey for $USERNAME$. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7064,7 +7064,7 @@
   },
   "confirmPasskeyOverwriteMfaMacOS": {
     "message": "overwrite a $RPID$ passkey for $USERNAME$. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7078,7 +7078,7 @@
   },
   "confirmPasskeyAssertionMfaMacOS": {
     "message": "sign in as $USERNAME$ with your $RPID$ passkey. $RPID$ is requesting this check for MFA",
-    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",

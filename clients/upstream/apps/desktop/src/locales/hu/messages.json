@@ -413,7 +413,7 @@
   },
   "deletionDateDescV2": {
     "message": "A Send véglegesen törölve lesz ebben az időpontban.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "fileToShare": {
     "message": "Megosztandó fájl"
@@ -446,7 +446,7 @@
   },
   "sendDetails": {
     "message": "Send részletek",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeTextToShare": {
     "message": "Megosztandó szöveg"
@@ -469,7 +469,7 @@
   },
   "deleteSendPermanentConfirmation": {
     "message": "Biztosan véglegesen törlésre kerüljön ez a Send elem?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewItemHeaderLoginSentenceCase": {
     "message": "Bejelentkezés megtekintése",
@@ -1710,7 +1710,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Adjunk meg egy hitelesítő alkalmazás, például a Komboe Authenticator által generált kódot.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "YubiKey OTP biztonsági kulcs"
@@ -2622,7 +2622,7 @@
   },
   "show": {
     "message": "Megjelenítés",
-    "description": "Tray menu item that brings the Bitwarden window to the foreground."
+    "description": "Tray menu item that brings the Komboe window to the foreground."
   },
   "hideToTray": {
     "message": "Elrejtés a tálcára"
@@ -3192,11 +3192,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "allSends": {
     "message": "Összes küldés",
-    "description": "'Sends' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Sends' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeFile": {
     "message": "Fájl"
@@ -3206,11 +3206,11 @@
   },
   "searchSends": {
     "message": "Küldés keresése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Küldés szerkesztése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "me": {
     "message": "Én"
@@ -3226,14 +3226,14 @@
   },
   "deletionDateDesc": {
     "message": "A Send véglegesen törlésre kerül a meghatározott időpontban.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Lejárati dátum"
   },
   "expirationDateDesc": {
     "message": "Beállítva a hozzáférés ehhez a Küldéshez lejár a meghatározott időpontban.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCount": {
     "message": "Maximális elérési szám",
@@ -3241,61 +3241,61 @@
   },
   "maxAccessCountDesc": {
     "message": "Beállítva a Küldés elérhetetlen lesz a meghatározott hozzáférések számának elérése után.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "currentAccessCount": {
     "message": "Aktuális elérési szám"
   },
   "disableSend": {
     "message": "A Küldés letiltásával mindenki hozzáférése megvonható.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendPasswordDesc": {
     "message": "Opcionálissan egy jelszó kérhető a felhasználóktól a Küldés eléréséhez.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendNotesDesc": {
     "message": "Személyes megjegyzések erről a Küldésről.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Hivatkozás küldése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLinkLabel": {
     "message": "Send küldése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textHiddenByDefault": {
     "message": "A Küldés elérésekor alapértelmezés szerint a szöveg elrejtése",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "A Send létrejött.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "A Send mentésre került.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletedSend": {
     "message": "A Send törlésre került.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Új jelszó"
   },
   "whatTypeOfSend": {
     "message": "Milyen típusú ez a küldés?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSend": {
     "message": "Új Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Send elem hozzáadása",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTextDesc": {
     "message": "A küldendő szöveg."
@@ -3320,26 +3320,26 @@
   },
   "deleteSendConfirmation": {
     "message": "Biztosan törlésre kerüljön ez a küldés?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLink": {
     "message": "Send hivatkozás másolása",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkToClipboard": {
     "message": "Hivatkozás küldése másolás a vágólapra",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copySendLinkOnSave": {
     "message": "A hivatkozás másolása a Küldés megosztásához a vágólapra mentéskor."
   },
   "sendDisabled": {
     "message": "A Send eltávolításra került.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "A vállalati házirend miatt csak egy meglévő Küldés törölhető.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "copyLink": {
     "message": "Hivatkozás másolása"
@@ -4004,7 +4004,7 @@
   },
   "vault": {
     "message": "Széf",
-    "description": "'Vault' is a noun and refers to the Bitwarden Vault feature."
+    "description": "'Vault' is a noun and refers to the Komboe Vault feature."
   },
   "rememberEmail": {
     "message": "Email megjegyzése"
@@ -5540,7 +5540,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "Az URI egyezés észlelése az, ahogyan a Komboe azonosítja az automatikus kitöltési javaslatokat.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "A \"normál kifejezés“ egy fejlett opció, amely a hitelesítő adatok növekvő kiszivárgásának kockázatával.",
@@ -5579,7 +5579,7 @@
   },
   "bitwardenSupport": {
     "message": "Komboe támogatás",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "Letöltés"
@@ -5921,14 +5921,14 @@
   },
   "sendsTitleNoItems": {
     "message": "Érzékeny információt küldése biztonságosan",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsTitleNoSearchResults": {
     "message": "Nincsenek visszakapott keresési eredmények."
   },
   "sendsBodyNoItems": {
     "message": "Fájlok vagy adatok megosztása biztonságosan bárkivel, bármilyen platformon. Az információk titkosítva maradnak a végpontokon, korlátozva a kitettséget.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoSearchResults": {
     "message": "Töröljük a szűrőket vagy próbálkozzunk másik keresési kifejezéssel."
@@ -6693,7 +6693,7 @@
   },
   "sendPasswordHelperText": {
     "message": "A személyeknek meg kell adniuk a jelszót a Send elem megtekintéséhez.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "emailProtected": {
     "message": "Védett email cím"
@@ -6759,7 +6759,7 @@
   },
   "sendTypes": {
     "message": "Send elem típusok",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "any": {
     "message": "Bármelyik"
@@ -6899,7 +6899,7 @@
   },
   "sendHasUnsavedEdits": {
     "message": "A Send elem nem mentett szerkesztéseket tartalmaz. Biztos, hogy el akarunk navigálni?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "viewTextSendHeader": {
     "message": "Szöveg megtekintése"
@@ -6909,7 +6909,7 @@
   },
   "sendCreated": {
     "message": "Az új Send elem létrejött.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "A beviteli adat legyen numerikus."
@@ -6936,23 +6936,23 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Nem felel meg a szervezet Send szabályzatának.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "A Send elem szerkesztéséhez készítsünk másolatot. Ha ez a Send elem a beállított törlési dátumon lejárhat, nincs szükség műveletre.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowTextSends": {
     "message": "A szöveges Send elemek nem engedélyezettek a szervezet számára.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "A fájl Send elemek nem engedélyezettek a szervezet számára.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Ez a Send elem automatikusan lejár a beállított törlési dátumnál.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Másolat létrehozása"
@@ -7050,7 +7050,7 @@
   },
   "confirmPasskeyRegistrationMfaMacOS": {
     "message": "hozzunk létre egy új $RPID$ belépőkulcsot $USERNAME$ email címhez. $RPID$ kéri ezt az ellenőrzést az MFA-hoz",
-    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to create a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7064,7 +7064,7 @@
   },
   "confirmPasskeyOverwriteMfaMacOS": {
     "message": "írjunk felül egy $RPID$ belépőkulcsot $USERNAME$ email címhez. $RPID$ kéri ezt az ellenőrzést az MFA-hoz",
-    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to overwrite an existing passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",
@@ -7078,7 +7078,7 @@
   },
   "confirmPasskeyAssertionMfaMacOS": {
     "message": "jelentkezzünk be $USERNAME$ email címmek $RPID$ belépőkulccsal. $RPID$ kéri ezt az ellenőrzést az MFA-hoz",
-    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Bitwarden is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
+    "description": "Prompt for the user to use a passkey. Shown in macOS Touch ID prompt as \"Komboe is trying to {message}.\", so the first sentence should omit capitalization and the final sentence should omit ending punctuation.",
     "placeholders": {
       "rpId": {
         "content": "$1",

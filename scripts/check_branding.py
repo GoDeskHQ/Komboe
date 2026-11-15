@@ -6,10 +6,13 @@ desktop app (asar + resources), or an installer directory. The check looks at
 bytes that ship, not at the rebrand script's intentions.
 
 Allowed on purpose:
-- copyright, license, and source-offer text
+- license and source-offer text (the notices screen, not the About copyright line)
 - the import-format labels Bitwarden (json), Bitwarden (.json), and Bitwarden (csv)
-- protocol headers such as Bitwarden-Client-Name
-- PascalCase identifiers such as BitwardenApplication (not shown to people)
+- protocol header names such as Bitwarden-Client-Name
+- PascalCase identifiers and package paths (not shown to people)
+
+The name check is case-insensitive and includes misspellings (Bitward, Bitwarde,
+BItwarden). Upstream image and SVG bytes are rejected by sha256.
 """
 from __future__ import annotations
 
@@ -27,14 +30,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DENY = ROOT / "scripts" / "branding_denylist.json"
 
-NAME = re.compile(r"(?<![A-Za-z0-9_@])(?:Bitwarden|Vaultwarden)")
+NAME_START = re.compile(r"(?i)(?:(?<![A-Za-z0-9_@])|(?<=\\n))(?:bit\s*ward|vaultwarden)")
 IMPORT_FORMATS = ("Bitwarden (.json)", "Bitwarden (json)", "Bitwarden (csv)")
 ALLOW = re.compile(
-    r"copyright|GNU GENERAL PUBLIC|licensed under|license agreement|trademark|Bitwarden Inc|GPL|AGPL|not affiliated|not endorsed|"
-    r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|"
-    r"Bitwarden-Client-|Bitwarden \(json\)|Bitwarden \(\.json\)|Bitwarden \(csv\)",
+    r"GNU GENERAL PUBLIC|licensed under|license agreement|not affiliated|not endorsed|"
+    r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|trademark|GPL|AGPL",
     re.I,
 )
+CODE_SUFFIX = re.compile(r"(?:json|csv|fill|password|browser|web|desktop|license)", re.I)
+SKIP_TEXT_EXT = {".wasm", ".node", ".so", ".dll", ".dylib", ".pak", ".bin", ".dat", ".exe", ".pdb"}
 COMMENT = re.compile(r"<!--.*?-->|/\*.*?\*/", re.S)
 IMAGE_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".bmp", ".icns", ".svg", ".xml"}
 TEXT_EXT = {".html", ".htm", ".hbs", ".json", ".js", ".mjs", ".css", ".svg", ".xml", ".txt", ".md", ".yml"}
@@ -49,14 +53,87 @@ def sha256(blob: bytes) -> str:
     return hashlib.sha256(blob).hexdigest()
 
 
+def product_spans(text: str):
+    """Yield (start, end) of a product-name variant without swallowing camelCase suffixes."""
+    for match in NAME_START.finditer(text):
+        end = match.end()
+        if match.group(0).lower().startswith("vaultwarden"):
+            yield match.start(), end
+            continue
+        # Include the "en" of Bitwarden, not a following identifier (bitwardenjson).
+        if text[end:end + 2].lower() == "en":
+            end += 2
+        elif text[end:end + 1].lower() == "e" and not text[end + 1:end + 2].isalpha():
+            end += 1
+        chunk = re.sub(r"\s+", "", text[match.start():end])
+        if chunk.isupper():
+            while end < len(text) and text[end].isupper():
+                end += 1
+        yield match.start(), end
+
+
+def still_branded(text: str) -> bool:
+    return next(product_spans(text), None) is not None
+
+
 def allowed(window: str) -> bool:
     if any(label in window for label in IMPORT_FORMATS):
-        # Only the label itself is allowed, not a sentence that merely sits near one.
         stripped = window.strip().strip("\"'")
-        if stripped in IMPORT_FORMATS or any(stripped.endswith(label) or stripped.startswith(label) for label in IMPORT_FORMATS):
-            if "Bitwarden" not in stripped.replace("Bitwarden (json)", "").replace("Bitwarden (.json)", "").replace("Bitwarden (csv)", ""):
-                return True
+        rest = stripped
+        for label in IMPORT_FORMATS:
+            rest = rest.replace(label, "")
+        if not still_branded(rest):
+            return True
+    # Importer format name. Minified bundles keep name/displayName/sourceName "Bitwarden".
+    if re.search(r'(?:sourceName|displayName|featuredImporter)"?\s*[:=]', window) and re.search(
+        r'"Bitwarden"', window
+    ):
+        return True
     return ALLOW.search(window) is not None
+
+
+def isolated_identifier(text: str, start: int, end: int) -> bool:
+    """Resource keys and class names packed in dex/arsc, not a sentence."""
+    window = text[max(0, start - 8): end + 8]
+    if "\x00" not in window:
+        return False
+    return not any(ch.isspace() for ch in window)
+
+
+def code_context(text: str, start: int, end: int) -> bool:
+    """Package paths, file names, translation keys, and protocol tokens are not product branding."""
+    prev = text[start - 1] if start else ""
+    nxt = text[end:end + 40]
+    if prev and prev in "@_-:":
+        return True
+    # Quoted lowercase ids: i18n keys, importer ids, resource names.
+    token = text[start:end]
+    if prev == '"' and nxt[:1] == '"' and token == "bitwarden":
+        return True
+    if isolated_identifier(text, start, end):
+        return True
+    if nxt[:1] in {"_", "-"}:
+        return True
+    if re.match(r"\.(?:scss|hbs|css|png|svg|js)\b", nxt):
+        return True
+    if nxt.startswith("Client"):
+        return True
+    if prev == "/" and "github.com/" in text[max(0, start - 80):start]:
+        return True
+    if prev == "/" and (nxt[:1] in "/" or re.match(r"\.(?:ts|js|mjs|svg|png|json|xml|kt|css|html)\b", nxt)):
+        return True
+    if prev == ".":
+        return True
+    if nxt.startswith(".") and re.match(r"\.(?:com|eu|net|pw|gov|atlassian)\b", nxt):
+        return True
+    if nxt.startswith(":{") or nxt.startswith("://") or nxt.startswith(':"') or nxt.startswith(":'"):
+        return True
+    if CODE_SUFFIX.match(nxt):
+        return True
+    # CamelCase identifier suffix: BitwardenIcon, bitwardenAccount.
+    if nxt[:1].isupper():
+        return True
+    return False
 
 
 def identifier_continuation(text: str, end: int) -> bool:
@@ -69,15 +146,19 @@ def visible_hits(text: str, path: str):
     hits = []
     if path.endswith("messages.json"):
         try:
-            data = json.loads(text)
+            data = json.loads(text.lstrip("\ufeff"))
         except json.JSONDecodeError:
             data = None
         if isinstance(data, dict):
             for key, value in data.items():
-                if isinstance(value, dict) and isinstance(value.get("message"), str):
-                    hits.extend(_scan_chunk(value["message"], f"{path} message {key}"))
+                if not isinstance(value, dict):
+                    continue
+                for field in ("message", "description"):
+                    raw = value.get(field)
+                    if isinstance(raw, str):
+                        hits.extend(_scan_chunk(raw, f"{path} {field} {key}"))
             return hits
-    if path.endswith((".js", ".mjs")):
+    if path.endswith((".js", ".mjs", ".ts")):
         text = strip_js_comments(text)
     elif path.endswith((".html", ".htm", ".hbs", ".css", ".scss")):
         text = COMMENT.sub(" ", text)
@@ -85,25 +166,39 @@ def visible_hits(text: str, path: str):
     return hits
 
 
+def resource_key(text: str, start: int, end: int, where: str) -> bool:
+    """String-pool keys inside an APK, not a sentence in the UI."""
+    path = where.lower()
+    if not (path.endswith(".dex") or path.endswith(".arsc") or path.endswith("androidmanifest.xml")):
+        return False
+    token = text[start:end]
+    if token.lower() not in {"bitwarden", "vaultwarden"}:
+        return False
+    nxt = text[end] if end < len(text) else ""
+    if nxt.isalpha():
+        return False
+    before = text[max(0, start - 40):start]
+    # A real sentence has a word that is not glued to an underscore.
+    return re.search(r"(?<![_\w])[^\W\d_]{3,}(?=\s)", before) is None
+
+
 def _scan_chunk(text: str, where: str):
     hits = []
-    for match in NAME.finditer(text):
-        if identifier_continuation(text, match.end()):
+    for start, end in product_spans(text):
+        if identifier_continuation(text, end) or code_context(text, start, end):
             continue
-        prefix = text[max(0, match.start() - 40):match.start()]
-        # Importer metadata. The visible format label is allowlisted separately.
-        if re.search(
-            r"(?:sourceName|displayName|name)[\"']?\s*[:=]\s*[\"']?$",
-            prefix,
-        ):
+        if resource_key(text, start, end, where):
             continue
-        if "com.bitwarden" in prefix or "userAgentItem" in prefix:
+        prefix = text[max(0, start - 48):start]
+        if "com.bitwarden" in prefix or "com/bitwarden" in prefix or "userAgentItem" in prefix:
             continue
-        window = text[max(0, match.start() - 160): match.end() + 160]
+        window = text[max(0, start - 160): end + 160]
         if allowed(window):
             continue
         snippet = " ".join(window.split())[:180]
         hits.append(f"{where}: {snippet}")
+    if re.search(r">\s*aultwarden", text, re.I):
+        hits.append(f"{where}: split Vaultwarden wordmark")
     return hits
 
 
@@ -116,13 +211,22 @@ def shield_hits(blob: bytes, path: str, signatures):
 
 
 def skip_text(path: str) -> bool:
-    normalized = path.replace("\\", "/")
-    if normalized.endswith(".map") or normalized.endswith(".js.map") or normalized.endswith(".dex"):
+    normalized = path.replace("\\", "/").lower()
+    if normalized.endswith(".map") or normalized.endswith(".js.map"):
         return True
-    # Generated SDK comments and API docs are not product UI. Class names in dex are not either.
+    if any(normalized.endswith(ext) for ext in SKIP_TEXT_EXT):
+        return True
+    # Generated SDK comments and API docs are not product UI.
     if "/node_modules/@bitwarden/sdk-internal/" in normalized or "bitwarden_wasm_internal" in normalized:
         return True
     return False
+
+
+def carries_name(blob: bytes) -> bool:
+    lower = blob.lower()
+    if b"bitward" in lower or b"vaultwarden" in lower:
+        return True
+    return b"b\x00i\x00t\x00w" in blob or b"B\x00i\x00t\x00w" in blob or b"B\x00I\x00t\x00W" in blob
 
 
 def strip_js_comments(text: str) -> str:
@@ -171,10 +275,10 @@ def scan_blob(blob: bytes, path: str, hashes, signatures):
     hits.extend(shield_hits(blob, path, signatures))
     if skip_text(path):
         return hits
-    if b"Bitwarden" in blob or b"Vaultwarden" in blob or b"\x00B\x00i\x00t\x00w\x00a\x00r\x00d\x00e\x00n" in blob:
+    if carries_name(blob):
         text = blob.decode("utf-8", errors="ignore")
-        if "Bitwarden" not in text and "Vaultwarden" not in text:
-            # UTF-16LE product name inside resources.arsc.
+        if not still_branded(text):
+            # UTF-16LE product name inside resources.arsc and other resource tables.
             text = blob.decode("utf-16le", errors="ignore")
         hits.extend(visible_hits(text, path))
     return hits
@@ -198,24 +302,34 @@ def walk_source():
             for name in filenames:
                 path = Path(dirpath) / name
                 ext = path.suffix.lower()
-                if ext not in IMAGE_EXT | TEXT_EXT | {".ttf", ".woff", ".woff2", ".gif"}:
+                icon_ts = name.endswith(".icon.ts") or name in {
+                    "admin-console.ts", "secrets-manager.ts", "secrets-manager-alt.ts",
+                    "provider-portal.ts", "business-unit-portal.ts", "shield.ts", "bitwarden-icon.ts",
+                }
+                if ext not in IMAGE_EXT | TEXT_EXT | {".ttf", ".woff", ".woff2", ".gif"} and not icon_ts:
                     continue
                 if path.stat().st_size > 40_000_000:
                     continue
                 blob = path.read_bytes()
                 rel = str(path.relative_to(ROOT))
-                if ext in {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".bmp", ".icns"} or name.startswith("bwi-font"):
+                if ext in {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".bmp", ".icns", ".svg"} or name.startswith("bwi-font") or icon_ts:
                     digest = sha256(blob)
                     if digest in hashes:
                         hits.append(f"{rel}: forbidden image sha256 {digest}")
-                if ext in TEXT_EXT or name.endswith((".svg", ".xml", ".html", ".hbs", ".json")):
-                    if b"Bitwarden" in blob or b"Vaultwarden" in blob or any(s.encode() in blob for s in signatures):
+                if ext in TEXT_EXT or icon_ts or name.endswith((".svg", ".xml", ".html", ".hbs", ".json")):
+                    if carries_name(blob) or any(s.encode() in blob for s in signatures):
                         text = blob.decode("utf-8", errors="ignore")
                         hits.extend(shield_hits(blob, rel, signatures))
-                        # Docs and legal source files are scanned only for the shield path.
-                        if "/locales/" in rel or rel.endswith((".html", ".hbs", ".svg")) or "messages.json" in rel:
-                            hits.extend(visible_hits(text, rel))
-                        elif rel.startswith("apps/web-marketing/") and ext in {".html", ".js"}:
+                        if rel.endswith(".md"):
+                            continue
+                        if (
+                            "/locales/" in rel
+                            or rel.endswith((".html", ".hbs", ".svg", ".icon.ts"))
+                            or "messages.json" in rel
+                            or icon_ts
+                            or "/libs/assets/" in rel
+                            or (rel.startswith("apps/web-marketing/") and ext in {".html", ".js"})
+                        ):
                             hits.extend(visible_hits(text, rel))
     return hits
 

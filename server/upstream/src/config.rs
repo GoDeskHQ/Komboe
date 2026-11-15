@@ -1319,7 +1319,7 @@ fn validate_config(cfg: &ConfigItems, on_update: bool) -> Result<(), Error> {
             Some(_) => {
                 println!(
                     "[NOTICE] You are using a plain text `ADMIN_TOKEN` which is insecure.\n\
-                Please generate a secure Argon2 PHC string by using `vaultwarden hash` or `argon2`.\n\
+                Please generate a secure Argon2 PHC string by using `komboe hash` or `argon2`.\n\
                 See: https://github.com/dani-garcia/vaultwarden/wiki/Enabling-admin-page#secure-the-admin_token\n"
                 );
             }

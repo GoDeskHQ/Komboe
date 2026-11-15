@@ -851,7 +851,7 @@
   },
   "bitwardenSupport": {
     "message": "Komboe-ის მხარდაჭერა",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "ჩამოტვირთვა"
@@ -1211,7 +1211,7 @@
   },
   "addDomain": {
     "message": "დომენის დამატება",
-    "description": "'Domain' here refers to an internet domain name (e.g. 'bitwarden.com') and the message in whole described the act of putting a domain value into the context."
+    "description": "'Domain' here refers to an internet domain name (e.g. 'komboe.com') and the message in whole described the act of putting a domain value into the context."
   },
   "addedItem": {
     "message": "ელემენტი დამატებულია"
@@ -1970,7 +1970,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "შეიყვანეთ აუთენტიფიკატორის აპის მიერ დაგენერირებული კოდი, როგორიცაა Komboe აუთენტიფიკატორი.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Yubico OTP უსაფრთხოების გასაღები"
@@ -3560,7 +3560,7 @@
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe შემდეგ მოგთხოვთ პაროლის განახლებას პაროლების მენეჯერში.",
-    "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
+    "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
     "message": "Komboe-ის შეტყობინების ილუსტრაცია, რომელიც მომხმარებელს შესვლის განახლებას სთხოვს."
@@ -3617,11 +3617,11 @@
   },
   "send": {
     "message": "გაგზავნა",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDetails": {
     "message": "Send-ის დეტალები",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "ტექსტი"
@@ -3634,7 +3634,7 @@
   },
   "allSends": {
     "message": "ყველა Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "წვდომის მაქსიმალური რაოდენობა მიღწეულია",
@@ -3654,7 +3654,7 @@
   },
   "copySendLink": {
     "message": "Send ბმულის კოპირება",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "პაროლის წაშლა"
@@ -3667,11 +3667,11 @@
   },
   "deletedSend": {
     "message": "Send წაშლილია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Send ბმული",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disabled": {
     "message": "გამორთული"
@@ -3681,26 +3681,26 @@
   },
   "deleteSend": {
     "message": "Send-ის წაშლა",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "დარწმუნებული ხართ, რომ გსურთ ამ Send-ის წაშლა?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "დარწმუნებული ხართ, რომ გსურთ ამ Send-ის სამუდამოდ წაშლა?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Send-ის რედაქტირება",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "წაშლის თარიღი"
   },
   "deletionDateDescV2": {
     "message": "Send სამუდამოდ წაიშლება ამ თარიღს.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "ვადა"
@@ -3722,38 +3722,38 @@
   },
   "createSend": {
     "message": "ახალი Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Send-ის შექმნა",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "ახალი პაროლი"
   },
   "sendDisabled": {
     "message": "Send წაშლილია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "საწარმოო პოლიტიკის გამო, შეგიძლიათ მხოლოდ არსებული Send-ის წაშლა.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send შექმნილია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSendSuccessfully": {
     "message": "Send წარმატებით შეიქმნა!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHoursSingle": {
     "message": "Send ხელმისაწვდომი იქნება ყველასთვის, ვისაც ბმული აქვს, მომდევნო 1 საათის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHours": {
     "message": "Send ხელმისაწვდომი იქნება ყველასთვის, ვისაც ბმული აქვს, მომდევნო $HOURS$ საათის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -3763,11 +3763,11 @@
   },
   "sendExpiresInDaysSingle": {
     "message": "Send ხელმისაწვდომი იქნება ყველასთვის, ვისაც ბმული აქვს, მომდევნო 1 დღის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInDays": {
     "message": "Send ხელმისაწვდომი იქნება ყველასთვის, ვისაც ბმული აქვს, მომდევნო $DAYS$ დღის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -3786,7 +3786,7 @@
   },
   "sendCreatedDescriptionV2": {
     "message": "დააკოპირეთ და გააზიარეთ ეს Send ბმული. Send ხელმისაწვდომი იქნება ყველასთვის, ვისაც ბმული აქვს, მომდევნო $TIME$-ის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3796,7 +3796,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "დააკოპირეთ და გააზიარეთ ეს Send ბმული. Send ხელმისაწვდომი იქნება ყველასთვის, ვისაც ბმული და თქვენ მიერ დაყენებული პაროლი აქვს, მომდევნო $TIME$-ის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3806,7 +3806,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "დააკოპირეთ და გააზიარეთ ეს Send ბმული. მისი ნახვა შეუძლიათ იმ ადამიანებს, რომლებიც თქვენ მიუთითეთ, მომდევნო $TIME$-ის განმავლობაში.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3816,11 +3816,11 @@
   },
   "sendLinkCopied": {
     "message": "Send ბმული დაკოპირებულია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Send შენახულია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "popOut": {
     "message": "გატანა"
@@ -4775,11 +4775,11 @@
   },
   "sendsTitleNoItems": {
     "message": "უსაფრთხოდ გაგზავნეთ მგრძნობიარე ინფორმაცია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "უსაფრთხოდ გააზიარეთ ფაილები და მონაცემები ნებისმიერთან, ნებისმიერ პლატფორმაზე. თქვენი ინფორმაცია დარჩება ბოლოდან ბოლომდე დაშიფრული, ხოლო გამოვლენა შეზღუდული.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "inputRequired": {
     "message": "შეყვანა სავალდებულოა."
@@ -6138,7 +6138,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "URI-ის შესაბამისობის აღმოჩენა არის ის, თუ როგორ ამოიცნობს Komboe ავტომატური შევსების შემოთავაზებებს.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"რეგულარული გამოსახულება\" არის გაფართოებული პარამეტრი მონაცემების გამოვლენის გაზრდილი რისკით.",
@@ -6194,11 +6194,11 @@
   },
   "defaultPasswordManagerCalloutTitle": {
     "message": "გააუმჯობესეთ თქვენი ავტომატური შევსების გამოცდილება",
-    "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
+    "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
     "message": "თქვენ მოგეთხოვებათ $BROWSER$ ბრაუზერის ნებართვის მინიჭება, რომ Komboe თქვენს ნაგულისხმევ პაროლების მენეჯერად იქცეს.",
-    "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
+    "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
         "content": "$1",
@@ -6223,7 +6223,7 @@
   },
   "defaultPasswordManagerPromptTitleV2": {
     "message": "გახადეთ Komboe თქვენი ნაგულისხმევი პაროლების მენეჯერი",
-    "description": "Label for the setting to make Bitwarden the default password manager"
+    "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
     "message": "გამორთეთ ბრაუზერის ავტომატური შევსების პარამეტრები კონფლიქტების თავიდან ასაცილებლად.",
@@ -7097,15 +7097,15 @@
   },
   "fileSends": {
     "message": "ფაილ Send-ები",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textSends": {
     "message": "ტექსტური Send-ები",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "itemSends": {
     "message": "ელემენტის Send-ები",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "accountActions": {
     "message": "ანგარიშის მოქმედებები"
@@ -7246,7 +7246,7 @@
   },
   "saveToBitwarden": {
     "message": "Komboe-ში შენახვა",
-    "description": "Confirmation message for saving a login to Bitwarden"
+    "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
     "message": "ცარიელი ადგილი",
@@ -7933,7 +7933,7 @@
   },
   "sendPasswordHelperText": {
     "message": "პირებს მოუწევთ პაროლის შეყვანა ამ Send-ის სანახავად",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "userVerificationFailed": {
     "message": "მომხმარებლის ვერიფიკაცია ვერ მოხერხდა."
@@ -8089,7 +8089,7 @@
   },
   "sendCreated": {
     "message": "Send შექმნილია",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "შეყვანა უნდა იყოს რიცხვითი"
@@ -8124,26 +8124,26 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "არ შეესაბამება თქვენი ორგანიზაციის Send პოლიტიკას",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "ამ Send-ის რედაქტირებისთვის, გააკეთეთ ასლი. თუ ეს Send შეიძლება დასრულდეს დაყენებულ წაშლის თარიღზე, მოქმედება არ არის საჭირო",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "ასლის გაკეთება"
   },
   "orgDoesNotAllowTextSends": {
     "message": "ტექსტური Send-ები დაუშვებელია თქვენი ორგანიზაციისთვის",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "ფაილ Send-ები დაუშვებელია თქვენი ორგანიზაციისთვის",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "ეს Send ავტომატურად დასრულდება დაყენებულ წაშლის თარიღს",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "errorImportingMyItemsMultiCollection": {
     "message": "ვერ აიმპორტებთ ელემენტებს ჩემს ელემენტებში, რომლებიც მრავალი კოლექციის ნაწილია"

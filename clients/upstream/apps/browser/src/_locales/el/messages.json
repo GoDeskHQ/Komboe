@@ -851,7 +851,7 @@
   },
   "bitwardenSupport": {
     "message": "Υποστήριξη Komboe",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "Λήψη"
@@ -1211,7 +1211,7 @@
   },
   "addDomain": {
     "message": "Προσθήκη τομέα",
-    "description": "'Domain' here refers to an internet domain name (e.g. 'bitwarden.com') and the message in whole described the act of putting a domain value into the context."
+    "description": "'Domain' here refers to an internet domain name (e.g. 'komboe.com') and the message in whole described the act of putting a domain value into the context."
   },
   "addedItem": {
     "message": "Το στοιχείο προστέθηκε"
@@ -1970,7 +1970,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Εισαγάγετε έναν κωδικό που δημιουργήθηκε από μια εφαρμογή ελέγχου ταυτότητας, όπως το Komboe Authenticator.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Κλειδί ασφαλείας OTP Yubico"
@@ -3560,7 +3560,7 @@
   },
   "updateInBitwardenSlideDesc": {
     "message": "Το Komboe θα σας ζητήσει στη συνέχεια να ενημερώσετε τον κωδικό πρόσβασης στον διαχειριστή κωδικών πρόσβασης.",
-    "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
+    "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
     "message": "Εικονογράφηση ειδοποίησης του Komboe που ζητά από τον χρήστη να ενημερώσει τη σύνδεση."
@@ -3617,11 +3617,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDetails": {
     "message": "Στοιχεία Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "Κείμενο"
@@ -3634,7 +3634,7 @@
   },
   "allSends": {
     "message": "Όλα τα Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "Ο μέγιστος αριθμός προσβάσεων συμπληρώθηκε",
@@ -3654,7 +3654,7 @@
   },
   "copySendLink": {
     "message": "Αντιγραφή συνδέσμου Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "Αφαίρεση κωδικού πρόσβασης"
@@ -3667,11 +3667,11 @@
   },
   "deletedSend": {
     "message": "Το Send διαγράφηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Σύνδεσμος Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disabled": {
     "message": "Απενεργοποιημένο"
@@ -3681,26 +3681,26 @@
   },
   "deleteSend": {
     "message": "Διαγραφή Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "Θέλετε σίγουρα να διαγράψετε αυτό το Send;",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "Θέλετε σίγουρα να διαγράψετε οριστικά αυτό το Send;",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Επεξεργασία Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "Ημερομηνία διαγραφής"
   },
   "deletionDateDescV2": {
     "message": "Το Send θα διαγραφεί οριστικά σε αυτήν την ημερομηνία.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "Ημερομηνία λήξης"
@@ -3722,38 +3722,38 @@
   },
   "createSend": {
     "message": "Νέο Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Δημιουργία Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "Νέος κωδικός πρόσβασης"
   },
   "sendDisabled": {
     "message": "Το Send αφαιρέθηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "Λόγω μιας επιχειρηματικής πολιτικής, είστε σε θέση να διαγράψετε μόνο ένα υπάρχον Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Το Send δημιουργήθηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSendSuccessfully": {
     "message": "Το Send δημιουργήθηκε επιτυχώς!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHoursSingle": {
     "message": "Το Send θα είναι διαθέσιμο σε όποιον έχει τον σύνδεσμο για την επόμενη 1 ώρα.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHours": {
     "message": "Το Send θα είναι διαθέσιμο σε όποιον έχει τον σύνδεσμο για τις επόμενες $HOURS$ ώρες.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -3763,11 +3763,11 @@
   },
   "sendExpiresInDaysSingle": {
     "message": "Το Send θα είναι διαθέσιμο σε όποιον έχει τον σύνδεσμο για την επόμενη 1 ημέρα.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInDays": {
     "message": "Το Send θα είναι διαθέσιμο σε όποιον έχει τον σύνδεσμο για τις επόμενες $DAYS$ ημέρες.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -3786,7 +3786,7 @@
   },
   "sendCreatedDescriptionV2": {
     "message": "Αντιγράψτε και μοιραστείτε αυτόν τον σύνδεσμο Send. Το Send θα είναι διαθέσιμο σε οποιονδήποτε έχει τον σύνδεσμο για τα επόμενα $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3796,7 +3796,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "Αντιγράψτε και μοιραστείτε αυτόν τον σύνδεσμο Send. Το Send θα είναι διαθέσιμο σε οποιονδήποτε έχει τον σύνδεσμο και τον κωδικό πρόσβασης που ορίσατε για τα επόμενα $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3806,7 +3806,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "Αντιγράψτε και μοιραστείτε αυτόν τον σύνδεσμο Send. Μπορεί να προβληθεί από τα άτομα που καθορίσατε για τα επόμενα $TIME$.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3816,11 +3816,11 @@
   },
   "sendLinkCopied": {
     "message": "Ο σύνδεσμος του Send αντιγράφηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Το Send αποθηκεύτηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "popOut": {
     "message": "Άνοιγμα σε αναδυόμενο παράθυρο"
@@ -4775,11 +4775,11 @@
   },
   "sendsTitleNoItems": {
     "message": "Ασφαλής αποστολή ευαίσθητων πληροφοριών",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "Ένας ασφαλής τρόπος διαμοιρασμού αρχείων και δεδομένων με οποιονδήποτε, σε οποιαδήποτε πλατφόρμα. Οι πληροφορίες σας παραμένουν κρυπτογραφημένες από άκρο σε άκρο, περιορίζοντας έτσι την έκθεσή τους.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "inputRequired": {
     "message": "Απαιτείται είσοδος."
@@ -6138,7 +6138,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "Η ανίχνευση αντιστοιχίας URI είναι ο τρόπος με τον οποίο το Komboe προσδιορίζει τις προτάσεις αυτόματης συμπλήρωσης.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "Η «Κανονική έκφραση» είναι προηγμένη επιλογή με αυξημένο κίνδυνο έκθεσης διαπιστευτηρίων.",
@@ -6194,11 +6194,11 @@
   },
   "defaultPasswordManagerCalloutTitle": {
     "message": "Βελτιώστε την εμπειρία αυτόματης συμπλήρωσής σας",
-    "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
+    "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
     "message": "Θα σας ζητηθεί να παραχωρήσετε άδεια στο πρόγραμμα περιήγησης $BROWSER$ για να ορίσετε το Komboe ως προεπιλεγμένο διαχειριστή κωδικών πρόσβασης.",
-    "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
+    "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
         "content": "$1",
@@ -6223,7 +6223,7 @@
   },
   "defaultPasswordManagerPromptTitleV2": {
     "message": "Ορίστε το Komboe ως τον προεπιλεγμένο διαχειριστή κωδικών πρόσβασής σας",
-    "description": "Label for the setting to make Bitwarden the default password manager"
+    "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
     "message": "Απενεργοποιήστε τις ρυθμίσεις αυτόματης συμπλήρωσης του προγράμματος περιήγησης για να αποφύγετε διενέξεις.",
@@ -7097,15 +7097,15 @@
   },
   "fileSends": {
     "message": "Send αρχείων",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textSends": {
     "message": "Send κειμένων",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "itemSends": {
     "message": "Send στοιχείων",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "accountActions": {
     "message": "Ενέργειες λογαριασμού"
@@ -7246,7 +7246,7 @@
   },
   "saveToBitwarden": {
     "message": "Αποθήκευση στο Komboe",
-    "description": "Confirmation message for saving a login to Bitwarden"
+    "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
     "message": "Κενό",
@@ -7933,7 +7933,7 @@
   },
   "sendPasswordHelperText": {
     "message": "Οι υπόλοιποι χρήστες θα πρέπει να εισαγάγουν τον κωδικό πρόσβασης για να δουν αυτό το Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "userVerificationFailed": {
     "message": "Η επαλήθευση χρήστη απέτυχε."
@@ -8089,7 +8089,7 @@
   },
   "sendCreated": {
     "message": "Το Send δημιουργήθηκε",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "Η είσοδος πρέπει να είναι αριθμητική"
@@ -8124,26 +8124,26 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "Μη συμμορφούμενο με την πολιτική Send του οργανισμού σας",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "Για να επεξεργαστείτε αυτό το Send, δημιουργήστε ένα αντίγραφο. Αν αυτό το Send μπορεί να λήξει στην καθορισμένη ημερομηνία διαγραφής, δεν απαιτείται καμία ενέργεια",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "Δημιουργία αντιγράφου"
   },
   "orgDoesNotAllowTextSends": {
     "message": "Τα Text Sends δεν επιτρέπονται για τον οργανισμό σας",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "Τα File Sends δεν επιτρέπονται για τον οργανισμό σας",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "Αυτό το Send θα λήξει αυτόματα στην καθορισμένη ημερομηνία διαγραφής",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "errorImportingMyItemsMultiCollection": {
     "message": "Δεν μπορείτε να εισαγάγετε στοιχεία στα Στοιχεία μου που αποτελούν μέρος πολλαπλών συλλογών"
