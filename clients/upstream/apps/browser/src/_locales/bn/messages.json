@@ -3,18 +3,18 @@
     "message": "Komboe"
   },
   "appLogoLabel": {
-    "message": "বিটওয়ার্ডেন লোগো"
+    "message": "Komboe লোগো"
   },
   "extName": {
-    "message": "বিটওয়ার্ডেন পাসওয়ার্ড ম্যানেজার",
+    "message": "Komboe পাসওয়ার্ড ম্যানেজার",
     "description": "Extension name, MUST be less than 40 characters (Safari restriction)"
   },
   "extNameBeta": {
-    "message": "বিটওয়ার্ডেন পাসওয়ার্ড ম্যানেজার বিটা",
+    "message": "Komboe পাসওয়ার্ড ম্যানেজার বিটা",
     "description": "Extension name for the beta channel, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "বাড়িতে, অফিসে বা চলার পথে, বিটওয়ার্ডেন আপনার সমস্ত পাসওয়ার্ড, পাসকী এবং সংবেদনশীল তথ্য সহজে সুরক্ষিত করে",
+    "message": "বাড়িতে, অফিসে বা চলার পথে, Komboe আপনার সমস্ত পাসওয়ার্ড, পাসকী এবং সংবেদনশীল তথ্য সহজে সুরক্ষিত করে",
     "description": "Extension description, MUST be less than 112 characters (Safari restriction)"
   },
   "loginOrCreateNewAccount": {
@@ -27,7 +27,7 @@
     "message": "অ্যাকাউন্ট তৈরি করুন"
   },
   "newToBitwarden": {
-    "message": "বিটওয়ার্ডেনে নতুন?"
+    "message": "Komboe নতুন?"
   },
   "logInWithPasskey": {
     "message": "পাসকী দিয়ে লগইন করুন"
@@ -324,22 +324,22 @@
     "message": "ওয়েব অ্যাপে চালিয়ে যাবেন?"
   },
   "continueToWebAppDesc": {
-    "message": "ওয়েব অ্যাপে আপনার বিটওয়ার্ডেন অ্যাকাউন্টের আরও বৈশিষ্ট্য অন্বেষণ করুন।"
+    "message": "ওয়েব অ্যাপে আপনার Komboe অ্যাকাউন্টের আরও বৈশিষ্ট্য অন্বেষণ করুন।"
   },
   "continueToHelpCenter": {
     "message": "সহায়তা কেন্দ্রে চালিয়ে যাবেন?"
   },
   "continueToHelpCenterDesc": {
-    "message": "সহায়তা কেন্দ্রে বিটওয়ার্ডেন কীভাবে ব্যবহার করতে হয় সে সম্পর্কে আরও জানুন।"
+    "message": "সহায়তা কেন্দ্রে Komboe কীভাবে ব্যবহার করতে হয় সে সম্পর্কে আরও জানুন।"
   },
   "continueToBrowserExtensionStore": {
     "message": "ব্রাউজার এক্সটেনশন স্টোরে চালিয়ে যাবেন?"
   },
   "continueToBrowserExtensionStoreDesc": {
-    "message": "অন্যদের বিটওয়ার্ডেন তাদের জন্য উপযুক্ত কিনা তা জানতে সহায়তা করুন। আপনার ব্রাউজারের এক্সটেনশন স্টোর দেখুন এবং এখনই একটি রেটিং দিন।"
+    "message": "অন্যদের Komboe তাদের জন্য উপযুক্ত কিনা তা জানতে সহায়তা করুন। আপনার ব্রাউজারের এক্সটেনশন স্টোর দেখুন এবং এখনই একটি রেটিং দিন।"
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "আপনি বিটওয়ার্ডেন ওয়েব অ্যাপে আপনার মাস্টার পাসওয়ার্ড পরিবর্তন করতে পারেন।"
+    "message": "আপনি Komboe ওয়েব অ্যাপে আপনার মাস্টার পাসওয়ার্ড পরিবর্তন করতে পারেন।"
   },
   "fingerprintPhrase": {
     "message": "ফিঙ্গারপ্রিন্ট ফ্রেজ",
@@ -356,31 +356,31 @@
     "message": "লগ আউট"
   },
   "aboutBitwarden": {
-    "message": "বিটওয়ার্ডেন সম্পর্কে"
+    "message": "Komboe সম্পর্কে"
   },
   "about": {
     "message": "সম্বন্ধে"
   },
   "moreFromBitwarden": {
-    "message": "বিটওয়ার্ডেন থেকে আরও"
+    "message": "Komboe থেকে আরও"
   },
   "continueToBitwardenDotCom": {
     "message": "komboe.com এ চালিয়ে যাবেন?"
   },
   "bitwardenForBusiness": {
-    "message": "ব্যবসার জন্য বিটওয়ার্ডেন"
+    "message": "ব্যবসার জন্য Komboe"
   },
   "bitwardenAuthenticator": {
-    "message": "বিটওয়ার্ডেন অথেন্টিকেটর"
+    "message": "Komboe অথেন্টিকেটর"
   },
   "continueToAuthenticatorPageDesc": {
-    "message": "বিটওয়ার্ডেন অথেন্টিকেটর আপনাকে অথেন্টিকেটর কী সংরক্ষণ করতে এবং 2-ধাপ যাচাইকরণ প্রবাহের জন্য TOTP কোড তৈরি করতে দেয়। komboe.com ওয়েবসাইটে আরও জানুন"
+    "message": "Komboe অথেন্টিকেটর আপনাকে অথেন্টিকেটর কী সংরক্ষণ করতে এবং 2-ধাপ যাচাইকরণ প্রবাহের জন্য TOTP কোড তৈরি করতে দেয়। komboe.com ওয়েবসাইটে আরও জানুন"
   },
   "bitwardenSecretsManager": {
-    "message": "বিটওয়ার্ডেন সিক্রেটস ম্যানেজার"
+    "message": "Komboe সিক্রেটস ম্যানেজার"
   },
   "continueToSecretsManagerPageDesc": {
-    "message": "বিটওয়ার্ডেন সিক্রেটস ম্যানেজার দিয়ে ডেভেলপার সিক্রেট নিরাপদে সংরক্ষণ, পরিচালনা এবং শেয়ার করুন। komboe.com ওয়েবসাইটে আরও জানুন।"
+    "message": "Komboe সিক্রেটস ম্যানেজার দিয়ে ডেভেলপার সিক্রেট নিরাপদে সংরক্ষণ, পরিচালনা এবং শেয়ার করুন। komboe.com ওয়েবসাইটে আরও জানুন।"
   },
   "passwordlessDotDev": {
     "message": "Passwordless.dev"
@@ -389,10 +389,10 @@
     "message": "Passwordless.dev দিয়ে ঐতিহ্যবাহী পাসওয়ার্ড থেকে মুক্ত মসৃণ এবং নিরাপদ লগইন অভিজ্ঞতা তৈরি করুন। komboe.com ওয়েবসাইটে আরও জানুন।"
   },
   "freeBitwardenFamilies": {
-    "message": "বিনামূল্যে বিটওয়ার্ডেন Families"
+    "message": "বিনামূল্যে Komboe Families"
   },
   "freeBitwardenFamiliesPageDesc": {
-    "message": "আপনি বিনামূল্যে বিটওয়ার্ডেন Families এর জন্য যোগ্য। আজই ওয়েব অ্যাপে এই অফারটি রিডিম করুন।"
+    "message": "আপনি বিনামূল্যে Komboe Families এর জন্য যোগ্য। আজই ওয়েব অ্যাপে এই অফারটি রিডিম করুন।"
   },
   "version": {
     "message": "সংস্করণ"
@@ -458,13 +458,13 @@
     "message": "সহায়তা এবং প্রতিক্রিয়া"
   },
   "helpCenter": {
-    "message": "বিটওয়ার্ডেন সহায়তা কেন্দ্র"
+    "message": "Komboe সহায়তা কেন্দ্র"
   },
   "communityForums": {
-    "message": "বিটওয়ার্ডেন কমিউনিটি ফোরাম অন্বেষণ করুন"
+    "message": "Komboe কমিউনিটি ফোরাম অন্বেষণ করুন"
   },
   "contactSupport": {
-    "message": "বিটওয়ার্ডেন সহায়তার সাথে যোগাযোগ করুন"
+    "message": "Komboe সহায়তার সাথে যোগাযোগ করুন"
   },
   "sync": {
     "message": "সিঙ্ক"
@@ -486,7 +486,7 @@
     "message": "আপনার লগইনগুলির জন্য স্বয়ংক্রিয়ভাবে শক্তিশালী, অদ্বিতীয় পাসওয়ার্ড তৈরি করুন।"
   },
   "bitWebVaultApp": {
-    "message": "বিটওয়ার্ডেন ওয়েব অ্যাপ"
+    "message": "Komboe ওয়েব অ্যাপ"
   },
   "select": {
     "message": "নির্বাচন করুন"
@@ -850,7 +850,7 @@
     "message": "ডায়াগনস্টিক রিপোর্ট ডাউনলোড করুন তারপর শেয়ার করুন"
   },
   "bitwardenSupport": {
-    "message": "বিটওয়ার্ডেন সহায়তা",
+    "message": "Komboe সহায়তা",
     "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
@@ -1067,10 +1067,10 @@
     "message": "2-ধাপ যাচাইকরণ নির্বিঘ্ন করুন"
   },
   "totpHelper": {
-    "message": "বিটওয়ার্ডেন 2-ধাপ যাচাইকরণ কোড সংরক্ষণ এবং পূরণ করতে পারে। এই ফিল্ডে কী কপি এবং পেস্ট করুন।"
+    "message": "Komboe 2-ধাপ যাচাইকরণ কোড সংরক্ষণ এবং পূরণ করতে পারে। এই ফিল্ডে কী কপি এবং পেস্ট করুন।"
   },
   "totpHelperWithCapture": {
-    "message": "বিটওয়ার্ডেন 2-ধাপ যাচাইকরণ কোড সংরক্ষণ এবং পূরণ করতে পারে। এই ওয়েবসাইটের অথেন্টিকেটর QR কোডের স্ক্রিনশট নিতে ক্যামেরা আইকন নির্বাচন করুন, অথবা এই ফিল্ডে কী কপি এবং পেস্ট করুন।"
+    "message": "Komboe 2-ধাপ যাচাইকরণ কোড সংরক্ষণ এবং পূরণ করতে পারে। এই ওয়েবসাইটের অথেন্টিকেটর QR কোডের স্ক্রিনশট নিতে ক্যামেরা আইকন নির্বাচন করুন, অথবা এই ফিল্ডে কী কপি এবং পেস্ট করুন।"
   },
   "learnMoreAboutAuthenticators": {
     "message": "অথেন্টিকেটর সম্পর্কে আরও জানুন"
@@ -1160,7 +1160,7 @@
     "message": "দ্বি-পদক্ষেপ লগইন অন্য ডিভাইসে আপনার লগইনটি যাচাই করার জন্য সিকিউরিটি কী, প্রমাণীকরণকারী অ্যাপ্লিকেশন, এসএমএস, ফোন কল বা ই-মেইল ব্যাবহারের মাধ্যমে আপনার অ্যাকাউন্টকে আরও সুরক্ষিত করে। komboe.com ওয়েব ভল্টে দ্বি-পদক্ষেপের লগইন সক্ষম করা যাবে। আপনি কি এখনই ওয়েবসাইটটি দেখতে চান?"
   },
   "twoStepLoginConfirmationContent": {
-    "message": "বিটওয়ার্ডেন ওয়েব অ্যাপে দুই-ধাপ লগইন সেট আপ করে আপনার অ্যাকাউন্ট আরও নিরাপদ করুন।"
+    "message": "Komboe ওয়েব অ্যাপে দুই-ধাপ লগইন সেট আপ করে আপনার অ্যাকাউন্ট আরও নিরাপদ করুন।"
   },
   "twoStepLoginConfirmationTitle": {
     "message": "ওয়েব অ্যাপে চালিয়ে যাবেন?"
@@ -1349,11 +1349,11 @@
     }
   },
   "notificationLoginSaveConfirmation": {
-    "message": "বিটওয়ার্ডেন এ সংরক্ষিত।",
+    "message": "Komboe এ সংরক্ষিত।",
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "বিটওয়ার্ডেন এ আপডেট করা হয়েছে।",
+    "message": "Komboe এ আপডেট করা হয়েছে।",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
@@ -1457,7 +1457,7 @@
     "message": "হ্যাঁ, এখনই হালনাগাদ করুন"
   },
   "notificationUnlockDesc": {
-    "message": "অটোফিল অনুরোধ সম্পূর্ণ করতে আপনার বিটওয়ার্ডেন ভল্ট আনলক করুন।"
+    "message": "অটোফিল অনুরোধ সম্পূর্ণ করতে আপনার Komboe ভল্ট আনলক করুন।"
   },
   "notificationUnlock": {
     "message": "আনলক"
@@ -1605,10 +1605,10 @@
     "message": "এই পাসওয়ার্ডটি এই ফাইল রপ্তানি এবং আমদানি করতে ব্যবহৃত হবে"
   },
   "accountRestrictedOptionDescription": {
-    "message": "আপনার অ্যাকাউন্টের এনক্রিপশন কী ব্যবহার করুন, যা আপনার অ্যাকাউন্টের ব্যবহারকারীর নাম এবং মাস্টার পাসওয়ার্ড থেকে উদ্ভূত, রপ্তানি এনক্রিপ্ট করতে এবং শুধুমাত্র বর্তমান বিটওয়ার্ডেন অ্যাকাউন্টে আমদানি সীমাবদ্ধ করতে।"
+    "message": "আপনার অ্যাকাউন্টের এনক্রিপশন কী ব্যবহার করুন, যা আপনার অ্যাকাউন্টের ব্যবহারকারীর নাম এবং মাস্টার পাসওয়ার্ড থেকে উদ্ভূত, রপ্তানি এনক্রিপ্ট করতে এবং শুধুমাত্র বর্তমান Komboe অ্যাকাউন্টে আমদানি সীমাবদ্ধ করতে।"
   },
   "passwordProtectedOptionDescription": {
-    "message": "রপ্তানি এনক্রিপ্ট করতে একটি ফাইল পাসওয়ার্ড সেট করুন এবং ডিক্রিপশনের জন্য পাসওয়ার্ড ব্যবহার করে যেকোনো বিটওয়ার্ডেন অ্যাকাউন্টে আমদানি করুন।"
+    "message": "রপ্তানি এনক্রিপ্ট করতে একটি ফাইল পাসওয়ার্ড সেট করুন এবং ডিক্রিপশনের জন্য পাসওয়ার্ড ব্যবহার করে যেকোনো Komboe অ্যাকাউন্টে আমদানি করুন।"
   },
   "exportTypeHeading": {
     "message": "রপ্তানির ধরন"
@@ -1637,7 +1637,7 @@
     "message": "এই রপ্তানি আপনার অ্যাকাউন্টের এনক্রিপশন কী ব্যবহার করে আপনার ডেটা এনক্রিপ্ট করে। আপনি যদি কখনও আপনার অ্যাকাউন্টের এনক্রিপশন কী রোটেট করেন তবে আপনার আবার রপ্তানি করা উচিত কারণ আপনি এই রপ্তানি ফাইলটি ডিক্রিপ্ট করতে পারবেন না।"
   },
   "encExportAccountWarningDesc": {
-    "message": "অ্যাকাউন্ট এনক্রিপশন কী প্রতিটি বিটওয়ার্ডেন ব্যবহারকারী অ্যাকাউন্টের জন্য অনন্য, তাই আপনি একটি এনক্রিপ্টেড রপ্তানি একটি ভিন্ন অ্যাকাউন্টে আমদানি করতে পারবেন না।"
+    "message": "অ্যাকাউন্ট এনক্রিপশন কী প্রতিটি Komboe ব্যবহারকারী অ্যাকাউন্টের জন্য অনন্য, তাই আপনি একটি এনক্রিপ্টেড রপ্তানি একটি ভিন্ন অ্যাকাউন্টে আমদানি করতে পারবেন না।"
   },
   "exportMasterPassword": {
     "message": "আপনার ভল্ট তথ্য রফতানি করতে আপনার মূল পাসওয়ার্ডটি দিন।"
@@ -1863,7 +1863,7 @@
     "message": "প্রিমিয়াম কিনুন"
   },
   "premiumPurchaseAlertV2": {
-    "message": "আপনি বিটওয়ার্ডেন ওয়েব অ্যাপে আপনার অ্যাকাউন্ট সেটিংস থেকে Premium কিনতে পারেন।"
+    "message": "আপনি Komboe ওয়েব অ্যাপে আপনার অ্যাকাউন্ট সেটিংস থেকে Premium কিনতে পারেন।"
   },
   "premiumFeatures": {
     "message": "Premium এ আপগ্রেড করুন এবং পান:"
@@ -1969,7 +1969,7 @@
     "message": "প্রমাণীকরণকারী অ্যাপ"
   },
   "authenticatorAppDescV2": {
-    "message": "বিটওয়ার্ডেন অথেন্টিকেটর এর মতো একটি অথেন্টিকেটর অ্যাপ দ্বারা তৈরি কোড লিখুন।",
+    "message": "Komboe অথেন্টিকেটর এর মতো একটি অথেন্টিকেটর অ্যাপ দ্বারা তৈরি কোড লিখুন।",
     "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
@@ -2002,7 +2002,7 @@
     "message": "স্ব-হোস্টকৃত পরিবেশ"
   },
   "selfHostedBaseUrlHint": {
-    "message": "আপনার অন-প্রিমাইজ হোস্ট করা বিটওয়ার্ডেন ইনস্টলেশনের বেস URL উল্লেখ করুন। উদাহরণ: https://komboe.company.com"
+    "message": "আপনার অন-প্রিমাইজ হোস্ট করা Komboe ইনস্টলেশনের বেস URL উল্লেখ করুন। উদাহরণ: https://komboe.company.com"
   },
   "selfHostedCustomEnvHeader": {
     "message": "উন্নত কনফিগারেশনের জন্য, আপনি প্রতিটি পরিষেবার বেস URL স্বতন্ত্রভাবে উল্লেখ করতে পারেন।"
@@ -2055,7 +2055,7 @@
     "message": "সহজে অটোফিল সাজেশন খুঁজুন"
   },
   "autofillSpotlightDesc": {
-    "message": "আপনার ব্রাউজারের অটোফিল সেটিংস বন্ধ করুন, যাতে তারা বিটওয়ার্ডেন এর সাথে দ্বন্দ্ব না করে।"
+    "message": "আপনার ব্রাউজারের অটোফিল সেটিংস বন্ধ করুন, যাতে তারা Komboe এর সাথে দ্বন্দ্ব না করে।"
   },
   "turnOffBrowserAutofill": {
     "message": "$BROWSER$ অটোফিল বন্ধ করুন",
@@ -2112,7 +2112,7 @@
     "message": "ফর্ম ক্ষেত্রে অটোফিল সাজেশন দেখান"
   },
   "howDoesBitwardenProtectFromPhishing": {
-    "message": "বিটওয়ার্ডেন কীভাবে আপনার ডেটাকে ফিশিং থেকে রক্ষা করে?"
+    "message": "Komboe কীভাবে আপনার ডেটাকে ফিশিং থেকে রক্ষা করে?"
   },
   "currentWebsite": {
     "message": "বর্তমান ওয়েবসাইট"
@@ -3033,7 +3033,7 @@
     "message": "আপনি কি নিশ্চিতভাবে আপনার অ্যাকাউন্টের এনক্রিপশন কী রোটেট করতে চান?"
   },
   "updateEncryptionKeyWarning": {
-    "message": "আপনার এনক্রিপশন কী আপডেট করার পরে, আপনি বর্তমানে ব্যবহার করছেন এমন সমস্ত বিটওয়ার্ডেন অ্যাপ্লিকেশন (যেমন মোবাইল অ্যাপ বা ব্রাউজার এক্সটেনশন) থেকে লগ আউট এবং আবার লগ ইন করতে হবে। লগ আউট এবং আবার লগ ইন করতে ব্যর্থ হলে (যা আপনার নতুন এনক্রিপশন কী ডাউনলোড করে) ডেটা ক্ষতি হতে পারে। আমরা স্বয়ংক্রিয়ভাবে আপনাকে লগ আউট করার চেষ্টা করব, তবে এটি বিলম্বিত হতে পারে।"
+    "message": "আপনার এনক্রিপশন কী আপডেট করার পরে, আপনি বর্তমানে ব্যবহার করছেন এমন সমস্ত Komboe অ্যাপ্লিকেশন (যেমন মোবাইল অ্যাপ বা ব্রাউজার এক্সটেনশন) থেকে লগ আউট এবং আবার লগ ইন করতে হবে। লগ আউট এবং আবার লগ ইন করতে ব্যর্থ হলে (যা আপনার নতুন এনক্রিপশন কী ডাউনলোড করে) ডেটা ক্ষতি হতে পারে। আমরা স্বয়ংক্রিয়ভাবে আপনাকে লগ আউট করার চেষ্টা করব, তবে এটি বিলম্বিত হতে পারে।"
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "আপনার সংরক্ষিত যেকোনো অ্যাকাউন্ট-সীমাবদ্ধ রপ্তানি অবৈধ হয়ে যাবে।"
@@ -3064,7 +3064,7 @@
     "message": "Komboe আনলক করার জন্য আপনার পিন কোডটি সেট করুন। আপনি যদি অ্যাপ্লিকেশনটি থেকে পুরোপুরি লগ আউট করেন তবে আপনার পিন সেটিংস রিসেট করা হবে।"
   },
   "setPinCode": {
-    "message": "আপনি বিটওয়ার্ডেন আনলক করতে এই PIN ব্যবহার করতে পারেন। আপনি যদি কখনও অ্যাপ্লিকেশন থেকে সম্পূর্ণ লগ আউট করেন তবে আপনার PIN রিসেট হবে।"
+    "message": "আপনি Komboe আনলক করতে এই PIN ব্যবহার করতে পারেন। আপনি যদি কখনও অ্যাপ্লিকেশন থেকে সম্পূর্ণ লগ আউট করেন তবে আপনার PIN রিসেট হবে।"
   },
   "pinRequired": {
     "message": "পিন কোড প্রয়োজন।"
@@ -3200,7 +3200,7 @@
     "message": "ফর্মটি আপনার সংরক্ষিত লগইনের URI থেকে একটি ভিন্ন ডোমেইন দ্বারা হোস্ট করা হয়েছে। তবুও অটোফিল করতে ঠিক আছে চয়ন করুন, বা থামতে বাতিল চয়ন করুন।"
   },
   "autofillIframeWarningTip": {
-    "message": "ভবিষ্যতে এই সতর্কতা প্রতিরোধ করতে, এই URI, $HOSTNAME$, এই সাইটের জন্য আপনার বিটওয়ার্ডেন লগইন আইটেমে সংরক্ষণ করুন।",
+    "message": "ভবিষ্যতে এই সতর্কতা প্রতিরোধ করতে, এই URI, $HOSTNAME$, এই সাইটের জন্য আপনার Komboe লগইন আইটেমে সংরক্ষণ করুন।",
     "placeholders": {
       "hostname": {
         "content": "$1",
@@ -3209,7 +3209,7 @@
     }
   },
   "topLayerHijackWarning": {
-    "message": "এই পৃষ্ঠাটি বিটওয়ার্ডেন অভিজ্ঞতায় হস্তক্ষেপ করছে। নিরাপত্তা ব্যবস্থা হিসাবে বিটওয়ার্ডেন ইনলাইন মেনু সাময়িকভাবে অক্ষম করা হয়েছে।"
+    "message": "এই পৃষ্ঠাটি Komboe অভিজ্ঞতায় হস্তক্ষেপ করছে। নিরাপত্তা ব্যবস্থা হিসাবে Komboe ইনলাইন মেনু সাময়িকভাবে অক্ষম করা হয়েছে।"
   },
   "setMasterPassword": {
     "message": "মূল পাসওয়ার্ড ধার্য করুন"
@@ -3266,7 +3266,7 @@
     "message": "আপনার নতুন মূল পাসওয়ার্ড নীতির প্রয়োজনীয়তা পূরণ করে না।"
   },
   "receiveMarketingEmails": {
-    "message": "আপনার ইনবক্সে বিটওয়ার্ডেন থেকে আপডেট পান।"
+    "message": "আপনার ইনবক্সে Komboe থেকে আপডেট পান।"
   },
   "unsubscribe": {
     "message": "আনসাবস্ক্রাইব"
@@ -3371,13 +3371,13 @@
     "message": "বায়োমেট্রিক্স ব্যর্থ হয়েছে"
   },
   "biometricsFailedDesc": {
-    "message": "বায়োমেট্রিক্স সম্পূর্ণ করা যাবে না, মাস্টার পাসওয়ার্ড ব্যবহার বা লগ আউট করার কথা বিবেচনা করুন। যদি এটি চলতে থাকে, অনুগ্রহ করে বিটওয়ার্ডেন সহায়তার সাথে যোগাযোগ করুন।"
+    "message": "বায়োমেট্রিক্স সম্পূর্ণ করা যাবে না, মাস্টার পাসওয়ার্ড ব্যবহার বা লগ আউট করার কথা বিবেচনা করুন। যদি এটি চলতে থাকে, অনুগ্রহ করে Komboe সহায়তার সাথে যোগাযোগ করুন।"
   },
   "nativeMessagingPermissionErrorTitle": {
     "message": "অনুমতি প্রদান করা হয়নি"
   },
   "nativeMessagingPermissionErrorDesc": {
-    "message": "বিটওয়ার্ডেন ডেস্কটপ অ্যাপ্লিকেশনের সাথে যোগাযোগের অনুমতি ছাড়া আমরা ব্রাউজার এক্সটেনশনে বায়োমেট্রিক্স প্রদান করতে পারি না। আবার চেষ্টা করুন।"
+    "message": "Komboe ডেস্কটপ অ্যাপ্লিকেশনের সাথে যোগাযোগের অনুমতি ছাড়া আমরা ব্রাউজার এক্সটেনশনে বায়োমেট্রিক্স প্রদান করতে পারি না। আবার চেষ্টা করুন।"
   },
   "nativeMessagingPermissionSidebarTitle": {
     "message": "অনুমতি অনুরোধ ত্রুটি"
@@ -3414,7 +3414,7 @@
     "message": "বাদ দেওয়া ডোমেইন"
   },
   "excludedDomainsDesc": {
-    "message": "বিটওয়ার্ডেন এই ডোমেইনগুলির জন্য লগইন বিবরণ সংরক্ষণ করতে বলবে না। পরিবর্তনগুলি কার্যকর হতে আপনাকে পৃষ্ঠাটি রিফ্রেশ করতে হবে।"
+    "message": "Komboe এই ডোমেইনগুলির জন্য লগইন বিবরণ সংরক্ষণ করতে বলবে না। পরিবর্তনগুলি কার্যকর হতে আপনাকে পৃষ্ঠাটি রিফ্রেশ করতে হবে।"
   },
   "blockedDomainsDesc": {
     "message": "এই ওয়েবসাইটগুলির জন্য অটোফিল এবং অন্যান্য সম্পর্কিত বৈশিষ্ট্য দেওয়া হবে না। পরিবর্তনগুলি কার্যকর হতে আপনাকে পৃষ্ঠাটি রিফ্রেশ করতে হবে।"
@@ -3546,24 +3546,24 @@
     "message": "ঝুঁকিপূর্ণ লগইনের একটি তালিকার চিত্র।"
   },
   "welcomeDialogGraphicAlt": {
-    "message": "বিটওয়ার্ডেন ভল্ট পৃষ্ঠার বিন্যাসের চিত্র।"
+    "message": "Komboe ভল্ট পৃষ্ঠার বিন্যাসের চিত্র।"
   },
   "generatePasswordSlideDesc": {
-    "message": "ঝুঁকিপূর্ণ সাইটে বিটওয়ার্ডেন অটোফিল মেনু দিয়ে দ্রুত একটি শক্তিশালী, অনন্য পাসওয়ার্ড তৈরি করুন।",
+    "message": "ঝুঁকিপূর্ণ সাইটে Komboe অটোফিল মেনু দিয়ে দ্রুত একটি শক্তিশালী, অনন্য পাসওয়ার্ড তৈরি করুন।",
     "description": "Description of the generate password slide on the at-risk password page carousel"
   },
   "generatePasswordSlideImgAltPeriod": {
-    "message": "একটি তৈরি পাসওয়ার্ড প্রদর্শনকারী বিটওয়ার্ডেন অটোফিল মেনুর চিত্র।"
+    "message": "একটি তৈরি পাসওয়ার্ড প্রদর্শনকারী Komboe অটোফিল মেনুর চিত্র।"
   },
   "updateInBitwarden": {
-    "message": "বিটওয়ার্ডেন এ আপডেট করুন"
+    "message": "Komboe এ আপডেট করুন"
   },
   "updateInBitwardenSlideDesc": {
-    "message": "বিটওয়ার্ডেন তারপর আপনাকে পাসওয়ার্ড ম্যানেজারে পাসওয়ার্ড আপডেট করতে বলবে।",
+    "message": "Komboe তারপর আপনাকে পাসওয়ার্ড ম্যানেজারে পাসওয়ার্ড আপডেট করতে বলবে।",
     "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
-    "message": "ব্যবহারকারীকে লগইন আপডেট করতে অনুরোধকারী বিটওয়ার্ডেন এর বিজ্ঞপ্তির চিত্র।"
+    "message": "ব্যবহারকারীকে লগইন আপডেট করতে অনুরোধকারী Komboe এর বিজ্ঞপ্তির চিত্র।"
   },
   "turnOnAutofill": {
     "message": "অটোফিল চালু করুন"
@@ -4078,10 +4078,10 @@
     "message": "অটোফিল ডেটা পেতে ত্রুটি"
   },
   "couldNotDecryptVaultItem": {
-    "message": "বিটওয়ার্ডেন নিচে তালিকাভুক্ত ভল্ট আইটেমটি ডিক্রিপ্ট করতে পারেনি। বিটওয়ার্ডেন গ্রাহক সহায়তার সাথে যোগাযোগ করুন এবং এটি পুনরুদ্ধার করা যায় কিনা দেখতে নিচের আইটেম ID প্রদান করুন।"
+    "message": "Komboe নিচে তালিকাভুক্ত ভল্ট আইটেমটি ডিক্রিপ্ট করতে পারেনি। Komboe গ্রাহক সহায়তার সাথে যোগাযোগ করুন এবং এটি পুনরুদ্ধার করা যায় কিনা দেখতে নিচের আইটেম ID প্রদান করুন।"
   },
   "couldNotDecryptVaultItems": {
-    "message": "বিটওয়ার্ডেন নিচে তালিকাভুক্ত ভল্ট আইটেমগুলি ডিক্রিপ্ট করতে পারেনি। বিটওয়ার্ডেন গ্রাহক সহায়তার সাথে যোগাযোগ করুন এবং সেগুলি পুনরুদ্ধার করা যায় কিনা দেখতে নিচের আইটেম ID গুলি প্রদান করুন।"
+    "message": "Komboe নিচে তালিকাভুক্ত ভল্ট আইটেমগুলি ডিক্রিপ্ট করতে পারেনি। Komboe গ্রাহক সহায়তার সাথে যোগাযোগ করুন এবং সেগুলি পুনরুদ্ধার করা যায় কিনা দেখতে নিচের আইটেম ID গুলি প্রদান করুন।"
   },
   "itemId": {
     "message": "আইটেম ID",
@@ -4191,11 +4191,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "বিটওয়ার্ডেন দ্বারা তৈরি।",
+    "message": "Komboe দ্বারা তৈরি।",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "ওয়েবসাইট: $WEBSITE$। বিটওয়ার্ডেন দ্বারা তৈরি।",
+    "message": "ওয়েবসাইট: $WEBSITE$। Komboe দ্বারা তৈরি।",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -4417,7 +4417,7 @@
     "message": "আপনার ডিভাইসে একটি বিজ্ঞপ্তি পাঠানো হয়েছে।"
   },
   "notificationSentDevicePart1": {
-    "message": "আপনার ডিভাইসে বা বিটওয়ার্ডেন আনলক করুন"
+    "message": "আপনার ডিভাইসে বা Komboe আনলক করুন"
   },
   "notificationSentDeviceAnchor": {
     "message": "ওয়েব অ্যাপ"
@@ -4917,15 +4917,15 @@
     "message": "বিষয়বস্তুতে যান"
   },
   "bitwardenOverlayButton": {
-    "message": "বিটওয়ার্ডেন অটোফিল মেনু বোতাম",
+    "message": "Komboe অটোফিল মেনু বোতাম",
     "description": "Page title for the iframe containing the overlay button"
   },
   "toggleBitwardenVaultOverlay": {
-    "message": "বিটওয়ার্ডেন অটোফিল মেনু টগল করুন",
+    "message": "Komboe অটোফিল মেনু টগল করুন",
     "description": "Screen reader and tool tip label for the overlay button"
   },
   "bitwardenVault": {
-    "message": "বিটওয়ার্ডেন অটোফিল মেনু",
+    "message": "Komboe অটোফিল মেনু",
     "description": "Page title in overlay"
   },
   "unlockYourAccountToViewMatchingLogins": {
@@ -4997,7 +4997,7 @@
     "description": "Screen reader text (aria-label) for new identity button within inline menu"
   },
   "bitwardenOverlayMenuAvailable": {
-    "message": "বিটওয়ার্ডেন অটোফিল মেনু উপলব্ধ। নির্বাচন করতে নিচের তীর কী চাপুন।",
+    "message": "Komboe অটোফিল মেনু উপলব্ধ। নির্বাচন করতে নিচের তীর কী চাপুন।",
     "description": "Screen reader text for announcing when the overlay opens on the page"
   },
   "turnOn": {
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "ফাইল এখানে বিটওয়ার্ডেন এ।",
+    "message": "ফাইল এখানে Komboe এ।",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6091,7 +6091,7 @@
     "message": "সক্রিয় অ্যাকাউন্ট"
   },
   "bitwardenAccount": {
-    "message": "বিটওয়ার্ডেন অ্যাকাউন্ট"
+    "message": "Komboe অ্যাকাউন্ট"
   },
   "availableAccounts": {
     "message": "উপলব্ধ অ্যাকাউন্ট"
@@ -6137,7 +6137,7 @@
     "description": "Label indicating the most common import formats"
   },
   "uriMatchDefaultStrategyHint": {
-    "message": "URI ম্যাচ সনাক্তকরণ হল বিটওয়ার্ডেন কীভাবে অটোফিল সাজেশন চিহ্নিত করে।",
+    "message": "URI ম্যাচ সনাক্তকরণ হল Komboe কীভাবে অটোফিল সাজেশন চিহ্নিত করে।",
     "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
@@ -6181,15 +6181,15 @@
     "description": "Body content for dialog which asks if the user wants to proceed to the browser's keyboard shortcut settings page"
   },
   "overrideDefaultBrowserAutofillTitle": {
-    "message": "বিটওয়ার্ডেন কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করবেন?",
+    "message": "Komboe কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করবেন?",
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "এই বিকল্পটি উপেক্ষা করলে বিটওয়ার্ডেন অটোফিল সাজেশন এবং আপনার ব্রাউজারের মধ্যে দ্বন্দ্ব হতে পারে।",
+    "message": "এই বিকল্পটি উপেক্ষা করলে Komboe অটোফিল সাজেশন এবং আপনার ব্রাউজারের মধ্যে দ্বন্দ্ব হতে পারে।",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
-    "message": "বিটওয়ার্ডেন কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করুন",
+    "message": "Komboe কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করুন",
     "description": "Label for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerCalloutTitle": {
@@ -6197,7 +6197,7 @@
     "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
-    "message": "বিটওয়ার্ডেন কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করতে আপনাকে একটি $BROWSER$ ব্রাউজার অনুমতি দিতে বলা হবে।",
+    "message": "Komboe কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করতে আপনাকে একটি $BROWSER$ ব্রাউজার অনুমতি দিতে বলা হবে।",
     "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
@@ -6207,11 +6207,11 @@
     }
   },
   "privacyPermissionAdditionNotGrantedTitle": {
-    "message": "বিটওয়ার্ডেন কে ডিফল্ট পাসওয়ার্ড ম্যানেজার হিসাবে সেট করতে অক্ষম",
+    "message": "Komboe কে ডিফল্ট পাসওয়ার্ড ম্যানেজার হিসাবে সেট করতে অক্ষম",
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "বিটওয়ার্ডেন কে ডিফল্ট পাসওয়ার্ড ম্যানেজার হিসাবে সেট করতে আপনাকে ব্রাউজার গোপনীয়তা অনুমতি দিতে হবে।",
+    "message": "Komboe কে ডিফল্ট পাসওয়ার্ড ম্যানেজার হিসাবে সেট করতে আপনাকে ব্রাউজার গোপনীয়তা অনুমতি দিতে হবে।",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6219,10 +6219,10 @@
     "description": "Button text for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerPromptTitle": {
-    "message": "বিটওয়ার্ডেন কে আপনার ব্রাউজারের ডিফল্ট পাসওয়ার্ড ম্যানেজার করুন"
+    "message": "Komboe কে আপনার ব্রাউজারের ডিফল্ট পাসওয়ার্ড ম্যানেজার করুন"
   },
   "defaultPasswordManagerPromptTitleV2": {
-    "message": "বিটওয়ার্ডেন কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করুন",
+    "message": "Komboe কে আপনার ডিফল্ট পাসওয়ার্ড ম্যানেজার করুন",
     "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
@@ -6234,13 +6234,13 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "ব্রাউজার প্রম্পট থেকে বিটওয়ার্ডেন কে আপনার সেটিংস পরিবর্তন করার অনুমতি দিতে।"
+    "message": "ব্রাউজার প্রম্পট থেকে Komboe কে আপনার সেটিংস পরিবর্তন করার অনুমতি দিতে।"
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "আমরা আপনার ব্রাউজারের অন্তর্নির্মিত পাসওয়ার্ড ম্যানেজার বন্ধ করব যাতে আপনি একটি নিরাপদ লগইন অভিজ্ঞতা উপভোগ করতে পারেন।"
   },
   "defaultPasswordManagerSuccessToast": {
-    "message": "বিটওয়ার্ডেন কে আপনার ডিফল্ট ব্রাউজার পাসওয়ার্ড ম্যানেজার করা হয়েছে"
+    "message": "Komboe কে আপনার ডিফল্ট ব্রাউজার পাসওয়ার্ড ম্যানেজার করা হয়েছে"
   },
   "allow": {
     "message": "অনুমতি দিন",
@@ -6648,16 +6648,16 @@
     "message": "সংযুক্তি ডাউনলোড করুন"
   },
   "downloadBitwarden": {
-    "message": "বিটওয়ার্ডেন ডাউনলোড করুন"
+    "message": "Komboe ডাউনলোড করুন"
   },
   "downloadBitwardenOnAllDevices": {
-    "message": "সমস্ত ডিভাইসে বিটওয়ার্ডেন ডাউনলোড করুন"
+    "message": "সমস্ত ডিভাইসে Komboe ডাউনলোড করুন"
   },
   "getTheMobileApp": {
     "message": "মোবাইল অ্যাপ পান"
   },
   "getTheMobileAppDesc": {
-    "message": "বিটওয়ার্ডেন মোবাইল অ্যাপ দিয়ে চলার পথে আপনার পাসওয়ার্ড অ্যাক্সেস করুন।"
+    "message": "Komboe মোবাইল অ্যাপ দিয়ে চলার পথে আপনার পাসওয়ার্ড অ্যাক্সেস করুন।"
   },
   "getTheDesktopApp": {
     "message": "ডেস্কটপ অ্যাপ পান"
@@ -7210,10 +7210,10 @@
     "message": "ভুল কনফিগার করা সিস্টেম ফাইলের কারণে বায়োমেট্রিক আনলক অনুপলব্ধ।"
   },
   "biometricsStatusHelptextDesktopDisconnected": {
-    "message": "বিটওয়ার্ডেন ডেস্কটপ অ্যাপ বন্ধ থাকায় বায়োমেট্রিক আনলক অনুপলব্ধ।"
+    "message": "Komboe ডেস্কটপ অ্যাপ বন্ধ থাকায় বায়োমেট্রিক আনলক অনুপলব্ধ।"
   },
   "biometricsStatusHelptextNotEnabledInDesktop": {
-    "message": "বায়োমেট্রিক আনলক অনুপলব্ধ কারণ বিটওয়ার্ডেন ডেস্কটপ অ্যাপে $EMAIL$ এর জন্য এটি সক্ষম নয়।",
+    "message": "বায়োমেট্রিক আনলক অনুপলব্ধ কারণ Komboe ডেস্কটপ অ্যাপে $EMAIL$ এর জন্য এটি সক্ষম নয়।",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "বিটওয়ার্ডেন এ সংরক্ষণ করুন",
+    "message": "Komboe এ সংরক্ষণ করুন",
     "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
@@ -7489,13 +7489,13 @@
     "message": "Use folders to organize vault items. They're just for you. No one else will see or use them."
   },
   "introCarouselLabel": {
-    "message": "বিটওয়ার্ডেন এ স্বাগতম"
+    "message": "Komboe এ স্বাগতম"
   },
   "securityPrioritized": {
     "message": "নিরাপত্তা, অগ্রাধিকারপ্রাপ্ত"
   },
   "securityPrioritizedBody": {
-    "message": "আপনার নিরাপদ ভল্টে লগইন, কার্ড এবং পরিচয় সংরক্ষণ করুন। বিটওয়ার্ডেন আপনার কাছে গুরুত্বপূর্ণ জিনিস সুরক্ষিত করতে জিরো-নলেজ, এন্ড-টু-এন্ড এনক্রিপশন ব্যবহার করে।"
+    "message": "আপনার নিরাপদ ভল্টে লগইন, কার্ড এবং পরিচয় সংরক্ষণ করুন। Komboe আপনার কাছে গুরুত্বপূর্ণ জিনিস সুরক্ষিত করতে জিরো-নলেজ, এন্ড-টু-এন্ড এনক্রিপশন ব্যবহার করে।"
   },
   "quickLogin": {
     "message": "দ্রুত এবং সহজ লগইন"
@@ -7513,7 +7513,7 @@
     "message": "আপনার ডেটা, যখন এবং যেখানে আপনার প্রয়োজন"
   },
   "secureDevicesBody": {
-    "message": "বিটওয়ার্ডেন মোবাইল, ব্রাউজার এবং ডেস্কটপ অ্যাপের সাথে সীমাহীন ডিভাইসে সীমাহীন পাসওয়ার্ড সংরক্ষণ করুন।"
+    "message": "Komboe মোবাইল, ব্রাউজার এবং ডেস্কটপ অ্যাপের সাথে সীমাহীন ডিভাইসে সীমাহীন পাসওয়ার্ড সংরক্ষণ করুন।"
   },
   "nudgeBadgeAria": {
     "message": "1 বিজ্ঞপ্তি"
@@ -7522,7 +7522,7 @@
     "message": "বিদ্যমান পাসওয়ার্ড আমদানি করুন"
   },
   "emptyVaultNudgeBody": {
-    "message": "ম্যানুয়ালি যোগ না করে দ্রুত লগইন বিটওয়ার্ডেন এ স্থানান্তর করতে আমদানিকারক ব্যবহার করুন।"
+    "message": "ম্যানুয়ালি যোগ না করে দ্রুত লগইন Komboe এ স্থানান্তর করতে আমদানিকারক ব্যবহার করুন।"
   },
   "emptyVaultNudgeButton": {
     "message": "এখনই আমদানি করুন"
@@ -7641,7 +7641,7 @@
     "message": "এই সেটিং সম্পর্কে"
   },
   "permitCipherDetailsDescription": {
-    "message": "বিটওয়ার্ডেন আপনার অভিজ্ঞতা উন্নত করতে কোন আইকন বা পাসওয়ার্ড URL পরিবর্তন ব্যবহার করা উচিত তা সনাক্ত করতে সংরক্ষিত লগইন URI ব্যবহার করবে। এই পরিষেবাটি ব্যবহার করার সময় কোনো তথ্য সংগ্রহ বা সংরক্ষণ করা হয় না।"
+    "message": "Komboe আপনার অভিজ্ঞতা উন্নত করতে কোন আইকন বা পাসওয়ার্ড URL পরিবর্তন ব্যবহার করা উচিত তা সনাক্ত করতে সংরক্ষিত লগইন URI ব্যবহার করবে। এই পরিষেবাটি ব্যবহার করার সময় কোনো তথ্য সংগ্রহ বা সংরক্ষণ করা হয় না।"
   },
   "showQuickCopyActionsDetailsDescription": {
     "message": "আপনার ব্যবহারকারীর নাম, পাসওয়ার্ড, বা যাচাইকরণ কোড ক্লিপবোর্ডে কপি করতে আইটেমের পাশে 3টি দ্রুত কপি বোতাম যোগ করুন।"
@@ -7650,7 +7650,7 @@
     "message": "এই পৃষ্ঠা দেখার অনুমতি আপনার নেই। একটি ভিন্ন অ্যাকাউন্ট দিয়ে লগ ইন করার চেষ্টা করুন।"
   },
   "wasmNotSupported": {
-    "message": "আপনার ব্রাউজারে WebAssembly সমর্থিত নয় বা সক্ষম নয়। বিটওয়ার্ডেন অ্যাপ ব্যবহার করতে WebAssembly প্রয়োজন।",
+    "message": "আপনার ব্রাউজারে WebAssembly সমর্থিত নয় বা সক্ষম নয়। Komboe অ্যাপ ব্যবহার করতে WebAssembly প্রয়োজন।",
     "description": "'WebAssembly' is a technical term and should not be translated."
   },
   "showMore": {
@@ -7738,7 +7738,7 @@
     "message": "ত্রুটি: ডিক্রিপ্ট করা যায় না"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "আপনার সংস্থা আর বিটওয়ার্ডেন এ লগ ইন করতে মাস্টার পাসওয়ার্ড ব্যবহার করছে না। চালিয়ে যেতে, সংস্থা এবং ডোমেইন যাচাই করুন।"
+    "message": "আপনার সংস্থা আর Komboe এ লগ ইন করতে মাস্টার পাসওয়ার্ড ব্যবহার করছে না। চালিয়ে যেতে, সংস্থা এবং ডোমেইন যাচাই করুন।"
   },
   "continueWithLogIn": {
     "message": "লগ ইন দিয়ে চালিয়ে যান"
@@ -7824,7 +7824,7 @@
     "message": "আপনার টাইমআউট ক্রিয়া পরিবর্তন করতে একটি আনলক পদ্ধতি সেট করুন"
   },
   "sessionTimeoutSuppressedByConnectedDevice": {
-    "message": "বিটওয়ার্ডেন ডেস্কটপ অ্যাপ দ্বারা পরিচালিত। সম্পাদনা করতে ডেস্কটপ অ্যাপ খুলুন।"
+    "message": "Komboe ডেস্কটপ অ্যাপ দ্বারা পরিচালিত। সম্পাদনা করতে ডেস্কটপ অ্যাপ খুলুন।"
   },
   "percentageCompleted": {
     "message": "$PERCENT$% সম্পূর্ণ",
@@ -7926,7 +7926,7 @@
     "message": "user@komboe.com, user@acme.com"
   },
   "downloadBitwardenApps": {
-    "message": "বিটওয়ার্ডেন অ্যাপ ডাউনলোড করুন"
+    "message": "Komboe অ্যাপ ডাউনলোড করুন"
   },
   "emailProtected": {
     "message": "ইমেইল সুরক্ষিত"
@@ -7960,13 +7960,13 @@
     "message": "নতুন অনুমতি প্রয়োজন"
   },
   "sharedUnlockDesktopPermissionDesc": {
-    "message": "শেয়ার করা আনলক ব্যবহার করতে, বিটওয়ার্ডেন ডেস্কটপ অ্যাপের সাথে যোগাযোগের অনুমতি প্রয়োজন। আপনি চালিয়ে গেলে, আপনার ব্রাউজার আপনাকে এটি অনুমোদন করতে বলবে।"
+    "message": "শেয়ার করা আনলক ব্যবহার করতে, Komboe ডেস্কটপ অ্যাপের সাথে যোগাযোগের অনুমতি প্রয়োজন। আপনি চালিয়ে গেলে, আপনার ব্রাউজার আপনাকে এটি অনুমোদন করতে বলবে।"
   },
   "sharedUnlockDesktopPermissionWarning": {
-    "message": "বিটওয়ার্ডেন লক এবং রিলোড করবে। আপনি অনুমোদন করার পরে, এক্সটেনশন রিলোড হবে এবং আপনার ভল্ট লক করবে।"
+    "message": "Komboe লক এবং রিলোড করবে। আপনি অনুমোদন করার পরে, এক্সটেনশন রিলোড হবে এবং আপনার ভল্ট লক করবে।"
   },
   "biometricPermissionDesc": {
-    "message": "বায়োমেট্রিক আনলক ব্যবহার করতে, বিটওয়ার্ডেন ডেস্কটপ অ্যাপের সাথে যোগাযোগের অনুমতি প্রয়োজন। আপনি চালিয়ে গেলে, আপনার ব্রাউজার আপনাকে এটি অনুমোদন করতে বলবে।"
+    "message": "বায়োমেট্রিক আনলক ব্যবহার করতে, Komboe ডেস্কটপ অ্যাপের সাথে যোগাযোগের অনুমতি প্রয়োজন। আপনি চালিয়ে গেলে, আপনার ব্রাউজার আপনাকে এটি অনুমোদন করতে বলবে।"
   },
   "enterMonth": {
     "message": "মাস লিখুন।"

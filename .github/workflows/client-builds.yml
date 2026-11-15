@@ -145,7 +145,7 @@ jobs:
           pin=$(cat mobile/ANDROID_UPSTREAM_PIN)
           git clone --depth 1 -b "$pin" https://github.com/bitwarden/android.git /tmp/bw-android
           python3 mobile/android_rebrand.py /tmp/bw-android
-          python3 mobile/stamp-version.py /tmp/bw-android 2026111504 2026.11.15.4
+          python3 mobile/stamp-version.py /tmp/bw-android 2026111505 2026.11.15.5
           mkdir -p "$HOME/.android"
           if [ -n "${ANDROID_DEBUG_KEYSTORE_BASE64:-}" ]; then
             echo "$ANDROID_DEBUG_KEYSTORE_BASE64" | base64 -d > "$HOME/.android/debug.keystore"
@@ -155,7 +155,7 @@ jobs:
           apk=$(find app/build/outputs/apk -name '*.apk' | head -1)
           python3 "$GITHUB_WORKSPACE/scripts/check_branding.py" --built "$apk"
           mkdir -p "$GITHUB_WORKSPACE/dist"
-          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.4.apk"
+          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.5.apk"
           python3 - << PY
           import hashlib, os, struct, subprocess
           from pathlib import Path
@@ -191,7 +191,7 @@ jobs:
           digest = hashlib.sha256(cert).hexdigest()
           file_hash = hashlib.sha256(data).hexdigest()
           Path("$GITHUB_WORKSPACE/dist/android-apk.txt").write_text(
-              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.4\nversionCode 2026111504\n"
+              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.5\nversionCode 2026111505\n"
           )
           print("signer", digest)
           print("apk", file_hash)

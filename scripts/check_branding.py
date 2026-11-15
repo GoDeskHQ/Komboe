@@ -12,7 +12,10 @@ Allowed on purpose:
 - PascalCase identifiers and package paths (not shown to people)
 
 The name check is case-insensitive and includes misspellings (Bitward, Bitwarde,
-BItwarden). Upstream image and SVG bytes are rejected by sha256.
+BItwarden), Latin tokens within edit distance 2 of "bitwarden", and the
+transliterations in scripts/brand_names.py. Upstream image and SVG bytes,
+including toolbar icons and the download QR, are rejected by sha256.
+`bitwarden_export` is rejected wherever it is spelled out.
 """
 from __future__ import annotations
 
@@ -26,6 +29,8 @@ import struct
 import sys
 import zipfile
 from pathlib import Path
+
+from brand_names import fuzzy_spans, needle_blobs, transliteration_spans
 
 ROOT = Path(__file__).resolve().parents[1]
 DENY = ROOT / "scripts" / "branding_denylist.json"
@@ -53,12 +58,17 @@ def sha256(blob: bytes) -> str:
     return hashlib.sha256(blob).hexdigest()
 
 
+def _overlaps(start: int, end: int, spans) -> bool:
+    return any(not (end <= left or start >= right) for left, right in spans)
+
+
 def product_spans(text: str):
     """Yield (start, end) of a product-name variant without swallowing camelCase suffixes."""
+    found = []
     for match in NAME_START.finditer(text):
         end = match.end()
         if match.group(0).lower().startswith("vaultwarden"):
-            yield match.start(), end
+            found.append((match.start(), end))
             continue
         # Include the "en" of Bitwarden, not a following identifier (bitwardenjson).
         if text[end:end + 2].lower() == "en":
@@ -69,7 +79,15 @@ def product_spans(text: str):
         if chunk.isupper():
             while end < len(text) and text[end].isupper():
                 end += 1
-        yield match.start(), end
+        found.append((match.start(), end))
+    for start, end in transliteration_spans(text):
+        if not _overlaps(start, end, found):
+            found.append((start, end))
+    for start, end in fuzzy_spans(text):
+        if not _overlaps(start, end, found):
+            found.append((start, end))
+    for start, end in found:
+        yield start, end
 
 
 def still_branded(text: str) -> bool:
@@ -112,7 +130,8 @@ def code_context(text: str, start: int, end: int) -> bool:
         return True
     if isolated_identifier(text, start, end):
         return True
-    if nxt[:1] in {"_", "-"}:
+    # bitwarden_export is the vault download name, not an identifier.
+    if nxt[:1] in {"_", "-"} and not nxt.lower().startswith("_export"):
         return True
     if re.match(r"\.(?:scss|hbs|css|png|svg|js)\b", nxt):
         return True
@@ -197,6 +216,13 @@ def _scan_chunk(text: str, where: str):
             continue
         snippet = " ".join(window.split())[:180]
         hits.append(f"{where}: {snippet}")
+    if re.search(r"(?i)bitwarden_export", text):
+        hits.append(f"{where}: bitwarden_export")
+    if re.search(
+        r"""(?i)["']bitwarden["']\s*\+(?:\s*\([^)]{0,200}\)\s*\+)?\s*["']_export_""",
+        text,
+    ):
+        hits.append(f"{where}: bitwarden export filename prefix")
     if re.search(r">\s*aultwarden", text, re.I):
         hits.append(f"{where}: split Vaultwarden wordmark")
     return hits
@@ -226,7 +252,9 @@ def carries_name(blob: bytes) -> bool:
     lower = blob.lower()
     if b"bitward" in lower or b"vaultwarden" in lower:
         return True
-    return b"b\x00i\x00t\x00w" in blob or b"B\x00i\x00t\x00w" in blob or b"B\x00I\x00t\x00W" in blob
+    if b"b\x00i\x00t\x00w" in blob or b"B\x00i\x00t\x00w" in blob or b"B\x00I\x00t\x00W" in blob:
+        return True
+    return any(needle in blob for needle in needle_blobs())
 
 
 def strip_js_comments(text: str) -> str:

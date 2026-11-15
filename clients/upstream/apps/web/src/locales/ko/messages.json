@@ -5769,7 +5769,7 @@
     "message": "Komboe 웹 보관함"
   },
   "bitSecretsManager": {
-    "message": "Birwarden 비밀 데이터 관리자"
+    "message": "Komboe 비밀 데이터 관리자"
   },
   "loggedIn": {
     "message": "로그인됨."
@@ -7256,7 +7256,7 @@
     "message": "계정이 존재한다면 추가적인 안내사항이 있는 이메일을 보냈습니다."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Biitiwarden 계정을 삭제하도록 요청했습니다. 아래 버튼을 클릭하여 확인하십시오."
+    "message": "Komboe 계정을 삭제하도록 요청했습니다. 아래 버튼을 클릭하여 확인하십시오."
   },
   "deleteRecoverOrgConfirmDesc": {
     "message": "You have requested to delete your Komboe organization."

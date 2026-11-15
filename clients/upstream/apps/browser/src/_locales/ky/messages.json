@@ -1353,7 +1353,7 @@
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "Bidwarden'де жаңыртылды.",
+    "message": "Komboe'де жаңыртылды.",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
