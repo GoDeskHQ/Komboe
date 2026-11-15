@@ -93,28 +93,8 @@
       "qr": false
     },
     {
-      "id": "desktop-linux-deb",
-      "name": "Desktop for Linux (.deb)",
-      "platforms": [
-        "Linux"
-      ],
-      "kind": "desktop",
-      "filename": "komboe-desktop-amd64.deb",
-      "version": null,
-      "status": "unavailable",
-      "channel": "unsigned-testing",
-      "sha256": null,
-      "size": null,
-      "releasedAt": null,
-      "url": null,
-      "docsUrl": "https://github.com/GoDeskio/Komboe",
-      "install": "Unsigned testing package. Install with your package manager, then set the Komboe server URL.",
-      "reason": "No verified current Linux .deb. Older unsigned builds are not offered.",
-      "qr": false
-    },
-    {
       "id": "desktop-linux-appimage",
-      "name": "Desktop for Linux (AppImage)",
+      "name": "Linux (AppImage, updates itself)",
       "platforms": [
         "Linux"
       ],
@@ -128,8 +108,28 @@
       "releasedAt": null,
       "url": null,
       "docsUrl": "https://github.com/GoDeskio/Komboe",
-      "install": "Unsigned testing AppImage. Make it executable and run it, then set the Komboe server URL.",
+      "install": "Primary Linux download. This AppImage checks https://komboe.com/downloads/desktop/latest-linux.yml on any connection and updates itself.",
       "reason": "No verified current Linux AppImage. Older unsigned builds are not offered.",
+      "qr": false
+    },
+    {
+      "id": "desktop-linux-deb",
+      "name": "Linux (.deb)",
+      "platforms": [
+        "Linux"
+      ],
+      "kind": "desktop",
+      "filename": "komboe-desktop-amd64.deb",
+      "version": null,
+      "status": "unavailable",
+      "channel": "unsigned-testing",
+      "sha256": null,
+      "size": null,
+      "releasedAt": null,
+      "url": null,
+      "docsUrl": "https://github.com/GoDeskio/Komboe",
+      "install": "Package install. When a new build is published, Komboe downloads that .deb, checks its sha256, and installs it with pkexec and apt. If that cannot run, the prompt switches you to the AppImage, which updates itself.",
+      "reason": "No verified current Linux .deb. Older unsigned builds are not offered.",
       "qr": false
     },
     {

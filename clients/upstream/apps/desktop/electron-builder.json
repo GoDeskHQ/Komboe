@@ -164,10 +164,18 @@
         "Name": "Komboe",
         "Type": "Application",
         "GenericName": "Password Manager",
-        "StartupWMClass": "komboe"
+        "StartupWMClass": "komboe",
+        "Exec": "komboe --enable-features=UseOzonePlatform --ozone-platform=x11 %U"
       }
     },
-    "executableName": "komboe"
+    "executableName": "komboe",
+    "artifactName": "Komboe-${version}-${arch}.${ext}"
+  },
+  "appImage": {
+    "artifactName": "Komboe-${version}-x86_64.${ext}"
+  },
+  "deb": {
+    "artifactName": "Komboe-${version}-amd64.${ext}"
   },
   "dmg": {
     "icon": "dmg.icns",

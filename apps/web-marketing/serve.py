@@ -23,6 +23,40 @@ HOP = {
     "bitwarden-client-name", "bitwarden-client-version",
 }
 
+# Pages and assets a browser is allowed to fetch. Build scripts, tests, and
+# package metadata are never in this set, even if they sit next to serve.py.
+PUBLIC_FILES = {
+    "index.html",
+    "404.html",
+    "features.html",
+    "security.html",
+    "pricing.html",
+    "downloads.html",
+    "developers.html",
+    "login.html",
+    "signup.html",
+    "privacy.html",
+    "terms.html",
+    "robots.txt",
+    "sitemap.xml",
+    "site.webmanifest",
+    "llms.txt",
+    "komboe-downloads.json",
+    "downloads/index.html",
+    "downloads/komboe-downloads.json",
+    "vault/index.html",
+    "vault/signup/index.html",
+    ".well-known/security.txt",
+}
+ASSET_SUFFIXES = {
+    ".css", ".js", ".json", ".map", ".webp", ".png", ".jpg", ".jpeg", ".gif",
+    ".svg", ".ico", ".woff", ".woff2", ".txt", ".webmanifest",
+}
+DOWNLOAD_SUFFIXES = {
+    ".apk", ".apks", ".aab", ".deb", ".exe", ".dmg", ".zip", ".json", ".yml",
+    ".yaml", ".appimage", ".html",
+}
+
 # APK and installer types the stdlib does not always know.
 EXTRA_TYPES = {
     ".apk": "application/vnd.android.package-archive",
@@ -50,6 +84,38 @@ def policy():
 
 def proxied(path):
     return path.startswith("/api/") or path.startswith("/identity/") or path in ("/api", "/identity", "/alive")
+
+
+def site_rel(path: str) -> str | None:
+    """URL path to a relative site path, or None when it leaves the site root."""
+    if not path.startswith("/") or path.startswith("//"):
+        return None
+    raw = path[1:]
+    if raw == "":
+        return "index.html"
+    if "\\" in raw or "\x00" in raw:
+        return None
+    parts = [part for part in raw.split("/") if part not in ("", ".")]
+    if any(part == ".." for part in parts):
+        return None
+    return "/".join(parts)
+
+
+def allowed_site_file(rel: str) -> bool:
+    if rel in PUBLIC_FILES:
+        return True
+    if rel.startswith("assets/"):
+        return Path(rel).suffix.lower() in ASSET_SUFFIXES
+    if rel.startswith("downloads/"):
+        return Path(rel).suffix.lower() in DOWNLOAD_SUFFIXES
+    return False
+
+
+def allowed_download(rel: str) -> bool:
+    name = Path(rel).name
+    if not name or name.startswith("."):
+        return False
+    return Path(name).suffix.lower() in DOWNLOAD_SUFFIXES
 
 
 def safe_under(root: Path, rel: str) -> Path | None:
@@ -129,12 +195,20 @@ class Handler(SimpleHTTPRequestHandler):
                 return
         if path.startswith("/downloads/"):
             rel = path[len("/downloads/"):]
-            if rel and DOWNLOADS_DIR is not None:
+            if rel and allowed_download(rel) and DOWNLOADS_DIR is not None:
                 overlay = safe_under(DOWNLOADS_DIR, rel)
                 if overlay is not None and overlay.is_file():
                     self._send_file(overlay)
                     return
-        super().do_GET()
+        rel = site_rel(path)
+        if rel is None or not allowed_site_file(rel):
+            self._drop(404)
+            return
+        local = safe_under(ROOT, rel)
+        if local is None or not local.is_file():
+            self._drop(404)
+            return
+        self._send_file(local)
 
     def do_POST(self):
         if API and proxied(urllib.parse.urlparse(self.path).path):

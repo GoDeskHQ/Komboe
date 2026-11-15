@@ -85,30 +85,30 @@ CATALOG = [
         "missing": "No verified current Windows installer. Older unsigned builds are not offered.",
     },
     {
-        "id": "desktop-linux-deb",
-        "filename": "komboe-desktop-amd64.deb",
-        "patterns": ["*.deb"],
+        "id": "desktop-linux-appimage",
+        "filename": None,
+        "patterns": ["Komboe-*-x86_64.AppImage", "*.AppImage"],
         "prefix": "desktop/",
-        "name": "Desktop for Linux (.deb)",
+        "name": "Linux (AppImage, updates itself)",
         "platforms": ["Linux"],
         "kind": "desktop",
         "channel": "unsigned-testing",
         "docsUrl": SOURCE,
-        "install": "Unsigned testing package. The .deb does not replace itself. Komboe prompts you to install the AppImage, which updates itself over any connection.",
-        "missing": "No verified current Linux .deb. Older unsigned builds are not offered.",
+        "install": "Primary Linux download. This AppImage checks https://komboe.com/downloads/desktop/latest-linux.yml on any connection and updates itself.",
+        "missing": "No verified current Linux AppImage. Older unsigned builds are not offered.",
     },
     {
-        "id": "desktop-linux-appimage",
-        "filename": "komboe-desktop-x86_64.AppImage",
-        "patterns": ["*.AppImage"],
+        "id": "desktop-linux-deb",
+        "filename": None,
+        "patterns": ["Komboe-*-amd64.deb", "*.deb"],
         "prefix": "desktop/",
-        "name": "Desktop for Linux (AppImage)",
+        "name": "Linux (.deb)",
         "platforms": ["Linux"],
         "kind": "desktop",
         "channel": "unsigned-testing",
         "docsUrl": SOURCE,
-        "install": "Unsigned testing AppImage. It checks https://komboe.com/downloads/desktop/latest-linux.yml on any connection and updates itself.",
-        "missing": "No verified current Linux AppImage. Older unsigned builds are not offered.",
+        "install": "Package install. When a new build is published, Komboe downloads that .deb, checks its sha256, and installs it with pkexec and apt. If that cannot run, the prompt switches you to the AppImage, which updates itself.",
+        "missing": "No verified current Linux .deb. Older unsigned builds are not offered.",
     },
     {
         "id": "desktop-macos",
@@ -202,6 +202,10 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+DESKTOP_PACKAGE = ROOT / "clients/upstream/apps/desktop/package.json"
+LINUX_SOURCE_NAMES = {"desktop-linux-appimage", "desktop-linux-deb"}
+
+
 def version_from(path: Path | None) -> str | None:
     if path is None or not path.is_file():
         return None
@@ -236,6 +240,30 @@ def find_source(artifacts: Path, item: dict) -> Path | None:
     # Prefer a versioned io.komboe.android-*.apk over the generic name.
     versioned = [p for p in matches if p.name.startswith("io.komboe.android-")]
     return versioned[-1] if versioned else matches[-1]
+
+
+def yml_version(artifacts: Path, name: str) -> str | None:
+    yml = next(artifacts.rglob(name), None)
+    if yml is None:
+        return None
+    match = re.search(r"(?m)^version:\s*(\S+)", yml.read_text(encoding="utf-8"))
+    return match.group(1) if match else None
+
+
+def desktop_version(artifacts: Path, source: Path, item_id: str) -> str | None:
+    """Desktop builds are 2026.11.x. The browser manifest version is not a desktop version."""
+    if item_id == "desktop-linux-appimage" or item_id == "desktop-linux-deb":
+        found = yml_version(artifacts, "latest-linux.yml")
+        if found:
+            return found
+    if item_id == "desktop-windows":
+        found = yml_version(artifacts, "latest.yml")
+        if found:
+            return found
+    match = re.search(r"Komboe-(\d+\.\d+\.\d+)", source.name)
+    if match:
+        return match.group(1)
+    return version_from(DESKTOP_PACKAGE)
 
 
 def released_at_for(path: Path, override: str | None) -> str:
@@ -390,6 +418,8 @@ def build(
         if published:
             if item["id"] == "android" and source.name.startswith("io.komboe.android-"):
                 publish_name = source.name
+            elif item["id"] in LINUX_SOURCE_NAMES:
+                publish_name = source.name
             else:
                 publish_name = item["filename"] or source.name
         version = None
@@ -398,6 +428,8 @@ def build(
                 version = android_meta["versionName"]
             elif item["kind"] == "extension":
                 version = version_from(version_file)
+            elif item["kind"] == "desktop":
+                version = desktop_version(artifacts, source, item["id"])
             elif android_meta and item["id"] == "android":
                 version = android_meta.get("versionName")
             else:
@@ -475,8 +507,25 @@ def build(
     if publish_dir is not None and windows is not None and windows.get("status") == "published":
         write_windows_feed(artifacts, publish_dir, windows["filename"], windows.get("version"))
     appimage = next((asset for asset in assets if asset["id"] == "desktop-linux-appimage"), None)
+    deb = next((asset for asset in assets if asset["id"] == "desktop-linux-deb"), None)
     if publish_dir is not None and appimage is not None and appimage.get("status") == "published":
         write_linux_feed(artifacts, publish_dir, appimage["filename"], appimage.get("version"))
+    if (
+        publish_dir is not None
+        and deb is not None
+        and deb.get("status") == "published"
+        and deb.get("sha256")
+        and deb.get("filename")
+    ):
+        payload = {
+            "version": deb.get("version"),
+            "filename": deb["filename"],
+            "url": deb["filename"],
+            "sha256": deb["sha256"],
+        }
+        dest = publish_dir / "desktop" / "linux-deb.json"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     return manifest
 
 

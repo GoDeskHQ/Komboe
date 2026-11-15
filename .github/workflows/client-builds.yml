@@ -147,7 +147,7 @@ jobs:
           pin=$(cat mobile/ANDROID_UPSTREAM_PIN)
           git clone --depth 1 -b "$pin" https://github.com/bitwarden/android.git /tmp/bw-android
           python3 mobile/android_rebrand.py /tmp/bw-android
-          python3 mobile/stamp-version.py /tmp/bw-android 2026111508 2026.11.15.8
+          python3 mobile/stamp-version.py /tmp/bw-android 2026111509 2026.11.15.9
           mkdir -p "$HOME/.android"
           if [ -n "${ANDROID_DEBUG_KEYSTORE_BASE64:-}" ]; then
             echo "$ANDROID_DEBUG_KEYSTORE_BASE64" | base64 -d > "$HOME/.android/debug.keystore"
@@ -157,7 +157,7 @@ jobs:
           apk=$(find app/build/outputs/apk -name '*.apk' | head -1)
           python3 "$GITHUB_WORKSPACE/scripts/check_branding.py" --built "$apk"
           mkdir -p "$GITHUB_WORKSPACE/dist"
-          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.8.apk"
+          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.9.apk"
           python3 - << PY
           import hashlib, json, os, struct
           from pathlib import Path
@@ -193,18 +193,18 @@ jobs:
           digest = hashlib.sha256(cert).hexdigest()
           file_hash = hashlib.sha256(data).hexdigest()
           Path("$GITHUB_WORKSPACE/dist/android-apk.txt").write_text(
-              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.8\nversionCode 2026111508\n"
+              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.9\nversionCode 2026111509\n"
           )
-          versioned = "io.komboe.android-2026.11.15.8.apk"
+          versioned = "io.komboe.android-2026.11.15.9.apk"
           feed = {
-              "versionName": "2026.11.15.8",
-              "versionCode": 2026111508,
+              "versionName": "2026.11.15.9",
+              "versionCode": 2026111509,
               "apkUrl": "https://komboe.com/downloads/android/" + versioned,
               "sha256": file_hash,
               "minSdk": 29,
               "releaseNotes": "Komboe updates download on Wi-Fi or mobile data and install with the same signing certificate.",
           }
-          if feed["sha256"] != file_hash or feed["versionCode"] != 2026111508:
+          if feed["sha256"] != file_hash or feed["versionCode"] != 2026111509:
               raise SystemExit("latest.json does not match the APK")
           if "downloads.komboe.com" in feed["apkUrl"] or not feed["apkUrl"].startswith("https://komboe.com/downloads/android/"):
               raise SystemExit("apkUrl must be https://komboe.com/downloads/android/")
@@ -244,12 +244,16 @@ jobs:
         run: |
           set -eu
           mkdir -p dist
-          if compgen -G "gathered/**/*.deb" > /dev/null || compgen -G "gathered/*.deb" > /dev/null; then
+          if find gathered -name '*.deb' | grep -q .; then
             deb=$(find gathered -name '*.deb' | head -1)
-            cp "$deb" dist/komboe-desktop-amd64.deb
+            cp "$deb" "dist/$(basename "$deb")"
           fi
           if find gathered -name '*.AppImage' | grep -q .; then
-            cp "$(find gathered -name '*.AppImage' | head -1)" dist/komboe-desktop-x86_64.AppImage
+            image=$(find gathered -name '*.AppImage' | head -1)
+            cp "$image" "dist/$(basename "$image")"
+          fi
+          if find gathered -name 'latest-linux.yml' | grep -q .; then
+            cp "$(find gathered -name 'latest-linux.yml' | head -1)" dist/latest-linux.yml
           fi
           if find gathered -name '*.exe' | grep -q .; then
             cp "$(find gathered -name '*.exe' | head -1)" dist/komboe-desktop-win-x64-setup.exe

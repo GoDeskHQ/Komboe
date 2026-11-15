@@ -64,18 +64,21 @@ async function doBuild(context) {
   }
 
   if (context.electronPlatformName === "linux") {
-    console.log("Creating memory-protection wrapper script");
+    // The Electron binary stays named `komboe`. ps and System Monitor show that
+    // filename. The wrapper is `komboe-launch` and execs `komboe`; it must not
+    // replace the binary or the process name becomes the wrapper.
+    console.log("Keeping the Linux executable named komboe");
     const appOutDir = context.appOutDir;
-    const oldBin = path.join(appOutDir, context.packager.executableName);
-    const newBin = path.join(appOutDir, "bitwarden-app");
-    fse.moveSync(oldBin, newBin);
-    console.log("Moved binary to bitwarden-app");
-
+    const electronBin = path.join(appOutDir, context.packager.executableName);
+    const komboeBin = path.join(appOutDir, "komboe");
+    if (electronBin !== komboeBin) {
+      fse.moveSync(electronBin, komboeBin);
+    }
     const wrapperScript = path.join(__dirname, "../resources/linux-wrapper.sh");
-    const wrapperBin = path.join(appOutDir, context.packager.executableName);
+    const wrapperBin = path.join(appOutDir, "komboe-launch");
     fse.copyFileSync(wrapperScript, wrapperBin);
     fse.chmodSync(wrapperBin, "755");
-    console.log("Copied memory-protection wrapper script");
+    console.log("Copied komboe-launch wrapper next to the komboe binary");
   }
 
   if (isMacOsBuild) {
