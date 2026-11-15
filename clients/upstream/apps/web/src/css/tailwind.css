@@ -134,3 +134,16 @@
     @apply tw-text-primary-600 hover:tw-text-primary-700 focus-visible:before:tw-ring-primary-600;
   }
 }
+
+/*
+ * The vault header wordmark reuses the side-nav foreground token, which is white
+ * in both themes. That is correct on the dark side nav and invisible on the light
+ * header (background-alt is near white). Unlayered so it beats the utility.
+ * Navy on light, cream on dark.
+ */
+.theme_light bit-landing-header .tw-fill-fg-nav {
+  fill: #0b1b33;
+}
+.theme_dark bit-landing-header .tw-fill-fg-nav {
+  fill: #f0ece7;
+}
