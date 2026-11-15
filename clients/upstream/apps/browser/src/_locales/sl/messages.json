@@ -27,7 +27,7 @@
     "message": "Ustvari račun"
   },
   "newToBitwarden": {
-    "message": "Novi na Bitwardenu?"
+    "message": "Novi na Komboeu?"
   },
   "logInWithPasskey": {
     "message": "Prijava s ključem za dostop"
@@ -330,7 +330,7 @@
     "message": "Nadaljuj na center za pomoč?"
   },
   "continueToHelpCenterDesc": {
-    "message": "Več o uporabi Bitwardenja izveste v Centru za pomoč."
+    "message": "Več o uporabi Komboeja izveste v Centru za pomoč."
   },
   "continueToBrowserExtensionStore": {
     "message": "Nadaljuj na trgovino z razširitvami brskalnika?"
@@ -356,13 +356,13 @@
     "message": "Odjava"
   },
   "aboutBitwarden": {
-    "message": "O Bitwardenu"
+    "message": "O Komboeu"
   },
   "about": {
     "message": "O programu"
   },
   "moreFromBitwarden": {
-    "message": "Več od Bitwardena"
+    "message": "Več od Komboea"
   },
   "continueToBitwardenDotCom": {
     "message": "Nadaljuj na komboe.com?"
@@ -2055,7 +2055,7 @@
     "message": "Preprosto poiščite predloge za samodejno izpolnjevanje"
   },
   "autofillSpotlightDesc": {
-    "message": "Izklopite nastavitve samodejnega izpolnjevanja brskalnika, da ne bodo v nasprotju z Bitwardenom."
+    "message": "Izklopite nastavitve samodejnega izpolnjevanja brskalnika, da ne bodo v nasprotju z Komboeom."
   },
   "turnOffBrowserAutofill": {
     "message": "Izklopite samodejno izpolnjevanje v $BROWSER$",
@@ -3064,7 +3064,7 @@
     "message": "Za odklep Bitwardna si nastavite PIN-kodo. PIN-koda bo ponastavljena, če se boste popolnoma odjavili iz aplikacije."
   },
   "setPinCode": {
-    "message": "Ta PIN lahko uporabite za odklepanje Bitwardena. PIN bo ponastavljen, če se kdaj popolnoma odjavite iz aplikacije."
+    "message": "Ta PIN lahko uporabite za odklepanje Komboea. PIN bo ponastavljen, če se kdaj popolnoma odjavite iz aplikacije."
   },
   "pinRequired": {
     "message": "Potrebna je PIN-koda."
@@ -3209,7 +3209,7 @@
     }
   },
   "topLayerHijackWarning": {
-    "message": "Ta stran moti delovanje Bitwardena. Vgrajeni meni Komboe je bil začasno onemogočen kot varnostni ukrep."
+    "message": "Ta stran moti delovanje Komboea. Vgrajeni meni Komboe je bil začasno onemogočen kot varnostni ukrep."
   },
   "setMasterPassword": {
     "message": "Nastavi glavno geslo"
@@ -3266,7 +3266,7 @@
     "message": "Vaše novo glavno geslo ne ustreza zahtevam."
   },
   "receiveMarketingEmails": {
-    "message": "Prejemajte posodobitve od Bitwardena v svoj nabiralnik."
+    "message": "Prejemajte posodobitve od Komboea v svoj nabiralnik."
   },
   "unsubscribe": {
     "message": "Odjava"
@@ -3556,14 +3556,14 @@
     "message": "Ilustracija menija za samodejno izpolnjevanje Komboe, ki prikazuje ustvarjeno geslo."
   },
   "updateInBitwarden": {
-    "message": "Posodobi v Bitwardenu"
+    "message": "Posodobi v Komboeu"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe vas bo nato pozval, da posodobite geslo v upravitelju gesel.",
     "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
-    "message": "Ilustracija Bitwardenovega obvestila, ki uporabnika poziva k posodobitvi prijave."
+    "message": "Ilustracija Komboeovega obvestila, ki uporabnika poziva k posodobitvi prijave."
   },
   "turnOnAutofill": {
     "message": "Vklopite samodejno izpolnjevanje"
@@ -6207,11 +6207,11 @@
     }
   },
   "privacyPermissionAdditionNotGrantedTitle": {
-    "message": "Bitwardena ni mogoče nastaviti za privzeti upravitelj gesel",
+    "message": "Komboea ni mogoče nastaviti za privzeti upravitelj gesel",
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Bitwardenu morate odobriti dovoljenja za zasebnost brskalnika, da ga nastavite za privzeti upravitelj gesel.",
+    "message": "Komboeu morate odobriti dovoljenja za zasebnost brskalnika, da ga nastavite za privzeti upravitelj gesel.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6234,7 +6234,7 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "iz poziva brskalnika, da Bitwardenu odobrite dovoljenje za spreminjanje vaših nastavitev."
+    "message": "iz poziva brskalnika, da Komboeu odobrite dovoljenje za spreminjanje vaših nastavitev."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "Izklopili bomo vgrajeni upravitelj gesel v vašem brskalniku, da boste lahko uživali v varni prijavi."
@@ -7489,7 +7489,7 @@
     "message": "Use folders to organize vault items. They're just for you. No one else will see or use them."
   },
   "introCarouselLabel": {
-    "message": "Dobrodošli v Bitwardenu"
+    "message": "Dobrodošli v Komboeu"
   },
   "securityPrioritized": {
     "message": "Varnost na prvem mestu"

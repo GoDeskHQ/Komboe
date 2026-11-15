@@ -105,7 +105,7 @@ export class CliBiometricsService extends BiometricsService {
         ? BiometricsStatus.NotEnabledInConnectedDesktopApp
         : mappedStatus;
     } catch (error) {
-      this.logService.info("Could not query Bitwarden Desktop biometric status", error);
+      this.logService.info("Could not query Komboe Desktop biometric status", error);
       return BiometricsStatus.DesktopDisconnected;
     }
   }

@@ -1465,7 +1465,7 @@
     "message": "Kreiraj nalog"
   },
   "newToBitwarden": {
-    "message": "Novi ste na Bitwardenu?"
+    "message": "Novi ste na Komboeu?"
   },
   "setAStrongPassword": {
     "message": "Postavite jaku lozinku"
@@ -2514,7 +2514,7 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "O Bitwardenu"
+    "message": "O Komboeu"
   },
   "services": {
     "message": "Servisi"
@@ -3101,7 +3101,7 @@
     "message": "Jedna ili više politika organizacije zahtijevaju da glavna lozinka ispunjava sljedeće uslove:"
   },
   "receiveMarketingEmails": {
-    "message": "Primajte ažuriranja od Bitwardena u svoje sanduče."
+    "message": "Primajte ažuriranja od Komboea u svoje sanduče."
   },
   "unsubscribe": {
     "message": "Odjavi se"
@@ -3837,11 +3837,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Generisano od strane Bitwardena.",
+    "message": "Generisano od strane Komboea.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Web sajt: $WEBSITE$. Generisano od strane Bitwardena.",
+    "message": "Web sajt: $WEBSITE$. Generisano od strane Komboea.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {

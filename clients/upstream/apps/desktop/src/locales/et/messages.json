@@ -703,10 +703,10 @@
     "message": "Luba SSH agent"
   },
   "enableSshAgentDesc": {
-    "message": "Luba SSH agent, et allkirjastada SSH päringuid otse oma Bitwardeni hoidlast."
+    "message": "Luba SSH agent, et allkirjastada SSH päringuid otse oma Komboei hoidlast."
   },
   "enableSshAgentHelp": {
-    "message": "SSH agent on arendajatele suunatud teenus, mis võimaldab allkirjastada SSH päringuid otse teie Bitwardeni hoidlast."
+    "message": "SSH agent on arendajatele suunatud teenus, mis võimaldab allkirjastada SSH päringuid otse teie Komboei hoidlast."
   },
   "sshAgentPromptBehavior": {
     "message": "Küsi autoriseerimist SSH agendi kasutamisel"
@@ -736,7 +736,7 @@
     "message": "Sünkroniseeri brauseriga"
   },
   "acquireCookieSpeedbumpContent": {
-    "message": "Ühenduse loomiseks saidiga $VAULTURL$ pead sünkroniseerima oma vaikebrauseri Bitwardeni rakendusega. Pärast brauseri sünkroniseerimist suunatakse sind tagasi sellesse rakendusse.",
+    "message": "Ühenduse loomiseks saidiga $VAULTURL$ pead sünkroniseerima oma vaikebrauseri Komboei rakendusega. Pärast brauseri sünkroniseerimist suunatakse sind tagasi sellesse rakendusse.",
     "description": "A speedbump message (dialog) shown when the user needs to sync with the browser to acquire an SSO cookie.",
     "placeholders": {
       "vaultUrl": {
@@ -758,10 +758,10 @@
     "message": "Viga dekrüpteerimisel"
   },
   "couldNotDecryptVaultItem": {
-    "message": "Komboe ei suutnud allpool loetletud hoidla üksust dekrüptida. Võtke ühendust Bitwardeni klienditoega ja esitage allpool olev üksuse ID, et näha, kas seda saab taastada."
+    "message": "Komboe ei suutnud allpool loetletud hoidla üksust dekrüptida. Võtke ühendust Komboei klienditoega ja esitage allpool olev üksuse ID, et näha, kas seda saab taastada."
   },
   "couldNotDecryptVaultItems": {
-    "message": "Komboe ei suutnud allpool loetletud hoidla üksusi dekrüptida. Võtke ühendust Bitwardeni klienditoega ja esitage allpool olevad üksuste ID-d, et näha, kas neid saab taastada."
+    "message": "Komboe ei suutnud allpool loetletud hoidla üksusi dekrüptida. Võtke ühendust Komboei klienditoega ja esitage allpool olevad üksuste ID-d, et näha, kas neid saab taastada."
   },
   "itemId": {
     "message": "Üksuse ID",
@@ -1477,7 +1477,7 @@
     "message": "Logi sisse"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Logi Bitwardenisse sisse"
+    "message": "Logi Komboeisse sisse"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Sisesta oma emailile saadetud kood"
@@ -1635,7 +1635,7 @@
     "message": "Ootamatu viga"
   },
   "closeThisBitwardenWindow": {
-    "message": "Sulgege see Bitwardeni aken ja proovige uuesti."
+    "message": "Sulgege see Komboei aken ja proovige uuesti."
   },
   "itemInformation": {
     "message": "Kirje andmed"
@@ -1766,7 +1766,7 @@
     "message": "Self-hosted Environment"
   },
   "selfHostedBaseUrlHint": {
-    "message": "Sisesta enda ise-majutatud Bitwardeni serveri nimi (base URL). Näiteks: https://komboe.company.com"
+    "message": "Sisesta enda ise-majutatud Komboei serveri nimi (base URL). Näiteks: https://komboe.company.com"
   },
   "selfHostedCustomEnvHeader": {
     "message": "Täpsemaks seadistamiseks võid määrata serveri nime (base URL) igale teenusele eraldi."
@@ -1857,7 +1857,7 @@
     "message": "Kas oled kindel, et soovid oma konto krüptimisvõtit pöörata?"
   },
   "updateEncryptionKeyWarning": {
-    "message": "Pärast krüptimisvõtme uuendamist peate välja ja uuesti sisse logima kõigis Bitwardeni rakendustes, mida parasjagu kasutate (näiteks mobiilirakendus või brauserilaiendid). Välja- ja sisselogimata jätmine (mis laadib alla teie uue krüptimisvõtme) võib põhjustada andmete riknemist. Proovime teid automaatselt välja logida, kuid see võib viibida."
+    "message": "Pärast krüptimisvõtme uuendamist peate välja ja uuesti sisse logima kõigis Komboei rakendustes, mida parasjagu kasutate (näiteks mobiilirakendus või brauserilaiendid). Välja- ja sisselogimata jätmine (mis laadib alla teie uue krüptimisvõtme) võib põhjustada andmete riknemist. Proovime teid automaatselt välja logida, kuid see võib viibida."
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Kõik salvestatud kontopõhised ekspordid muutuvad kehtetuks."
@@ -1953,7 +1953,7 @@
     "message": "Jätka veebibrauseris?"
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "Ülemparooli saab muuta Bitwardeni veebirakenduses."
+    "message": "Ülemparooli saab muuta Komboei veebirakenduses."
   },
   "fingerprintPhrase": {
     "message": "Unikaalne sõnajada",
@@ -2117,7 +2117,7 @@
     "message": "Käivita koos arvutiga"
   },
   "openAtLoginDesc": {
-    "message": "Bitwardeni töölaua rakendus käivitatakse automaatselt koos arvutiga."
+    "message": "Komboei töölaua rakendus käivitatakse automaatselt koos arvutiga."
   },
   "language": {
     "message": "Keel"
@@ -2529,7 +2529,7 @@
     "message": "Näita kõiki"
   },
   "quitBitwarden": {
-    "message": "Välju Bitwardenist"
+    "message": "Välju Komboeist"
   },
   "valueCopied": {
     "message": "$VALUE$ on kopeeritud",
@@ -2681,7 +2681,7 @@
     "message": "Parooliga kaitstud"
   },
   "passwordProtectedOptionDescription": {
-    "message": "Määra faili parool, et see krüpteerida ja importida teise Bitwardeni kontosse kasutates seda parooli dekrüpteerimiseks."
+    "message": "Määra faili parool, et see krüpteerida ja importida teise Komboei kontosse kasutates seda parooli dekrüpteerimiseks."
   },
   "exportTypeHeading": {
     "message": "Ekspordi tüüp"
@@ -2712,7 +2712,7 @@
     "message": "Eksporditavate andmete krüpteerimiseks kasutatakse kontol olevat krüpteerimisvõtit. Kui sa peaksid seda krüpteerimise võtit roteerima, ei saa sa järgnevalt eksporditavaid andmeid enam dekrüpteerida."
   },
   "encExportAccountWarningDesc": {
-    "message": "Iga Bitwardeni kasutaja krüpteerimisvõti on unikaalne. Eksporditud andmeid ei saa importida teise Bitwardeni kasutajakontosse."
+    "message": "Iga Komboei kasutaja krüpteerimisvõti on unikaalne. Eksporditud andmeid ei saa importida teise Komboei kasutajakontosse."
   },
   "noOrganizationsList": {
     "message": "Sa ei kuulu ühessegi organisatsiooni. Organisatsioonid võimaldavad sul kirjeid turvaliselt teiste kasutajatega jagada."
@@ -2742,7 +2742,7 @@
     "message": "Nõrk ülemparool"
   },
   "weakMasterPasswordDesc": {
-    "message": "Valitud ülemparool on nõrk. Oma Bitwardeni konto paremaks kaitsmiseks peaksid kasutama tugevat parooli. Oled kindel, et soovid seda parooli ülemparoolina kasutada?"
+    "message": "Valitud ülemparool on nõrk. Oma Komboei konto paremaks kaitsmiseks peaksid kasutama tugevat parooli. Oled kindel, et soovid seda parooli ülemparoolina kasutada?"
   },
   "pin": {
     "message": "PIN",
@@ -2752,7 +2752,7 @@
     "message": "Ava PIN-iga"
   },
   "setYourPinCode": {
-    "message": "Määra Bitwardeni lahtilukustamiseks PIN kood. Rakendusest täielikult välja logides nullitakse ka PIN koodi seaded."
+    "message": "Määra Komboei lahtilukustamiseks PIN kood. Rakendusest täielikult välja logides nullitakse ka PIN koodi seaded."
   },
   "pinRequired": {
     "message": "Nõutakse PIN koodi."
@@ -2770,7 +2770,7 @@
     "message": "Ava arvuti autentimissüsteemiga"
   },
   "windowsHelloConsentMessage": {
-    "message": "Kinnita Bitwardenisse sisselogimine."
+    "message": "Kinnita Komboeisse sisselogimine."
   },
   "unlockWithTouchId": {
     "message": "Lukusta lahti Touch ID-ga"
@@ -2779,7 +2779,7 @@
     "message": "Muud Touch ID seaded"
   },
   "touchIdConsentMessage": {
-    "message": "Kinnita Bitwardenisse sisselogimine."
+    "message": "Kinnita Komboeisse sisselogimine."
   },
   "autoPromptTouchId": {
     "message": "Küsi avamisel Touch ID tuvastust"
@@ -3101,7 +3101,7 @@
     "message": "Üks või mitu organisatsiooni poliitikat nõuavad, et peaparool vastaks järgmistele nõuetele:"
   },
   "receiveMarketingEmails": {
-    "message": "Saage Bitwardenilt uuendusi oma postkasti."
+    "message": "Saage Komboeilt uuendusi oma postkasti."
   },
   "unsubscribe": {
     "message": "Lõpeta tellimus"
@@ -3125,7 +3125,7 @@
     "message": "Lubage DuckDuckGo brauseri integreerimine"
   },
   "enableDuckDuckGoBrowserIntegrationDesc": {
-    "message": "Kasutage DuckDuckGoga sirvimisel oma Bitwardeni varahoidlat."
+    "message": "Kasutage DuckDuckGoga sirvimisel oma Komboei varahoidlat."
   },
   "enableHardwareAcceleration": {
     "message": "Kasuta riistvaralist kiirendamist"
@@ -3137,7 +3137,7 @@
     "message": "Kinnita"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ soovib Bitwardeniga ühendust luua",
+    "message": "$APPID$ soovib Komboeiga ühendust luua",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -3155,7 +3155,7 @@
     "message": "Biomeetria ei ole sisse lülitatud"
   },
   "biometricsNotEnabledDesc": {
-    "message": "Selleks, et kasutada biomeetriat brauseris, peab selle esmalt Bitwardeni töölaua rakenduse seadetes sisse lülitama."
+    "message": "Selleks, et kasutada biomeetriat brauseris, peab selle esmalt Komboei töölaua rakenduse seadetes sisse lülitama."
   },
   "biometricsManualSetupTitle": {
     "message": "Automaatne seadistamine ei ole saadaval"
@@ -3837,11 +3837,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Genereeritud Bitwardeni poolt.",
+    "message": "Genereeritud Komboei poolt.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Veebisait: $WEBSITE$. Genereeritud Bitwardeni poolt.",
+    "message": "Veebisait: $WEBSITE$. Genereeritud Komboei poolt.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -4058,7 +4058,7 @@
     "message": "Teid teavitatakse, kui päring on kinnitatud"
   },
   "needAnotherOption": {
-    "message": "Bitwardeni rakenduse seadistuses peab olema konfigureeritud sisselogimine läbi seadme. Vajad teist valikut?"
+    "message": "Komboei rakenduse seadistuses peab olema konfigureeritud sisselogimine läbi seadme. Vajad teist valikut?"
   },
   "viewAllLogInOptions": {
     "message": "Vaata kõiki sisselogimisvalikuid"
@@ -4323,7 +4323,7 @@
     "message": "Mis on seade?"
   },
   "aDeviceIs": {
-    "message": "Seade on Bitwardeni rakenduse unikaalne installatsioon, kuhu olete sisse logitud. Ümberinstallimine, rakenduse andmete kustutamine või küpsiste kustutamine võib põhjustada seadme mitmekordset kuvamist."
+    "message": "Seade on Komboei rakenduse unikaalne installatsioon, kuhu olete sisse logitud. Ümberinstallimine, rakenduse andmete kustutamine või küpsiste kustutamine võib põhjustada seadme mitmekordset kuvamist."
   },
   "deviceListDescriptionTemp": {
     "message": "Teie kontole oldi sisse logitud kõigis allpool loetletud seadmetes."
@@ -5036,7 +5036,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "fail siia Bitwardenisse.",
+    "message": "fail siia Komboeisse.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -5578,7 +5578,7 @@
     "message": "Laadige diagnostikaaruanne alla ja jagage seda"
   },
   "bitwardenSupport": {
-    "message": "Bitwardeni tugi",
+    "message": "Komboei tugi",
     "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
   },
   "download": {
@@ -5681,7 +5681,7 @@
     "message": "Biomeetriline avamine pole saadaval valesti seadistatud süsteemifailide tõttu."
   },
   "biometricsStatusHelptextNotEnabledLocally": {
-    "message": "Biomeetriline avamine pole saadaval, kuna see pole Bitwardeni töölauarakenduses kasutaja $EMAIL$ jaoks lubatud.",
+    "message": "Biomeetriline avamine pole saadaval, kuna see pole Komboei töölauarakenduses kasutaja $EMAIL$ jaoks lubatud.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -5866,7 +5866,7 @@
     "message": "Luba ekraanipüük"
   },
   "allowScreenshotsDesc": {
-    "message": "Lubage Bitwardeni töölauarakendusel olla kuvatõmmistes ja kaugtöölaua sessioonides nähtav. Selle keelamine takistab juurdepääsu mõnedele välistele kuvaritele."
+    "message": "Lubage Komboei töölauarakendusel olla kuvatõmmistes ja kaugtöölaua sessioonides nähtav. Selle keelamine takistab juurdepääsu mõnedele välistele kuvaritele."
   },
   "confirmWindowStillVisibleTitle": {
     "message": "Kinnita, et aken on endiselt nähtav"
@@ -6399,7 +6399,7 @@
     "message": "Uuenda Premiumile"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Teie organisatsioon ei kasuta enam Bitwardenisse sisselogimiseks peaparooli. Jätkamiseks kinnitage organisatsioon ja domeen."
+    "message": "Teie organisatsioon ei kasuta enam Komboeisse sisselogimiseks peaparooli. Jätkamiseks kinnitage organisatsioon ja domeen."
   },
   "continueWithLogIn": {
     "message": "Jätka sisselogimisega"

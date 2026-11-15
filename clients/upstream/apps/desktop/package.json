@@ -1,15 +1,15 @@
 {
   "name": "@bitwarden/desktop",
-  "description": "A secure and free password manager for all of your devices.",
-  "version": "2026.10.2",
+  "description": "Komboe: a secure, self-hosted password manager for all of your devices.",
+  "version": "2026.11.15",
   "keywords": [
-    "bitwarden",
+    "komboe",
     "password",
     "vault",
     "password manager"
   ],
   "author": "Komboe <hello@komboe.com> (https://komboe.com)",
-  "homepage": "https://bitwarden.com",
+  "homepage": "https://komboe.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GoDeskio/Komboe.git"

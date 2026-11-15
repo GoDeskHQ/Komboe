@@ -15,8 +15,10 @@ origin is https://komboe.com/downloads/ — there is no downloads.komboe.com hos
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
+import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
@@ -270,6 +272,46 @@ def write_android_feed(asset: dict, dest: Path, extra: dict | None) -> None:
     dest.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
+def write_windows_feed(artifacts: Path, publish_dir: Path, exe_name: str, version: str | None) -> None:
+    """electron-updater reads desktop/latest.yml next to the installer on komboe.com/downloads/desktop."""
+    yml = next(artifacts.rglob("latest.yml"), None)
+    exe = None
+    for path in artifacts.rglob("*.exe"):
+        if path.is_file() and (exe is None or path.name == exe_name):
+            exe = path
+            if path.name == exe_name:
+                break
+    if yml is not None:
+        text = yml.read_text(encoding="utf-8")
+        text = re.sub(
+            r"(?m)^([ \t]*(?:- )?(?:path|url):[ \t]*).+\.exe[ \t]*$",
+            rf"\1{exe_name}",
+            text,
+        )
+    elif exe is not None:
+        digest = hashlib.sha512()
+        with exe.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        fingerprint = base64.b64encode(digest.digest()).decode("ascii")
+        text = (
+            f"version: {version or '0.0.0'}\n"
+            "files:\n"
+            f"  - url: {exe_name}\n"
+            f"    sha512: {fingerprint}\n"
+            f"    size: {exe.stat().st_size}\n"
+            f"path: {exe_name}\n"
+            f"sha512: {fingerprint}\n"
+        )
+    else:
+        return
+    if not text.endswith("\n"):
+        text += "\n"
+    dest = publish_dir / "desktop" / "latest.yml"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(text, encoding="utf-8")
+
+
 def build(
     artifacts: Path,
     version_file: Path | None,
@@ -377,6 +419,9 @@ def build(
         and android_asset.get("sha256")
     ):
         write_android_feed(android_asset, publish_dir / "android" / "latest.json", android_meta)
+    windows = next((asset for asset in assets if asset["id"] == "desktop-windows"), None)
+    if publish_dir is not None and windows is not None and windows.get("status") == "published":
+        write_windows_feed(artifacts, publish_dir, windows["filename"], windows.get("version"))
     return manifest
 
 

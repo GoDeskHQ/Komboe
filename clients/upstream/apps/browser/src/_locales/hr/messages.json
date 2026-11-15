@@ -27,7 +27,7 @@
     "message": "Stvori račun"
   },
   "newToBitwarden": {
-    "message": "Novi u Bitwardenu?"
+    "message": "Novi u Komboeu?"
   },
   "logInWithPasskey": {
     "message": "Prijava pristupnim ključem"
@@ -330,7 +330,7 @@
     "message": "Nastavi u centar za pomoć?"
   },
   "continueToHelpCenterDesc": {
-    "message": "Za pomoć oko korištenja Bitwardena posjeti centar za pomoć."
+    "message": "Za pomoć oko korištenja Komboea posjeti centar za pomoć."
   },
   "continueToBrowserExtensionStore": {
     "message": "Nastaviti na trgovinu proširenja za preglednik?"
@@ -356,13 +356,13 @@
     "message": "Odjava"
   },
   "aboutBitwarden": {
-    "message": "O Bitwardenu"
+    "message": "O Komboeu"
   },
   "about": {
     "message": "O aplikaciji"
   },
   "moreFromBitwarden": {
-    "message": "Više od Bitwardena"
+    "message": "Više od Komboea"
   },
   "continueToBitwardenDotCom": {
     "message": "Nastavi na komboe.com?"
@@ -2055,7 +2055,7 @@
     "message": "Jednostavno pronađi prijedloge auto-ispune"
   },
   "autofillSpotlightDesc": {
-    "message": "Isključi postavke auto-ispune preglenika kako se ne bi kosile s Bitwardenom."
+    "message": "Isključi postavke auto-ispune preglenika kako se ne bi kosile s Komboeom."
   },
   "turnOffBrowserAutofill": {
     "message": "Isključi auto-ispunu za $BROWSER$",
@@ -3061,7 +3061,7 @@
     "message": "Postavi PIN"
   },
   "setYourPinCode": {
-    "message": "Postavi svoj PIN kôd za otključavanje Bitwardena. Postavke PIN-a se resetiraju ako se potpuno odjaviš iz aplikacije."
+    "message": "Postavi svoj PIN kôd za otključavanje Komboea. Postavke PIN-a se resetiraju ako se potpuno odjaviš iz aplikacije."
   },
   "setPinCode": {
     "message": "Ovim PIN-om možeš otključati Komboe. Tvoj PIN će se resetirati ako se ikada potpuno odjaviš iz aplikacije."
@@ -3266,7 +3266,7 @@
     "message": "Tvoja nova glavna lozinka ne ispunjava zahtjeve."
   },
   "receiveMarketingEmails": {
-    "message": "Primajte novosti od Bitwardena u svoj pretinac."
+    "message": "Primajte novosti od Komboea u svoj pretinac."
   },
   "unsubscribe": {
     "message": "Poništi pretplatu"
@@ -3556,7 +3556,7 @@
     "message": "Ilustracija Komboe dijaloga auto-ispune s prikazom generirane lozinke."
   },
   "updateInBitwarden": {
-    "message": "Ažuriraj u Bitwardenu"
+    "message": "Ažuriraj u Komboeu"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe će te pitati treba li ažurirati lozinku u upravitelju lozinki.",
@@ -6185,7 +6185,7 @@
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "Ostavljanje ove postavke isključenom može uzrokovati sukob između prijedloga za auto-ispunu Bitwardena i tvojeg preglednika.",
+    "message": "Ostavljanje ove postavke isključenom može uzrokovati sukob između prijedloga za auto-ispunu Komboea i tvojeg preglednika.",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
@@ -6211,7 +6211,7 @@
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Za postavljanje Bitwardena kao zadanog upravitelja lozinki moraš pregledniku dati dopuštenje privatnosti.",
+    "message": "Za postavljanje Komboea kao zadanog upravitelja lozinki moraš pregledniku dati dopuštenje privatnosti.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6234,7 +6234,7 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "iz upita preglednika da date Bitwardenu dozvolu za promjenu vaših postavki."
+    "message": "iz upita preglednika da date Komboeu dozvolu za promjenu vaših postavki."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "Isključit ćemo ugrađeni upravitelj lozinkama vašeg preglednika kako biste mogli uživati u sigurnom iskustvu prijave."

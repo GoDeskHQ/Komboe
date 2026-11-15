@@ -9121,7 +9121,7 @@
     "message": "預設"
   },
   "fillAssistRuleSourceDefaultDesc": {
-    "message": "使用已經Bitwarden審查的自動填寫規則集。"
+    "message": "使用已經Komboe審查的自動填寫規則集。"
   },
   "fillAssistRuleSourceCustom": {
     "message": "自訂"
@@ -18456,11 +18456,11 @@
     "description": "Title of the dialog that introduces the redesigned vault to existing users."
   },
   "newExperienceDialogDesc": {
-    "message": "更好的使用體驗，同樣值得信賴的安全性。Bitwarden密碼庫已就您們的回饋重新設計，因此項目將會更容易被找到，亦會如您所料地運作。",
+    "message": "更好的使用體驗，同樣值得信賴的安全性。Komboe密碼庫已就您們的回饋重新設計，因此項目將會更容易被找到，亦會如您所料地運作。",
     "description": "Body copy of the dialog that introduces the redesigned vault to existing users."
   },
   "newExperienceDialogImgAlt": {
-    "message": "全新改版的Bitwarden密碼庫之預覽。",
+    "message": "全新改版的Komboe密碼庫之預覽。",
     "description": "Alt text for the screenshot shown in the dialog that introduces the redesigned vault."
   },
   "exploreTheNewVault": {

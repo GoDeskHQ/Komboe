@@ -37,7 +37,7 @@ pub fn make_http_request(method: reqwest::Method, url: &str) -> Result<reqwest::
 
 pub fn get_reqwest_client_builder(enforce_block: bool) -> ClientBuilder {
     let mut headers = header::HeaderMap::new();
-    headers.insert(header::USER_AGENT, header::HeaderValue::from_static("Vaultwarden"));
+    headers.insert(header::USER_AGENT, header::HeaderValue::from_static("Komboe"));
 
     let redirect_policy = reqwest::redirect::Policy::custom(move |attempt| {
         if attempt.previous().len() >= 5 {

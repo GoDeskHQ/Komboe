@@ -134,6 +134,27 @@ def test_android_feed(work):
     assert "downloads.komboe.com" not in json.dumps(feed)
 
 
+def test_windows_feed(work):
+    artifacts = work / "win-artifacts"
+    publish = work / "win-publish"
+    artifacts.mkdir(parents=True)
+    exe = b"MZ-komboe-setup-fixture"
+    (artifacts / "komboe-desktop-win-x64-setup.exe").write_bytes(exe)
+    (artifacts / "latest.yml").write_text(
+        "version: 2026.11.15\nfiles:\n  - url: Komboe Setup 2026.10.2.exe\n    sha512: aaa\n    size: 1\npath: Komboe Setup 2026.10.2.exe\nsha512: aaa\n"
+    )
+    out = work / "with-windows.json"
+    manifest = run_manifest(artifacts, publish, [out], url_prefix=FEED_HOST)
+    windows = next(a for a in manifest["assets"] if a["id"] == "desktop-windows")
+    assert windows["status"] == "published"
+    assert windows["filename"] == "komboe-desktop-win-x64-setup.exe"
+    assert (publish / "desktop" / "komboe-desktop-win-x64-setup.exe").read_bytes() == exe
+    feed = (publish / "desktop" / "latest.yml").read_text(encoding="utf-8")
+    assert "url: komboe-desktop-win-x64-setup.exe" in feed
+    assert "path: komboe-desktop-win-x64-setup.exe" in feed
+    assert "Komboe Setup" not in feed
+
+
 def test_http_and_qr(work, ext_url_rel, payload, sha):
     server = serve(work / "www")
     try:
@@ -231,6 +252,7 @@ def main():
     payload = (work / "www/downloads/komboe-chrome-mv3.zip").read_bytes()
     test_http_and_qr(work, ext["url"], payload, ext["sha256"])
     test_android_feed(work)
+    test_windows_feed(work)
     empty = work / "empty"
     empty.mkdir()
     empty_out = work / "empty.json"

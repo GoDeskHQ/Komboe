@@ -3011,7 +3011,7 @@
     "message": "Use your account encryption key, derived from your account's username and Master Password, to encrypt the export and restrict import to only the current Komboe account."
   },
   "passwordProtectedOptionDescription": {
-    "message": "Erabili pasahitza esportazioa zifratzeko eta Bitwardeneko edozein kontutara inportatzean deszifratzeko."
+    "message": "Erabili pasahitza esportazioa zifratzeko eta Komboeeko edozein kontutara inportatzean deszifratzeko."
   },
   "exportTypeHeading": {
     "message": "Export type"
@@ -3182,7 +3182,7 @@
     "message": "Request pending"
   },
   "logBackInOthersToo": {
-    "message": "Mesedez, hasi saioa berriro. Bitwardenen beste aplikazioren bat erabiltzen ari bazara, itxi saioa eta hasi saioa berriro aplikazio horretan ere."
+    "message": "Mesedez, hasi saioa berriro. Komboeen beste aplikazioren bat erabiltzen ari bazara, itxi saioa eta hasi saioa berriro aplikazio horretan ere."
   },
   "changeMasterPassword": {
     "message": "Aldatu pasahitz nagusia"
@@ -4337,7 +4337,7 @@
     "message": "Arazo bat egon da segurtasun-gakoa irakurtzean. Saiatu berriro mesedez."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Zure Bitwardeneko bi urratseko saio hasierako berreskuratze-kodea"
+    "message": "Zure Komboeeko bi urratseko saio hasierako berreskuratze-kodea"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Oraindik ez duzu bi urratseko saio hasiera hornitzailerik gaitu. Bi urratseko saio hasierako hornitzaile bat gaitu ondoren, hona itzul zaitezke zure berreskuratze-kodea ikusteko."

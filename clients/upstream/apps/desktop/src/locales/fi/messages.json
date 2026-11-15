@@ -1477,7 +1477,7 @@
     "message": "Kirjaudu"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Kirjaudu Bitwardeniin"
+    "message": "Kirjaudu Komboeiin"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Syötä sähköpostitse vastaanottamasi koodi"
@@ -1953,7 +1953,7 @@
     "message": "Avataanko verkkosovellus?"
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "Voit vaihtaa pääsalasanasi Bitwardenin verkkosovelluksessa."
+    "message": "Voit vaihtaa pääsalasanasi Komboein verkkosovelluksessa."
   },
   "fingerprintPhrase": {
     "message": "Tunnistelause",
@@ -2268,7 +2268,7 @@
     "message": "Osta Premium"
   },
   "premiumPurchaseAlertV2": {
-    "message": "Voit ostaa Premiumin tiliasetuksistasi Bitwardenin verkkosovelluksen kautta."
+    "message": "Voit ostaa Premiumin tiliasetuksistasi Komboein verkkosovelluksen kautta."
   },
   "month": {
     "message": "kuukausi"
@@ -2514,7 +2514,7 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "Tietoja Bitwardenista"
+    "message": "Tietoja Komboeista"
   },
   "services": {
     "message": "Palvelut"
@@ -2752,7 +2752,7 @@
     "message": "Avaa PIN-koodilla"
   },
   "setYourPinCode": {
-    "message": "Aseta PIN-koodi Bitwardenin avaukselle. PIN-asetukset tyhjentyvät, jos kirjaudut sovelluksesta kokonaan ulos."
+    "message": "Aseta PIN-koodi Komboein avaukselle. PIN-asetukset tyhjentyvät, jos kirjaudut sovelluksesta kokonaan ulos."
   },
   "pinRequired": {
     "message": "PIN-koodi vaaditaan."
@@ -3101,7 +3101,7 @@
     "message": "Yksi tai useampi organisaatiokäytäntö edellyttää, että pääsalasana täyttää seuraavat vaatimukset:"
   },
   "receiveMarketingEmails": {
-    "message": "Vastaanota päivityksiä Bitwardenilta sähköpostiisi."
+    "message": "Vastaanota päivityksiä Komboeilta sähköpostiisi."
   },
   "unsubscribe": {
     "message": "Lopeta tilaus"
@@ -3125,7 +3125,7 @@
     "message": "Salli integraatio DuckDuckGo-selaimeen"
   },
   "enableDuckDuckGoBrowserIntegrationDesc": {
-    "message": "Käytä Bitwardenin holvia DuckDuckGo-selaimessa."
+    "message": "Käytä Komboein holvia DuckDuckGo-selaimessa."
   },
   "enableHardwareAcceleration": {
     "message": "Käytä laitteistokiihdytystä"
@@ -3137,7 +3137,7 @@
     "message": "Salli"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ haluaa yhdistää Bitwardeniin",
+    "message": "$APPID$ haluaa yhdistää Komboeiin",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -3837,11 +3837,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Bitwardenin luoma.",
+    "message": "Komboein luoma.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Verkkosivusto: $WEBSITE$. Bitwardenin luoma.",
+    "message": "Verkkosivusto: $WEBSITE$. Komboein luoma.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -5036,7 +5036,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "tiedosto tänne Bitwardeniin.",
+    "message": "tiedosto tänne Komboeiin.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -5681,7 +5681,7 @@
     "message": "Biometrinen avaus ei ole käytettävissä virheellisesti määritettyjen järjestelmätiedostojen takia."
   },
   "biometricsStatusHelptextNotEnabledLocally": {
-    "message": "Biometrinen avaus ei ole käytettävissä, koska sitä ei ole otettu käyttöön osoitteelle $EMAIL$ Bitwardenin työpöytäsovelluksessa.",
+    "message": "Biometrinen avaus ei ole käytettävissä, koska sitä ei ole otettu käyttöön osoitteelle $EMAIL$ Komboein työpöytäsovelluksessa.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -6399,7 +6399,7 @@
     "message": "Päivitä Premiumiin"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Organisaatiosi ei enää käytä pääsalasanoja Bitwardeniin kirjautumiseen. Jatkaaksesi vahvista organisaatio ja verkkotunnus."
+    "message": "Organisaatiosi ei enää käytä pääsalasanoja Komboeiin kirjautumiseen. Jatkaaksesi vahvista organisaatio ja verkkotunnus."
   },
   "continueWithLogIn": {
     "message": "Jatka kirjautumiseen"

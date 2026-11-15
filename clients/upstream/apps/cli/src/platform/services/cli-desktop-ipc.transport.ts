@@ -45,7 +45,7 @@ export function encodeNativeMessagingFrame(message: IpcMessage | object): Buffer
   return frame;
 }
 
-/** SDK IPC transport backed by the Bitwarden Desktop native-messaging proxy. */
+/** SDK IPC transport backed by the Komboe Desktop native-messaging proxy. */
 export class CliDesktopIpcTransport {
   private proxy?: ChildProcessWithoutNullStreams;
   private connection?: Promise<void>;
@@ -65,7 +65,7 @@ export class CliDesktopIpcTransport {
 
     const proxy = this.proxy;
     if (proxy == null || !this.connected) {
-      throw new Error("Bitwarden Desktop proxy disconnected before the message could be sent");
+      throw new Error("Komboe Desktop proxy disconnected before the message could be sent");
     }
 
     const frame = encodeNativeMessagingFrame({
@@ -124,7 +124,7 @@ export class CliDesktopIpcTransport {
     return new Promise<void>((resolve, reject) => {
       let settled = false;
       const timeout = setTimeout(() => {
-        fail(new Error(`Connection to Bitwarden Desktop via ${proxyPath} timed out`));
+        fail(new Error(`Connection to Komboe Desktop via ${proxyPath} timed out`));
         proxy.kill();
       }, CONNECTION_TIMEOUT_MS);
 
@@ -135,7 +135,7 @@ export class CliDesktopIpcTransport {
         settled = true;
         clearTimeout(timeout);
         this.connected = true;
-        this.logService.info(`[IPC] Connected to Bitwarden Desktop via ${proxyPath}`);
+        this.logService.info(`[IPC] Connected to Komboe Desktop via ${proxyPath}`);
         resolve();
       };
 
@@ -156,7 +156,7 @@ export class CliDesktopIpcTransport {
       proxy.once("exit", (code, signal) =>
         fail(
           new Error(
-            `Bitwarden Desktop proxy exited${code != null ? ` with code ${code}` : ""}${
+            `Komboe Desktop proxy exited${code != null ? ` with code ${code}` : ""}${
               signal != null ? ` from signal ${signal}` : ""
             }`,
           ),
@@ -214,7 +214,7 @@ export class CliDesktopIpcTransport {
           ),
         );
       } catch (error) {
-        this.logService.info("[IPC] Ignoring malformed Bitwarden Desktop message", error);
+        this.logService.info("[IPC] Ignoring malformed Komboe Desktop message", error);
       }
     }
   }

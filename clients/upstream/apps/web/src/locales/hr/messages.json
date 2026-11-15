@@ -2326,7 +2326,7 @@
     "message": "Stvori račun"
   },
   "newToBitwarden": {
-    "message": "Novi u Bitwardenu?"
+    "message": "Novi u Komboeu?"
   },
   "setAStrongPassword": {
     "message": "Postavi jaku lozinku"
@@ -3215,7 +3215,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Postavljanje previsoke KDF iteracije može rezultirati slabijom izvedbom prilikom otključavanja Bitwardena na uređajima sa sporijim CPU-om. Predlažemo da vrijednost povećavaš za $INCREMENT$ i isprobaš na svim svojim uređajima.",
+    "message": "Postavljanje previsoke KDF iteracije može rezultirati slabijom izvedbom prilikom otključavanja Komboea na uređajima sa sporijim CPU-om. Predlažemo da vrijednost povećavaš za $INCREMENT$ i isprobaš na svim svojim uređajima.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -4500,7 +4500,7 @@
     "message": "Izvještaj o slabim lozinkama"
   },
   "weakPasswordsReportDesc": {
-    "message": "Slabe lozinke relativno jednostanvo mogu pogoditi hakeri i automatski alati koji se koriste za probijanje lozniki. Bitwardenov generator lozinki ti može pomoći stvoriti jake lozinke."
+    "message": "Slabe lozinke relativno jednostanvo mogu pogoditi hakeri i automatski alati koji se koriste za probijanje lozniki. Komboeov generator lozinki ti može pomoći stvoriti jake lozinke."
   },
   "weakPasswordsFound": {
     "message": "Pronađene slabe lozinke"
@@ -5563,7 +5563,7 @@
     "message": "SSO vanjski Id"
   },
   "ssoExternalIdDesc": {
-    "message": "SSO vanjski ID je nešifrirana referenca između Bitwardena i tvojeg konfiguriranog SSO davatelja usluge."
+    "message": "SSO vanjski ID je nešifrirana referenca između Komboea i tvojeg konfiguriranog SSO davatelja usluge."
   },
   "nestCollectionUnder": {
     "message": "Ugnijezdi zbirku pod"
@@ -9331,7 +9331,7 @@
     "message": "Zahtjev za pristup Secrets Manageru poslan administratorima e-poštom."
   },
   "requestAccessSMDefaultEmailContent": {
-    "message": "Pozdrav,\n\nMolim pretplatu na Komboe Secrets Manager za naš tim. Vaša podrška bi nam puno značila!\n\nKomboe Secrets Manager je end-to-end kriptirano rješenje za upravljanje tajnama za sigurno pohranjivanje, dijeljenje i implementaciju strojnih vjerodajnica kao što su API ključevi, lozinke za baze podataka i certifikata za autentifikaciju.\n\nSecrets Manager će nam pomoći da:\n\n- poboljšamo sigurnost\n- pojednostavimo poslovanje\n- spriječimo skupa curenja tajnih podataka\n\nZa besplatno probno razdoblje za naš tim, molimo obratite se Bitwardenu.\n\nHvala vam na pomoći!"
+    "message": "Pozdrav,\n\nMolim pretplatu na Komboe Secrets Manager za naš tim. Vaša podrška bi nam puno značila!\n\nKomboe Secrets Manager je end-to-end kriptirano rješenje za upravljanje tajnama za sigurno pohranjivanje, dijeljenje i implementaciju strojnih vjerodajnica kao što su API ključevi, lozinke za baze podataka i certifikata za autentifikaciju.\n\nSecrets Manager će nam pomoći da:\n\n- poboljšamo sigurnost\n- pojednostavimo poslovanje\n- spriječimo skupa curenja tajnih podataka\n\nZa besplatno probno razdoblje za naš tim, molimo obratite se Komboeu.\n\nHvala vam na pomoći!"
   },
   "giveMembersAccess": {
     "message": "Daj članovima pristup do:"
@@ -12252,7 +12252,7 @@
     "message": "Više postavki"
   },
   "moreFromBitwarden": {
-    "message": "Više od Bitwardena"
+    "message": "Više od Komboea"
   },
   "switchProducts": {
     "message": "Zamijeni proizvode"
@@ -13145,7 +13145,7 @@
     "message": "Korisnik je postavio glavnu lozinku tijekom TDE offboardinga."
   },
   "startYour7DayFreeTrialOfBitwardenFor": {
-    "message": "Pokreni besplatnih 7 dana Bitwardena za $ORG$",
+    "message": "Pokreni besplatnih 7 dana Komboea za $ORG$",
     "placeholders": {
       "org": {
         "content": "$1",
@@ -14291,7 +14291,7 @@
     "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
   },
   "scimIntegrationDescEnd": {
-    "message": "(Sustav za upravljanje identitetom između domena) za automatsko dodjeljivanje korisnika i grupa Bitwardenu korištenjem vodiča za implementaciju za vašeg pružatelja identiteta.",
+    "message": "(Sustav za upravljanje identitetom između domena) za automatsko dodjeljivanje korisnika i grupa Komboeu korištenjem vodiča za implementaciju za vašeg pružatelja identiteta.",
     "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
   },
   "bwdc": {
@@ -14535,7 +14535,7 @@
     "message": "Nastavi Komboe postavljanje"
   },
   "continueSettingUpFreeTrial": {
-    "message": "Nastavi s postavljanjem besplatne probe Bitwardena"
+    "message": "Nastavi s postavljanjem besplatne probe Komboea"
   },
   "continueSettingUpPasswordManager": {
     "message": "Nastavi postavljanje Komboe upravitelja lozinki"
@@ -15237,7 +15237,7 @@
     "description": "This represents the beginning of a sentence. The full sentence will be 'Manage subscription from the Provider Portal', but 'Provider Portal' will be a link and thus cannot be included in the translation file."
   },
   "toHostBitwardenOnYourOwnServer": {
-    "message": "Za smještanje Bitwardena na vlastiti poslužitelj, morat ćeš prenijeti datoteku licence. Kako bi podržali besplatne Families pakete i napredne mogućnosti naplate za svoj poslužitelj, morat ćeš postaviti automatsku sinkronizaciju."
+    "message": "Za smještanje Komboea na vlastiti poslužitelj, morat ćeš prenijeti datoteku licence. Kako bi podržali besplatne Families pakete i napredne mogućnosti naplate za svoj poslužitelj, morat ćeš postaviti automatsku sinkronizaciju."
   },
   "selfHostingTitleProper": {
     "message": "Vlastiti poslužitelj"
@@ -16049,7 +16049,7 @@
     "message": "Otvori Komboe proširenje"
   },
   "gettingStartedWithBitwardenPart1": {
-    "message": "Za savjete o korištenju Bitwardena posjeti",
+    "message": "Za savjete o korištenju Komboea posjeti",
     "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Bitwarden visit the Learning Center and Help Center'"
   },
   "gettingStartedWithBitwardenPart2": {
@@ -16171,7 +16171,7 @@
     }
   },
   "restoreProviderPortalAccessViaCustomerSupport": {
-    "message": "Za vraćanje pristupa portalu tvojeg davatelja usluga, obrati se korisničkoj podršci Bitwardena za obnavljanje pretplate.",
+    "message": "Za vraćanje pristupa portalu tvojeg davatelja usluga, obrati se korisničkoj podršci Komboea za obnavljanje pretplate.",
     "description": "A message shown in a non-dismissible dialog to any user of a suspended providers."
   },
   "restoreProviderPortalAccessViaPaymentMethod": {

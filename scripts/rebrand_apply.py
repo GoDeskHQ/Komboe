@@ -30,8 +30,10 @@ def sub_text(t):
 
 # 1. locale message values (web + shared libs). Only "message" values change.
 def locale(t):
-    return "".join(WORD.sub("Komboe", l).replace("bitwarden.com", "komboe.com") if '"message":' in l else l
-                   for l in t.splitlines(keepends=True))
+    # Message values only, including inflected forms (Bitwardens, Bitwardenu).
+    # Import-format labels stay. Descriptions are translator notes, not UI.
+    from komboe_brand import rewrite_locale
+    return rewrite_locale(t)
 for p in glob.glob(f"{C}/apps/web/src/locales/*/messages.json") + glob.glob(f"{C}/apps/cli/src/locales/*/messages.json"):
     rw(p, locale)
 
@@ -56,9 +58,11 @@ def png(src, size):
     im = Image.open(src).convert("RGBA"); im.thumbnail(size, Image.LANCZOS)
     canvas = Image.new("RGBA", size, (0, 0, 0, 0)); canvas.paste(im, ((size[0]-im.width)//2, (size[1]-im.height)//2), im)
     b = io.BytesIO(); canvas.save(b, "PNG", optimize=True); return b.getvalue()
-ICON = f"{B}/master/komboe-logo-master-transparent.png"
-LIGHT = f"{B}/variants/komboe-light-transparent.png"
-DARK = f"{B}/variants/komboe-dark-transparent.png"
+# Official kit, not the older violet master. apply_client_artwork() overwrites the
+# files this pass still resizes, and restores favicons byte-for-byte afterwards.
+ICON = f"{ROOT}/brand/komboe-kit/01-master/komboe-mark-navy-gradient.png"
+LIGHT = f"{ROOT}/brand/komboe-kit/01-master/komboe-mark-navy.png"
+DARK = f"{ROOT}/brand/komboe-kit/01-master/komboe-mark-mono-white.png"
 targets = {f"{C}/apps/web/src/images/icons/*.png": ICON, f"{C}/apps/web/src/images/logo-dark@2x.png": DARK,
            f"{C}/apps/web/src/images/logo-primary@2x.png": DARK, f"{C}/apps/web/src/images/logo-white@2x.png": LIGHT,
            f"{S}/src/static/images/vaultwarden-icon.png": ICON, f"{S}/src/static/images/vaultwarden-favicon.png": ICON,
@@ -285,5 +289,11 @@ _mg = f"{S}/src/static/images/mail-github.png"   # footer icon -> Komboe mark (w
 if os.path.exists(f"{B}/favicon/pwa-192.png"):
     from PIL import Image
     Image.open(f"{B}/favicon/pwa-192.png").convert("RGBA").resize((60, 60), Image.LANCZOS).save(_mg)
+
+# Official kit artwork the earlier pass never touched: desktop src/images (tray,
+# notifications, wordmarks), the NSIS sidebar, extension popup/Safari/store art,
+# the web register lockup, the shield SVG, and the bwi shield glyph.
+from komboe_brand import apply_client_artwork
+apply_client_artwork(changed)
 
 print(f"rebrand: {len(changed)} files changed")

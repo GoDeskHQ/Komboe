@@ -575,7 +575,7 @@ export class SendReceiveCommand extends DownloadCommand {
 
           return await this.saveAttachmentToFile(
             downloadData.url,
-            path.basename(decryptedView?.file?.fileName ?? `BitwardenSendFile-${Date.now()}`),
+            path.basename(decryptedView?.file?.fileName ?? `KomboeSendFile-${Date.now()}`),
             decryptBufferFn,
             options.output,
           );

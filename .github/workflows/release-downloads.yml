@@ -82,10 +82,14 @@ jobs:
           npm run build:oss --workspace @bitwarden/desktop
           cd apps/desktop
           npx electron-builder --win nsis --x64 -p never --config.win.target=nsis
+      - name: Unpacked desktop app has no Bitwarden branding
+        run: python scripts/check_branding.py --built clients/upstream/apps/desktop/dist/win-unpacked
       - uses: actions/upload-artifact@v4
         with:
           name: release-windows
-          path: clients/upstream/apps/desktop/dist/*.exe
+          path: |
+            clients/upstream/apps/desktop/dist/*.exe
+            clients/upstream/apps/desktop/dist/latest.yml
           if-no-files-found: ignore
 
   manifest:
@@ -105,7 +109,7 @@ jobs:
         run: |
           set -eu
           mkdir -p dist
-          find gathered -type f \( -name '*.zip' -o -name '*.deb' -o -name '*.AppImage' -o -name '*.exe' \) -exec cp {} dist/ \;
+          find gathered -type f \( -name '*.zip' -o -name '*.deb' -o -name '*.AppImage' -o -name '*.exe' -o -name 'latest.yml' -o -name 'latest-linux.yml' \) -exec cp {} dist/ \;
           # Keep the names the manifest generator expects.
           if compgen -G "dist/*.deb" > /dev/null; then
             deb=$(ls dist/*.deb | head -1)

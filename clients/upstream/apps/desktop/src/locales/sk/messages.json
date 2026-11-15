@@ -1465,7 +1465,7 @@
     "message": "Vytvoriť účet"
   },
   "newToBitwarden": {
-    "message": "Ste noví na Bitwardene?"
+    "message": "Ste noví na Komboee?"
   },
   "setAStrongPassword": {
     "message": "Nastavte silné heslo"
@@ -1477,7 +1477,7 @@
     "message": "Prihlásiť sa"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Prihlásenie do Bitwardenu"
+    "message": "Prihlásenie do Komboeu"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Zadajte kód zaslaný na váš e-mail"
@@ -1635,7 +1635,7 @@
     "message": "Neočakávaná chyba"
   },
   "closeThisBitwardenWindow": {
-    "message": "Zatvorte toto okno Bitwardenu a skúste to znova."
+    "message": "Zatvorte toto okno Komboeu a skúste to znova."
   },
   "itemInformation": {
     "message": "Informácie o položke"
@@ -1857,7 +1857,7 @@
     "message": "Naozaj chcete rotovať šifrovací kľúč k účtu?"
   },
   "updateEncryptionKeyWarning": {
-    "message": "Po aktualizácii šifrovacieho kľúča budete požiadaný o opätovné prihlásenie sa do všetkých aplikácií Bitwardenu, ktoré momentálne používate (napríklad mobilné aplikácie, alebo rozšírenia v prehliadači). Ak sa opätovne neodhlásite (stiahnu sa nové šifrovacie kľúče), mohlo by to viesť k poškodeniu uložených údajov. Pokúsime sa vás odhlásiť automaticky, ale môže to chvíľu trvať."
+    "message": "Po aktualizácii šifrovacieho kľúča budete požiadaný o opätovné prihlásenie sa do všetkých aplikácií Komboeu, ktoré momentálne používate (napríklad mobilné aplikácie, alebo rozšírenia v prehliadači). Ak sa opätovne neodhlásite (stiahnu sa nové šifrovacie kľúče), mohlo by to viesť k poškodeniu uložených údajov. Pokúsime sa vás odhlásiť automaticky, ale môže to chvíľu trvať."
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Všetky exporty s obmedzeným prístupom, ktoré ste uložili, sa stanú neplatnými."
@@ -3101,7 +3101,7 @@
     "message": "Jedno alebo viac pravidiel organizácie požadujú, aby hlavné heslo spĺňalo nasledujúce požiadavky:"
   },
   "receiveMarketingEmails": {
-    "message": "Dostávať aktualizácie od Bitwardenu do e-mailovej schránky."
+    "message": "Dostávať aktualizácie od Komboeu do e-mailovej schránky."
   },
   "unsubscribe": {
     "message": "Odhlásiť sa z odberu"
@@ -3125,7 +3125,7 @@
     "message": "Povoliť integráciu prehliadača DuckDuckGo"
   },
   "enableDuckDuckGoBrowserIntegrationDesc": {
-    "message": "Používajte svoj trezor v Bitwardene pri prehliadaní pomocou DuckDuckGo."
+    "message": "Používajte svoj trezor v Komboee pri prehliadaní pomocou DuckDuckGo."
   },
   "enableHardwareAcceleration": {
     "message": "Použiť hardvérové zrýchlenie"
@@ -3137,7 +3137,7 @@
     "message": "Schváliť"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ sa chce pripojiť k Bitwardenu",
+    "message": "$APPID$ sa chce pripojiť k Komboeu",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -3837,11 +3837,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Vygenerované Bitwardenom.",
+    "message": "Vygenerované Komboeom.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Webstránka: $WEBSITE$. Vygenerované Bitwardenon.",
+    "message": "Webstránka: $WEBSITE$. Vygenerované Komboeon.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -5036,7 +5036,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "sem do Bitwardenu.",
+    "message": "sem do Komboeu.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -5578,7 +5578,7 @@
     "message": "Stiahnite si diagnostickú správu, a potom ju zdieľajte s"
   },
   "bitwardenSupport": {
-    "message": "podporou Bitwardenu",
+    "message": "podporou Komboeu",
     "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
   },
   "download": {
@@ -5848,7 +5848,7 @@
     "message": "Pre túto aplikáciu neboli nájdené žiadne prístupové kľúče."
   },
   "passkeyNotAllowedForBitwardenVault": {
-    "message": "Prístupové kľúče pre $DOMAIN$ nie je možné uložiť ani použiť v Bitwardene.",
+    "message": "Prístupové kľúče pre $DOMAIN$ nie je možné uložiť ani použiť v Komboee.",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -5866,7 +5866,7 @@
     "message": "Povoliť snímanie obrazovky"
   },
   "allowScreenshotsDesc": {
-    "message": "Umožní zachytenie Bitwardenu na snímkach obrazovky a jej zobrazenie v reláciách vzdialenej plochy. Zakázanie tejto funkcie zabráni prístupu na niektoré externé displeje."
+    "message": "Umožní zachytenie Komboeu na snímkach obrazovky a jej zobrazenie v reláciách vzdialenej plochy. Zakázanie tejto funkcie zabráni prístupu na niektoré externé displeje."
   },
   "confirmWindowStillVisibleTitle": {
     "message": "Potvrdiť viditeľnosť okna"
@@ -6399,7 +6399,7 @@
     "message": "Upgradovať na Prémium"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Vaša organizácia už nepoužíva hlavné heslá na prihlásenie do Bitwardenu. Ak chcete pokračovať, overte organizáciu a doménu."
+    "message": "Vaša organizácia už nepoužíva hlavné heslá na prihlásenie do Komboeu. Ak chcete pokračovať, overte organizáciu a doménu."
   },
   "continueWithLogIn": {
     "message": "Pokračujte prihlásením"

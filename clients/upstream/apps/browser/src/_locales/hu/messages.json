@@ -27,7 +27,7 @@
     "message": "Fiók létrehozása"
   },
   "newToBitwarden": {
-    "message": "Új vagyunk a Bitwardenben?"
+    "message": "Új vagyunk a Komboeben?"
   },
   "logInWithPasskey": {
     "message": "Bejelentkezés hozzáférési kulccsal"
@@ -362,7 +362,7 @@
     "message": "Névjegy"
   },
   "moreFromBitwarden": {
-    "message": "További infó a Bitwardenről"
+    "message": "További infó a Komboeről"
   },
   "continueToBitwardenDotCom": {
     "message": "Folytatás a komboe.com webhelyen?"
@@ -1349,11 +1349,11 @@
     }
   },
   "notificationLoginSaveConfirmation": {
-    "message": "mentésre került a Bitwardenbe.",
+    "message": "mentésre került a Komboebe.",
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "frissítésre került a Bitwardenben.",
+    "message": "frissítésre került a Komboeben.",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
@@ -1451,7 +1451,7 @@
     "message": "Kérés az új hozzáféréi kulcsok mentésére vagy bejelentkezés a széfben tárolt hozzáférési kulcsokkal. Minden bejelentkezett fiókra vonatkozik."
   },
   "notificationChangeDesc": {
-    "message": "Frissítésre kerüljön a jelszó a Bitwardenben?"
+    "message": "Frissítésre kerüljön a jelszó a Komboeben?"
   },
   "notificationChangeSave": {
     "message": "Frissítés"
@@ -2055,7 +2055,7 @@
     "message": "Az automatikus kitöltési javaslatok könnyű megtalálása"
   },
   "autofillSpotlightDesc": {
-    "message": "Kapcsoljuk ki a böngésző automatikus kitöltési beállításait, így azok nem ütköznek a Bitwardennel."
+    "message": "Kapcsoljuk ki a böngésző automatikus kitöltési beállításait, így azok nem ütköznek a Komboenel."
   },
   "turnOffBrowserAutofill": {
     "message": "$BROWSER$ automatikus kitöltés kikapcsolása",
@@ -3266,7 +3266,7 @@
     "message": "Az új mesterjelszó nem felel meg a szabály követelményeknek."
   },
   "receiveMarketingEmails": {
-    "message": "Frissítések fogadása a Bitwardentől a postaládában."
+    "message": "Frissítések fogadása a Komboetől a postaládában."
   },
   "unsubscribe": {
     "message": "Leiratkozás"
@@ -3556,7 +3556,7 @@
     "message": "A Komboe automatikus kitöltési menüjének illusztrációja, amely egy generált jelszót jelenít meg."
   },
   "updateInBitwarden": {
-    "message": "Frissítés a Bitwardenben"
+    "message": "Frissítés a Komboeben"
   },
   "updateInBitwardenSlideDesc": {
     "message": "A Komboe ezután felkér a jelszó frissítésére a jelszókezelőben.",
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "fájlt ide a Bitwardenhez.",
+    "message": "fájlt ide a Komboehez.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6211,7 +6211,7 @@
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Ki kell osztani a böngésző adatvédelmi jogosultságait a Bitwardennek az alapértelmezett jelszókezelőként történő beállításhoz.",
+    "message": "Ki kell osztani a böngésző adatvédelmi jogosultságait a Komboenek az alapértelmezett jelszókezelőként történő beállításhoz.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6234,7 +6234,7 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "a böngésző felszólításából, hogy adjunk engedélyt a Bitwardennek a beállítások módosítására."
+    "message": "a böngésző felszólításából, hogy adjunk engedélyt a Komboenek a beállítások módosítására."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "A böngésző beépített jelszókezelője kikapcsolásra kerül, hogy biztonságos bejelentkezési élményt kapjunk."
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "Mentés a Bitwardenbe",
+    "message": "Mentés a Komboebe",
     "description": "Confirmation message for saving a login to Bitwarden"
   },
   "spaceCharacterDescriptor": {
@@ -7489,7 +7489,7 @@
     "message": "Használjunk mappákat a széf elemek rendszerezéséhez. Ezek sajátok — senki más nem látja vagy használhatja ezeket."
   },
   "introCarouselLabel": {
-    "message": "Üdvözlet a Bitwardenben"
+    "message": "Üdvözlet a Komboeben"
   },
   "securityPrioritized": {
     "message": "Biztonság, prioritásos"
@@ -7522,7 +7522,7 @@
     "message": "Létező jelszavak importálása"
   },
   "emptyVaultNudgeBody": {
-    "message": "Az importálóval gyorsan átvihetünk bejelentkezéseket a Bitwardenbe anélkül, hogy manuálisan hozzáadnánk azokat."
+    "message": "Az importálóval gyorsan átvihetünk bejelentkezéseket a Komboebe anélkül, hogy manuálisan hozzáadnánk azokat."
   },
   "emptyVaultNudgeButton": {
     "message": "Importálás most"
@@ -7738,7 +7738,7 @@
     "message": "Hiba: nem fejthető vissza."
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "A szervezet már nem használ mesterjelszavakat a Bitwardenbe bejelentkezéshez. A folytatáshoz ellenőrizzük a szervezetet és a tartományt."
+    "message": "A szervezet már nem használ mesterjelszavakat a Komboebe bejelentkezéshez. A folytatáshoz ellenőrizzük a szervezetet és a tartományt."
   },
   "continueWithLogIn": {
     "message": "Folytatás bejelentkezéssel"
@@ -7960,13 +7960,13 @@
     "message": "Új jogosultság szükséges"
   },
   "sharedUnlockDesktopPermissionDesc": {
-    "message": "A megosztott feloldás használatához a Bitwardennek jogosultságra van szüksége az asztali alkalmazással kommunikáláshoz. Amikor folytatjuk, a böngésző kérni fogja annak jóváhagyását."
+    "message": "A megosztott feloldás használatához a Komboenek jogosultságra van szüksége az asztali alkalmazással kommunikáláshoz. Amikor folytatjuk, a böngésző kérni fogja annak jóváhagyását."
   },
   "sharedUnlockDesktopPermissionWarning": {
     "message": "A Komboe zárol és újratölt. A jóváhagyás után a bővítmény újratöltődik és lezárja a széfet."
   },
   "biometricPermissionDesc": {
-    "message": "A biometrikus feloldás használatához a Bitwardennek jogosultságra van szüksége az asztali alkalmazással  kommunikáláshoz. Amikor folytatjuk, a böngésző kérni fogja annak jóváhagyását."
+    "message": "A biometrikus feloldás használatához a Komboenek jogosultságra van szüksége az asztali alkalmazással  kommunikáláshoz. Amikor folytatjuk, a böngésző kérni fogja annak jóváhagyását."
   },
   "enterMonth": {
     "message": "A hónap megadása."

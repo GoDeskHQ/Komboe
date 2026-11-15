@@ -46,7 +46,7 @@ describe("CliIpcService", () => {
     jest.mocked(ipcRequestDiscover).mockRejectedValue(new Error("request timed out"));
 
     await expect(service.verifyDesktopConnection()).rejects.toThrow(
-      `Biometric unlock requires Bitwarden Desktop ${MINIMUM_BIOMETRIC_DESKTOP_VERSION} or newer`,
+      `Biometric unlock requires Komboe Desktop ${MINIMUM_BIOMETRIC_DESKTOP_VERSION} or newer`,
     );
     expect(transport.disconnect).toHaveBeenCalled();
   });
@@ -55,7 +55,7 @@ describe("CliIpcService", () => {
     jest.mocked(ipcRequestDiscover).mockResolvedValue({ version: "2026.8.0" });
 
     await expect(service.verifyDesktopConnection()).rejects.toThrow(
-      `Biometric unlock requires Bitwarden Desktop ${MINIMUM_BIOMETRIC_DESKTOP_VERSION} or newer`,
+      `Biometric unlock requires Komboe Desktop ${MINIMUM_BIOMETRIC_DESKTOP_VERSION} or newer`,
     );
     expect(transport.disconnect).toHaveBeenCalled();
   });

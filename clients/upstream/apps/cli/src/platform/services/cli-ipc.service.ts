@@ -16,7 +16,7 @@ import { CliDesktopIpcTransport } from "./cli-desktop-ipc.transport";
 const DESKTOP_DISCOVER_TIMEOUT_MS = 5_000;
 export const MINIMUM_BIOMETRIC_DESKTOP_VERSION = "2026.9.0";
 
-/** SDK IPC service backed by the Bitwarden Desktop native-messaging proxy. */
+/** SDK IPC service backed by the Komboe Desktop native-messaging proxy. */
 export class CliIpcService extends IpcService {
   private communicationBackend?: IpcCommunicationBackend;
   private transport?: CliDesktopIpcTransport;
@@ -57,14 +57,14 @@ export class CliIpcService extends IpcService {
         AbortSignal.timeout(DESKTOP_DISCOVER_TIMEOUT_MS),
       );
       if (lt(response.version, MINIMUM_BIOMETRIC_DESKTOP_VERSION)) {
-        throw new Error(`Bitwarden Desktop ${response.version} is unsupported.`);
+        throw new Error(`Komboe Desktop ${response.version} is unsupported.`);
       }
       return response.version;
     } catch (error) {
       this.disconnect();
       const details = error instanceof Error ? ` ${error.message}` : "";
       throw new Error(
-        `Could not establish SDK IPC with Bitwarden Desktop. Biometric unlock requires Bitwarden Desktop ${MINIMUM_BIOMETRIC_DESKTOP_VERSION} or newer.${details}`,
+        `Could not establish SDK IPC with Komboe Desktop. Biometric unlock requires Komboe Desktop ${MINIMUM_BIOMETRIC_DESKTOP_VERSION} or newer.${details}`,
       );
     }
   }
@@ -81,7 +81,7 @@ export class CliIpcService extends IpcService {
     this.communicationBackend = new IpcCommunicationBackend({
       send: async (message: OutgoingMessage): Promise<void> => {
         if (message.destination !== "DesktopMain" && message.destination !== "DesktopRenderer") {
-          throw new Error("CLI IPC only supports Bitwarden Desktop destinations");
+          throw new Error("CLI IPC only supports Komboe Desktop destinations");
         }
         await this.transport!.send(message);
       },

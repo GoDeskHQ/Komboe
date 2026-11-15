@@ -13,6 +13,9 @@ jobs:
       - name: Sender, backup, and update checks
         run: |
           set -eu
+          python3 -m pip install --quiet Pillow fonttools brotli
+          python3 scripts/check_branding.py --source
+          python3 tests/features/downloads_manifest.py
           python3 tests/features/smtp_from.py
           python3 tests/features/android_self_update.py
           python3 tests/features/backup_restore.py
@@ -112,6 +115,8 @@ jobs:
         env:
           NODE_OPTIONS: --max-old-space-size=5120
         run: npm run dist:oss:selfhost --workspace @bitwarden/web-vault
+      - name: Built web vault has no Bitwarden branding
+        run: python3 scripts/check_branding.py --built clients/upstream/apps/web/build
       - name: Install Playwright
         working-directory: apps/web-marketing
         run: |
@@ -173,6 +178,8 @@ jobs:
                   raise SystemExit(f"clients image manifest includes a file this image did not build: {other['id']}")
           print("extension", digest, asset["size"])
           PY
+      - name: Built extension zip has no Bitwarden branding
+        run: python3 scripts/check_branding.py --built dist/komboe-chrome-mv3.zip
       - uses: actions/upload-artifact@v4
         with:
           name: komboe-chrome-mv3

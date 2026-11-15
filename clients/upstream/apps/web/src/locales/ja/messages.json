@@ -3182,7 +3182,7 @@
     "message": "保留中のリクエスト"
   },
   "logBackInOthersToo": {
-    "message": "ログインし直してください。他のBitwardenのアプリを使用している場合、同様にログインし直してください。"
+    "message": "ログインし直してください。他のKomboeのアプリを使用している場合、同様にログインし直してください。"
   },
   "changeMasterPassword": {
     "message": "マスターパスワードの変更"
@@ -3991,7 +3991,7 @@
     "message": "ドメインルール"
   },
   "domainRulesDesc": {
-    "message": "複数の異なるドメインで同じログイン情報を用いることができます。「グローバルドメイン」はBitwardenにより予め作成されたものです。"
+    "message": "複数の異なるドメインで同じログイン情報を用いることができます。「グローバルドメイン」はKomboeにより予め作成されたものです。"
   },
   "globalEqDomains": {
     "message": "グローバルドメイン"
@@ -4039,7 +4039,7 @@
     "message": "組織の2段階認証を有効化します。"
   },
   "twoStepLoginEnterpriseDescStart": {
-    "message": "Bitwardenの2段階認証をメンバーに強制するには、次のようにします。 ",
+    "message": "Komboeの2段階認証をメンバーに強制するには、次のようにします。 ",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Bitwarden Two-step Login options for members by using the Two-step Login Policy.'"
   },
   "twoStepLoginPolicy": {
@@ -4271,7 +4271,7 @@
     "message": "すべてのキーを無効化"
   },
   "twoFactorDuoDesc": {
-    "message": "Bitwardenアプリの情報をDuoの管理パネルから入力して下さい。"
+    "message": "Komboeアプリの情報をDuoの管理パネルから入力して下さい。"
   },
   "twoFactorDuoClientId": {
     "message": "クライアント ID"
@@ -4322,7 +4322,7 @@
     "message": "フォームを保存します。"
   },
   "twoFactorU2fWarning": {
-    "message": "プラットフォームの制限によりFIDO U2F対応キーはBitwardenのアプリケーションのすべてで使用できるわけではありません。他の二段階認証プロバイダを有効化しておくと、FIDO U2F対応キーが使用できない場合でもアカウントにアクセスできます。サポートされるプラットフォーム:"
+    "message": "プラットフォームの制限によりFIDO U2F対応キーはKomboeのアプリケーションのすべてで使用できるわけではありません。他の二段階認証プロバイダを有効化しておくと、FIDO U2F対応キーが使用できない場合でもアカウントにアクセスできます。サポートされるプラットフォーム:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "ウェブ保管庫とU2Fに対応したブラウザ(Chrome、Opera、Vivaldi、Firefox)のブラウザ拡張機能"
@@ -4500,7 +4500,7 @@
     "message": "脆弱パスワード調査"
   },
   "weakPasswordsReportDesc": {
-    "message": "脆弱なパスワードは、ハッカーによって簡単に推測することができ、また自動化されたツールでパスワードが解析されます。Bitwardenのパスワード生成ツールを使用すると、強力なパスワードを作成することができます。"
+    "message": "脆弱なパスワードは、ハッカーによって簡単に推測することができ、また自動化されたツールでパスワードが解析されます。Komboeのパスワード生成ツールを使用すると、強力なパスワードを作成することができます。"
   },
   "weakPasswordsFound": {
     "message": "脆弱なパスワードが見つかりました"
@@ -7115,7 +7115,7 @@
     "message": "Return to registration"
   },
   "joinOrganizationDesc": {
-    "message": "あなたは上記の組織への参加の招待を受けています。招待を承諾するには、ログインするかBitwardenアカウントを作成してください。"
+    "message": "あなたは上記の組織への参加の招待を受けています。招待を承諾するには、ログインするかKomboeアカウントを作成してください。"
   },
   "finishJoiningThisOrganizationBySettingAMasterPassword": {
     "message": "マスターパスワードを設定して、この組織への参加を完了します。"
@@ -7256,7 +7256,7 @@
     "message": "アカウントが存在する場合、詳細な手順を記載したメールを送信しました。"
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Bitwardenアカウント削除のリクエストがありました。削除する場合はボタンをクリックしてください。"
+    "message": "Komboeアカウント削除のリクエストがありました。削除する場合はボタンをクリックしてください。"
   },
   "deleteRecoverOrgConfirmDesc": {
     "message": "Komboe 組織の削除をリクエストしました。"
@@ -7593,7 +7593,7 @@
     }
   },
   "updateEncryptionKeyWarning": {
-    "message": "暗号化キーの更新後は、モバイルアプリやブラウザ拡張機能など現在利用中のすべてのBitwardenアプリで再ログインが必要となります。再ログインしないと(新しい暗号化キーをダウンロードすると)データが破損する可能性があります。自動的にログアウトを試みますが、遅延することがあります。"
+    "message": "暗号化キーの更新後は、モバイルアプリやブラウザ拡張機能など現在利用中のすべてのKomboeアプリで再ログインが必要となります。再ログインしないと(新しい暗号化キーをダウンロードすると)データが破損する可能性があります。自動的にログアウトを試みますが、遅延することがあります。"
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Any account restricted exports you have saved will become invalid."
@@ -8645,7 +8645,7 @@
     "message": "緊急連絡先を編集"
   },
   "inviteEmergencyContactDesc": {
-    "message": "Bitwardenアカウントのメールアドレスを入力して、新しい緊急連絡先を招待してください。相手がまだBitwardenのアカウントを持っていない場合は、新しいアカウントを作成するように促されます。"
+    "message": "Komboeアカウントのメールアドレスを入力して、新しい緊急連絡先を招待してください。相手がまだKomboeのアカウントを持っていない場合は、新しいアカウントを作成するように促されます。"
   },
   "emergencyAccessRecoveryInitiated": {
     "message": "緊急アクセス開始"
@@ -8684,7 +8684,7 @@
     "message": "招待されたユーザー"
   },
   "acceptEmergencyAccess": {
-    "message": "上記のユーザーの緊急連絡先になるよう招待されています。 招待を承認するには、ログインまたは新しいBitwardenアカウントを作成する必要があります。"
+    "message": "上記のユーザーの緊急連絡先になるよう招待されています。 招待を承認するには、ログインまたは新しいKomboeアカウントを作成する必要があります。"
   },
   "emergencyInviteAcceptFailed": {
     "message": "招待状を受け取ることができません。新しい招待状を送信するよう組織の管理者に依頼してください。"
@@ -14291,7 +14291,7 @@
     "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
   },
   "scimIntegrationDescEnd": {
-    "message": "(System for Cross-domain Identity Management) を使用して、identity Providerの実装ガイドに従って、ユーザーとグループを自動的にBitwardenにプロビジョニングします。",
+    "message": "(System for Cross-domain Identity Management) を使用して、identity Providerの実装ガイドに従って、ユーザーとグループを自動的にKomboeにプロビジョニングします。",
     "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
   },
   "bwdc": {

@@ -339,7 +339,7 @@
     "message": "Hjelp andre med å finne ut om Komboe passer for dem. Besøk nettleserens utvidelsesbutikk og legg igjen en vurdering nå."
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "Du kan endre hovedpassordet ditt i Bitwardens nettapp."
+    "message": "Du kan endre hovedpassordet ditt i Komboes nettapp."
   },
   "fingerprintPhrase": {
     "message": "Fingeravtrykksfrase",
@@ -461,7 +461,7 @@
     "message": "Komboe hjelpesenter"
   },
   "communityForums": {
-    "message": "Utforsk Bitwardens community forum"
+    "message": "Utforsk Komboes community forum"
   },
   "contactSupport": {
     "message": "Kontakt Komboe brukerstøtte"
@@ -486,7 +486,7 @@
     "message": "Generer automatisk sterke og unike passord for dine innlogginger."
   },
   "bitWebVaultApp": {
-    "message": "Bitwardens nett-app"
+    "message": "Komboes nett-app"
   },
   "select": {
     "message": "Velg"
@@ -3085,7 +3085,7 @@
     "message": "Venter på bekreftelse fra skrivebordsprogrammet"
   },
   "awaitDesktopDesc": {
-    "message": "Bekreft bruk av biometri i Bitwardens skrivebordsprogram for å aktivere biometri for nettleseren."
+    "message": "Bekreft bruk av biometri i Komboes skrivebordsprogram for å aktivere biometri for nettleseren."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Lås med hovedpassordet når du starter nettleseren på nytt"
@@ -3311,13 +3311,13 @@
     "message": "Nettleserintegrasjon er ikke aktivert"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Nettleserintegrasjon er ikke aktivert i Bitwardens skrivebordsprogram. Du kan aktiver integrasjonen i innstillingene for skrivebordsprogrammet."
+    "message": "Nettleserintegrasjon er ikke aktivert i Komboes skrivebordsprogram. Du kan aktiver integrasjonen i innstillingene for skrivebordsprogrammet."
   },
   "startDesktopTitle": {
-    "message": "Start Bitwardens skrivebordsprogram."
+    "message": "Start Komboes skrivebordsprogram."
   },
   "startDesktopDesc": {
-    "message": "Bitwardens skrivebordsprogram må startes før denne funksjonen kan brukes."
+    "message": "Komboes skrivebordsprogram må startes før denne funksjonen kan brukes."
   },
   "errorEnableBiometricTitle": {
     "message": "Kunne ikke aktivere biometrier"
@@ -3377,7 +3377,7 @@
     "message": "Tillatelse er ikke gitt"
   },
   "nativeMessagingPermissionErrorDesc": {
-    "message": "Uten tillatelse til å kommunisere med Bitwardens skrivebordsprogram kan vi ikke tilgjengeligjøre biometri i nettleserutvidelsen. Prøv igjen."
+    "message": "Uten tillatelse til å kommunisere med Komboes skrivebordsprogram kan vi ikke tilgjengeligjøre biometri i nettleserutvidelsen. Prøv igjen."
   },
   "nativeMessagingPermissionSidebarTitle": {
     "message": "Feil ved forespørsel om tillatelse"
@@ -4917,15 +4917,15 @@
     "message": "Hopp frem til innholdet"
   },
   "bitwardenOverlayButton": {
-    "message": "Bitwardens autoutfyllingsmenyknapp",
+    "message": "Komboes autoutfyllingsmenyknapp",
     "description": "Page title for the iframe containing the overlay button"
   },
   "toggleBitwardenVaultOverlay": {
-    "message": "Skru på/av Bitwardens auto-utfyllmeny",
+    "message": "Skru på/av Komboes auto-utfyllmeny",
     "description": "Screen reader and tool tip label for the overlay button"
   },
   "bitwardenVault": {
-    "message": "Bitwardens autoutfyllingsmeny",
+    "message": "Komboes autoutfyllingsmeny",
     "description": "Page title in overlay"
   },
   "unlockYourAccountToViewMatchingLogins": {
@@ -6185,7 +6185,7 @@
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "Å ignorere dette alternativet kan føre til konflikter mellom Bitwardens autofyllforslag og nettleserens.",
+    "message": "Å ignorere dette alternativet kan føre til konflikter mellom Komboes autofyllforslag og nettleserens.",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {

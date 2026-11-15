@@ -76,7 +76,7 @@ describe("CliBiometricsService", () => {
       BiometricsStatus.DesktopDisconnected,
     );
     expect(logService.info).toHaveBeenCalledWith(
-      "Could not query Bitwarden Desktop biometric status",
+      "Could not query Komboe Desktop biometric status",
       expect.any(Error),
     );
   });

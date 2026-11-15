@@ -6,7 +6,7 @@
   "productName": "Komboe",
   "appId": "io.komboe.desktop",
   "buildDependenciesFromSource": true,
-  "copyright": "Copyright \u00a9 2026 Komboe.",
+  "copyright": "Copyright © 2026 Komboe. Komboe is based on Bitwarden clients (GPL-3.0).",
   "directories": {
     "buildResources": "resources",
     "output": "dist",
@@ -192,7 +192,7 @@
     }
   },
   "mas": {
-    "identity": "GoDesk",
+    "identity": "Komboe",
     "entitlements": "resources/entitlements.mas.plist",
     "entitlementsInherit": "resources/entitlements.mas.inherit.plist",
     "entitlementsLoginHelper": "resources/entitlements.mas.loginhelper.plist",
@@ -202,6 +202,15 @@
       "ElectronTeamID": "LTZ2PFU5D6"
     },
     "provisioningProfile": "bitwarden_stable_desktop_appstore.provisionprofile"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": false,
+    "artifactName": "komboe-desktop-win-${arch}-setup.${ext}",
+    "uninstallDisplayName": "${productName}",
+    "deleteAppDataOnUninstall": true,
+    "include": "installer.nsh"
   },
   "nsisWeb": {
     "oneClick": false,
@@ -219,8 +228,8 @@
     "artifactName": "${productName}-${version}-${arch}.${ext}",
     "backgroundColor": "#0B1F3A",
     "applicationId": "komboedesktop",
-    "identityName": "GoDesk.Komboe",
-    "publisher": "CN=GoDesk",
+    "identityName": "Komboe.Komboe",
+    "publisher": "CN=Komboe",
     "minVersion": "10.0.14393.0",
     "maxVersionTested": "10.0.26100.0",
     "customExtensionsPath": "../custom-appx-extensions.stable.xml",

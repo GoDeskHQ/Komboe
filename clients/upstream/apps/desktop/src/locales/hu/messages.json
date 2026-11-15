@@ -1465,7 +1465,7 @@
     "message": "Fiók létrehozása"
   },
   "newToBitwarden": {
-    "message": "Új vagyunk a Bitwardenben?"
+    "message": "Új vagyunk a Komboeben?"
   },
   "setAStrongPassword": {
     "message": "Erős jelszó beállítása"
@@ -1477,7 +1477,7 @@
     "message": "Bejelentkezés"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Bejelentkezés a Bitwardenbe"
+    "message": "Bejelentkezés a Komboebe"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Adjuk meg az email címre elküldött kódot."
@@ -2529,7 +2529,7 @@
     "message": "Összes megjelenítése"
   },
   "quitBitwarden": {
-    "message": "Kilépés a Bitwardenből"
+    "message": "Kilépés a Komboeből"
   },
   "valueCopied": {
     "message": "$VALUE$ másolásra került.",
@@ -3101,7 +3101,7 @@
     "message": "Egy vagy több szervezeti rendszabályhoz mesterjelszó szükséges a következő követelmények megfeleléséhez:"
   },
   "receiveMarketingEmails": {
-    "message": "Frissítések fogadása a Bitwardentől a postaládában."
+    "message": "Frissítések fogadása a Komboetől a postaládában."
   },
   "unsubscribe": {
     "message": "Leiratkozás"
@@ -3137,7 +3137,7 @@
     "message": "Jóváhagyás"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ szeretne csaklakozni a Bitwardenhez.",
+    "message": "$APPID$ szeretne csaklakozni a Komboehez.",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -5036,7 +5036,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "fájlt ide a Bitwardenhez.",
+    "message": "fájlt ide a Komboehez.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -5848,7 +5848,7 @@
     "message": "Az alkalmazáshoz nem található hozzáférési kulcs."
   },
   "passkeyNotAllowedForBitwardenVault": {
-    "message": "A $DOMAIN$ belépőkulcsai nem menthetők és nem használhatók a Bitwardenben.",
+    "message": "A $DOMAIN$ belépőkulcsai nem menthetők és nem használhatók a Komboeben.",
     "placeholders": {
       "domain": {
         "content": "$1",
@@ -6399,7 +6399,7 @@
     "message": "Áttérés Prémium csomagra"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "A szervezet már nem használ mesterjelszavakat a Bitwardenbe bejelentkezéshez. A folytatáshoz ellenőrizzük a szervezetet és a tartományt."
+    "message": "A szervezet már nem használ mesterjelszavakat a Komboebe bejelentkezéshez. A folytatáshoz ellenőrizzük a szervezetet és a tartományt."
   },
   "continueWithLogIn": {
     "message": "Folytatás bejelentkezéssel"

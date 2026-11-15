@@ -4,6 +4,76 @@ Kotlin namespace/package names stay upstream (internal identifiers); copyright/l
 GPL-3.0: the upstream LICENSE.txt and a corresponding-source notice are copied into the APK assets."""
 import glob, os, re, shutil, sys
 
+def install_android_kit(src, root):
+    """Official navy/off-white launcher, notification, shield, authenticator wordmark, and autofill GIFs.
+
+    Image replacement is not optional. require_pil() already aborted if Pillow is missing.
+    """
+    sys.path.insert(0, os.path.join(root, "scripts"))
+    from komboe_brand import android_gif, android_vector_from_svg
+
+    kit = os.path.join(root, "brand", "komboe-kit", "03-android", "res")
+    if not os.path.isdir(kit):
+        sys.exit(f"official Android kit missing: {kit}")
+    for flavor_res in glob.glob(os.path.join(src, "app", "src", "*", "res")):
+        for dirpath, _, files in os.walk(kit):
+            for name in files:
+                rel = os.path.relpath(os.path.join(dirpath, name), kit)
+                if rel.startswith("values"):
+                    # The kit colors file is only the mark palette. Copying it over
+                    # app/src/main/res/values would duplicate ic_launcher_background.
+                    continue
+                dest = os.path.join(flavor_res, rel)
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                shutil.copyfile(os.path.join(dirpath, name), dest)
+                print("rebrand kit", os.path.relpath(dest, src))
+        for color_file in glob.glob(os.path.join(flavor_res, "values", "ic_launcher_background.xml")):
+            text = open(color_file, encoding="utf-8").read()
+            updated = re.sub(
+                r'(<color name="ic_launcher_background">)[^<]*<',
+                r"\1#0B1B33<",
+                text,
+            )
+            if updated != text:
+                open(color_file, "w", encoding="utf-8").write(updated)
+                print("rebrand launcher background", os.path.relpath(color_file, src))
+
+    stat = os.path.join(kit, "drawable", "ic_stat_komboe.xml")
+    foreground = os.path.join(kit, "drawable", "ic_launcher_foreground.xml")
+    word = android_vector_from_svg(
+        os.path.join(root, "brand", "komboe-kit", "05-wordmark-lockups", "komboe-lockup-horizontal-navy.svg"),
+        "#0B1B33",
+    )
+    mark = android_vector_from_svg(
+        os.path.join(root, "brand", "komboe-kit", "01-master", "komboe-mark-navy.svg"),
+        "#0B1B33",
+    )
+    for path in glob.glob(os.path.join(src, "**", "res", "drawable*", "ic_notification*.xml"), recursive=True):
+        shutil.copyfile(stat, path)
+        print("rebrand notification", os.path.relpath(path, src))
+    for path in glob.glob(os.path.join(src, "**", "res", "drawable*", "ic_shield*.xml"), recursive=True):
+        shutil.copyfile(foreground, path)
+        print("rebrand shield", os.path.relpath(path, src))
+    for path in glob.glob(os.path.join(src, "**", "res", "drawable*", "logo_authenticator*.xml"), recursive=True):
+        open(path, "w", encoding="utf-8").write(word)
+        print("rebrand authenticator wordmark", os.path.relpath(path, src))
+    for name, body in (
+        ("logo_bitwarden.xml", word),
+        ("logo_bitwarden_icon.xml", mark),
+        ("logo_shield_icon.xml", mark),
+    ):
+        for path in glob.glob(os.path.join(src, "**", "res", "drawable*", name), recursive=True):
+            png = os.path.join(os.path.dirname(os.path.dirname(path)), "drawable-nodpi", name[:-4] + ".png")
+            if os.path.exists(png):
+                os.remove(png)
+            open(path, "w", encoding="utf-8").write(body)
+            print("rebrand vector", os.path.relpath(path, src))
+    for path in glob.glob(os.path.join(src, "**", "gif_setup_autofill.gif"), recursive=True):
+        dark = "night" in path.replace("\\", "/")
+        android_gif(path, dark=dark)
+        print("rebrand gif", os.path.relpath(path, src))
+
+
 def main(src):
     global S, ROOT
     S = src
@@ -16,39 +86,26 @@ def main(src):
        .replace('            applicationIdSuffix = ".dev"\n', ''))
     for p in glob.glob(f"{S}/app/src/*/res/values/strings_non_localized.xml"):
         rw(p, lambda t: re.sub(r'(name="app_name"[^>]*>)(?:Bitwarden|Komboe)( Beta| Dev)?<', r"\1Komboe<", t))
-    for p in glob.glob(f"{S}/app/src/main/res/values*/strings.xml"):
-        rw(p, lambda t: "".join(l if re.search(r"copyright|licen[cs]e|bitwarden\.com|@", l, re.I) else re.sub(r"\bBitwarden\b", "Komboe", l) for l in t.splitlines(True)))
-    try:
-        from PIL import Image
-        src = Image.open(f"{ROOT}/branding/logo/master/komboe-logo-master-transparent.png").convert("RGBA")
-        for p in glob.glob(f"{S}/app/src/*/res/mipmap-*/*.png") + glob.glob(f"{S}/app/src/*/res/mipmap-*/*.webp"):
-            im = Image.open(p); size = im.size; c = Image.new("RGBA", size, (255, 255, 255, 255))
-            l = src.copy(); l.thumbnail((int(size[0]*.8), int(size[1]*.8))); c.paste(l, ((size[0]-l.width)//2, (size[1]-l.height)//2), l)
-            c.save(p)
-    except ImportError: pass
-    # Phase D: adaptive launcher icon (mipmap-anydpi overrides the PNG mipmaps on API 26+) and in-app logos -> padlock-K.
-    # Compose painterResource only accepts vectors or rasters, so the vector XMLs are replaced by same-named PNGs (drawable-nodpi).
-    try:
-        from PIL import Image
-        src = Image.open(f"{ROOT}/branding/logo/master/komboe-logo-master-transparent.png").convert("RGBA")
-        def put(xml, size, frac, mono=False):
-            d = os.path.join(os.path.dirname(os.path.dirname(xml)), "drawable-nodpi"); os.makedirs(d, exist_ok=True)
-            c = Image.new("RGBA", (size, size), (0, 0, 0, 0)); l = src.copy(); l.thumbnail((int(size*frac),) * 2)
-            if mono: l = Image.merge("RGBA", (*[Image.new("L", l.size, 255)] * 3, l.getchannel("A")))
-            c.paste(l, ((size-l.width)//2, (size-l.height)//2), l)
-            c.save(os.path.join(d, os.path.basename(xml)[:-4] + ".png")); os.remove(xml); print("rebrand icon", os.path.relpath(xml, S))
-        for x in glob.glob(f"{S}/app/src/*/res/drawable/ic_launcher_foreground.xml"): put(x, 432, .55)
-        for x in glob.glob(f"{S}/app/src/*/res/drawable/ic_launcher_monochrome.xml"): put(x, 432, .55, mono=True)
-        # Phase E: in-app logos must stay VectorDrawables (screens load them with rememberVectorPainter): wordmark / mark as vector paths.
-        import sys; sys.path.insert(0, f"{ROOT}/branding/wordmark"); from wordmark_lib import android_vector
-        for n, wm, hdp, pad in [("logo_bitwarden", True, 34, 0), ("logo_shield_icon", False, 288, 1.0), ("logo_bitwarden_icon", False, 48, 0)]:
-            xml = f"{S}/ui/src/main/res/drawable/{n}.xml"; png_ = f"{S}/ui/src/main/res/drawable-nodpi/{n}.png"
-            if os.path.exists(png_): os.remove(png_)
-            new = android_vector(hdp, "#6D4AFF", wordmark=wm, pad=pad)
-            if not os.path.exists(xml) or open(xml).read() != new: open(xml, "w").write(new); print("rebrand vector", os.path.relpath(xml, S))
-        for p in glob.glob(f"{S}/app/src/*/res/values/ic_launcher_background.xml"):
-            rw(p, lambda t: re.sub(r"(<color name=\"ic_launcher_background\">)[^<]*<", r"\1#FFFFFF<", t))
-    except ImportError: pass
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    from komboe_brand import require_pil
+    require_pil()
+    def rewrite_strings(t):
+        from komboe_brand import rewrite_visible
+        return "".join(
+            l if re.search(r"copyright|licen[cs]e|not affiliated|corresponding source", l, re.I) else rewrite_visible(l)
+            for l in t.splitlines(True)
+        )
+    for p in glob.glob(f"{S}/**/res/values*/strings*.xml", recursive=True):
+        rw(p, rewrite_strings)
+    for p in glob.glob(f"{S}/**/AndroidManifest.xml", recursive=True):
+        rw(p, lambda t: t.replace('android:label="Bitwarden Bridge"', 'android:label="Komboe Bridge"'))
+    for p in glob.glob(f"{S}/**/*.xml", recursive=True):
+        if "targetPackage" not in open(p, encoding="utf-8", errors="ignore").read():
+            continue
+        rw(p, lambda t: t.replace('android:targetPackage="com.x8bit.bitwarden.dev"', 'android:targetPackage="io.komboe.android"')
+           .replace('android:targetPackage="com.x8bit.bitwarden.beta"', 'android:targetPackage="io.komboe.android"')
+           .replace('android:targetPackage="com.x8bit.bitwarden"', 'android:targetPackage="io.komboe.android"'))
+    install_android_kit(S, ROOT)
 
     # GPL-3.0 §4–§6: the binary must carry the license text and say where the source is.
     assets = os.path.join(S, "app", "src", "main", "assets")
