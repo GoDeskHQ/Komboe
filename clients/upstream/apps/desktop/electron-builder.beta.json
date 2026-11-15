@@ -28,7 +28,7 @@
   "generateUpdatesFilesForAllChannels": true,
   "publish": {
     "provider": "generic",
-    "url": "https://downloads.komboe.com/desktop"
+    "url": "https://komboe.com/downloads/desktop"
   },
   "mac": {
     "electronUpdaterCompatibility": ">=0.0.1",

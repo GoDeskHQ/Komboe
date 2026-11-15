@@ -102,3 +102,6 @@ pre{padding:12px;overflow:auto;font-size:13px}
   body::before{background:none}
   .btn:hover{transform:none}
 }
+
+.dl .fine span{display:inline-block;min-width:5.5rem;color:var(--mu)}
+.dl .sha code{display:block;margin-top:4px;font-size:12px;word-break:break-all;color:var(--fg)}

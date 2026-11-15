@@ -10,7 +10,7 @@ import java.net.URI
  * {
  *   "versionName": "2026.11.1",
  *   "versionCode": 2026110101,
- *   "apkUrl": "https://downloads.komboe.com/android/io.komboe.android-2026.11.1.apk",
+ *   "apkUrl": "https://komboe.com/downloads/android/io.komboe.android-2026.11.1.apk",
  *   "sha256": "0123...cdef",
  *   "minSdk": 29,
  *   "releaseNotes": "In-app Wi-Fi updates."

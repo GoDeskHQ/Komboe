@@ -66,3 +66,27 @@ These client update paths are unchanged:
 - Desktop **Check for Updates** still downloads and installs when `KOMBOE_UPDATE_FEED=1` (Windows and macOS). Linux auto-update stays off, as it did before.
 - `komboe update` still reads `KOMBOE_CLI_RELEASES_URL` and reports the download URL.
 - `/admin` → Diagnostics still compares versions when `ADMIN_EXTERNAL_CHECKS=true`. It does not download a server image.
+
+## Downloads page on komboe.com
+
+The `marketing` service serves the public downloads page and the Android OTA feed:
+
+- Page: `https://komboe.com/downloads`
+- Feed: `https://komboe.com/downloads/android/latest.json`
+
+Set `KOMBOE_MARKETING_DIGEST` to the hex digest printed by the main image job for `komboe-marketing`. Leave the public hostname pointed at the `server` service on port 8080 so the web vault stays on `/`. Add an HA Caddy (or Coolify/Traefik) path route on `komboe.com` (and `sandbox.komboe.com` if you want the same page there):
+
+```
+@downloads path /downloads /downloads/*
+reverse_proxy @downloads marketing:4173
+```
+
+Copy the publish tree from `scripts/publish-downloads.py --publish-dir ...` into the `komboe-downloads` volume, which is mounted at `/var/komboe-downloads` in the marketing container. After a release the volume should contain at least:
+
+```
+/var/komboe-downloads/komboe-downloads.json
+/var/komboe-downloads/android/latest.json
+/var/komboe-downloads/android/io.komboe.android-<version>.apk
+```
+
+Do not create a `downloads.komboe.com` DNS record. This file does not change DNS.

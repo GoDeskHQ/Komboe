@@ -99,13 +99,13 @@ Until those tests land, `android-e2e-check.sh` + `android-instrumentation.sh` + 
 
 ## In-app self-update
 
-The fdroid debug (and release) APK built by `mobile/android-build.sh` includes Settings → About → Check for updates after `android_rebrand.py` runs. Desktop already used `KOMBOE_UPDATE_FEED`; Android uses `https://downloads.komboe.com/android/latest.json` (override `komboe_update_feed_url` at build time). This section does **not** claim a device run happened.
+The fdroid debug (and release) APK built by `mobile/android-build.sh` includes Settings → About → Check for updates after `android_rebrand.py` runs. Desktop already used `KOMBOE_UPDATE_FEED`; Android uses `https://komboe.com/downloads/android/latest.json` (override `komboe_update_feed_url` at build time). This section does **not** claim a device run happened.
 
 ### Publish a feed entry
 
 1. Build: `bash mobile/android-build.sh` and note the fdroid debug APK path.
 2. Record `versionName`, `versionCode` (`aapt dump badging` or `dumpsys package io.komboe.android`), and `sha256sum` of the APK.
-3. Host the APK and a `latest.json` like `distribution/android/latest.example.json` at an https origin. The default is `https://downloads.komboe.com/android/`. `apkUrl` must be https on that same host.
+3. Host the APK and a `latest.json` like `distribution/android/latest.example.json` at an https origin. The default is `https://komboe.com/downloads/android/`. `apkUrl` must be https on that same host.
 4. Until that host exists, point a debug build at a staging URL you already control by editing `mobile/self-update/komboe_update_strings.xml` before the build.
 
 ### Fold5 manual E2E (do not mark OTA done until these pass)

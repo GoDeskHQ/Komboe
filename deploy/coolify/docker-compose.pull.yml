@@ -1,9 +1,12 @@
 # Pull-only Coolify stack. Set docker_compose_location to this file.
 # The host pulls the images and does not compile them.
-# KOMBOE_SERVER_DIGEST and KOMBOE_CLIENTS_DIGEST are the hex digests printed by
-# the main image job, without a sha256: prefix. They are not secrets.
+# KOMBOE_SERVER_DIGEST, KOMBOE_CLIENTS_DIGEST, and KOMBOE_MARKETING_DIGEST are the
+# hex digests printed by the main image job, without a sha256: prefix. They are not secrets.
 # Coolify fills DOMAIN when it assigns the app URL. TLS stays on Coolify's proxy.
 # Point the domain at the server service, port 8080.
+# Point /downloads and /downloads/* at the marketing service, port 4173.
+# Copy release files into the komboe-downloads volume at /var/komboe-downloads
+# (android/latest.json and the APK). Do not create a downloads.komboe.com DNS record.
 services:
   clients:
     image: ghcr.io/godeskio/komboe-clients@sha256:${KOMBOE_CLIENTS_DIGEST:?set to the digest printed by the main image job}
@@ -44,7 +47,23 @@ services:
       retries: 5
       start_period: 30s
 
+  marketing:
+    image: ghcr.io/godeskio/komboe-marketing@sha256:${KOMBOE_MARKETING_DIGEST:?set to the digest printed by the main image job}
+    expose:
+      - "4173"
+    environment:
+      KOMBOE_DOWNLOADS_DIR: /var/komboe-downloads
+    volumes:
+      - komboe-downloads:/var/komboe-downloads
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:4173/downloads"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
 volumes:
   web-vault:
   extension:
   komboe-data:
+  komboe-downloads:

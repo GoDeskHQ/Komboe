@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Build a rebranded Komboe Android debug APK from the pinned upstream bitwarden/android (GPL-3.0).
 # Portable toolchain, no apt: TOOLS=/workspace/tools with jdk-21*/ and android-sdk/cmdline-tools/latest.
+# Optional: KOMBOE_VERSION_CODE and KOMBOE_VERSION_NAME stamp gradle/libs.versions.toml after rebrand.
 set -euo pipefail
 PIN=$(cat "$(dirname "$0")/ANDROID_UPSTREAM_PIN")
 SRC=${SRC:-/workspace/up/bw-android}; TOOLS=${TOOLS:-/workspace/tools}
@@ -8,6 +9,9 @@ SRC=${SRC:-/workspace/up/bw-android}; TOOLS=${TOOLS:-/workspace/tools}
 export JAVA_HOME=$(ls -d "$TOOLS"/jdk-21*) ANDROID_HOME=$TOOLS/android-sdk; export PATH=$JAVA_HOME/bin:$PATH
 yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
 python3 "$(dirname "$0")/android_rebrand.py" "$SRC"
+if [ -n "${KOMBOE_VERSION_CODE:-}" ] && [ -n "${KOMBOE_VERSION_NAME:-}" ]; then
+  python3 "$(dirname "$0")/stamp-version.py" "$SRC" "$KOMBOE_VERSION_CODE" "$KOMBOE_VERSION_NAME"
+fi
 # GPL-3.0: the debug APK must contain the license text and the source offer.
 for f in LICENSE.txt komboe-source.txt THIRD-PARTY-NOTICES.md; do
   [ -f "$SRC/app/src/main/assets/$f" ] || { echo "missing GPL asset $f"; exit 1; }

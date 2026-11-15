@@ -1,0 +1,10 @@
+# Marketing site + /downloads for komboe.com.
+# Binaries live in the /var/komboe-downloads volume, not in this image.
+FROM python:3.12-alpine
+WORKDIR /site
+COPY . /site
+ENV KOMBOE_DOWNLOADS_DIR=/var/komboe-downloads
+EXPOSE 4173
+HEALTHCHECK --interval=30s --timeout=5s --retries=5 --start-period=10s \
+  CMD wget -q -O /dev/null http://127.0.0.1:4173/downloads || exit 1
+CMD ["python3", "serve.py", "--host", "0.0.0.0", "--port", "4173"]
