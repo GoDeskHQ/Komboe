@@ -1,8 +1,9 @@
-import { dialog, IpcMainEvent, ipcMain, Notification } from "electron";
+import { app, dialog, IpcMainEvent, ipcMain, Notification } from "electron";
 import log from "electron-log";
 import { autoUpdater, UpdateDownloadedEvent, VerifyUpdateSupport } from "electron-updater";
 
 import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.service";
+import { UrlType } from "@bitwarden/common/platform/misc/safe-urls";
 import { LogService } from "@bitwarden/logging";
 
 import { SafeShell } from "../platform/main/safe-shell.main";
@@ -16,10 +17,27 @@ const UpdaterCheckInterval = 12 * 60 * 60 * 1000; // 12 hours
 
 const MaxTimeBeforeBlockingUpdateNotification = 7 * 24 * 60 * 60 * 1000; // 7 days
 
+function versionIsNewer(remote: string, local: string): boolean {
+  const parse = (value: string) => value.split(".").map((part) => parseInt(part, 10) || 0);
+  const left = parse(remote);
+  const right = parse(local);
+  const length = Math.max(left.length, right.length);
+  for (let index = 0; index < length; index++) {
+    const a = left[index] ?? 0;
+    const b = right[index] ?? 0;
+    if (a !== b) {
+      return a > b;
+    }
+  }
+  return false;
+}
+
 export class UpdaterMain {
   private doingUpdateCheck = false;
   private doingUpdateCheckWithFeedback = false;
   private canUpdate = false;
+  private linuxAppImage = false;
+  private linuxDebPackage = false;
   private updateDownloaded: UpdateDownloadedEvent | null = null;
   private originalRolloutFunction: VerifyUpdateSupport | null = null;
 
@@ -57,15 +75,17 @@ export class UpdaterMain {
 
     this.originalRolloutFunction = autoUpdater.isUserWithinRollout;
 
-    // AppImage auto update was recently disabled. There is some infra work
-    // we need to do to properly support this. Due to capacity, we decided to
-    // temporarily disable AppImage auto updates. See PM-41518.
-    const linuxCanUpdate = false;
+    // The AppImage replaces itself from https://komboe.com/downloads/desktop/latest-linux.yml
+    // on any connection. The .deb cannot replace itself without root, so it prompts for the
+    // AppImage, which is the self-updating Linux build. macOS has no CI build and no
+    // latest-mac.yml, so it is left out of this feed.
+    this.linuxAppImage = process.platform === "linux" && Boolean(process.env.APPIMAGE);
+    this.linuxDebPackage = process.platform === "linux" && !this.linuxAppImage;
     const windowsCanUpdate =
       process.platform === "win32" && !isWindowsStore() && !isWindowsPortable();
     const macCanUpdate = process.platform === "darwin" && !isMacAppStore();
     this.canUpdate =
-      !this.userDisabledUpdates() && (linuxCanUpdate || windowsCanUpdate || macCanUpdate);
+      !this.userDisabledUpdates() && (this.linuxAppImage || windowsCanUpdate || macCanUpdate);
   }
 
   async init() {
@@ -149,6 +169,11 @@ export class UpdaterMain {
     }
 
     if (this.doingUpdateCheck) {
+      return;
+    }
+
+    if (this.linuxDebPackage && !this.userDisabledUpdates()) {
+      await this.promptLinuxDebTowardAppImage(withFeedback);
       return;
     }
 
@@ -281,6 +306,70 @@ export class UpdaterMain {
       ipcMain.once("confirmUpdateRestart", handler);
       this.windowMain.win.webContents.send("confirmUpdateRestart");
     });
+  }
+
+  /**
+   * The .deb install stays on the package the user installed. A newer feed version
+   * opens the downloads page for the AppImage, which updates itself.
+   */
+  private async promptLinuxDebTowardAppImage(withFeedback: boolean) {
+    const local = app.getVersion();
+    let remote = "";
+    try {
+      remote = await this.linuxFeedVersion();
+    } catch (error) {
+      this.logService.error("Linux update feed failed", error);
+      if (withFeedback && this.windowMain.win != null) {
+        await dialog.showMessageBox(this.windowMain.win, {
+          type: "error",
+          message: "Komboe could not read the Linux update feed.",
+          buttons: [this.i18nService.t("ok")],
+          defaultId: 0,
+          noLink: true,
+        });
+      }
+      return;
+    }
+    const newer = versionIsNewer(remote, local);
+    if (!newer && !withFeedback) {
+      return;
+    }
+    if (this.windowMain.win == null) {
+      return;
+    }
+    const detail = newer
+      ? `Version ${remote} is available. This .deb does not replace itself. The AppImage is the Linux build that updates itself from komboe.com over any connection.`
+      : "This .deb does not replace itself. The AppImage is the Linux build that updates itself from komboe.com over any connection.";
+    const result = await dialog.showMessageBox(this.windowMain.win, {
+      type: "info",
+      title: "Komboe",
+      message: newer ? "A Komboe update is available" : "Linux updates use the AppImage",
+      detail,
+      buttons: ["Open downloads", this.i18nService.t("later")],
+      cancelId: 1,
+      defaultId: 0,
+      noLink: true,
+    });
+    if (result.response === 0) {
+      this.shell.openExternal("https://komboe.com/downloads", UrlType.WebUrl);
+    }
+  }
+
+  private async linuxFeedVersion(): Promise<string> {
+    const base = (process.env.KOMBOE_UPDATE_URL ?? "https://komboe.com/downloads/desktop").replace(
+      /\/$/,
+      "",
+    );
+    const response = await fetch(`${base}/latest-linux.yml`);
+    if (!response.ok) {
+      throw new Error(`Linux update feed returned ${response.status}`);
+    }
+    const text = await response.text();
+    const match = /^version:\s*(\S+)/m.exec(text);
+    if (match == null) {
+      throw new Error("Linux update feed has no version");
+    }
+    return match[1];
   }
 
   private userDisabledUpdates(): boolean {

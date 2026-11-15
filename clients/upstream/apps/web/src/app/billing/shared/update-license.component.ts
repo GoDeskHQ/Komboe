@@ -10,6 +10,11 @@ import { I18nService } from "@bitwarden/common/platform/abstractions/i18n.servic
 import { PlatformUtilsService } from "@bitwarden/common/platform/abstractions/platform-utils.service";
 import { ToastService } from "@bitwarden/components";
 
+import {
+  KOMBOE_ORGANIZATION_LICENSE_FILENAME,
+  KOMBOE_PREMIUM_LICENSE_FILENAME,
+  licenseUploadAccepted,
+} from "./license-file-names";
 import { UpdateLicenseDialogResult } from "./update-license-types";
 
 // FIXME(https://bitwarden.atlassian.net/browse/CL-764): Migrate to OnPush
@@ -36,6 +41,8 @@ export class UpdateLicenseComponent implements OnInit {
   // eslint-disable-next-line @angular-eslint/prefer-output-emitter-ref
   @Output() onCanceled = new EventEmitter();
 
+  protected readonly premiumLicenseName = KOMBOE_PREMIUM_LICENSE_FILENAME;
+  protected readonly organizationLicenseName = KOMBOE_ORGANIZATION_LICENSE_FILENAME;
   formPromise: Promise<void>;
   title: string = this.i18nService.t("updateLicense");
   updateLicenseForm = this.formBuilder.group({
@@ -62,7 +69,8 @@ export class UpdateLicenseComponent implements OnInit {
       return;
     }
     const file = this.updateLicenseForm.get("file").value;
-    if (file == null) {
+    const kind = this.organizationId == null ? "premium" : "organization";
+    if (file == null || !licenseUploadAccepted(file.name, kind)) {
       this.toastService.showToast({
         variant: "error",
         title: this.i18nService.t("errorOccurred"),

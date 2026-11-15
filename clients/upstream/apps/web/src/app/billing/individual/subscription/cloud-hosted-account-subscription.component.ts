@@ -321,7 +321,7 @@ export class CloudHostedAccountSubscriptionComponent {
         const license = await this.accountBillingClient.getLicense();
         const json = JSON.stringify(license, null, 2);
         this.fileDownloadService.download({
-          fileName: "bitwarden_premium_license.json",
+          fileName: "komboe_premium_license.json",
           blobData: json,
         });
         break;

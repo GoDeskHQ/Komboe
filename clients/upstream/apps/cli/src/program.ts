@@ -102,7 +102,7 @@ export class Program extends BaseProgram {
       writeLn('    komboe send "text to send"');
       writeLn('    echo "text to send" | komboe send');
       writeLn(
-        "    komboe receive https://vault.bitwarden.com/#/send/rg3iuoS_Akm2gqy6ADRHmg/Ht7dYjsqjmgqUM3rjzZDSQ",
+        "    komboe receive https://komboe.com/#/send/rg3iuoS_Akm2gqy6ADRHmg/Ht7dYjsqjmgqUM3rjzZDSQ",
       );
       writeLn("", true);
     });
@@ -424,7 +424,7 @@ export class Program extends BaseProgram {
         writeLn("");
         writeLn("    komboe config server");
         writeLn("    komboe config server https://bw.company.com");
-        writeLn("    komboe config server bitwarden.com");
+        writeLn("    komboe config server komboe.com");
         writeLn(
           "    komboe config server --api http://localhost:4000 --identity http://localhost:33656",
         );

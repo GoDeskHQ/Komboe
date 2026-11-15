@@ -155,6 +155,35 @@ def test_windows_feed(work):
     assert "Komboe Setup" not in feed
 
 
+def test_linux_feed(work):
+    artifacts = work / "linux-artifacts"
+    publish = work / "linux-publish"
+    artifacts.mkdir(parents=True)
+    image = b"AppImage-komboe-fixture-bytes"
+    (artifacts / "Komboe-2026.11.18.AppImage").write_bytes(image)
+    (artifacts / "latest-linux.yml").write_text(
+        "version: 2026.11.17\nfiles:\n  - url: Komboe-2026.11.17.AppImage\n    sha512: old\n    size: 1\npath: Komboe-2026.11.17.AppImage\nsha512: old\n"
+    )
+    out = work / "with-linux.json"
+    manifest = run_manifest(artifacts, publish, [out], url_prefix=FEED_HOST)
+    asset = next(a for a in manifest["assets"] if a["id"] == "desktop-linux-appimage")
+    assert asset["status"] == "published"
+    assert asset["filename"] == "komboe-desktop-x86_64.AppImage"
+    assert asset["sha256"] == hashlib.sha256(image).hexdigest()
+    published = publish / "desktop" / "komboe-desktop-x86_64.AppImage"
+    assert published.read_bytes() == image
+    feed = (publish / "desktop" / "latest-linux.yml").read_text(encoding="utf-8")
+    assert "url: komboe-desktop-x86_64.AppImage" in feed
+    assert "path: komboe-desktop-x86_64.AppImage" in feed
+    assert "Komboe-2026.11.17.AppImage" not in feed
+    digest = hashlib.sha512(image).digest()
+    import base64
+    fingerprint = base64.b64encode(digest).decode("ascii")
+    assert fingerprint in feed
+    assert f"size: {len(image)}" in feed
+    assert (publish / "desktop" / "latest.yml").exists() is False
+
+
 def test_http_and_qr(work, ext_url_rel, payload, sha):
     server = serve(work / "www")
     try:
@@ -253,6 +282,7 @@ def main():
     test_http_and_qr(work, ext["url"], payload, ext["sha256"])
     test_android_feed(work)
     test_windows_feed(work)
+    test_linux_feed(work)
     empty = work / "empty"
     empty.mkdir()
     empty_out = work / "empty.json"

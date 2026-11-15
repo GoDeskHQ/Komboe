@@ -5207,7 +5207,7 @@
     "placeholders": {
       "file_name": {
         "content": "$1",
-        "example": "bitwarden_premium_license.json"
+        "example": "komboe_premium_license.json"
       }
     }
   },
@@ -14535,19 +14535,19 @@
     "message": "Продължете настройването на Komboe"
   },
   "continueSettingUpFreeTrial": {
-    "message": "Продължете настройването на безплатния пробен период на Буторден"
+    "message": "Продължете настройването на безплатния пробен период на Komboe"
   },
   "continueSettingUpPasswordManager": {
     "message": "Продължете настройването на Управителя на пароли Komboe"
   },
   "continueSettingUpFreeTrialPasswordManager": {
-    "message": "Продължете настройването на безплатния пробен период на Управлението на пароли на Буторден"
+    "message": "Продължете настройването на безплатния пробен период на Управлението на пароли на Komboe"
   },
   "continueSettingUpSecretsManager": {
     "message": "Продължете настройването на Управлелието на тайни в Komboe"
   },
   "continueSettingUpFreeTrialSecretsManager": {
-    "message": "Продължете настройването на безплатния пробен период на Управлението на тайни на Буторден"
+    "message": "Продължете настройването на безплатния пробен период на Управлението на тайни на Komboe"
   },
   "enterTeamsOrgInfo": {
     "message": "Въведете информацията относно своята екипна организация"
@@ -16827,7 +16827,7 @@
     "placeholders": {
       "file_name": {
         "content": "$1",
-        "example": "bitwarden_license.json"
+        "example": "komboe_license.json"
       }
     }
   },

@@ -48,7 +48,7 @@ export class DownloadLicenceDialogComponent {
     );
     const licenseString = JSON.stringify(license, null, 2);
     this.fileDownloadService.download({
-      fileName: "bitwarden_organization_license.json",
+      fileName: "komboe_organization_license.json",
       blobData: licenseString,
     });
     await this.dialogRef.close(DownloadLicenseDialogResult.Downloaded);

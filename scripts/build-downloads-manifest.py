@@ -87,25 +87,27 @@ CATALOG = [
     {
         "id": "desktop-linux-deb",
         "filename": "komboe-desktop-amd64.deb",
+        "patterns": ["*.deb"],
         "prefix": "desktop/",
         "name": "Desktop for Linux (.deb)",
         "platforms": ["Linux"],
         "kind": "desktop",
         "channel": "unsigned-testing",
         "docsUrl": SOURCE,
-        "install": "Unsigned testing package. Install with your package manager, then set the Komboe server URL.",
+        "install": "Unsigned testing package. The .deb does not replace itself. Komboe prompts you to install the AppImage, which updates itself over any connection.",
         "missing": "No verified current Linux .deb. Older unsigned builds are not offered.",
     },
     {
         "id": "desktop-linux-appimage",
         "filename": "komboe-desktop-x86_64.AppImage",
+        "patterns": ["*.AppImage"],
         "prefix": "desktop/",
         "name": "Desktop for Linux (AppImage)",
         "platforms": ["Linux"],
         "kind": "desktop",
         "channel": "unsigned-testing",
         "docsUrl": SOURCE,
-        "install": "Unsigned testing AppImage. Make it executable and run it, then set the Komboe server URL.",
+        "install": "Unsigned testing AppImage. It checks https://komboe.com/downloads/desktop/latest-linux.yml on any connection and updates itself.",
         "missing": "No verified current Linux AppImage. Older unsigned builds are not offered.",
     },
     {
@@ -118,7 +120,7 @@ CATALOG = [
         "channel": "unavailable",
         "docsUrl": SOURCE,
         "install": "",
-        "missing": "No macOS build. Apple signing and notarization are not set up.",
+        "missing": "No macOS build and no latest-mac.yml. Apple signing and notarization are not set up.",
     },
     {
         "id": "android",
@@ -312,6 +314,56 @@ def write_windows_feed(artifacts: Path, publish_dir: Path, exe_name: str, versio
     dest.write_text(text, encoding="utf-8")
 
 
+def write_linux_feed(artifacts: Path, publish_dir: Path, appimage_name: str, version: str | None) -> None:
+    """electron-updater reads desktop/latest-linux.yml next to the AppImage."""
+    yml = next(artifacts.rglob("latest-linux.yml"), None)
+    image = None
+    for path in artifacts.rglob("*.AppImage"):
+        if path.is_file() and (image is None or path.name == appimage_name):
+            image = path
+            if path.name == appimage_name:
+                break
+    if image is None and yml is None:
+        return
+    if image is not None:
+        digest = hashlib.sha512()
+        with image.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
+        fingerprint = base64.b64encode(digest.digest()).decode("ascii")
+        size = image.stat().st_size
+    else:
+        fingerprint = ""
+        size = 0
+    if yml is not None:
+        text = yml.read_text(encoding="utf-8")
+        text = re.sub(
+            r"(?m)^([ \t]*(?:- )?(?:path|url):[ \t]*).+\.AppImage[ \t]*$",
+            rf"\1{appimage_name}",
+            text,
+        )
+        if image is not None:
+            text = re.sub(r"(?m)^([ \t]*sha512:[ \t]*).+$", rf"\1{fingerprint}", text)
+            text = re.sub(r"(?m)^([ \t]*size:[ \t]*)\d+[ \t]*$", rf"\g<1>{size}", text)
+    elif image is not None:
+        text = (
+            f"version: {version or '0.0.0'}\n"
+            "files:\n"
+            f"  - url: {appimage_name}\n"
+            f"    sha512: {fingerprint}\n"
+            f"    size: {size}\n"
+            f"path: {appimage_name}\n"
+            f"sha512: {fingerprint}\n"
+        )
+    else:
+        return
+    if not text.endswith("\n"):
+        text += "\n"
+    dest = publish_dir / "desktop" / "latest-linux.yml"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(text, encoding="utf-8")
+
+
 def build(
     artifacts: Path,
     version_file: Path | None,
@@ -422,6 +474,9 @@ def build(
     windows = next((asset for asset in assets if asset["id"] == "desktop-windows"), None)
     if publish_dir is not None and windows is not None and windows.get("status") == "published":
         write_windows_feed(artifacts, publish_dir, windows["filename"], windows.get("version"))
+    appimage = next((asset for asset in assets if asset["id"] == "desktop-linux-appimage"), None)
+    if publish_dir is not None and appimage is not None and appimage.get("status") == "published":
+        write_linux_feed(artifacts, publish_dir, appimage["filename"], appimage.get("version"))
     return manifest
 
 

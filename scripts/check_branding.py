@@ -172,7 +172,7 @@ def visible_hits(text: str, path: str):
             for key, value in data.items():
                 if not isinstance(value, dict):
                     continue
-                for field in ("message", "description"):
+                for field in ("message", "description", "example"):
                     raw = value.get(field)
                     if isinstance(raw, str):
                         hits.extend(_scan_chunk(raw, f"{path} {field} {key}"))
@@ -182,6 +182,9 @@ def visible_hits(text: str, path: str):
     elif path.endswith((".html", ".htm", ".hbs", ".css", ".scss")):
         text = COMMENT.sub(" ", text)
     hits.extend(_scan_chunk(text, path))
+    normalized = path.replace("\\", "/")
+    if normalized.endswith("features.html") or normalized.endswith("docs/FEATURES.md"):
+        hits.extend(marketing_hits(text, path))
     return hits
 
 
@@ -213,9 +216,17 @@ def host_hits(text: str, where: str):
         labels = [part.lower() for part in host.split(".") if part.lower() not in {"bitwarden", "com"}]
         before = text[max(0, match.start() - 60):match.start()]
         after = text[match.end():match.end() + 40]
+        # A path on the public vault, www, or the bare host is a page, not a protocol URL.
+        paged = after[:1] in "/#"
+        user_page = paged and (len(labels) == 0 or labels == ["www"] or labels == ["vault"])
         prose = bool(re.search(r"[^\W\d_]{2,}\s+$", before)) or bool(re.search(r"^\s+[^\W\d_]{2,}", after))
-        protocol = len(labels) == 1 and labels[0] in _PROTOCOL_LABELS and not prose
-        bare = len(labels) == 0 and not prose
+        protocol = (
+            len(labels) == 1
+            and labels[0] in _PROTOCOL_LABELS
+            and not prose
+            and not user_page
+        )
+        bare = len(labels) == 0 and not prose and not user_page
         if protocol or bare:
             continue
         window = text[max(0, match.start() - 80):match.end() + 80]
@@ -242,6 +253,7 @@ def _scan_chunk(text: str, where: str):
         snippet = " ".join(window.split())[:180]
         hits.append(f"{where}: {snippet}")
     hits.extend(host_hits(text, where))
+    hits.extend(license_file_hits(text, where))
     if re.search(r"(?i)bitwarden_export", text):
         hits.append(f"{where}: bitwarden_export")
     if re.search(
@@ -251,6 +263,42 @@ def _scan_chunk(text: str, where: str):
         hits.append(f"{where}: bitwarden export filename prefix")
     if re.search(r">\s*aultwarden", text, re.I):
         hits.append(f"{where}: split Vaultwarden wordmark")
+    return hits
+
+
+_LICENSE_FILE = re.compile(r"(?i)bitwarden_(?:premium_|organization_)?license\.json")
+_BW_PROSE = re.compile(r"\bBW\b(?=\s+[A-Za-z])")
+
+
+def audit_literal_hits(text: str, where: str):
+    """User-facing leftovers that live in TypeScript string literals."""
+    hits = []
+    if re.search(r"(?i)bitwarden\.com/help", text):
+        hits.append(f"{where}: bitwarden.com/help link")
+    if re.search(r"(?i)vault\.bitwarden\.com[/#]", text):
+        hits.append(f"{where}: vault.bitwarden.com page")
+    hits.extend(license_file_hits(text, where))
+    return hits
+
+
+def license_file_hits(text: str, where: str):
+    """User-visible or downloaded license names. An upload list that also names komboe_* stays."""
+    hits = []
+    for match in _LICENSE_FILE.finditer(text):
+        window = text[max(0, match.start() - 160):match.end() + 80]
+        if re.search(r"(?i)komboe_(?:premium_|organization_)?license\.json", window):
+            continue
+        hits.append(f"{where}: bitwarden license filename")
+    return hits
+
+
+def marketing_hits(text: str, where: str):
+    """Planned-feature notes must not name the proprietary tree or use the BW abbreviation in prose."""
+    hits = []
+    if "bitwarden_license" in text:
+        hits.append(f"{where}: bitwarden_license in marketing prose")
+    if _BW_PROSE.search(text):
+        hits.append(f"{where}: BW in marketing prose")
     return hits
 
 
@@ -361,6 +409,9 @@ def walk_source():
                     rel = str(path.relative_to(ROOT))
                     if any(sig.encode() in blob for sig in signatures):
                         hits.extend(shield_hits(blob, rel, signatures))
+                    if not name.endswith(".spec.ts") and "spec-data" not in rel and not name.endswith(".stories.ts"):
+                        text = strip_js_comments(blob.decode("utf-8", errors="ignore"))
+                        hits.extend(audit_literal_hits(text, rel))
                     continue
                 icon_ts = name.endswith(".icon.ts") or name in {
                     "admin-console.ts", "secrets-manager.ts", "secrets-manager-alt.ts",
@@ -391,6 +442,9 @@ def walk_source():
                             or (rel.startswith("apps/web-marketing/") and ext in {".html", ".js"})
                         ):
                             hits.extend(visible_hits(text, rel))
+    features = ROOT / "docs/FEATURES.md"
+    if features.is_file():
+        hits.extend(marketing_hits(features.read_text(encoding="utf-8"), "docs/FEATURES.md"))
     return hits
 
 

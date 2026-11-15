@@ -27,11 +27,19 @@ OLD = [
     "شهادات النظام ليست آمنة مثل استيراد الشهادات إلى بت وردين",
     "സ്വയം ഹോസ്റ്റ് ചെയ്ത ബിറ്റ് വാർഡൻ പരിസ്ഥിതി",
     '<path fill="#6D4AFF" d="M192.19 20.75a.5.5 0 0 0-.37-.17"/>',
+    "Продължете настройването на безплатния пробен период на Буторден",
+    "бутварден",
+    "BW event export is enterprise-tier",
+    "SSO screens live under bitwarden_license/ and must be clean-room",
+    "https://bitwarden.com/help/create-bitwarden-account/",
+    "https://vault.bitwarden.com/invite-link/example",
+    "fileName: bitwarden_premium_license.json",
+    "fileName: bitwarden_organization_license.json",
 ]
 
 
 def must_fail(text: str) -> None:
-    hits = check.visible_hits(text, "audit.txt")
+    hits = check.visible_hits(text, "apps/web-marketing/features.html")
     hits.extend(check.shield_hits(text.encode(), "audit.txt", ("M192.19 20.75a.5.5",)))
     if not hits:
         raise SystemExit(f"expected a branding hit for {text!r}")
@@ -47,13 +55,14 @@ def main() -> None:
     for text in OLD:
         must_fail(text)
     must_pass('webVault: "https://vault.bitwarden.com"')
+    must_pass('["komboe_premium_license.json", "bitwarden_premium_license.json"]')
     must_pass('identity: "https://identity.bitwarden.com"')
     must_pass('api: "https://api.bitwarden.com"')
     must_pass('domain: "bitwarden.com"')
     rewritten = brand.rewrite_visible(
-        "go to vault.bitwarden.com and www.bitwarden.com. بت وردين. ബിറ്റ് വാർഡൻ"
+        "go to vault.bitwarden.com and www.bitwarden.com. بت وردين. ബിറ്റ് വാർഡൻ. Буторден"
     )
-    for banned in ("bitwarden.com", "بت وردين", "ബിറ്റ് വാർഡൻ"):
+    for banned in ("bitwarden.com", "بت وردين", "ബിറ്റ് വാർഡൻ", "Буторден"):
         if banned in rewritten:
             raise SystemExit(f"rewrite left {banned!r} in {rewritten!r}")
     if "komboe.com" not in rewritten or "Komboe" not in rewritten:

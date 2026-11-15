@@ -10,8 +10,8 @@ import re
 # Stems are specific enough that ordinary words in the same script do not match.
 # A short inflection in the same script may follow the stem.
 TRANSLITERATION_PATTERNS = (
-    # Cyrillic: Bulgarian Битуорден, Serbian Битварден, and nearby misspellings.
-    r"(?i)(?:битуорден|битуордун|биуорден|битоурден|биуторден|битурден|битварден|бітварден|бітуорден)[а-яёіїєґ]{0,6}",
+    # Cyrillic: Bulgarian Битуорден and Буторден, Serbian Битварден, and nearby misspellings.
+    r"(?i)(?:битуорден|битуордун|биуорден|битоурден|биуторден|битурден|битварден|бітварден|бітуорден|буторден|бутордън|бутварден|бутвардън|бутуорден)[а-яёіїєґ]{0,6}",
     # Bengali, including the two encodings of য.
     r"বিটও(?:\u09af\u09bc|\u09df)ার্ডেন[\u0980-\u09FF]{0,4}",
     # Hindi and Marathi.
@@ -34,6 +34,7 @@ TRANSLITERATION_PATTERNS = (
 # UTF-16 resource tables are not skipped.
 NAME_NEEDLES = (
     "Битуорден",
+    "Буторден",
     "Битуордун",
     "Битварден",
     "বিটও",

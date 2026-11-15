@@ -27,6 +27,7 @@ jobs:
           cd apps/desktop
           npx electron-builder --linux deb AppImage --x64 -p never
           ls -l dist
+          python3 "$GITHUB_WORKSPACE/scripts/ensure-linux-feed.py" dist
       - name: Unpacked desktop app has no Bitwarden branding
         run: python3 scripts/check_branding.py --built clients/upstream/apps/desktop/dist/linux-unpacked
       - uses: actions/upload-artifact@v4
@@ -35,6 +36,7 @@ jobs:
           path: |
             clients/upstream/apps/desktop/dist/*.deb
             clients/upstream/apps/desktop/dist/*.AppImage
+            clients/upstream/apps/desktop/dist/latest-linux.yml
 
   desktop-windows:
     runs-on: windows-latest
@@ -145,7 +147,7 @@ jobs:
           pin=$(cat mobile/ANDROID_UPSTREAM_PIN)
           git clone --depth 1 -b "$pin" https://github.com/bitwarden/android.git /tmp/bw-android
           python3 mobile/android_rebrand.py /tmp/bw-android
-          python3 mobile/stamp-version.py /tmp/bw-android 2026111507 2026.11.15.7
+          python3 mobile/stamp-version.py /tmp/bw-android 2026111508 2026.11.15.8
           mkdir -p "$HOME/.android"
           if [ -n "${ANDROID_DEBUG_KEYSTORE_BASE64:-}" ]; then
             echo "$ANDROID_DEBUG_KEYSTORE_BASE64" | base64 -d > "$HOME/.android/debug.keystore"
@@ -155,7 +157,7 @@ jobs:
           apk=$(find app/build/outputs/apk -name '*.apk' | head -1)
           python3 "$GITHUB_WORKSPACE/scripts/check_branding.py" --built "$apk"
           mkdir -p "$GITHUB_WORKSPACE/dist"
-          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.7.apk"
+          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.8.apk"
           python3 - << PY
           import hashlib, json, os, struct
           from pathlib import Path
@@ -191,18 +193,18 @@ jobs:
           digest = hashlib.sha256(cert).hexdigest()
           file_hash = hashlib.sha256(data).hexdigest()
           Path("$GITHUB_WORKSPACE/dist/android-apk.txt").write_text(
-              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.7\nversionCode 2026111507\n"
+              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.8\nversionCode 2026111508\n"
           )
-          versioned = "io.komboe.android-2026.11.15.7.apk"
+          versioned = "io.komboe.android-2026.11.15.8.apk"
           feed = {
-              "versionName": "2026.11.15.7",
-              "versionCode": 2026111507,
+              "versionName": "2026.11.15.8",
+              "versionCode": 2026111508,
               "apkUrl": "https://komboe.com/downloads/android/" + versioned,
               "sha256": file_hash,
               "minSdk": 29,
               "releaseNotes": "Komboe updates download on Wi-Fi or mobile data and install with the same signing certificate.",
           }
-          if feed["sha256"] != file_hash or feed["versionCode"] != 2026111507:
+          if feed["sha256"] != file_hash or feed["versionCode"] != 2026111508:
               raise SystemExit("latest.json does not match the APK")
           if "downloads.komboe.com" in feed["apkUrl"] or not feed["apkUrl"].startswith("https://komboe.com/downloads/android/"):
               raise SystemExit("apkUrl must be https://komboe.com/downloads/android/")
