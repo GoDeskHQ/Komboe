@@ -87,8 +87,12 @@ jobs:
           else
             echo "present=true" >> "$GITHUB_OUTPUT"
           fi
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
         if: steps.sign.outputs.present == 'true'
+        with:
+          cmdline-tools-version: "15859902"
+          log-accepted-android-sdk-licenses: "false"
+          packages: "platform-tools platforms;android-37 build-tools;37.0.0"
       - name: Build the F-Droid release APK when a keystore already exists
         if: steps.sign.outputs.present == 'true'
         run: |
@@ -124,7 +128,11 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+        with:
+          cmdline-tools-version: "15859902"
+          log-accepted-android-sdk-licenses: "false"
+          packages: "platform-tools platforms;android-37 build-tools;37.0.0"
       - name: Build the rebranded fdroid debug APK
         env:
           ANDROID_DEBUG_KEYSTORE_BASE64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_BASE64 }}

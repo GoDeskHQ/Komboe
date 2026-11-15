@@ -30,7 +30,7 @@ DENY = ROOT / "scripts" / "branding_denylist.json"
 NAME = re.compile(r"(?<![A-Za-z0-9_@])(?:Bitwarden|Vaultwarden)")
 IMPORT_FORMATS = ("Bitwarden (.json)", "Bitwarden (json)", "Bitwarden (csv)")
 ALLOW = re.compile(
-    r"copyright|GNU GENERAL PUBLIC|licensed under|GPL|AGPL|not affiliated|not endorsed|"
+    r"copyright|GNU GENERAL PUBLIC|licensed under|license agreement|trademark|GPL|AGPL|not affiliated|not endorsed|"
     r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|"
     r"Bitwarden-Client-|Bitwarden \(json\)|Bitwarden \(\.json\)|Bitwarden \(csv\)",
     re.I,
