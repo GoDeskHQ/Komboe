@@ -112,13 +112,11 @@ The fdroid debug (and release) APK built by `mobile/android-build.sh` includes S
 
 Use a build that already contains this feature. An older sideload cannot update itself until that first build is installed over USB once.
 
-- [ ] Confirm “Restrict updates to Wi-Fi” is off (the default).
 - [ ] On Wi-Fi, open Komboe → Settings → About.
 - [ ] Confirm the current version row, then tap **Check for updates**.
 - [ ] When the hosted `versionCode` is not newer: the app says it is up to date.
-- [ ] Publish a higher `versionCode` on the feed. On mobile data, with the Wi-Fi-only toggle still off, start the app or tap **Check for updates**. The app downloads the APK, verifies sha256, and shows the system install prompt. Complete it. After upgrade, About shows the new version.
-- [ ] Turn “Restrict updates to Wi-Fi” on, disable Wi-Fi, and tap **Check for updates**. The app refuses and tells you updates are set to Wi-Fi only.
-- [ ] Turn the toggle off, stay on mobile data, and confirm a newer feed still installs.
+- [ ] Publish a higher `versionCode` on the feed. Turn Wi-Fi off so the phone is on mobile data only, then start the app or tap **Check for updates**. The app downloads the APK, verifies sha256, and shows the system install prompt. Complete it. After upgrade, About shows the new version.
+- [ ] Repeat the newer-feed case on Wi-Fi. Both network types download. There is no Wi-Fi-only switch.
 - [ ] A bad sha256 in the feed must not install. A non-https `apkUrl` or a different host than the feed must be rejected.
 - [ ] No Bitwarden Inc. branding in the new About rows.
 

@@ -13,7 +13,7 @@ import java.net.URI
  *   "apkUrl": "https://komboe.com/downloads/android/io.komboe.android-2026.11.1.apk",
  *   "sha256": "0123...cdef",
  *   "minSdk": 29,
- *   "releaseNotes": "In-app Wi-Fi updates."
+ *   "releaseNotes": "Updates install over Wi-Fi or mobile data."
  * }
  */
 data class KomboeSelfUpdateManifest(

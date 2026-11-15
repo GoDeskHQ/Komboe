@@ -15,43 +15,41 @@ import java.net.HttpURLConnection
 import java.net.URI
 import java.security.MessageDigest
 import java.util.concurrent.Executors
+import java.util.concurrent.atomic.AtomicBoolean
 import com.x8bit.bitwarden.R
 
 /**
  * In-app OTA for io.komboe.android. There is no Play Store and no USB after the first sideload.
  * The default feed is https://komboe.com/downloads/android/latest.json (override the string resource
  * komboe_update_feed_url at build time). APK bytes must be https on the same host, and sha256 must match.
- * Checks and downloads run on Wi-Fi or mobile data unless the person turns on “Restrict updates to Wi-Fi”.
+ * Checks and downloads use whatever network has internet: Wi-Fi, mobile data, ethernet, or a VPN.
+ * There is no Wi-Fi-only mode. The downloaded APK is installed with PackageInstaller, so Android
+ * keeps the existing signing certificate.
  */
 object KomboeSelfUpdate {
     const val ACTION_INSTALL_STATUS = "io.komboe.android.update.INSTALL_STATUS"
-    private const val PREFS = "komboe_self_update"
-    private const val KEY_WIFI_ONLY = "wifi_only"
-    private const val KEY_LAST_CHECK = "last_check_ms"
+    /** Compiled into the APK so a strings scan can see the network policy. */
+    const val NETWORK_POLICY = "wifi-or-mobile-data"
     private const val PERIOD_MS = 24L * 60 * 60 * 1000
     private const val CONNECT_TIMEOUT_MS = 20_000
     private const val READ_TIMEOUT_MS = 60_000
     private val io = Executors.newSingleThreadExecutor()
     private val main = Handler(Looper.getMainLooper())
-
-    fun wifiOnly(context: Context): Boolean =
-        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getBoolean(KEY_WIFI_ONLY, false)
-
-    fun setWifiOnly(context: Context, wifiOnly: Boolean) {
-        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-            .edit()
-            .putBoolean(KEY_WIFI_ONLY, wifiOnly)
-            .apply()
-    }
+    private val periodicArmed = AtomicBoolean(false)
 
     fun feedUrl(context: Context): String =
         context.getString(R.string.komboe_update_feed_url).trim()
 
+    /** Check on this process start, then again every 24 hours while the process stays up. */
     fun schedulePeriodic(context: Context) {
         val app = context.applicationContext
-        val last = app.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getLong(KEY_LAST_CHECK, 0L)
-        if (System.currentTimeMillis() - last < PERIOD_MS) return
         io.execute { runCheck(app, promptIfUpToDate = false) }
+        if (periodicArmed.compareAndSet(false, true)) {
+            main.postDelayed({
+                periodicArmed.set(false)
+                schedulePeriodic(app)
+            }, PERIOD_MS)
+        }
     }
 
     fun checkNow(context: Context) {
@@ -63,17 +61,13 @@ object KomboeSelfUpdate {
     private fun runCheck(context: Context, promptIfUpToDate: Boolean) {
         try {
             if (!canDownload(context)) {
-                toast(context, context.getString(R.string.komboe_update_wifi_required))
+                toast(context, context.getString(R.string.komboe_update_need_network))
                 return
             }
             val feed = feedUrl(context)
             require(feed.startsWith("https://", ignoreCase = true)) { "feed URL must be https" }
             val body = httpGet(feed)
             val manifest = KomboeSelfUpdateManifest.parse(body, feed)
-            context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-                .edit()
-                .putLong(KEY_LAST_CHECK, System.currentTimeMillis())
-                .apply()
             val installed = installedVersionCode(context)
             if (manifest.minSdk != null && Build.VERSION.SDK_INT < manifest.minSdk) {
                 toast(context, context.getString(R.string.komboe_update_min_sdk, manifest.minSdk))
@@ -98,11 +92,12 @@ object KomboeSelfUpdate {
         val network = cm.activeNetwork ?: return false
         val caps = cm.getNetworkCapabilities(network) ?: return false
         if (!caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) return false
-        val wifi = caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
-            caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)
-        if (wifi) return true
-        // Cellular and other networks are allowed unless the person restricted updates to Wi-Fi.
-        return !wifiOnly(context)
+        // Wi-Fi, mobile data, ethernet, and VPN. NETWORK_POLICY is referenced so the dex keeps it.
+        val allowed = caps.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
+            caps.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ||
+            caps.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) ||
+            caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)
+        return allowed && NETWORK_POLICY == "wifi-or-mobile-data"
     }
 
     private fun installedVersionCode(context: Context): Long {

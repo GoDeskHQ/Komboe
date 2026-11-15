@@ -203,7 +203,7 @@ def patch_tree(src, path, old, new, label):
 
 
 def inject_self_update(src, root):
-    """Copy the Komboe Wi-Fi OTA sources into the pinned Android tree and hook Settings → About."""
+    """Copy the Komboe OTA sources into the pinned Android tree and hook Settings → About."""
     dest_kt = os.path.join(src, "app/src/main/kotlin/io/komboe/android/update")
     os.makedirs(dest_kt, exist_ok=True)
     overlay = os.path.join(root, "mobile/self-update")
@@ -263,17 +263,6 @@ def inject_self_update(src, root):
                 .standardHorizontalMargin()
                 .fillMaxWidth()
                 .testTag(tag = "KomboeCheckForUpdatesRow"),
-        )
-        BitwardenSwitch(
-            label = stringResource(id = com.x8bit.bitwarden.R.string.komboe_updates_wifi_only),
-            contentDescription = stringResource(id = com.x8bit.bitwarden.R.string.komboe_updates_wifi_only),
-            isChecked = io.komboe.android.update.KomboeSelfUpdate.wifiOnly(updateContext),
-            onCheckedChange = { io.komboe.android.update.KomboeSelfUpdate.setWifiOnly(updateContext, it) },
-            cardStyle = CardStyle.Middle(),
-            modifier = Modifier
-                .standardHorizontalMargin()
-                .fillMaxWidth()
-                .testTag(tag = "KomboeUpdatesWifiOnlyRow"),
         )
         CopyRow(
 '''

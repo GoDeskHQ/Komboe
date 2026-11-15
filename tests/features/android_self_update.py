@@ -98,29 +98,36 @@ def test_overlay_and_docs_present():
     assert "REQUEST_INSTALL_PACKAGES" not in kotlin  # permission lives in the manifest hook
     assert "PackageInstaller" in kotlin
     assert "TRANSPORT_WIFI" in kotlin
-    assert "fun wifiOnly" in kotlin
-    assert 'getBoolean(KEY_WIFI_ONLY, false)' in kotlin
+    assert "TRANSPORT_CELLULAR" in kotlin
+    assert "TRANSPORT_ETHERNET" in kotlin
+    assert 'NETWORK_POLICY = "wifi-or-mobile-data"' in kotlin
+    assert "fun schedulePeriodic" in kotlin
+    assert "fun checkNow" in kotlin
+    assert "wifiOnly" not in kotlin
+    assert "KEY_WIFI_ONLY" not in kotlin
     assert "userInitiated &&" not in kotlin
     assert "allowMetered" not in kotlin
-    assert "return !wifiOnly(context)" in kotlin
     assert "sha256" in (OVERLAY / "KomboeSelfUpdateManifest.kt").read_text()
     strings = (OVERLAY / "komboe_update_strings.xml").read_text()
     assert "https://komboe.com/downloads/android/latest.json" in strings
-    assert "Restrict updates to Wi-Fi" in strings
-    assert "Allow updates on mobile data" not in strings
+    assert "downloads.komboe.com" not in strings
+    assert "Restrict updates to Wi-Fi" not in strings
+    assert "Wi-Fi and mobile data both work" in strings
     running = (ROOT / "docs/RUNNING.md").read_text()
     assert "komboe.com/downloads/android" in running
     assert "Wi-Fi or mobile data" in running
-    assert "Restrict updates to Wi-Fi" in running
+    assert "Restrict updates to Wi-Fi" not in running
     e2e = (ROOT / "mobile/ANDROID-E2E.md").read_text()
     assert "Check for updates" in e2e
-    assert "Restrict updates to Wi-Fi" in e2e
-    assert "Allow updates on mobile data" not in e2e
+    assert "Restrict updates to Wi-Fi" not in e2e
+    assert "mobile data" in e2e
     compose = (ROOT / "docker-compose.yml").read_text()
     assert "SMTP_FROM: donotreply@komboe.com" in compose
     rebrand = (ROOT / "mobile/android_rebrand.py").read_text()
-    assert "KomboeSelfUpdate.wifiOnly" in rebrand
-    assert "KomboeUpdatesWifiOnlyRow" in rebrand
+    assert "KomboeSelfUpdate.wifiOnly" not in rebrand
+    assert "KomboeUpdatesWifiOnlyRow" not in rebrand
+    assert "REQUEST_INSTALL_PACKAGES" in rebrand
+    assert "KomboeSelfUpdate.schedulePeriodic" in rebrand
 
 
 def test_injects_into_pinned_tree_snippets():
@@ -169,11 +176,43 @@ def test_injects_into_pinned_tree_snippets():
         assert "REQUEST_INSTALL_PACKAGES" in (dest / "app/src/main/AndroidManifest.xml").read_text()
 
 
+def test_latest_json_matches_apk_bytes():
+    import hashlib
+    from android_feed_match import check
+
+    apk = b"not-a-real-apk-but-stable-bytes"
+    digest = hashlib.sha256(apk).hexdigest()
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        name = "io.komboe.android-2026.11.15.6.apk"
+        (root / name).write_bytes(apk)
+        (root / "android-apk.txt").write_text(
+            f"file sha256 {digest}\nsigner sha256 {'0418ff9b' + 'a' * 56}\nversionName 2026.11.15.6\nversionCode 2026111506\n"
+        )
+        feed = {
+            "versionName": "2026.11.15.6",
+            "versionCode": 2026111506,
+            "apkUrl": "https://komboe.com/downloads/android/" + name,
+            "sha256": digest,
+            "minSdk": 29,
+        }
+        (root / "latest.json").write_text(json.dumps(feed))
+        check(root)
+        feed["sha256"] = "b" * 64
+        (root / "latest.json").write_text(json.dumps(feed))
+        try:
+            check(root)
+        except SystemExit:
+            return
+        raise AssertionError("mismatched sha256 was accepted")
+
+
 def main():
     test_example_feed_parses()
     test_rejects_bad_feeds()
     test_overlay_and_docs_present()
     test_injects_into_pinned_tree_snippets()
+    test_latest_json_matches_apk_bytes()
     print("ANDROID SELF-UPDATE PASS")
 
 
