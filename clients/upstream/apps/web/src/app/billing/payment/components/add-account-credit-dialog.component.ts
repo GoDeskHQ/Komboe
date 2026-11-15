@@ -119,7 +119,7 @@ const positiveNumberValidator =
       <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted" />
       <input type="hidden" name="amount" value="{{ amount }}" />
       <input type="hidden" name="custom" value="{{ payPalCustom$ | async }}" />
-      <input type="hidden" name="item_name" value="Bitwarden Account Credit" />
+      <input type="hidden" name="item_name" value="Komboe Account Credit" />
       <input type="hidden" name="item_number" value="{{ payPalSubject }}" />
     </form>
   `,

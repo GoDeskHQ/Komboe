@@ -92,7 +92,7 @@ jobs:
         with:
           cmdline-tools-version: "15859902"
           log-accepted-android-sdk-licenses: "false"
-          packages: "platform-tools platforms;android-37 build-tools;37.0.0"
+          packages: "platform-tools platforms;android-37.2 build-tools;37.0.0"
       - name: Build the F-Droid release APK when a keystore already exists
         if: steps.sign.outputs.present == 'true'
         run: |
@@ -132,7 +132,7 @@ jobs:
         with:
           cmdline-tools-version: "15859902"
           log-accepted-android-sdk-licenses: "false"
-          packages: "platform-tools platforms;android-37 build-tools;37.0.0"
+          packages: "platform-tools platforms;android-37.2 build-tools;37.0.0"
       - name: Build the rebranded fdroid debug APK
         env:
           ANDROID_DEBUG_KEYSTORE_BASE64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_BASE64 }}

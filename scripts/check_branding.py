@@ -77,7 +77,7 @@ def visible_hits(text: str, path: str):
                 if isinstance(value, dict) and isinstance(value.get("message"), str):
                     hits.extend(_scan_chunk(value["message"], f"{path} message {key}"))
             return hits
-    if path.endswith((".html", ".htm", ".hbs", ".css", ".scss")):
+    if path.endswith((".html", ".htm", ".hbs", ".css", ".scss", ".js", ".mjs")):
         text = COMMENT.sub(" ", text)
     hits.extend(_scan_chunk(text, path))
     return hits
@@ -90,7 +90,12 @@ def _scan_chunk(text: str, where: str):
             continue
         prefix = text[max(0, match.start() - 40):match.start()]
         # Importer metadata. The visible format label is allowlisted separately.
-        if re.search(r"sourceName[\"']?\s*[:=]\s*[\"']?$", prefix):
+        if re.search(
+            r"(?:sourceName|displayName|name)[\"']?\s*[:=]\s*[\"']?$",
+            prefix,
+        ):
+            continue
+        if "com.bitwarden" in prefix or "userAgentItem" in prefix:
             continue
         window = text[max(0, match.start() - 160): match.end() + 160]
         if allowed(window):
@@ -108,12 +113,24 @@ def shield_hits(blob: bytes, path: str, signatures):
     return hits
 
 
+def skip_text(path: str) -> bool:
+    normalized = path.replace("\\", "/")
+    if normalized.endswith(".map") or normalized.endswith(".js.map"):
+        return True
+    # Generated SDK comments and API docs are not product UI.
+    if "/node_modules/@bitwarden/sdk-internal/" in normalized or "bitwarden_wasm_internal" in normalized:
+        return True
+    return False
+
+
 def scan_blob(blob: bytes, path: str, hashes, signatures):
     hits = []
     digest = sha256(blob)
     if digest in hashes:
         hits.append(f"{path}: forbidden image sha256 {digest}")
     hits.extend(shield_hits(blob, path, signatures))
+    if skip_text(path):
+        return hits
     if b"Bitwarden" in blob or b"Vaultwarden" in blob or b"\x00B\x00i\x00t\x00w\x00a\x00r\x00d\x00e\x00n" in blob:
         text = blob.decode("utf-8", errors="ignore")
         if "Bitwarden" not in text and "Vaultwarden" not in text:
