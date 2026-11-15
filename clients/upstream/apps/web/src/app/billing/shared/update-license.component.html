@@ -6,9 +6,7 @@
     <bit-hint>{{
       "licenseFileDesc"
         | i18n
-          : (!organizationId
-              ? "bitwarden_premium_license.json"
-              : "bitwarden_organization_license.json")
+          : (!organizationId ? premiumLicenseName : organizationLicenseName)
     }}</bit-hint>
   </bit-file-upload>
   <div class="tw-flex tw-gap-2 tw-mt-4">

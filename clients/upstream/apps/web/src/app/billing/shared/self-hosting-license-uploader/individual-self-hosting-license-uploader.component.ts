@@ -8,6 +8,7 @@ import { PlatformUtilsService } from "@bitwarden/common/platform/abstractions/pl
 import { SyncService } from "@bitwarden/common/platform/sync";
 import { ToastService } from "@bitwarden/components";
 
+import { KOMBOE_PREMIUM_LICENSE_FILENAME, licenseUploadAccepted } from "../license-file-names";
 import { AbstractSelfHostingLicenseUploaderComponent } from "../../shared/self-hosting-license-uploader/abstract-self-hosting-license-uploader.component";
 
 /**
@@ -45,7 +46,7 @@ export class IndividualSelfHostingLicenseUploaderComponent extends AbstractSelfH
     await super.submit();
 
     const file = this.formValue.file;
-    if (file == null) {
+    if (file == null || !licenseUploadAccepted(file.name, "premium")) {
       return;
     }
 
@@ -65,6 +66,6 @@ export class IndividualSelfHostingLicenseUploaderComponent extends AbstractSelfH
   }
 
   get hintFileName(): string {
-    return "bitwarden_premium_license.json";
+    return KOMBOE_PREMIUM_LICENSE_FILENAME;
   }
 }

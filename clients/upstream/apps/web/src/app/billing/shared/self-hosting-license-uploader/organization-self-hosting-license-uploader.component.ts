@@ -20,6 +20,7 @@ import { ToastService } from "@bitwarden/components";
 // eslint-disable-next-line no-restricted-imports
 import { EncryptService, LegacyCompatKeyService } from "@bitwarden/legacy-crypto";
 
+import { KOMBOE_ORGANIZATION_LICENSE_FILENAME, licenseUploadAccepted } from "../license-file-names";
 import { AbstractSelfHostingLicenseUploaderComponent } from "../../shared/self-hosting-license-uploader/abstract-self-hosting-license-uploader.component";
 
 /**
@@ -60,6 +61,10 @@ export class OrganizationSelfHostingLicenseUploaderComponent extends AbstractSel
 
   protected async submit(): Promise<void> {
     await super.submit();
+    const file = this.formValue.file;
+    if (file == null || !licenseUploadAccepted(file.name, "organization")) {
+      return;
+    }
     const activeUserId = await firstValueFrom(getUserId(this.accountService.activeAccount$));
     const orgKey = await this.legacyCompatKeyService.makeOrgKey<OrgKey>(activeUserId);
     const key = orgKey[0].encryptedString;
@@ -72,7 +77,7 @@ export class OrganizationSelfHostingLicenseUploaderComponent extends AbstractSel
     const orgKeys = await this.legacyCompatKeyService.makeKeyPair(orgKey[1]);
 
     const fd = new FormData();
-    fd.append("license", this.formValue.file);
+    fd.append("license", file);
     fd.append("key", key);
     fd.append("collectionName", collectionCt);
     const response = await this.organizationApiService.createLicense(fd);
@@ -95,6 +100,6 @@ export class OrganizationSelfHostingLicenseUploaderComponent extends AbstractSel
   }
 
   get hintFileName(): string {
-    return "bitwarden_organization_license.json";
+    return KOMBOE_ORGANIZATION_LICENSE_FILENAME;
   }
 }

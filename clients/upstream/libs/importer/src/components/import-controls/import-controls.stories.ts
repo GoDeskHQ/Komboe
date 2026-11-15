@@ -46,7 +46,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["csv", "json"],
     pasteFormats: ["csv", "json"],
     sourceName: "Keeper",
-    instructionLink: "https://bitwarden.com/help/import-from-keeper/",
+    instructionLink: "https://komboe.com/#import-from-keeper/",
   }),
   keepercsv: buildOption({
     id: "keepercsv",
@@ -67,7 +67,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["csv", "html"],
     pasteFormats: ["csv"],
     sourceName: "LastPass",
-    instructionLink: "https://bitwarden.com/help/import-from-lastpass/",
+    instructionLink: "https://komboe.com/#import-from-lastpass/",
   }),
   chromecsv: buildOption({
     id: "chromecsv",
@@ -75,7 +75,7 @@ const options: Record<string, ImportOption> = {
     isBrowser: true,
     hasDirectImporter: true,
     sourceName: "Chrome",
-    instructionLink: "https://bitwarden.com/help/import-from-chrome/",
+    instructionLink: "https://komboe.com/#import-from-chrome/",
   }),
   dashlane: buildOption({
     id: "dashlane",
@@ -104,7 +104,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["1pux", "json", "1pif", "csv"],
     pasteFormats: ["json", "1pif", "csv"],
     sourceName: "1Password",
-    instructionLink: "https://bitwarden.com/help/import-from-1password/",
+    instructionLink: "https://komboe.com/#import-from-1password/",
   }),
   "1password1pux": buildOption({
     id: "1password1pux",
@@ -112,7 +112,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["1pux", "json"],
     pasteFormats: ["json"],
     sourceName: "1Password",
-    instructionLink: "https://bitwarden.com/help/import-from-1password/",
+    instructionLink: "https://komboe.com/#import-from-1password/",
   }),
   "1password1pif": buildOption({
     id: "1password1pif",
@@ -138,7 +138,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["kdbx", "xml", "csv"],
     pasteFormats: ["xml", "csv"],
     sourceName: "KeePass",
-    instructionLink: "https://bitwarden.com/help/import-from-keepass/",
+    instructionLink: "https://komboe.com/#import-from-keepass/",
   }),
   keepass2xml: buildOption({
     id: "keepass2xml",
@@ -146,7 +146,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["xml"],
     pasteFormats: ["xml"],
     sourceName: "KeePass",
-    instructionLink: "https://bitwarden.com/help/import-from-keepass/",
+    instructionLink: "https://komboe.com/#import-from-keepass/",
   }),
   keepasskdbx: buildOption({
     id: "keepasskdbx",
@@ -156,7 +156,7 @@ const options: Record<string, ImportOption> = {
     // Matches production; without it KdbxCredentials would exercise the wrong (file) branch.
     sdk: { fileTypes: ["kdbx"], credentialKind: CredentialKind.passwordWithKeyFile },
     sourceName: "KeePass",
-    instructionLink: "https://bitwarden.com/help/import-from-keepass/",
+    instructionLink: "https://komboe.com/#import-from-keepass/",
   }),
   keepassxcsv: buildOption({
     id: "keepassxcsv",
@@ -164,7 +164,7 @@ const options: Record<string, ImportOption> = {
     acceptedFileTypes: ["csv"],
     pasteFormats: ["csv"],
     sourceName: "KeePass",
-    instructionLink: "https://bitwarden.com/help/import-from-keepass/",
+    instructionLink: "https://komboe.com/#import-from-keepass/",
   }),
 };
 

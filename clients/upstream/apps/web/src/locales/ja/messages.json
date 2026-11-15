@@ -5207,7 +5207,7 @@
     "placeholders": {
       "file_name": {
         "content": "$1",
-        "example": "bitwarden_premium_license.json"
+        "example": "komboe_premium_license.json"
       }
     }
   },
@@ -16827,7 +16827,7 @@
     "placeholders": {
       "file_name": {
         "content": "$1",
-        "example": "bitwarden_license.json"
+        "example": "komboe_license.json"
       }
     }
   },

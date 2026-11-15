@@ -42,14 +42,14 @@ Status: **Excluded** = conflicts with the no-escrow/no-recovery rules; **Review*
 | 32 | Orgs | Per-member family pricing | GoDesk-original | In scope | GAP: sources use flat 6-seat family; GoDesk-original |
 | 33 | Admin | Admin console / dashboard | PP, BW, VW, PB, PD, PS | In scope |  |
 | 34 | Admin | Event / activity logs, audit | PP, BW, VW, PB, PS | In scope |  |
-| 35 | Admin | SIEM / syslog export | PP, BW, PB | Review | BW event export is enterprise-tier — clean-room on Vaultwarden side |
+| 35 | Admin | SIEM / syslog export | PP, BW, PB | Review | Event export at this tier is a clean-room build on the self-hosted server. |
 | 36 | Admin | Enterprise policies (master password rules, 2FA required, disable export etc.) | PP, BW, VW, PB, PS | In scope |  |
 | 37 | Admin | Password expiry / rotation policy | PB | In scope |  |
 | 38 | Admin | Public org management API | BW, PB, PS | In scope |  |
-| 39 | Admin | Directory connector LDAP/AD | BW, PB, PS | Review | BW Directory Connector is separate repo; verify license before reuse |
-| 40 | Admin | SSO SAML/OIDC login | PP, BW, PB, PS | Review | SSO for identity only; never key release. BW SSO is bitwarden_license/ — clean-room build |
-| 41 | Admin | SCIM provisioning | PP, BW, PB, PS | Review | BW SCIM is bitwarden_license/ — clean-room build |
-| 42 | Admin | Trusted devices (SSO without master password) | BW | Review | Allowed only if admin/server can never decrypt; BW trusted-device code under bitwarden_license/ must not be copied |
+| 39 | Admin | Directory connector LDAP/AD | BW, PB, PS | Review | Directory sync is a separate component; confirm its license before reuse. |
+| 40 | Admin | SSO SAML/OIDC login | PP, BW, PB, PS | Review | SSO for identity only; never key release. Organization SSO screens are a clean-room build. |
+| 41 | Admin | SCIM provisioning | PP, BW, PB, PS | Review | SCIM provisioning is a clean-room build. |
+| 42 | Admin | Trusted devices (SSO without master password) | BW | Review | Allowed only if an admin or the server can never decrypt. The upstream trusted-device implementation must not be copied. |
 | 43 | Admin | Admin password reset / account recovery | BW, PB | Excluded | Escrow/admin recovery — violates no-recovery rule |
 | 44 | Admin | Key Connector (org-held decryption key) | BW | Excluded | Org-held decryption key — violates no-escrow rule |
 | 45 | Admin | Self-hosted instance admin page (/admin) | VW, PB, PS | In scope |  |
@@ -66,7 +66,7 @@ Status: **Excluded** = conflicts with the no-escrow/no-recovery rules; **Review*
 | 56 | TOTP | Built-in TOTP authenticator for stored items | PP, BW, VW, KP, PB, PS | In scope |  |
 | 57 | TOTP | Passkey storage + autofill | PP, BW, VW, KP, PB | In scope |  |
 | 58 | TOTP | Passkey import/export (FIDO CXP) | PP, BW, KP | In scope |  |
-| 59 | Aliases | Hide-my-email aliases | PP, SL | In scope | BW integrates via 3rd-party alias APIs |
+| 59 | Aliases | Hide-my-email aliases | PP, SL | In scope | Integrates through third-party alias APIs. |
 | 60 | Aliases | Alias generation integrations (SimpleLogin/addy/Firefox Relay/Fastmail/DuckDuckGo) | BW, VW | In scope |  |
 | 61 | Aliases | Custom domains for aliases, catch-all | PP, SL | In scope |  |
 | 62 | Aliases | Multiple mailboxes per alias | PP, SL | In scope |  |
@@ -80,7 +80,7 @@ Status: **Excluded** = conflicts with the no-escrow/no-recovery rules; **Review*
 | 70 | Health | Exposed-password check (k-anonymity) | BW, VW, KP, PS | In scope |  |
 | 71 | Health | Inactive 2FA report / missing 2FA | PP, BW, VW | In scope |  |
 | 72 | Health | Unsecured (http) website report | BW, VW | In scope |  |
-| 73 | Health | Org access-intelligence / risk insights | BW | Review | BW access intelligence is enterprise (bitwarden_license/) — clean-room |
+| 73 | Health | Org access-intelligence / risk insights | BW | Review | Organization risk insights are an enterprise clean-room build. |
 | 74 | Generator | Password + passphrase generator | PP, BW, VW, KP, PB, PD, PS | In scope |  |
 | 75 | Generator | Username generator | BW, VW | In scope |  |
 | 76 | Import | Import CSV / JSON from all major managers | PP, BW, VW, KP, PB, PD, PS | In scope |  |
@@ -117,4 +117,4 @@ Status: **Excluded** = conflicts with the no-escrow/no-recovery rules; **Review*
 
 ## Exclusions also applied
 - Passbolt-style account recovery (part of #43) — excluded.
-- Any file under `bitwarden_license/` — never imported (see scripts/check-licenses.sh).
+- Any proprietary upstream license directory — never imported (see scripts/check-licenses.sh).

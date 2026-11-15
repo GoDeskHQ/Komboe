@@ -14,7 +14,7 @@ const TOTAL_TOUR_STEPS = 3;
 type TourStep = 0 | 1 | 2 | 3;
 
 const DUMMY_ALLOWED_DOMAINS = "acme.com, acme.eu, acme.fr, acme.uk";
-const DUMMY_INVITE_LINK_URL = "https://vault.bitwarden.com/invite-link/example";
+const DUMMY_INVITE_LINK_URL = "https://komboe.com/invite-link/example";
 
 /**
  * TODO(guided-tour removal): this whole component is temporary. It exists only to back the

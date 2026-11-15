@@ -155,9 +155,7 @@ export class AppComponent implements OnDestroy, OnInit {
               type: "info",
             });
             if (emailVerificationConfirmed) {
-              this.platformUtilsService.launchUri(
-                "https://bitwarden.com/help/create-bitwarden-account/",
-              );
+              this.platformUtilsService.launchUri("https://komboe.com/signup.html");
             }
             break;
           }
