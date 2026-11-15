@@ -4,5 +4,5 @@ import { Vendor } from "./data";
 
 export const Bitwarden: VendorMetadata = Object.freeze({
   id: Vendor.bitwarden,
-  name: "Bitwarden",
+  name: "Reserved",
 });

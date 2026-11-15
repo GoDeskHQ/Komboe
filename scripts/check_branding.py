@@ -126,7 +126,7 @@ def code_context(text: str, start: int, end: int) -> bool:
         return True
     if nxt.startswith(".") and re.match(r"\.(?:com|eu|net|pw|gov|atlassian)\b", nxt):
         return True
-    if nxt.startswith(":{") or nxt.startswith("://"):
+    if nxt.startswith(":{") or nxt.startswith("://") or nxt.startswith(':"') or nxt.startswith(":'"):
         return True
     if CODE_SUFFIX.match(nxt):
         return True
@@ -166,10 +166,28 @@ def visible_hits(text: str, path: str):
     return hits
 
 
+def resource_key(text: str, start: int, end: int, where: str) -> bool:
+    """String-pool keys inside an APK, not a sentence in the UI."""
+    path = where.lower()
+    if not (path.endswith(".dex") or path.endswith(".arsc") or path.endswith("androidmanifest.xml")):
+        return False
+    token = text[start:end]
+    if token.lower() not in {"bitwarden", "vaultwarden"}:
+        return False
+    nxt = text[end] if end < len(text) else ""
+    if nxt.isalpha():
+        return False
+    before = text[max(0, start - 40):start]
+    # A real sentence has a word that is not glued to an underscore.
+    return re.search(r"(?<![_\w])[^\W\d_]{3,}(?=\s)", before) is None
+
+
 def _scan_chunk(text: str, where: str):
     hits = []
     for start, end in product_spans(text):
         if identifier_continuation(text, end) or code_context(text, start, end):
+            continue
+        if resource_key(text, start, end, where):
             continue
         prefix = text[max(0, start - 48):start]
         if "com.bitwarden" in prefix or "com/bitwarden" in prefix or "userAgentItem" in prefix:
