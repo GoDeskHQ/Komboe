@@ -101,6 +101,16 @@ def site_rel(path: str) -> str | None:
     return "/".join(parts)
 
 
+def canonical_site_file(rel: str) -> str | None:
+    """Directory URLs such as /vault/ serve the public index.html inside them."""
+    if rel in PUBLIC_FILES:
+        return rel
+    for candidate in (f"{rel}/index.html", f"{rel.rstrip('/')}/index.html"):
+        if candidate in PUBLIC_FILES:
+            return candidate
+    return rel if allowed_site_file(rel) else None
+
+
 def allowed_site_file(rel: str) -> bool:
     if rel in PUBLIC_FILES:
         return True
@@ -201,6 +211,7 @@ class Handler(SimpleHTTPRequestHandler):
                     self._send_file(overlay)
                     return
         rel = site_rel(path)
+        rel = canonical_site_file(rel) if rel is not None else None
         if rel is None or not allowed_site_file(rel):
             self._drop(404)
             return

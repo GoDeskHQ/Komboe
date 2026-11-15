@@ -289,6 +289,9 @@ def test_serve_overlay(work):
         for hidden in ("/build.py", "/legal_copy.py", "/serve.py", "/e2e/run.sh", "/README.md", "/package.json"):
             code = raw(hidden).status
             assert code == 404, (hidden, code)
+        vault = urllib.request.urlopen(f"http://127.0.0.1:{port}/vault/", timeout=10)
+        assert vault.status == 200
+        assert b"Your vault" in vault.read()
     finally:
         httpd.shutdown()
 

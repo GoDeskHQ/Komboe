@@ -164,8 +164,7 @@
         "Name": "Komboe",
         "Type": "Application",
         "GenericName": "Password Manager",
-        "StartupWMClass": "komboe",
-        "Exec": "komboe --enable-features=UseOzonePlatform --ozone-platform=x11 %U"
+        "StartupWMClass": "komboe"
       }
     },
     "executableName": "komboe",
