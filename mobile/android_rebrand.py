@@ -90,13 +90,30 @@ def main(src):
     from komboe_brand import require_pil
     require_pil()
     def rewrite_strings(t):
-        from komboe_brand import rewrite_visible
-        return "".join(
-            l if re.search(r"copyright|licen[cs]e|not affiliated|corresponding source", l, re.I) else rewrite_visible(l)
-            for l in t.splitlines(True)
-        )
+        from komboe_brand import rewrite_visible, LICENSE_LINE
+        def repl(match):
+            inner = match.group(1)
+            if LICENSE_LINE.search(inner):
+                return match.group(0)
+            return ">" + rewrite_visible(inner) + "<"
+        # Text nodes only. name="bitwarden" resource ids stay so the build still compiles.
+        return re.sub(r">([^<]*)<", repl, t)
     for p in glob.glob(f"{S}/**/res/values*/strings*.xml", recursive=True):
         rw(p, rewrite_strings)
+    def rewrite_kotlin_literals(t):
+        from komboe_brand import rewrite_visible
+        def repl(match):
+            inner = match.group(1)
+            if re.search(r"(?i)(?:api|identity|vault|icons|events|notifications|send|gw)\.bitwarden", inner):
+                return match.group(0)
+            if "bitwarden-gov" in inner.lower() and " " not in inner:
+                return match.group(0)
+            if " " not in inner and "©" not in inner and "http" not in inner.lower():
+                return match.group(0)
+            return '"' + rewrite_visible(inner) + '"'
+        return re.sub(r'"([^"\n]*)"', repl, t)
+    for p in glob.glob(f"{S}/**/*.kt", recursive=True):
+        rw(p, rewrite_kotlin_literals)
     for p in glob.glob(f"{S}/**/AndroidManifest.xml", recursive=True):
         rw(p, lambda t: t.replace('android:label="Bitwarden Bridge"', 'android:label="Komboe Bridge"'))
     for p in glob.glob(f"{S}/**/*.xml", recursive=True):

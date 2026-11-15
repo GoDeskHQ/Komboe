@@ -8,7 +8,9 @@ upstream art in place.
 from __future__ import annotations
 
 import glob
+import hashlib
 import io
+import json
 import os
 import re
 import shutil
@@ -232,8 +234,17 @@ def shield_svg(dest):
     return _write_text(dest, body)
 
 
+# Case and spelling variants the exact "Bitwarden" replace left in locales:
+# BItwarden, BitWarden, Bitward, Bitwarde, bitwarden.firma.dk, and inflections.
+FUZZY_NAME = re.compile(r"(?i)(?<![A-Za-z0-9_@./])bit\s*ward\w*")
+LICENSE_LINE = re.compile(
+    r"GNU GENERAL PUBLIC|licensed under|not affiliated|not endorsed|corresponding source|source offer",
+    re.I,
+)
+
+
 def rewrite_visible(text: str) -> str:
-    """Replace Bitwarden/Vaultwarden names in user-visible text. Import-format labels stay."""
+    """Replace product-name variants in user-visible text. Import-format labels stay."""
     parts = []
     rest = text
     while rest:
@@ -250,23 +261,192 @@ def rewrite_visible(text: str) -> str:
 
 
 def _rename(text: str) -> str:
-    text = text.replace("Vaultwarden", "Komboe").replace("Bitwarden", "Komboe")
-    text = text.replace("vault.bitwarden.com", "komboe.com").replace("bitwarden.com", "komboe.com")
+    text = re.sub(r"(?i)©\s*bit\s*ward\w*(?:\s+inc\.?)?", "© Komboe", text)
+    text = re.sub(r"(?i)(https?://)bitwarden\.", r"\1komboe.", text)
+    text = re.sub(r"(?i)vault\.bitwarden\.com", "komboe.com", text)
+    text = re.sub(r"(?i)bitwarden\.\s*com", "komboe.com", text)
+    text = re.sub(r"(?i)bitwarden\.(?:eu|net|pw)\b", "komboe.com", text)
+    text = FUZZY_NAME.sub("Komboe", text)
+    text = text.replace("Vaultwarden", "Komboe")
     return text
 
 
 def rewrite_locale(text: str) -> str:
     out = []
     for line in text.splitlines(keepends=True):
-        if '"message":' in line and not re.search(
-            r"copyright|GNU GENERAL PUBLIC|licensed under|not affiliated|corresponding source",
-            line,
-            re.I,
-        ):
+        if ('"message":' in line or '"description":' in line) and not LICENSE_LINE.search(line):
             out.append(rewrite_visible(line))
         else:
             out.append(line)
     return "".join(out)
+
+
+UPSTREAM_SHIELD_FRAGMENTS = (
+    "M15.6599 3.17501",
+    "M18.7697 12.9217",
+    "M22.01 17.055V4.135",
+    "M75.971 26.765",
+)
+
+# Product wordmarks and the account-switcher shield. Filenames stay so imports keep working.
+LOCKUP_ICONS = {
+    "libs/assets/src/svg/svgs/admin-console.ts": (
+        'import { svg } from "../svg";\n\nconst AdminConsoleLogo = svg`\n{svg}\n`;\n\nexport default AdminConsoleLogo;\n'
+    ),
+    "libs/assets/src/svg/svgs/secrets-manager.ts": (
+        'import { svg } from "../svg";\n\nconst SecretsManagerLogo = svg`\n{svg}\n`;\n\nexport default SecretsManagerLogo;\n'
+    ),
+    "libs/assets/src/svg/svgs/secrets-manager-alt.ts": (
+        'import { svg } from "../svg";\n\nexport const SecretsManagerAlt = svg`\n{svg}\n`;\n'
+    ),
+    "libs/assets/src/svg/svgs/provider-portal.ts": (
+        'import { svg } from "../svg";\n\nconst ProviderPortalLogo = svg`\n{svg}\n`;\n\nexport default ProviderPortalLogo;\n'
+    ),
+    "libs/assets/src/svg/svgs/business-unit-portal.ts": (
+        'import { svg } from "../svg";\n\nconst BusinessUnitPortalLogo = svg`\n{svg}\n`;\n\nexport default BusinessUnitPortalLogo;\n'
+    ),
+    "libs/assets/src/svg/svgs/bitwarden-logo.icon.ts": (
+        'import { svg } from "../svg";\n\nexport const BitwardenLogo = svg`\n{svg}\n`;\n'
+    ),
+    "libs/assets/src/svg/svgs/bitwarden-logo-beta.icon.ts": (
+        'import { svg } from "../svg";\n\nexport const BitwardenLogoBeta = svg`\n{svg}\n`;\n'
+    ),
+    "libs/assets/src/svg/svgs/shield.ts": (
+        'import { svg } from "../svg";\n\nconst BitwardenShield = svg`\n{svg}\n`;\n\nexport { BitwardenShield };\n'
+    ),
+    "libs/assets/src/svg/svgs/bitwarden-icon.ts": (
+        'import { svg } from "../svg";\n\nexport const BitwardenIcon = svg`\n{svg}\n`;\n'
+    ),
+}
+
+
+def _lockup_svg():
+    text = open(os.path.join(KIT, "05-wordmark-lockups", "komboe-lockup-horizontal-navy.svg"), encoding="utf-8").read()
+    text = re.sub(r"<rect\b[^>]*/>", "", text)
+    text = text.replace('fill="#F0ECE7"', 'class="tw-fill-fg-nav"')
+    text = text.replace('fill="#0B1B33"', 'class="tw-fill-fg-nav"')
+    text = text.replace('fill="#070702"', 'class="tw-fill-fg-nav"')
+    return text.strip()
+
+
+def _mark_icon_svg():
+    mark = open(os.path.join(KIT, "01-master", "komboe-mark-mono-black.svg"), encoding="utf-8").read()
+    mark = mark.replace('fill="#070702"', 'class="tw-fill-fg-nav"')
+    mark = mark.replace('fill="#0B1B33"', 'class="tw-fill-fg-nav"')
+    inner = re.search(r"<svg[^>]*>(.*)</svg>", mark, re.S)
+    body = inner.group(1).strip() if inner else mark
+    return (
+        '<svg width="20" height="20" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">'
+        f"{body}</svg>"
+    )
+
+
+def _file_icon_svg():
+    """Neutral import glyph. Not a product mark."""
+    return (
+        '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">'
+        '<path class="tw-fill-fg-nav" fill-rule="evenodd" d="M6 2.5h7.2L18 7.3V21.5H6V2.5Zm7 1.6V8h3.9L13 4.1ZM8.2 11.2h7.6V12.7H8.2v-1.5Zm0 3h7.6v1.5H8.2v-1.5Z"/>'
+        "</svg>"
+    )
+
+
+def _remember_replaced(old_blobs):
+    """Record sha256 of upstream bytes that this pass is about to overwrite."""
+    deny_path = os.path.join(ROOT, "scripts", "branding_denylist.json")
+    data = json.loads(open(deny_path, encoding="utf-8").read())
+    hashes = set(data["sha256"])
+    sigs = list(data.get("shield_paths") or [])
+    for frag in UPSTREAM_SHIELD_FRAGMENTS:
+        if frag not in sigs:
+            sigs.append(frag)
+    for blob in old_blobs:
+        hashes.add(hashlib.sha256(blob).hexdigest())
+    data["sha256"] = sorted(hashes)
+    data["shield_paths"] = sigs
+    data["note"] = (
+        "Hashes of upstream Bitwarden artwork, including the illustrations and shared "
+        "wordmark SVGs still byte-identical after the first rebrand. Import-format labels are not images."
+    )
+    open(deny_path, "w", encoding="utf-8").write(json.dumps(data, indent=2) + "\n")
+
+
+def _illustration_paths():
+    patterns = (
+        "apps/*/src/images/new-experience/new-experience.*.png",
+        "apps/web/src/images/welcome-dialog-graphic.png",
+        "apps/web/src/images/sm-give-access.png",
+        "apps/browser/src/images/at-risk-password-carousel/*.png",
+    )
+    found = []
+    for pattern in patterns:
+        found.extend(glob.glob(os.path.join(CLIENTS, pattern)))
+    return found
+
+
+def replace_leftover_branding():
+    """Illustrations and shared wordmarks the first artwork pass did not touch."""
+    require_pil()
+    Image, _ = require_pil()
+    changed = []
+    old_blobs = []
+
+    def stage(path, new):
+        if isinstance(new, str):
+            new = new.encode("utf-8")
+        old = open(path, "rb").read() if os.path.isfile(path) else b""
+        if old == new:
+            return
+        if old:
+            old_blobs.append(old)
+        if _write_bytes(path, new):
+            changed.append(os.path.relpath(path, ROOT))
+
+    for path in _illustration_paths():
+        dark = ".dark." in os.path.basename(path)
+        size = Image.open(path).size
+        buf = io.BytesIO()
+        plate(size, dark=dark).save(buf, "PNG", optimize=True)
+        stage(path, buf.getvalue())
+    lockup = _lockup_svg()
+    mark = _mark_icon_svg()
+    for rel, template in LOCKUP_ICONS.items():
+        path = os.path.join(CLIENTS, rel)
+        svg = mark if rel.endswith("bitwarden-icon.ts") else lockup
+        stage(path, template.replace("{svg}", svg))
+    import_path = os.path.join(CLIENTS, "libs/assets/src/svg/svgs/import-bitwarden.icon.ts")
+    import_ts = (
+        'import { svg } from "../svg";\n\nexport const ImportBitwardenIcon = svg`\n'
+        + _file_icon_svg()
+        + "\n`;\n"
+    )
+    stage(import_path, import_ts)
+    if old_blobs:
+        _remember_replaced(old_blobs)
+    leftover = []
+    for dirpath, _, filenames in os.walk(os.path.join(CLIENTS, "libs", "assets")):
+        for name in filenames:
+            path = os.path.join(dirpath, name)
+            if not name.endswith((".ts", ".svg")) or os.path.getsize(path) > 5_000_000:
+                continue
+            blob = open(path, "rb").read()
+            if any(frag.encode("ascii") in blob for frag in UPSTREAM_SHIELD_FRAGMENTS):
+                leftover.append(os.path.relpath(path, ROOT))
+    if leftover:
+        sys.exit("upstream shield still in:\n" + "\n".join(leftover))
+    locale_roots = (
+        "apps/web/src/locales",
+        "apps/browser/src/_locales",
+        "apps/desktop/src/locales",
+        "apps/cli/src/locales",
+    )
+    for rel in locale_roots:
+        for path in glob.glob(os.path.join(CLIENTS, rel, "*", "messages.json")):
+            text = open(path, encoding="utf-8").read()
+            updated = rewrite_locale(text)
+            if updated != text:
+                _write_text(path, updated)
+                changed.append(os.path.relpath(path, ROOT))
+    return changed
 
 
 def apply_client_artwork(changed: list | None = None):
@@ -393,6 +573,7 @@ def apply_client_artwork(changed: list | None = None):
     note(shield, shield_svg(shield))
     replace_bwi_shield(os.path.join(C, "libs/angular/src/scss/bwicons/fonts"))
     changed.append("clients/upstream/libs/angular/src/scss/bwicons/fonts/bwi-font.*")
+    changed.extend(replace_leftover_branding())
     return changed
 
 

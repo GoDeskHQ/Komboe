@@ -851,7 +851,7 @@
   },
   "bitwardenSupport": {
     "message": "Komboe ஆதரவு",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "பதிவிறக்கவும்"
@@ -1211,7 +1211,7 @@
   },
   "addDomain": {
     "message": "டொமைனைச் சேர்",
-    "description": "'Domain' here refers to an internet domain name (e.g. 'bitwarden.com') and the message in whole described the act of putting a domain value into the context."
+    "description": "'Domain' here refers to an internet domain name (e.g. 'komboe.com') and the message in whole described the act of putting a domain value into the context."
   },
   "addedItem": {
     "message": "உருப்படி சேர்க்கப்பட்டது"
@@ -1970,7 +1970,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Komboe Authenticator போன்ற அங்கீகரிப்பு செயலியால் உருவாக்கப்பட்ட குறியீட்டை உள்ளிடவும்.",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Yubico OTP பாதுகாப்பு விசை"
@@ -3560,7 +3560,7 @@
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe பின்னர் கடவுச்சொல் நிர்வாகியில் கடவுச்சொல்லைப் புதுப்பிக்க உங்களைத் தூண்டும்.",
-    "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
+    "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
     "message": "பயனரை உள்நுழைவைப் புதுப்பிக்கும்படி தூண்டும் Komboe இன் அறிவிப்பின் விளக்கம்."
@@ -3617,11 +3617,11 @@
   },
   "send": {
     "message": "அனுப்பு",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDetails": {
     "message": "அனுப்பு விவரங்கள்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "உரை"
@@ -3634,7 +3634,7 @@
   },
   "allSends": {
     "message": "அனைத்து அனுப்புகளும்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "அதிகபட்ச அணுகல் எண்ணிக்கை எட்டப்பட்டது",
@@ -3654,7 +3654,7 @@
   },
   "copySendLink": {
     "message": "அனுப்பு இணைப்பை நகலெடு",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "கடவுச்சொல்லை அகற்று"
@@ -3667,11 +3667,11 @@
   },
   "deletedSend": {
     "message": "அனுப்பு நீக்கப்பட்டது",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "அனுப்பு இணைப்பு",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disabled": {
     "message": "முடக்கப்பட்டது"
@@ -3681,26 +3681,26 @@
   },
   "deleteSend": {
     "message": "அனுப்பு நீக்கு",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "இந்த அனுப்புதலை நீக்க விரும்புகிறீர்களா?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "இந்த அனுப்புதலை நிரந்தரமாக நீக்க விரும்புகிறீர்களா?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "அனுப்பு திருத்து",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "நீக்கப்பட்ட தேதி"
   },
   "deletionDateDescV2": {
     "message": "இந்த தேதியில் அனுப்புதல் நிரந்தரமாக நீக்கப்படும்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "காலாவதி தேதி"
@@ -3722,38 +3722,38 @@
   },
   "createSend": {
     "message": "புதிய அனுப்பு",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Send-ஐ உருவாக்கு",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "புதிய கடவுச்சொல்"
   },
   "sendDisabled": {
     "message": "அனுப்பு அகற்றப்பட்டது",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "ஒரு நிறுவன கொள்கை காரணமாக, நீங்கள் ஏற்கனவே உள்ள அனுப்புதலை மட்டுமே நீக்க முடியும்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "அனுப்பு உருவாக்கப்பட்டது",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSendSuccessfully": {
     "message": "அனுப்புதல் வெற்றிகரமாக உருவாக்கப்பட்டது!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHoursSingle": {
     "message": "அடுத்த 1 மணிநேரத்திற்கு இணைப்பைக் கொண்ட எவரும் அனுப்புதலை அணுகலாம்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHours": {
     "message": "அடுத்த $HOURS$ மணிநேரத்திற்கு இணைப்பைக் கொண்ட எவரும் அனுப்புதலை அணுகலாம்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -3763,11 +3763,11 @@
   },
   "sendExpiresInDaysSingle": {
     "message": "அடுத்த 1 நாளுக்கு இணைப்பைக் கொண்ட எவரும் அனுப்புதலை அணுகலாம்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInDays": {
     "message": "அடுத்த $DAYS$ நாட்களுக்கு இணைப்பைக் கொண்ட எவரும் அனுப்புதலை அணுகலாம்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -3786,7 +3786,7 @@
   },
   "sendCreatedDescriptionV2": {
     "message": "இந்த Send இணைப்பை நகலெடுத்துப் பகிரவும். அடுத்த $TIME$-க்கு இணைப்பு உள்ள எவருக்கும் இந்த Send கிடைக்கும்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3796,7 +3796,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "இந்த Send இணைப்பை நகலெடுத்துப் பகிரவும். அடுத்த $TIME$-க்கு இணைப்பு மற்றும் நீங்கள் அமைத்த கடவுச்சொல் உள்ள எவருக்கும் இந்த Send கிடைக்கும்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3806,7 +3806,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "இந்த Send இணைப்பை நகலெடுத்துப் பகிரவும். அடுத்த $TIME$-க்கு நீங்கள் குறிப்பிட்ட நபர்களால் இதைப் பார்க்க முடியும்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3816,11 +3816,11 @@
   },
   "sendLinkCopied": {
     "message": "அனுப்பு இணைப்பு நகலெடுக்கப்பட்டது",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "அனுப்பு சேமிக்கப்பட்டது",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "popOut": {
     "message": "வெளியேற்றவும்"
@@ -4775,11 +4775,11 @@
   },
   "sendsTitleNoItems": {
     "message": "உணர்திறன் வாய்ந்த தகவல்களைப் பாதுகாப்பாக அனுப்பவும்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "கோப்புகள் மற்றும் தரவை யாருடனும், எந்த தளத்திலும் பாதுகாப்பாகப் பகிரவும். உங்கள் தகவல் எண்ட்-டு-எண்ட் என்க்ரிப்ட் செய்யப்பட்டிருக்கும், அதே நேரத்தில் வெளிப்பாட்டைக் கட்டுப்படுத்தும்.",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "inputRequired": {
     "message": "உள்ளீடு தேவை."
@@ -6138,7 +6138,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "URI மேட்ச் டிடெக்‌ஷன் என்பது Komboe தன்னியக்க நிரப்புதல் பரிந்துரைகளை எப்படி அடையாளம் காண்கிறது என்பதைக் குறிக்கிறது.",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"Regular expression\" என்பது ஒரு மேம்பட்ட விருப்பத்தேர்வு, இதில் சான்றுகள் அம்பலப்படுத்தப்படும் ஆபத்து அதிகம் உள்ளது.",
@@ -6194,11 +6194,11 @@
   },
   "defaultPasswordManagerCalloutTitle": {
     "message": "உங்கள் தானியங்கு நிரப்புதல் அனுபவத்தை சிறந்ததாக்குங்கள்",
-    "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
+    "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
     "message": "Komboe-ஐ உங்கள் இயல்புநிலை கடவுச்சொல் மேலாளராக மாற்ற $BROWSER$ உலாவி அனுமதியை வழங்குமாறு கேட்கப்படுவீர்கள்.",
-    "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
+    "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
         "content": "$1",
@@ -6223,7 +6223,7 @@
   },
   "defaultPasswordManagerPromptTitleV2": {
     "message": "Komboe-ஐ உங்கள் இயல்புநிலை கடவுச்சொல் மேலாளராக அமைக்கவும்",
-    "description": "Label for the setting to make Bitwarden the default password manager"
+    "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
     "message": "முரண்பாடுகளைத் தவிர்க்க உலாவி தானியங்கு நிரப்புதல் அமைப்புகளை முடக்கவும்.",
@@ -7097,15 +7097,15 @@
   },
   "fileSends": {
     "message": "கோப்பு அனுப்புகள்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textSends": {
     "message": "உரை அனுப்புகள்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "itemSends": {
     "message": "உருப்படி Sends",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "accountActions": {
     "message": "கணக்கு செயல்கள்"
@@ -7246,7 +7246,7 @@
   },
   "saveToBitwarden": {
     "message": "Komboe இல் சேமி",
-    "description": "Confirmation message for saving a login to Bitwarden"
+    "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
     "message": "இடைவெளி",
@@ -7933,7 +7933,7 @@
   },
   "sendPasswordHelperText": {
     "message": "இந்த Send-ஐப் பார்க்க தனிநபர்கள் கடவுச்சொல்லை உள்ளிட வேண்டும்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "userVerificationFailed": {
     "message": "பயனர் சரிபார்ப்பு தோல்வியடைந்தது."
@@ -8089,7 +8089,7 @@
   },
   "sendCreated": {
     "message": "Send உருவாக்கப்பட்டது",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "உள்ளீடு எண்களாக மட்டுமே இருக்க வேண்டும்"
@@ -8124,26 +8124,26 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "உங்கள் நிறுவனத்தின் Send கொள்கைக்கு இணங்கவில்லை",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "இந்த Send-ஐத் திருத்த, ஒரு நகலை உருவாக்கவும். நிர்ணயிக்கப்பட்ட நீக்கல் தேதியில் இந்த Send காலாவதியாகலாம் என்றால், எந்த நடவடிக்கையும் தேவையில்லை",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "ஒரு நகலை உருவாக்கவும்"
   },
   "orgDoesNotAllowTextSends": {
     "message": "உங்கள் நிறுவனத்திற்கு உரை Send-கள் அனுமதிக்கப்படவில்லை",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "உங்கள் நிறுவனத்திற்கு கோப்பு Send-கள் அனுமதிக்கப்படவில்லை",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "இந்த Send நிர்ணயிக்கப்பட்ட நீக்கல் தேதியில் தானாகவே காலாவதியாகும்",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "errorImportingMyItemsMultiCollection": {
     "message": "பல தொகுப்புகளின் பகுதியாக உள்ள உருப்படிகளை 'எனது உருப்படிகள்' என்பதில் இறக்குமதி செய்ய முடியாது"

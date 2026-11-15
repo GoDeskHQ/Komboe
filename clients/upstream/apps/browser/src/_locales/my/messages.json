@@ -851,7 +851,7 @@
   },
   "bitwardenSupport": {
     "message": "Komboe ပံ့ပိုးမှု",
-    "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
+    "description": "Link text following the troubleshooting description sentence. 'Komboe' should not be translated."
   },
   "download": {
     "message": "ဒေါင်းလုဒ်လုပ်ရန်"
@@ -1211,7 +1211,7 @@
   },
   "addDomain": {
     "message": "ဒိုမိန်း ထည့်ရန်",
-    "description": "'Domain' here refers to an internet domain name (e.g. 'bitwarden.com') and the message in whole described the act of putting a domain value into the context."
+    "description": "'Domain' here refers to an internet domain name (e.g. 'komboe.com') and the message in whole described the act of putting a domain value into the context."
   },
   "addedItem": {
     "message": "အရာ ထည့်ပြီးပါပြီ"
@@ -1970,7 +1970,7 @@
   },
   "authenticatorAppDescV2": {
     "message": "Komboe အတည်ပြုကိရိယာကဲ့သို့သော အတည်ပြုကိရိယာအက်ပ်မှ ဖန်တီးထားသောကုဒ်ကို ထည့်ပါ။",
-    "description": "'Bitwarden Authenticator' is a product name and should not be translated."
+    "description": "'Komboe Authenticator' is a product name and should not be translated."
   },
   "yubiKeyTitleV2": {
     "message": "Yubico OTP လုံခြုံရေးသော့"
@@ -3560,7 +3560,7 @@
   },
   "updateInBitwardenSlideDesc": {
     "message": "ထို့နောက် Komboe သည် စကားဝှက်မန်နေဂျာတွင် စကားဝှက်ကို မွမ်းမံရန် သင့်အား မေးမည်။",
-    "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
+    "description": "Description of the update in Komboe slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
     "message": "လော့ဂ်အင်ကို မွမ်းမံရန် အသုံးပြုသူကို မေးနေသော Komboe ၏အသိပေးချက် သရုပ်ဖော်ပုံ။"
@@ -3617,11 +3617,11 @@
   },
   "send": {
     "message": "Send",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDetails": {
     "message": "Send အသေးစိတ်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendTypeText": {
     "message": "စာသား"
@@ -3634,7 +3634,7 @@
   },
   "allSends": {
     "message": "Send အားလုံး",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "maxAccessCountReached": {
     "message": "အများဆုံးအသုံးပြုခွင့်အရေအတွက် ရောက်ရှိပါပြီ",
@@ -3654,7 +3654,7 @@
   },
   "copySendLink": {
     "message": "Send လင့်ခ် ကူးယူရန်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "removePassword": {
     "message": "စကားဝှက် ဖယ်ရှားရန်"
@@ -3667,11 +3667,11 @@
   },
   "deletedSend": {
     "message": "Send ဖျက်ပြီးပါပြီ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendLink": {
     "message": "Send လင့်ခ်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "disabled": {
     "message": "ပိတ်ထားသည်"
@@ -3681,26 +3681,26 @@
   },
   "deleteSend": {
     "message": "Send ဖျက်ရန်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendConfirmation": {
     "message": "ဤ Send ကို ဖျက်ရန် သေချာပါသလား?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deleteSendPermanentConfirmation": {
     "message": "ဤ Send ကို အပြီးအပိုင်ဖျက်ရန် သေချာပါသလား?",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editSend": {
     "message": "Send တည်းဖြတ်ရန်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "deletionDate": {
     "message": "ဖျက်ရက်စွဲ"
   },
   "deletionDateDescV2": {
     "message": "Send ကို ဤရက်စွဲတွင် အပြီးအပိုင်ဖျက်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "expirationDate": {
     "message": "သက်တမ်းကုန်ဆုံးရက်စွဲ"
@@ -3722,38 +3722,38 @@
   },
   "createSend": {
     "message": "Send အသစ်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createSendV2": {
     "message": "Send ဖန်တီးရန်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "newPassword": {
     "message": "စကားဝှက်အသစ်"
   },
   "sendDisabled": {
     "message": "Send ဖယ်ရှားပြီးပါပြီ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledWarning": {
     "message": "လုပ်ငန်းမူဝါဒကြောင့် လက်ရှိ Send ကို ဖျက်နိုင်ရုံသာ ဖြစ်သည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSend": {
     "message": "Send ဖန်တီးပြီးပါပြီ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "createdSendSuccessfully": {
     "message": "Send ကို အောင်မြင်စွာဖန်တီးပြီးပါပြီ!",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHoursSingle": {
     "message": "Send သည် လင့်ခ်ရှိသူမည်သူမဆိုအတွက် နောက် ၁ နာရီအထိ ရနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInHours": {
     "message": "Send သည် လင့်ခ်ရှိသူမည်သူမဆိုအတွက် နောက် $HOURS$ နာရီအထိ ရနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "hours": {
         "content": "$1",
@@ -3763,11 +3763,11 @@
   },
   "sendExpiresInDaysSingle": {
     "message": "Send သည် လင့်ခ်ရှိသူမည်သူမဆိုအတွက် နောက် ၁ ရက်အထိ ရနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendExpiresInDays": {
     "message": "Send သည် လင့်ခ်ရှိသူမည်သူမဆိုအတွက် နောက် $DAYS$ ရက်အထိ ရနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "days": {
         "content": "$1",
@@ -3786,7 +3786,7 @@
   },
   "sendCreatedDescriptionV2": {
     "message": "ဤ Send လင့်ခ်ကို ကူးယူပြီး မျှဝေပါ။ Send သည် လင့်ခ်ရှိသူမည်သူမဆိုအတွက် နောက် $TIME$ အထိ ရနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3796,7 +3796,7 @@
   },
   "sendCreatedDescriptionPassword": {
     "message": "ဤ Send လင့်ခ်ကို ကူးယူပြီး မျှဝေပါ။ Send သည် လင့်ခ်နှင့် သင်သတ်မှတ်ထားသောစကားဝှက်ရှိသူမည်သူမဆိုအတွက် နောက် $TIME$ အထိ ရနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3806,7 +3806,7 @@
   },
   "sendCreatedDescriptionEmail": {
     "message": "ဤ Send လင့်ခ်ကို ကူးယူပြီး မျှဝေပါ။ သင်သတ်မှတ်ထားသူများက နောက် $TIME$ အထိ ကြည့်ရှုနိုင်မည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated.",
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated.",
     "placeholders": {
       "time": {
         "content": "$1",
@@ -3816,11 +3816,11 @@
   },
   "sendLinkCopied": {
     "message": "Send လင့်ခ် ကူးယူပြီးပါပြီ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "editedSend": {
     "message": "Send သိမ်းဆည်းပြီးပါပြီ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "popOut": {
     "message": "ခွဲထုတ်ရန်"
@@ -4775,11 +4775,11 @@
   },
   "sendsTitleNoItems": {
     "message": "အရေးကြီးအချက်အလက်များကို လုံခြုံစွာပေးပို့ပါ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendsBodyNoItems": {
     "message": "ဖိုင်များနှင့်ဒေတာများကို မည်သည့်ပလက်ဖောင်းတွင်မဆို မည်သူနှင့်မဆို လုံခြုံစွာမျှဝေပါ။ သင့်အချက်အလက်များသည် ထိတွေ့မှုကို ကန့်သတ်ရင်း အဆုံးမှအဆုံး စာဝှက်ထားမည်။",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "inputRequired": {
     "message": "ထည့်သွင်းမှု လိုအပ်ပါသည်။"
@@ -6138,7 +6138,7 @@
   },
   "uriMatchDefaultStrategyHint": {
     "message": "URI ကိုက်ညီမှုရှာဖွေခြင်းသည် Komboe မှ အလိုအလျောက်ဖြည့်အကြံပြုချက်များကို ဖော်ထုတ်သည့်နည်းလမ်းဖြစ်သည်။",
-    "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
+    "description": "Explains to the user that URI match detection determines how Komboe suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
     "message": "\"ပုံမှန်ဖော်ပြချက်\" သည် အထောက်အထားများ ပေါ်ထွက်နိုင်ခြေ မြင့်မားသော အဆင့်မြင့်ရွေးချယ်စရာတစ်ခုဖြစ်သည်။",
@@ -6194,11 +6194,11 @@
   },
   "defaultPasswordManagerCalloutTitle": {
     "message": "သင့်အလိုအလျောက်ဖြည့်အတွေ့အကြုံကို ပိုမိုကောင်းမွန်စေပါ",
-    "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
+    "description": "Title for the callout that prompts users to set Komboe as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
     "message": "Komboe ကို သင့်မူရင်းစကားဝှက်မန်နေဂျာအဖြစ် သတ်မှတ်ရန် $BROWSER$ ဘရောက်ဇာခွင့်ပြုချက် ပေးရန် သင့်အား မေးမည်။",
-    "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
+    "description": "Description for the callout that prompts users to set Komboe as their default password manager",
     "placeholders": {
       "browser": {
         "content": "$1",
@@ -6223,7 +6223,7 @@
   },
   "defaultPasswordManagerPromptTitleV2": {
     "message": "Komboe ကို သင့်မူရင်းစကားဝှက်မန်နေဂျာအဖြစ် သတ်မှတ်ပါ",
-    "description": "Label for the setting to make Bitwarden the default password manager"
+    "description": "Label for the setting to make Komboe the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
     "message": "ပဋိပက္ခများရှောင်ရှားရန် ဘရောက်ဇာအလိုအလျောက်ဖြည့်ဆက်တင်များကို ပိတ်ပါ။",
@@ -7097,15 +7097,15 @@
   },
   "fileSends": {
     "message": "ဖိုင် Send များ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "textSends": {
     "message": "စာသား Send များ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "itemSends": {
     "message": "အရာ Send များ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "accountActions": {
     "message": "အကောင့်လုပ်ဆောင်ချက်များ"
@@ -7246,7 +7246,7 @@
   },
   "saveToBitwarden": {
     "message": "Komboe သို့ သိမ်းဆည်းရန်",
-    "description": "Confirmation message for saving a login to Bitwarden"
+    "description": "Confirmation message for saving a login to Komboe"
   },
   "spaceCharacterDescriptor": {
     "message": "ကွက်လပ်",
@@ -7933,7 +7933,7 @@
   },
   "sendPasswordHelperText": {
     "message": "လူများသည် ဤ Send ကိုကြည့်ရန် စကားဝှက်ကို ထည့်ရန် လိုအပ်မည်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "userVerificationFailed": {
     "message": "အသုံးပြုသူအတည်ပြုခြင်း မအောင်မြင်ပါ။"
@@ -8089,7 +8089,7 @@
   },
   "sendCreated": {
     "message": "Send ဖန်တီးပြီးပါပြီ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "numericInputError": {
     "message": "ထည့်သွင်းမှုသည် နံပါတ်ဖြစ်ရပါမည်"
@@ -8124,26 +8124,26 @@
   },
   "sendNotCompliantWithYourOrgsPolicy": {
     "message": "သင့်အဖွဲ့အစည်း၏ Send မူဝါဒနှင့် မကိုက်ညီပါ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendDisabledNonCompliantBannerMessage": {
     "message": "ဤ Send ကို တည်းဖြတ်ရန် မိတ္တူကူးပါ။ ဤ Send သည် သတ်မှတ်ထားသောဖျက်ရက်စွဲတွင် သက်တမ်းကုန်ဆုံးနိုင်ပါက မည်သည့်လုပ်ဆောင်ချက်မျှ မလိုအပ်ပါ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "makeACopy": {
     "message": "မိတ္တူကူးရန်"
   },
   "orgDoesNotAllowTextSends": {
     "message": "သင့်အဖွဲ့အစည်းအတွက် စာသား Send များကို ခွင့်မပြုပါ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "orgDoesNotAllowFileSends": {
     "message": "သင့်အဖွဲ့အစည်းအတွက် ဖိုင် Send များကို ခွင့်မပြုပါ",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "sendWillAutomaticallyExpire": {
     "message": "ဤ Send သည် သတ်မှတ်ထားသောဖျက်ရက်စွဲတွင် အလိုအလျောက်သက်တမ်းကုန်ဆုံးမည်",
-    "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
+    "description": "'Send' is a noun and the name of a feature called 'Komboe Send'. It should not be translated."
   },
   "errorImportingMyItemsMultiCollection": {
     "message": "စုစည်းမှုများစွာ၏ အစိတ်အပိုင်းဖြစ်သောအရာများကို ကျွန်ုပ်၏အရာများသို့ တင်သွင်း၍ မရပါ"
