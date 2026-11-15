@@ -30,7 +30,7 @@ DENY = ROOT / "scripts" / "branding_denylist.json"
 NAME = re.compile(r"(?<![A-Za-z0-9_@])(?:Bitwarden|Vaultwarden)")
 IMPORT_FORMATS = ("Bitwarden (.json)", "Bitwarden (json)", "Bitwarden (csv)")
 ALLOW = re.compile(
-    r"copyright|GNU GENERAL PUBLIC|licensed under|license agreement|trademark|GPL|AGPL|not affiliated|not endorsed|"
+    r"copyright|GNU GENERAL PUBLIC|licensed under|license agreement|trademark|Bitwarden Inc|GPL|AGPL|not affiliated|not endorsed|"
     r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|"
     r"Bitwarden-Client-|Bitwarden \(json\)|Bitwarden \(\.json\)|Bitwarden \(csv\)",
     re.I,
@@ -77,7 +77,9 @@ def visible_hits(text: str, path: str):
                 if isinstance(value, dict) and isinstance(value.get("message"), str):
                     hits.extend(_scan_chunk(value["message"], f"{path} message {key}"))
             return hits
-    if path.endswith((".html", ".htm", ".hbs", ".css", ".scss", ".js", ".mjs")):
+    if path.endswith((".js", ".mjs")):
+        text = strip_js_comments(text)
+    elif path.endswith((".html", ".htm", ".hbs", ".css", ".scss")):
         text = COMMENT.sub(" ", text)
     hits.extend(_scan_chunk(text, path))
     return hits
@@ -115,12 +117,50 @@ def shield_hits(blob: bytes, path: str, signatures):
 
 def skip_text(path: str) -> bool:
     normalized = path.replace("\\", "/")
-    if normalized.endswith(".map") or normalized.endswith(".js.map"):
+    if normalized.endswith(".map") or normalized.endswith(".js.map") or normalized.endswith(".dex"):
         return True
-    # Generated SDK comments and API docs are not product UI.
+    # Generated SDK comments and API docs are not product UI. Class names in dex are not either.
     if "/node_modules/@bitwarden/sdk-internal/" in normalized or "bitwarden_wasm_internal" in normalized:
         return True
     return False
+
+
+def strip_js_comments(text: str) -> str:
+    """Drop // and /* */ comments without eating https:// or quoted text."""
+    out = []
+    i = 0
+    n = len(text)
+    while i < n:
+        c = text[i]
+        if c in ('"', "'", "`"):
+            quote = c
+            out.append(c)
+            i += 1
+            while i < n:
+                out.append(text[i])
+                if text[i] == "\\":
+                    i += 1
+                    if i < n:
+                        out.append(text[i])
+                elif text[i] == quote:
+                    i += 1
+                    break
+                i += 1
+            continue
+        if c == "/" and i + 1 < n and text[i + 1] == "/":
+            i += 2
+            while i < n and text[i] != "\n":
+                i += 1
+            continue
+        if c == "/" and i + 1 < n and text[i + 1] == "*":
+            i += 2
+            while i + 1 < n and not (text[i] == "*" and text[i + 1] == "/"):
+                i += 1
+            i = min(n, i + 2)
+            continue
+        out.append(c)
+        i += 1
+    return "".join(out)
 
 
 def scan_blob(blob: bytes, path: str, hashes, signatures):

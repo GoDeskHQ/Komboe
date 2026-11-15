@@ -265,7 +265,7 @@ describe("NativeMessagingBackground", () => {
           expect(sut.connected).toBe(true);
           expect((sut as any).connecting).toBe(false);
           expect(logService.info).toHaveBeenCalledWith(
-            "[Native Messaging IPC] Connection to Bitwarden Desktop app established!",
+            "[Native Messaging IPC] Connection to Komboe Desktop app established!",
           );
         });
       });
@@ -275,7 +275,7 @@ describe("NativeMessagingBackground", () => {
           await messageListener({ command: "disconnected" });
 
           expect(logService.info).toHaveBeenCalledWith(
-            "[Native Messaging IPC] Disconnected from Bitwarden Desktop app.",
+            "[Native Messaging IPC] Disconnected from Komboe Desktop app.",
           );
         });
 
@@ -542,7 +542,7 @@ describe("NativeMessagingBackground", () => {
           await expect(sut.send({ command: "test" })).resolves.toBeUndefined();
 
           expect(logService.info).toHaveBeenCalledWith(
-            "[Native Messaging IPC] Disconnected from Bitwarden Desktop app because of the native port disconnecting.",
+            "[Native Messaging IPC] Disconnected from Komboe Desktop app because of the native port disconnecting.",
           );
           expectDisconnectedState();
           expect(mockPort.disconnect).toHaveBeenCalled();

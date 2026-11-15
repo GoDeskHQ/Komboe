@@ -41,7 +41,7 @@ type ConnectionState =
   | { kind: "connected"; port: NativePort };
 
 /**
- * Transport for communicating with the Bitwarden Desktop App over native messaging.
+ * Transport for communicating with the Komboe Desktop App over native messaging.
  *
  * Owns the native messaging port lifecycle, including the discover handshake and automatic
  * reconnection when the connection fails or is lost. Handles the `DesktopMain` and
@@ -117,7 +117,7 @@ export class DesktopIpcTransport {
         if (isProxyConnectedMessage(ipcMessage)) {
           this.setState({ kind: "connected", port });
           resolveReady();
-          this.logService.info("[IPC] Connected to Bitwarden Desktop App Transport");
+          this.logService.info("[IPC] Connected to Komboe Desktop App Transport");
         }
 
         if (!isIpcMessage(ipcMessage) && !isForwardedIpcMessage(ipcMessage)) {
@@ -138,7 +138,7 @@ export class DesktopIpcTransport {
       // disconnect during the handshake window (e.g. the desktop app closing) is still handled.
       port.onDisconnect.addListener(() => {
         if (this.currentState().kind === "connected") {
-          this.logService.warning("[IPC] Disconnected from Bitwarden Desktop App Transport");
+          this.logService.warning("[IPC] Disconnected from Komboe Desktop App Transport");
         }
 
         this.setState({ kind: "disconnected" });
@@ -172,13 +172,13 @@ export class DesktopIpcTransport {
           AbortSignal.timeout(DISCOVER_MESSAGE_TIMEOUT_MS),
         );
         this.logService.info(
-          `[IPC] Connected to Bitwarden Desktop App with version ${version.version}`,
+          `[IPC] Connected to Komboe Desktop App with version ${version.version}`,
         );
       } catch (e) {
-        this.logService.error("[IPC] Failed to handshake with Bitwarden Desktop App", e);
+        this.logService.error("[IPC] Failed to handshake with Komboe Desktop App", e);
       }
     } catch (e) {
-      this.logService.error("[IPC] Failed to connect to Bitwarden Desktop App", e);
+      this.logService.error("[IPC] Failed to connect to Komboe Desktop App", e);
       // Explicitly disconnect the port to avoid leaking the native port and its spawned
       // desktop_proxy process when the handshake fails (e.g. the desktop app is unreachable).
       activePort?.disconnect();
