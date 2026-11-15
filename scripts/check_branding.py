@@ -201,6 +201,31 @@ def resource_key(text: str, start: int, end: int, where: str) -> bool:
     return re.search(r"(?<![_\w])[^\W\d_]{3,}(?=\s)", before) is None
 
 
+_HOST = re.compile(r"(?i)(?<![A-Za-z0-9-])(?:https?://)?(?:[a-z0-9-]+\.)*bitwarden\.com\b")
+_PROTOCOL_LABELS = {"api", "identity", "vault", "icons", "events", "notifications", "send", "gw", "scim"}
+
+
+def host_hits(text: str, where: str):
+    """bitwarden.com in any host. Isolated protocol URLs stay; prose and www do not."""
+    hits = []
+    for match in _HOST.finditer(text):
+        host = re.sub(r"(?i)^https?://", "", match.group(0))
+        labels = [part.lower() for part in host.split(".") if part.lower() not in {"bitwarden", "com"}]
+        before = text[max(0, match.start() - 60):match.start()]
+        after = text[match.end():match.end() + 40]
+        prose = bool(re.search(r"[^\W\d_]{2,}\s+$", before)) or bool(re.search(r"^\s+[^\W\d_]{2,}", after))
+        protocol = len(labels) == 1 and labels[0] in _PROTOCOL_LABELS and not prose
+        bare = len(labels) == 0 and not prose
+        if protocol or bare:
+            continue
+        window = text[max(0, match.start() - 80):match.end() + 80]
+        if allowed(window):
+            continue
+        snippet = " ".join(window.split())[:180]
+        hits.append(f"{where}: {snippet}")
+    return hits
+
+
 def _scan_chunk(text: str, where: str):
     hits = []
     for start, end in product_spans(text):
@@ -216,6 +241,7 @@ def _scan_chunk(text: str, where: str):
             continue
         snippet = " ".join(window.split())[:180]
         hits.append(f"{where}: {snippet}")
+    hits.extend(host_hits(text, where))
     if re.search(r"(?i)bitwarden_export", text):
         hits.append(f"{where}: bitwarden_export")
     if re.search(
@@ -330,6 +356,12 @@ def walk_source():
             for name in filenames:
                 path = Path(dirpath) / name
                 ext = path.suffix.lower()
+                if ext == ".ts" and not (name.endswith(".icon.ts") or name == "shield.ts"):
+                    blob = path.read_bytes()
+                    rel = str(path.relative_to(ROOT))
+                    if any(sig.encode() in blob for sig in signatures):
+                        hits.extend(shield_hits(blob, rel, signatures))
+                    continue
                 icon_ts = name.endswith(".icon.ts") or name in {
                     "admin-console.ts", "secrets-manager.ts", "secrets-manager-alt.ts",
                     "provider-portal.ts", "business-unit-portal.ts", "shield.ts", "bitwarden-icon.ts",

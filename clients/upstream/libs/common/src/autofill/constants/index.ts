@@ -191,7 +191,7 @@ export const SHADOW_ROOT_CANDIDATE_NODE_NAMES = Object.freeze(
  * value to LEGACY_DEFAULT_FILL_ASSIST_RULES_URLS below — otherwise existing
  * "Default" policies silently flip to "Custom" pointing at the retired URL.
  */
-export const DEFAULT_FILL_ASSIST_RULES_URL = "https://fillassist.bitwarden.com";
+export const DEFAULT_FILL_ASSIST_RULES_URL = "https://komboe.com/fill-assist";
 
 /**
  * Historical values of DEFAULT_FILL_ASSIST_RULES_URL. Policies saved before

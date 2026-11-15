@@ -1,4 +1,5 @@
-// Komboe legal notice (GPL/AGPL attribution). Text approved by legal; do not edit without review.
+// FLAG FOR MARCUS: required GPL-3.0 / AGPL-3.0 attribution on the next line.
+// Leave that sentence as written. Do not drop the upstream copyright names without Marcus's review.
 
 // prettier-ignore
 // Single literal on purpose so the exact text is greppable in shipped bundles.

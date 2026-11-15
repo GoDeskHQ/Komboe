@@ -816,7 +816,7 @@ describe("DefaultDomainSettingsService", () => {
   });
 
   describe("effectiveFillAssistRulesUrl$", () => {
-    const DEFAULT_URL_TRAILING = "https://fillassist.bitwarden.com/";
+    const DEFAULT_URL_TRAILING = "https://komboe.com/fill-assist/";
 
     beforeEach(() => {
       accountService.activeAccountSubject.next({ id: mockUserId } as any);
@@ -860,7 +860,7 @@ describe("DefaultDomainSettingsService", () => {
       // the server config — otherwise self-hosted admins couldn't override.
       fillAssistPolicyMock$.next([
         makeFillAssistPolicy({
-          rulesUrl: "https://fillassist.bitwarden.com",
+          rulesUrl: "https://komboe.com/fill-assist",
         }),
       ]);
       serverConfigMock$.next({
@@ -877,7 +877,7 @@ describe("DefaultDomainSettingsService", () => {
       // URL with a slash must not shadow server config.
       fillAssistPolicyMock$.next([
         makeFillAssistPolicy({
-          rulesUrl: "https://fillassist.bitwarden.com/",
+          rulesUrl: "https://komboe.com/fill-assist/",
         }),
       ]);
       serverConfigMock$.next({
