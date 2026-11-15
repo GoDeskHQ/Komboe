@@ -25,7 +25,7 @@ import { FillAssistPolicy, FillAssistPolicyComponent, RuleSource } from "./fill-
 
 const ORG_ID = "org1" as OrganizationId;
 const USER_ID = "user1" as UserId;
-const DEFAULT_URL = "https://fillassist.bitwarden.com";
+const DEFAULT_URL = "https://komboe.com/fill-assist";
 // A historical value of DEFAULT_FILL_ASSIST_RULES_URL. Kept in sync with
 // LEGACY_DEFAULT_FILL_ASSIST_RULES_URLS in libs/common/src/autofill/constants.
 const LEGACY_GITHUB_URL = "https://github.com/GoDeskio/Komboe/blob/main/docs/BROWSER-EXTENSIONS.md";

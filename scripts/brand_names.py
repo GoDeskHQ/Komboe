@@ -20,12 +20,13 @@ TRANSLITERATION_PATTERNS = (
     r"ಬಿಟ್\u200c?ವ(?:ಾ)?ರ್ಡ[\u0c80-\u0cff\u200c]{0,10}(?:\.ಕಾಮ್|\.com)?",
     # Tamil. The stem stops before the pulli so உக்கு still matches.
     r"பிட்வார்டன[\u0b80-\u0bff]{0,6}",
-    # Malayalam, including ZWNJ inside the word.
-    r"ബിറ്റ്\u200c?വ[\u0d00-\u0d7f\u200c]{0,16}",
+    # Malayalam, including a space: ബിറ്റ് വാർഡൻ.
+    r"ബിറ്റ്[\u200c\s]*വ[\u0d00-\u0d7f\u200c\s]{0,16}",
     # Sinhala, including a latin .com host.
     r"බිට්ව(?:ර්ඩන්|ාඩන්|ොන්)(?:\.com)?",
-    # Arabic and Persian.
+    # Arabic and Persian, including the spaced form بت وردين.
     r"بيتواردن؟?",
+    r"بت[\s\u200c]*وردين",
     r"بیت\u200c?واردن",
 )
 
@@ -40,8 +41,10 @@ NAME_NEEDLES = (
     "ಬಿಟ್",
     "பிட்வார்டன்",
     "ബിറ്റ്",
+    "ബിറ്റ് വാ",
     "බිට්ව",
     "بيتواردن",
+    "بت وردين",
     "بیت",
     "Bitwaden",
     "Birwarden",

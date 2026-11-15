@@ -18,6 +18,7 @@ jobs:
           python3 tests/features/downloads_manifest.py
           python3 tests/features/smtp_from.py
           python3 tests/features/android_self_update.py
+          python3 tests/features/branding_audit.py
           python3 tests/features/backup_restore.py
           python3 tests/features/self_update.py
           python3 tests/features/coolify_pull.py

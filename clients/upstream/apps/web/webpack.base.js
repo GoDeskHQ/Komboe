@@ -320,7 +320,6 @@ module.exports.buildConfig = function buildConfig(params) {
                     https://logos.haveibeenpwned.com
                     ;media-src
                     'self'
-                    https://assets.bitwarden.com
                     ;child-src
                     'self'
                     https://js.stripe.com

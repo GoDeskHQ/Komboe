@@ -128,7 +128,8 @@
     "M18.7697 12.9217",
     "M22.01 17.055V4.135",
     "M75.971 26.765",
-    "M13.469.2A.647.647"
+    "M13.469.2A.647.647",
+    "M192.19 20.75a.5.5"
   ],
   "note": "Hashes of upstream Bitwarden artwork, including toolbar icons, the download QR, the Secrets Manager screenshot, illustrations, and shared wordmark SVGs. Import-format labels are not images."
 }

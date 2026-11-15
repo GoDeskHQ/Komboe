@@ -301,10 +301,16 @@ def _rename(text: str) -> str:
     from brand_names import fuzzy_spans, transliteration_spans
 
     text = re.sub(r"(?i)©\s*bit\s*ward(?:en)?(?:\s+inc\.?)?", "© Komboe", text)
-    # Example hosts in user-facing copy. Protocol hosts (api., vault., identity.) are not this shape.
-    text = re.sub(r"(?i)(https?://)bitwarden\.", r"\1komboe.", text)
-    # Bare bitwarden.com in copy. Leave api/identity/vault.bitwarden.com alone.
-    text = re.sub(r"(?i)(?<![A-Za-z0-9.])bitwarden\.\s*com", "komboe.com", text)
+    # User-facing hosts. www. and vault. are instructions, not the API. api/identity/icons stay.
+    def _public_host(match: re.Match) -> str:
+        scheme = match.group(1) or ""
+        return f"{scheme}komboe.com"
+
+    text = re.sub(
+        r"(?i)(?<![A-Za-z0-9.-])(https?://)?(?:www\.|vault\.)?bitwarden\.com",
+        _public_host,
+        text,
+    )
     text = re.sub(r"(?i)bitwarden_export", "komboe_export", text)
     text = _span_replace(text, transliteration_spans(text))
     pieces = []
@@ -340,6 +346,8 @@ UPSTREAM_SHIELD_FRAGMENTS = (
     "M75.971 26.765",
     # Notification-bar header shield in the extension autofill iframe.
     "M13.469.2A.647.647",
+    # Default-password-manager prompt shield, drawn in both form fields.
+    "M192.19 20.75a.5.5",
 )
 
 # Product wordmarks and the account-switcher shield. Filenames stay so imports keep working.
