@@ -236,7 +236,12 @@ def shield_svg(dest):
 
 # Case and spelling variants the exact "Bitwarden" replace left in locales:
 # BItwarden, BitWarden, Bitward, Bitwarde, bitwarden.firma.dk, and inflections.
-FUZZY_NAME = re.compile(r"(?i)(?<![A-Za-z0-9_@./])bit\s*ward\w*")
+# The match stops before camelCase suffixes (BitwardenString) and code ids (bitwardenjson).
+BRAND_NAME = re.compile(r"(?i)(?<![A-Za-z0-9_@./])bit\s*ward(?:en)?")
+CODE_SUFFIXES = {
+    "json", "csv", "fill", "passwordprotected", "browser", "web", "desktop",
+    "license", "premium", "organization", "account", "extension",
+}
 LICENSE_LINE = re.compile(
     r"GNU GENERAL PUBLIC|licensed under|not affiliated|not endorsed|corresponding source|source offer",
     re.I,
@@ -260,14 +265,36 @@ def rewrite_visible(text: str) -> str:
     return "".join(parts)
 
 
+def _brand_end(text: str, end: int) -> int | None:
+    """End index to replace, or None when this is a code identifier."""
+    if end < len(text) and (text[end].isupper() or text[end] == "_"):
+        return None
+    extra = re.match(r"[a-z]+", text[end:])
+    if extra:
+        suffix = extra.group(0)
+        if suffix in CODE_SUFFIXES or len(suffix) > 6:
+            return None
+        return end + extra.end()
+    return end
+
+
 def _rename(text: str) -> str:
-    text = re.sub(r"(?i)©\s*bit\s*ward\w*(?:\s+inc\.?)?", "© Komboe", text)
+    text = re.sub(r"(?i)©\s*bit\s*ward(?:en)?(?:\s+inc\.?)?", "© Komboe", text)
+    # Example hosts in user-facing copy. Protocol hosts (api., vault., identity.) are not this shape.
     text = re.sub(r"(?i)(https?://)bitwarden\.", r"\1komboe.", text)
-    text = re.sub(r"(?i)vault\.bitwarden\.com", "komboe.com", text)
     text = re.sub(r"(?i)bitwarden\.\s*com", "komboe.com", text)
-    text = re.sub(r"(?i)bitwarden\.(?:eu|net|pw)\b", "komboe.com", text)
-    text = FUZZY_NAME.sub("Komboe", text)
-    text = text.replace("Vaultwarden", "Komboe")
+    pieces = []
+    cursor = 0
+    for match in BRAND_NAME.finditer(text):
+        end = _brand_end(text, match.end())
+        if end is None:
+            continue
+        pieces.append(text[cursor:match.start()])
+        pieces.append("Komboe")
+        cursor = end
+    pieces.append(text[cursor:])
+    text = "".join(pieces)
+    text = re.sub(r"(?<![A-Za-z0-9_@./])Vaultwarden(?![A-Za-z0-9_])", "Komboe", text)
     return text
 
 

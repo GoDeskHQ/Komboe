@@ -34,9 +34,14 @@ NAME_START = re.compile(r"(?i)(?<![A-Za-z0-9_@])(?:bit\s*ward|vaultwarden)")
 IMPORT_FORMATS = ("Bitwarden (.json)", "Bitwarden (json)", "Bitwarden (csv)")
 ALLOW = re.compile(
     r"GNU GENERAL PUBLIC|licensed under|license agreement|not affiliated|not endorsed|"
-    r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|GPL|AGPL",
+    r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|trademark|GPL|AGPL",
     re.I,
 )
+CODE_SUFFIX = re.compile(
+    r"(?:json|csv|fill|passwordprotected|browser|web_vault|web|desktop|license)\b",
+    re.I,
+)
+SKIP_TEXT_EXT = {".wasm", ".node", ".so", ".dll", ".dylib", ".pak", ".bin", ".dat", ".exe", ".pdb"}
 COMMENT = re.compile(r"<!--.*?-->|/\*.*?\*/", re.S)
 IMAGE_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".bmp", ".icns", ".svg", ".xml"}
 TEXT_EXT = {".html", ".htm", ".hbs", ".json", ".js", ".mjs", ".css", ".svg", ".xml", ".txt", ".md", ".yml"}
@@ -58,11 +63,13 @@ def product_spans(text: str):
         if match.group(0).lower().startswith("vaultwarden"):
             yield match.start(), end
             continue
-        while end < len(text) and text[end].islower():
+        # Include the "en" of Bitwarden, not a following identifier (bitwardenjson).
+        if text[end:end + 2].lower() == "en":
+            end += 2
+        elif text[end:end + 1].lower() == "e" and not text[end + 1:end + 2].isalpha():
             end += 1
-        chunk = text[match.start():end]
-        letters = re.sub(r"\s+", "", chunk)
-        if letters.isupper():
+        chunk = re.sub(r"\s+", "", text[match.start():end])
+        if chunk.isupper():
             while end < len(text) and text[end].isupper():
                 end += 1
         yield match.start(), end
@@ -80,11 +87,11 @@ def allowed(window: str) -> bool:
             rest = rest.replace(label, "")
         if not still_branded(rest):
             return True
-    # Importer format name shown beside the allowlisted json/csv labels.
-    if re.search(r'(?:sourceName|displayName)"?\s*[:=]\s*"Bitwarden"', window):
-        rest = re.sub(r'"Bitwarden"', '""', window, count=1)
-        if not still_branded(rest):
-            return True
+    # Importer format name. Minified bundles keep name/displayName/sourceName "Bitwarden".
+    if re.search(r'(?:sourceName|displayName|featuredImporter)"?\s*[:=]', window) and re.search(
+        r'"Bitwarden"', window
+    ):
+        return True
     return ALLOW.search(window) is not None
 
 
@@ -104,7 +111,13 @@ def code_context(text: str, start: int, end: int) -> bool:
         return True
     if prev == "/" and (nxt[:1] in "/" or re.match(r"\.(?:ts|js|mjs|svg|png|json|xml|kt|css|html)\b", nxt)):
         return True
-    if prev == "." and re.match(r"(?:com|eu|net|pw)\b", nxt[1:] if nxt.startswith(".") else ""):
+    if prev == ".":
+        return True
+    if nxt.startswith(".") and re.match(r"\.(?:com|eu|net|pw|gov|atlassian)\b", nxt):
+        return True
+    if nxt.startswith(":{") or nxt.startswith("://"):
+        return True
+    if CODE_SUFFIX.match(nxt):
         return True
     # CamelCase identifier suffix: BitwardenIcon, bitwardenAccount.
     if nxt[:1].isupper():
@@ -169,8 +182,10 @@ def shield_hits(blob: bytes, path: str, signatures):
 
 
 def skip_text(path: str) -> bool:
-    normalized = path.replace("\\", "/")
+    normalized = path.replace("\\", "/").lower()
     if normalized.endswith(".map") or normalized.endswith(".js.map"):
+        return True
+    if any(normalized.endswith(ext) for ext in SKIP_TEXT_EXT):
         return True
     # Generated SDK comments and API docs are not product UI.
     if "/node_modules/@bitwarden/sdk-internal/" in normalized or "bitwarden_wasm_internal" in normalized:
