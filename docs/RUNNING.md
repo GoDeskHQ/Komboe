@@ -64,7 +64,7 @@ Desktop checks `https://komboe.com/downloads/desktop` for updates and installs t
 
 ## Android in-app updates
 
-After the first sideload, the Android app (`io.komboe.android`) checks an HTTPS feed and can install a newer APK automatically on Wi-Fi or mobile data. It checks once every 24 hours when the app starts, and also from Settings → About → Check for updates. “Restrict updates to Wi-Fi” is off by default.
+After the first sideload, the Android app (`io.komboe.android`) checks an HTTPS feed and installs a newer APK itself. Downloads use Wi-Fi or mobile data (also ethernet or a VPN). There is no Wi-Fi-only mode. The app checks when the process starts and again every 24 hours while that process stays up, and Settings → About → Check for updates checks immediately. PackageInstaller installs the APK, so the signing certificate stays the one the phone already trusts.
 
 The default feed is `https://komboe.com/downloads/android/latest.json`. Override it at build time by changing `komboe_update_feed_url` in `mobile/self-update/komboe_update_strings.xml` before running `mobile/android-build.sh`. `android_rebrand.py` copies that file and the OTA Kotlin sources into the pinned Bitwarden Android tree.
 
