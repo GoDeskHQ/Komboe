@@ -41,9 +41,9 @@ export class UpdaterMain {
   ) {
     autoUpdater.logger = log;
 
-    // Opt-in feed. KOMBOE_UPDATE_URL replaces the build-time komboe.com/downloads
-    // URL with a generic feed the operator hosts. Setting the URL does not
-    // contact it; checks stay off until KOMBOE_UPDATE_FEED=1.
+    // The build-time feed is komboe.com/downloads/desktop. KOMBOE_UPDATE_URL
+    // replaces it with a generic https feed the operator hosts. Checks are on
+    // by default; KOMBOE_UPDATE_FEED=0 or ELECTRON_NO_UPDATER=1 turns them off.
     const updateUrl = process.env.KOMBOE_UPDATE_URL;
     if (updateUrl != null && updateUrl.startsWith("https://")) {
       autoUpdater.setFeedURL({
@@ -157,7 +157,7 @@ export class UpdaterMain {
         await dialog.showMessageBox(this.windowMain.win, {
           type: "info",
           message:
-            "Update checks are off. Set KOMBOE_UPDATE_FEED=1 to check the configured feed, or KOMBOE_UPDATE_URL to an https feed you host.",
+            "Update checks are off because KOMBOE_UPDATE_FEED=0 or ELECTRON_NO_UPDATER=1 is set.",
           buttons: [this.i18nService.t("ok")],
           defaultId: 0,
           noLink: true,
@@ -284,9 +284,9 @@ export class UpdaterMain {
   }
 
   private userDisabledUpdates(): boolean {
-    // A self-hosted desktop build does not check komboe.com/downloads, or any
-    // other feed, unless the operator opts in. Linux already cannot auto-update.
-    if (process.env.KOMBOE_UPDATE_FEED !== "1") {
+    // Desktop checks komboe.com/downloads/desktop (or KOMBOE_UPDATE_URL) and
+    // updates itself, like the Android app. KOMBOE_UPDATE_FEED=0 opts out.
+    if (process.env.KOMBOE_UPDATE_FEED === "0") {
       return true;
     }
     for (const arg of process.argv) {

@@ -141,6 +141,17 @@ const DEFAULT_REGION = Region.US;
  */
 const DEFAULT_REGION_CONFIG = PRODUCTION_REGIONS.find((r) => r.key === DEFAULT_REGION);
 
+/**
+ * Komboe: an app that has never saved a server signs in to the Komboe account
+ * server at komboe.com, the same account the web vault and Android use.
+ * Picking another server in the server picker still overrides this.
+ */
+export const KOMBOE_DEFAULT_BASE_URL = "https://komboe.com";
+
+function komboeDefaultUrls(): Urls {
+  return { base: KOMBOE_DEFAULT_BASE_URL };
+}
+
 export class DefaultEnvironmentService implements EnvironmentService {
   private globalState: GlobalState<EnvironmentState | null>;
   private globalCloudRegionState: GlobalState<CloudRegion | null>;
@@ -214,7 +225,7 @@ export class DefaultEnvironmentService implements EnvironmentService {
             return config.urls.webVault;
           }
         }
-        return DEFAULT_REGION_CONFIG.urls.webVault;
+        return KOMBOE_DEFAULT_BASE_URL;
       }),
     );
   }
@@ -236,9 +247,9 @@ export class DefaultEnvironmentService implements EnvironmentService {
       region = Region.SelfHosted;
     }
 
-    // If self-hosted ensure urls are valid else fallback to default region
+    // If self-hosted has no urls, fall back to the Komboe account server
     if (region == Region.SelfHosted && isEmpty(urls)) {
-      region = DEFAULT_REGION;
+      urls = komboeDefaultUrls();
     }
 
     if (region != Region.SelfHosted) {
@@ -289,9 +300,9 @@ export class DefaultEnvironmentService implements EnvironmentService {
       region = Region.SelfHosted;
     }
 
-    // If self-hosted ensure urls are valid else fallback to default region
+    // Nothing saved yet (or self-hosted without urls): use the Komboe account server
     if (region == Region.SelfHosted && isEmpty(urls)) {
-      region = DEFAULT_REGION;
+      return new SelfHostedEnvironment(komboeDefaultUrls());
     }
 
     // Load urls from region config
