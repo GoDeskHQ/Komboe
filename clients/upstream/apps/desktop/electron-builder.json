@@ -167,7 +167,14 @@
         "StartupWMClass": "komboe"
       }
     },
-    "executableName": "komboe"
+    "executableName": "komboe",
+    "artifactName": "Komboe-${version}-${arch}.${ext}"
+  },
+  "appImage": {
+    "artifactName": "Komboe-${version}-x86_64.${ext}"
+  },
+  "deb": {
+    "artifactName": "Komboe-${version}-amd64.${ext}"
   },
   "dmg": {
     "icon": "dmg.icns",

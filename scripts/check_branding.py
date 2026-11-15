@@ -470,8 +470,78 @@ def parse_asar(blob: bytes):
     yield from walk(header, "")
 
 
+_LINUX_BIN = re.compile(r"(?i)(?:^|/)bitwarden(?:-app)?$")
+
+
+def linux_binary_hits(path: Path) -> list[str]:
+    """Executable and .desktop names inside a built Linux package."""
+    hits = []
+
+    def consider(name: str, where: str):
+        base = name.replace("\\", "/").split("/")[-1]
+        if _LINUX_BIN.search(base) or base.lower() == "bitwarden-app":
+            hits.append(f"{where}: linux executable named {base}")
+
+    if path.is_dir():
+        for dirpath, dirnames, filenames in os.walk(path):
+            dirnames[:] = [d for d in dirnames if d != "node_modules"]
+            for name in filenames:
+                full = Path(dirpath) / name
+                consider(name, str(full))
+                if name.endswith(".desktop") or name.endswith(".sh"):
+                    text = full.read_text(encoding="utf-8", errors="ignore")
+                    if re.search(r"(?i)bitwarden-app", text):
+                        hits.append(f"{full}: linux script names bitwarden-app")
+        return hits
+    if path.suffix == ".deb" or path.name.endswith(".deb"):
+        for member in deb_member_names(path):
+            consider(member, f"{path}:{member}")
+            if member.endswith(".desktop") or member.endswith(".sh"):
+                # Member text is checked when the archive is expanded by the caller.
+                if "bitwarden-app" in member:
+                    hits.append(f"{path}:{member}: linux executable named bitwarden-app")
+        blob = path.read_bytes()
+        if b"bitwarden-app" in blob:
+            hits.append(f"{path}: linux package contains bitwarden-app")
+        return hits
+    if path.name.endswith(".AppImage") or path.suffix.lower() == ".appimage":
+        if b"bitwarden-app" in path.read_bytes():
+            hits.append(f"{path}: AppImage contains bitwarden-app")
+        return hits
+    return hits
+
+
+def deb_member_names(path: Path) -> list[str]:
+    """Filenames stored in a .deb data tarball. Empty when the archive is not readable."""
+    blob = path.read_bytes()
+    if not blob.startswith(b"!<arch>\n"):
+        return []
+    offset = 8
+    data = b""
+    while offset + 60 <= len(blob):
+        header = blob[offset:offset + 60]
+        name = header[:16].decode("ascii", errors="ignore").strip()
+        size = int(header[48:58].decode("ascii", errors="ignore").strip() or "0")
+        start = offset + 60
+        payload = blob[start:start + size]
+        offset = start + size + (size % 2)
+        if name.startswith("data.tar"):
+            data = payload
+            break
+    if not data:
+        return []
+    import io
+    import tarfile
+    try:
+        with tarfile.open(fileobj=io.BytesIO(data), mode="r:*") as archive:
+            return [member.name for member in archive.getmembers()]
+    except (tarfile.TarError, OSError):
+        return []
+
+
 def scan_path(path: Path, hashes, signatures):
     hits = []
+    hits.extend(linux_binary_hits(path))
     if path.is_dir():
         for dirpath, dirnames, filenames in os.walk(path):
             dirnames[:] = [d for d in dirnames if d != "node_modules"]

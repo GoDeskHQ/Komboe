@@ -63,7 +63,7 @@ case "$DISPLAY_MODE" in
 esac
 
 if [ -n "$FLATPAK_ID" ]; then
-  exec zypak-wrapper "$APP_PATH/bitwarden-app" "$@" $PARAMS
+  exec zypak-wrapper "$APP_PATH/komboe" "$@" $PARAMS
 else
-  exec "$APP_PATH/bitwarden-app" $PARAMS "$@"
+  exec "$APP_PATH/komboe" $PARAMS "$@"
 fi

@@ -1,4 +1,9 @@
 import { app, dialog, IpcMainEvent, ipcMain, Notification } from "electron";
+import { spawn } from "child_process";
+import { createHash } from "crypto";
+import { chmodSync, mkdtempSync, writeFileSync } from "fs";
+import { tmpdir } from "os";
+import { join } from "path";
 import log from "electron-log";
 import { autoUpdater, UpdateDownloadedEvent, VerifyUpdateSupport } from "electron-updater";
 
@@ -16,6 +21,8 @@ const UpdaterCheckInitialDelay = 5 * 1000; // 5 seconds
 const UpdaterCheckInterval = 12 * 60 * 60 * 1000; // 12 hours
 
 const MaxTimeBeforeBlockingUpdateNotification = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+type LinuxDebFeed = { version: string; debUrl: string; sha256: string };
 
 function versionIsNewer(remote: string, local: string): boolean {
   const parse = (value: string) => value.split(".").map((part) => parseInt(part, 10) || 0);
@@ -309,14 +316,18 @@ export class UpdaterMain {
   }
 
   /**
-   * The .deb install stays on the package the user installed. A newer feed version
-   * opens the downloads page for the AppImage, which updates itself.
+   * The .deb installs the next package itself when the feed publishes a sha256.
+   * Komboe downloads that .deb, checks the sha256, and installs it with
+   * `pkexec apt-get install -y`. apt needs a polkit prompt, which pkexec shows.
+   * If the feed has no checksum, or pkexec is missing or the install fails, the
+   * same dialog switches the user to the AppImage. That is the Linux build that
+   * replaces itself from latest-linux.yml on any connection.
    */
   private async promptLinuxDebTowardAppImage(withFeedback: boolean) {
     const local = app.getVersion();
-    let remote = "";
+    let feed: LinuxDebFeed | null = null;
     try {
-      remote = await this.linuxFeedVersion();
+      feed = await this.linuxDebFeed();
     } catch (error) {
       this.logService.error("Linux update feed failed", error);
       if (withFeedback && this.windowMain.win != null) {
@@ -330,22 +341,53 @@ export class UpdaterMain {
       }
       return;
     }
-    const newer = versionIsNewer(remote, local);
+    const newer = versionIsNewer(feed.version, local);
     if (!newer && !withFeedback) {
       return;
     }
     if (this.windowMain.win == null) {
       return;
     }
-    const detail = newer
-      ? `Version ${remote} is available. This .deb does not replace itself. The AppImage is the Linux build that updates itself from komboe.com over any connection.`
-      : "This .deb does not replace itself. The AppImage is the Linux build that updates itself from komboe.com over any connection.";
+    const canInstallDeb = Boolean(feed.debUrl && feed.sha256);
+    const detail = canInstallDeb
+      ? `Version ${feed.version} is available. Komboe can download the new .deb, check its sha256, and install it with pkexec and apt. The AppImage is the build that updates itself without a package manager.`
+      : `Version ${feed.version} is available. This feed has no verified .deb checksum, so Komboe cannot install a package. The AppImage updates itself from komboe.com over any connection.`;
     const result = await dialog.showMessageBox(this.windowMain.win, {
       type: "info",
       title: "Komboe",
-      message: newer ? "A Komboe update is available" : "Linux updates use the AppImage",
+      message: newer ? "A Komboe update is available" : "Linux updates",
       detail,
-      buttons: ["Open downloads", this.i18nService.t("later")],
+      buttons: canInstallDeb
+        ? ["Install the .deb", "Switch to the AppImage", this.i18nService.t("later")]
+        : ["Switch to the AppImage", this.i18nService.t("later")],
+      cancelId: canInstallDeb ? 2 : 1,
+      defaultId: 0,
+      noLink: true,
+    });
+    if (canInstallDeb && result.response === 0 && feed.debUrl && feed.sha256) {
+      const installed = await this.installVerifiedDeb(feed.debUrl, feed.sha256);
+      if (!installed) {
+        await this.offerAppImageInstead();
+      }
+      return;
+    }
+    const appImageChoice = canInstallDeb ? 1 : 0;
+    if (result.response === appImageChoice) {
+      this.shell.openExternal("https://komboe.com/downloads", UrlType.WebUrl);
+    }
+  }
+
+  private async offerAppImageInstead() {
+    if (this.windowMain.win == null) {
+      return;
+    }
+    const result = await dialog.showMessageBox(this.windowMain.win, {
+      type: "warning",
+      title: "Komboe",
+      message: "The .deb install did not finish",
+      detail:
+        "Komboe did not install the package. The AppImage is the Linux build that updates itself. You can download it from komboe.com.",
+      buttons: ["Switch to the AppImage", this.i18nService.t("later")],
       cancelId: 1,
       defaultId: 0,
       noLink: true,
@@ -355,21 +397,74 @@ export class UpdaterMain {
     }
   }
 
-  private async linuxFeedVersion(): Promise<string> {
-    const base = (process.env.KOMBOE_UPDATE_URL ?? "https://komboe.com/downloads/desktop").replace(
+  private async installVerifiedDeb(url: string, expectedSha256: string): Promise<boolean> {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`deb download returned ${response.status}`);
+      }
+      const bytes = Buffer.from(await response.arrayBuffer());
+      const actual = createHash("sha256").update(bytes).digest("hex");
+      if (actual !== expectedSha256.toLowerCase()) {
+        this.logService.error("Linux deb sha256 mismatch", actual, expectedSha256);
+        return false;
+      }
+      const dir = mkdtempSync(join(tmpdir(), "komboe-deb-"));
+      const debPath = join(dir, "komboe.deb");
+      writeFileSync(debPath, bytes);
+      chmodSync(debPath, 0o644);
+      const code = await new Promise<number>((resolve) => {
+        const child = spawn("pkexec", ["apt-get", "install", "-y", debPath], {
+          stdio: "inherit",
+        });
+        child.on("error", () => resolve(1));
+        child.on("close", (status) => resolve(status ?? 1));
+      });
+      return code === 0;
+    } catch (error) {
+      this.logService.error("Linux deb install failed", error);
+      return false;
+    }
+  }
+
+  private feedBase(): string {
+    return (process.env.KOMBOE_UPDATE_URL ?? "https://komboe.com/downloads/desktop").replace(
       /\/$/,
       "",
     );
+  }
+
+  private async linuxDebFeed(): Promise<LinuxDebFeed> {
+    const base = this.feedBase();
     const response = await fetch(`${base}/latest-linux.yml`);
     if (!response.ok) {
       throw new Error(`Linux update feed returned ${response.status}`);
     }
     const text = await response.text();
-    const match = /^version:\s*(\S+)/m.exec(text);
-    if (match == null) {
+    const version = /^version:\s*(\S+)/m.exec(text)?.[1];
+    if (!version) {
       throw new Error("Linux update feed has no version");
     }
-    return match[1];
+    let debUrl = "";
+    let sha256 = "";
+    try {
+      const debResponse = await fetch(`${base}/linux-deb.json`);
+      if (debResponse.ok) {
+        const meta = (await debResponse.json()) as {
+          url?: string;
+          filename?: string;
+          sha256?: string;
+        };
+        const name = meta.url || meta.filename || "";
+        if (name && meta.sha256) {
+          debUrl = name.startsWith("https://") ? name : `${base}/${name.replace(/^\//, "")}`;
+          sha256 = meta.sha256;
+        }
+      }
+    } catch (error) {
+      this.logService.warning("Linux deb metadata was not readable", error);
+    }
+    return { version, debUrl, sha256 };
   }
 
   private userDisabledUpdates(): boolean {

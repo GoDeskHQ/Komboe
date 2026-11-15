@@ -70,6 +70,20 @@ def main() -> None:
     kept = brand.rewrite_visible("https://api.bitwarden.com")
     if kept != "https://api.bitwarden.com":
         raise SystemExit(f"protocol host was rewritten: {kept!r}")
+    from tempfile import TemporaryDirectory
+    with TemporaryDirectory() as raw:
+        folder = Path(raw)
+        (folder / "bitwarden-app").write_text("#!/bin/sh\n", encoding="utf-8")
+        (folder / "komboe.desktop").write_text("Exec=bitwarden-app %U\n", encoding="utf-8")
+        named = check.linux_binary_hits(folder)
+        if not any("bitwarden-app" in hit for hit in named):
+            raise SystemExit(f"linux binary name was not flagged: {named}")
+        clean = folder / "clean"
+        clean.mkdir()
+        (clean / "komboe").write_text("#!/bin/sh\nexec komboe\n", encoding="utf-8")
+        (clean / "komboe.desktop").write_text("Exec=komboe %U\n", encoding="utf-8")
+        if check.linux_binary_hits(clean):
+            raise SystemExit(f"komboe linux names were flagged: {check.linux_binary_hits(clean)}")
     print("BRANDING AUDIT PASS")
 
 

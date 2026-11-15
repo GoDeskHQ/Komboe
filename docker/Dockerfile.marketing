@@ -1,8 +1,15 @@
 # Marketing site + /downloads for komboe.com.
-# Binaries live in the /var/komboe-downloads volume, not in this image.
+# Only built pages and assets are in the image. Build scripts, tests, and
+# package metadata stay in the source tree. Binaries live in the
+# /var/komboe-downloads volume, not in this image.
 FROM python:3.12-alpine
 WORKDIR /site
-COPY . /site
+COPY serve.py csp.txt robots.txt sitemap.xml site.webmanifest llms.txt ./
+COPY *.html ./
+COPY assets ./assets
+COPY downloads ./downloads
+COPY vault ./vault
+COPY .well-known ./.well-known
 ENV KOMBOE_DOWNLOADS_DIR=/var/komboe-downloads
 EXPOSE 4173
 HEALTHCHECK --interval=30s --timeout=5s --retries=5 --start-period=10s \

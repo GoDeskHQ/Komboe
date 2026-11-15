@@ -160,28 +160,47 @@ def test_linux_feed(work):
     publish = work / "linux-publish"
     artifacts.mkdir(parents=True)
     image = b"AppImage-komboe-fixture-bytes"
-    (artifacts / "Komboe-2026.11.18.AppImage").write_bytes(image)
+    deb = b"deb-komboe-fixture-bytes"
+    image_name = "Komboe-2026.11.19-x86_64.AppImage"
+    deb_name = "Komboe-2026.11.19-amd64.deb"
+    (artifacts / image_name).write_bytes(image)
+    (artifacts / deb_name).write_bytes(deb)
     (artifacts / "latest-linux.yml").write_text(
-        "version: 2026.11.17\nfiles:\n  - url: Komboe-2026.11.17.AppImage\n    sha512: old\n    size: 1\npath: Komboe-2026.11.17.AppImage\nsha512: old\n"
+        "version: 2026.11.19\nfiles:\n  - url: Komboe-2026.10.1-x86_64.AppImage\n    sha512: old\n    size: 1\npath: Komboe-2026.10.1-x86_64.AppImage\nsha512: old\n"
     )
     out = work / "with-linux.json"
     manifest = run_manifest(artifacts, publish, [out], url_prefix=FEED_HOST)
-    asset = next(a for a in manifest["assets"] if a["id"] == "desktop-linux-appimage")
-    assert asset["status"] == "published"
-    assert asset["filename"] == "komboe-desktop-x86_64.AppImage"
-    assert asset["sha256"] == hashlib.sha256(image).hexdigest()
-    published = publish / "desktop" / "komboe-desktop-x86_64.AppImage"
-    assert published.read_bytes() == image
+    appimage = next(a for a in manifest["assets"] if a["id"] == "desktop-linux-appimage")
+    package = next(a for a in manifest["assets"] if a["id"] == "desktop-linux-deb")
+    assert appimage["status"] == "published"
+    assert package["status"] == "published"
+    assert appimage["version"] == "2026.11.19"
+    assert package["version"] == "2026.11.19"
+    assert appimage["version"] != "2026.10.1"
+    assert appimage["filename"] == image_name
+    assert package["filename"] == deb_name
+    assert appimage["sha256"] == hashlib.sha256(image).hexdigest()
+    assert package["sha256"] == hashlib.sha256(deb).hexdigest()
+    assert appimage["url"].endswith("desktop/" + image_name)
+    assert package["url"].endswith("desktop/" + deb_name)
+    assert (publish / "desktop" / image_name).read_bytes() == image
+    assert (publish / "desktop" / deb_name).read_bytes() == deb
     feed = (publish / "desktop" / "latest-linux.yml").read_text(encoding="utf-8")
-    assert "url: komboe-desktop-x86_64.AppImage" in feed
-    assert "path: komboe-desktop-x86_64.AppImage" in feed
-    assert "Komboe-2026.11.17.AppImage" not in feed
-    digest = hashlib.sha512(image).digest()
+    assert f"url: {image_name}" in feed
+    assert f"path: {image_name}" in feed
+    assert "version: 2026.11.19" in feed
+    assert "2026.10.1" not in feed
     import base64
-    fingerprint = base64.b64encode(digest).decode("ascii")
+    fingerprint = base64.b64encode(hashlib.sha512(image).digest()).decode("ascii")
     assert fingerprint in feed
     assert f"size: {len(image)}" in feed
-    assert (publish / "desktop" / "latest.yml").exists() is False
+    meta = json.loads((publish / "desktop" / "linux-deb.json").read_text(encoding="utf-8"))
+    assert meta["filename"] == deb_name
+    assert meta["url"] == deb_name
+    assert meta["sha256"] == package["sha256"]
+    assert meta["version"] == "2026.11.19"
+    ids = [asset["id"] for asset in manifest["assets"]]
+    assert ids.index("desktop-linux-appimage") < ids.index("desktop-linux-deb")
 
 
 def test_http_and_qr(work, ext_url_rel, payload, sha):
@@ -267,6 +286,12 @@ def test_serve_overlay(work):
         assert "Download Komboe" in page
         body = urllib.request.urlopen(f"http://127.0.0.1:{port}/downloads/android/latest.json", timeout=10).read()
         assert json.loads(body)["versionName"] == "overlay"
+        for hidden in ("/build.py", "/legal_copy.py", "/serve.py", "/e2e/run.sh", "/README.md", "/package.json"):
+            code = raw(hidden).status
+            assert code == 404, (hidden, code)
+        vault = urllib.request.urlopen(f"http://127.0.0.1:{port}/vault/", timeout=10)
+        assert vault.status == 200
+        assert b"Your vault" in vault.read()
     finally:
         httpd.shutdown()
 
