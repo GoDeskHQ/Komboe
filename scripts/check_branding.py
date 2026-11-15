@@ -30,17 +30,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DENY = ROOT / "scripts" / "branding_denylist.json"
 
-NAME_START = re.compile(r"(?i)(?<![A-Za-z0-9_@])(?:bit\s*ward|vaultwarden)")
+NAME_START = re.compile(r"(?i)(?:(?<![A-Za-z0-9_@])|(?<=\\n))(?:bit\s*ward|vaultwarden)")
 IMPORT_FORMATS = ("Bitwarden (.json)", "Bitwarden (json)", "Bitwarden (csv)")
 ALLOW = re.compile(
     r"GNU GENERAL PUBLIC|licensed under|license agreement|not affiliated|not endorsed|"
     r"corresponding source|source offer|\bbased on\b|Portions|Third-party|THIRD-PARTY|trademark|GPL|AGPL",
     re.I,
 )
-CODE_SUFFIX = re.compile(
-    r"(?:json|csv|fill|passwordprotected|browser|web_vault|web|desktop|license)\b",
-    re.I,
-)
+CODE_SUFFIX = re.compile(r"(?:json|csv|fill|password|browser|web|desktop|license)", re.I)
 SKIP_TEXT_EXT = {".wasm", ".node", ".so", ".dll", ".dylib", ".pak", ".bin", ".dat", ".exe", ".pdb"}
 COMMENT = re.compile(r"<!--.*?-->|/\*.*?\*/", re.S)
 IMAGE_EXT = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".bmp", ".icns", ".svg", ".xml"}
@@ -95,13 +92,27 @@ def allowed(window: str) -> bool:
     return ALLOW.search(window) is not None
 
 
+def isolated_identifier(text: str, start: int, end: int) -> bool:
+    """Resource keys and class names packed in dex/arsc, not a sentence."""
+    window = text[max(0, start - 8): end + 8]
+    if "\x00" not in window:
+        return False
+    return not any(ch.isspace() for ch in window)
+
+
 def code_context(text: str, start: int, end: int) -> bool:
     """Package paths, file names, translation keys, and protocol tokens are not product branding."""
     prev = text[start - 1] if start else ""
-    nxt = text[end:end + 16]
-    if prev in "@_-":
+    nxt = text[end:end + 40]
+    if prev and prev in "@_-:":
         return True
-    if nxt[:1] in "_-":
+    # Quoted lowercase ids: i18n keys, importer ids, resource names.
+    token = text[start:end]
+    if prev == '"' and nxt[:1] == '"' and token == "bitwarden":
+        return True
+    if isolated_identifier(text, start, end):
+        return True
+    if nxt[:1] in {"_", "-"}:
         return True
     if re.match(r"\.(?:scss|hbs|css|png|svg|js)\b", nxt):
         return True

@@ -237,7 +237,8 @@ def shield_svg(dest):
 # Case and spelling variants the exact "Bitwarden" replace left in locales:
 # BItwarden, BitWarden, Bitward, Bitwarde, bitwarden.firma.dk, and inflections.
 # The match stops before camelCase suffixes (BitwardenString) and code ids (bitwardenjson).
-BRAND_NAME = re.compile(r"(?i)(?<![A-Za-z0-9_@./])bit\s*ward(?:en)?")
+# Also a boundary after an Android "\n" escape, which otherwise looks like a letter.
+BRAND_NAME = re.compile(r"(?i)(?:(?<![A-Za-z0-9_@./])|(?<=\\n))bit\s*ward(?:en)?")
 CODE_SUFFIXES = {
     "json", "csv", "fill", "passwordprotected", "browser", "web", "desktop",
     "license", "premium", "organization", "account", "extension",
