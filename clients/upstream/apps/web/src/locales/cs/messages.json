@@ -2326,7 +2326,7 @@
     "message": "Vytvořit účet"
   },
   "newToBitwarden": {
-    "message": "Jste noví na Bitwardenu?"
+    "message": "Jste noví na Komboeu?"
   },
   "setAStrongPassword": {
     "message": "Nastavit hlavní heslo"
@@ -2344,7 +2344,7 @@
     "message": "Přihlásit se"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Přihlásit se do Bitwardenu"
+    "message": "Přihlásit se do Komboeu"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Zadejte kód odeslaný na Váš e-mail"
@@ -2919,7 +2919,7 @@
     "message": "Tento export zašifruje Vaše data pomocí šifrovacího klíče Vašeho účtu. Pokud někdy změníte šifrovací klíč Vašeho účtu, měli by jste vyexportovat data znovu, protože tento exportovaný soubor nebudete moci dešifrovat."
   },
   "encExportAccountWarningDesc": {
-    "message": "Šifrovací klíče účtu jsou pro každý uživatelský účet Bitwardenu jedinečné, takže nelze importovat šifrovaný export do jiného účtu."
+    "message": "Šifrovací klíče účtu jsou pro každý uživatelský účet Komboeu jedinečné, takže nelze importovat šifrovaný export do jiného účtu."
   },
   "exportNoun": {
     "message": "Export",
@@ -3008,10 +3008,10 @@
     "message": "Tato databáze KeePass je pro import příliš velká."
   },
   "accountRestrictedOptionDescription": {
-    "message": "Pro zašifrování exportu a omezení importu pouze na aktuální účet Bitwardenu použijte šifrovací klíč Vašeho účtu odvozený z uživatelského jména a hlavního hesla."
+    "message": "Pro zašifrování exportu a omezení importu pouze na aktuální účet Komboeu použijte šifrovací klíč Vašeho účtu odvozený z uživatelského jména a hlavního hesla."
   },
   "passwordProtectedOptionDescription": {
-    "message": "Nastavte heslo pro šifrování exportu a importujte ho do libovolného účtu Bitwardenu pomocí hesla pro dešifrování."
+    "message": "Nastavte heslo pro šifrování exportu a importujte ho do libovolného účtu Komboeu pomocí hesla pro dešifrování."
   },
   "exportTypeHeading": {
     "message": "Typ exportu"
@@ -3182,7 +3182,7 @@
     "message": "Čekající požadavek"
   },
   "logBackInOthersToo": {
-    "message": "Přihlaste se znovu. Používáte-li jiné aplikace Bitwardenu, přihlaste se znovu i v nich."
+    "message": "Přihlaste se znovu. Používáte-li jiné aplikace Komboeu, přihlaste se znovu i v nich."
   },
   "changeMasterPassword": {
     "message": "Změnit hlavní heslo"
@@ -3261,7 +3261,7 @@
     "message": "Zapnout ochranu pro přihlášení z nového zařízení"
   },
   "turnOffNewDeviceLoginProtectionModalDesc": {
-    "message": "Pokračujte níže a vypněte ověřovací e-maily od Bitwardenu, když se přihlásíte z nového zařízení."
+    "message": "Pokračujte níže a vypněte ověřovací e-maily od Komboeu, když se přihlásíte z nového zařízení."
   },
   "turnOnNewDeviceLoginProtectionModalDesc": {
     "message": "Níže postupujte tak, aby Vám Komboe zasílal ověřovací e-maily při přihlášení z nového zařízení."
@@ -3858,7 +3858,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "soubor sem do Bitwardenu.",
+    "message": "soubor sem do Komboeu.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -4039,7 +4039,7 @@
     "message": "Povolí dvoufázové přihlášení pro Vaši organizaci."
   },
   "twoStepLoginEnterpriseDescStart": {
-    "message": "Vynutí dvoufázové přihlášení členů k Bitwardenu použitím ",
+    "message": "Vynutí dvoufázové přihlášení členů k Komboeu použitím ",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Bitwarden Two-step Login options for members by using the Two-step Login Policy.'"
   },
   "twoStepLoginPolicy": {
@@ -4052,7 +4052,7 @@
     "message": "Pokud jste nastavili SSO nebo to plánujete, dvoufázové přihlášení může být již vynuceno prostřednictvím Vašeho poskytovatele identity."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Nastavením dvoufázového přihlášení můžete sami sobě znemožnit přihlášení k Vašemu účtu. Obnovovací kód umožňuje přístup do Vašeho účtu i v případě, pokud již nemůžete použít svůj normální způsob dvoufázového přihlášení (např. ztráta zařízení). Pokud ztratíte přístup ke svému účtu, nebude Vám schopna pomoci ani zákaznická podpora Bitwardenu. Doporučujeme si proto kód pro obnovení zapsat nebo vytisknout a uložit jej na bezpečném místě."
+    "message": "Nastavením dvoufázového přihlášení můžete sami sobě znemožnit přihlášení k Vašemu účtu. Obnovovací kód umožňuje přístup do Vašeho účtu i v případě, pokud již nemůžete použít svůj normální způsob dvoufázového přihlášení (např. ztráta zařízení). Pokud ztratíte přístup ke svému účtu, nebude Vám schopna pomoci ani zákaznická podpora Komboeu. Doporučujeme si proto kód pro obnovení zapsat nebo vytisknout a uložit jej na bezpečném místě."
   },
   "restrictedItemTypePolicy": {
     "message": "Odebrat typ položky karty"
@@ -4220,7 +4220,7 @@
     "message": "Uložte formulář."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Z důvodu omezení různých platforem, nemůže být YubiKey použit ve všech aplikacích Bitwardenu. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze YubiKey použít. Podporované platformy:"
+    "message": "Z důvodu omezení různých platforem, nemůže být YubiKey použit ve všech aplikacích Komboeu. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze YubiKey použít. Podporované platformy:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Webový trezor, aplikace, CLI a rozšíření pro prohlížeče na zařízeních s USB portem, která akceptují Váš YubiKey."
@@ -4322,7 +4322,7 @@
     "message": "Uložte formulář."
   },
   "twoFactorU2fWarning": {
-    "message": "Z důvodu omezení různých platforem, nemůže být FIDO U2F použit ve všech aplikacích Bitwardenu. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze FIDO U2F použít. Podporované platformy:"
+    "message": "Z důvodu omezení různých platforem, nemůže být FIDO U2F použit ve všech aplikacích Komboeu. Měli byste povolit jiný způsob dvoufázového přihlášení pro případy, kdy nelze FIDO U2F použít. Podporované platformy:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Webový trezor a rozšíření pro prohlížeče s podporou U2F (Chrome, Opera, Vivaldi nebo Firefox se zapnutým FIDO U2F)."
@@ -4695,7 +4695,7 @@
     }
   },
   "bitwardenFamiliesPlan": {
-    "message": "rodinným plánem Bitwardenu."
+    "message": "rodinným plánem Komboeu."
   },
   "addons": {
     "message": "Doplňky"
@@ -5418,7 +5418,7 @@
     }
   },
   "trialThankYou": {
-    "message": "Děkujeme za registraci do Bitwardenu s plánem $PLAN$!",
+    "message": "Děkujeme za registraci do Komboeu s plánem $PLAN$!",
     "placeholders": {
       "plan": {
         "content": "$1",
@@ -5557,13 +5557,13 @@
     "message": "Externí ID"
   },
   "externalIdDesc": {
-    "message": "Externí ID je nešifrovaná reference použitá adresářovým konektorem Bitwardenu a API."
+    "message": "Externí ID je nešifrovaná reference použitá adresářovým konektorem Komboeu a API."
   },
   "ssoExternalId": {
     "message": "Externí SSO ID"
   },
   "ssoExternalIdDesc": {
-    "message": "Externí SSO ID je nešifrovaná reference mezi Bitwardenem a Vaším nastaveným poskytovatelem SSO."
+    "message": "Externí SSO ID je nešifrovaná reference mezi Komboeem a Vaším nastaveným poskytovatelem SSO."
   },
   "nestCollectionUnder": {
     "message": "Vnořit sbírku pod"
@@ -5617,13 +5617,13 @@
     "message": "Pozvat"
   },
   "inviteUserDesc": {
-    "message": "Pozvěte nového uživatele do Vaší organizace zadáním e-mailové adresy jeho účtu na Bitwardenu. Pokud ještě nemá účet na Bitwardenu, bude vyzván k vytvoření nového účtu."
+    "message": "Pozvěte nového uživatele do Vaší organizace zadáním e-mailové adresy jeho účtu na Komboeu. Pokud ještě nemá účet na Komboeu, bude vyzván k vytvoření nového účtu."
   },
   "inviteUserDescription": {
     "message": "Pozvěte nové uživatele do Vaší organizace zadáním jejich e-mailové adresy níže."
   },
   "inviteUserDescSharedFolders": {
-    "message": "Pozvěte nového uživatele do trezoru Vaší organizace zadáním e-mailové adresy jeho účtu na Bitwardenu. Pokud ještě nemá účet na Bitwardenu, bude vyzván k vytvoření nového účtu.",
+    "message": "Pozvěte nového uživatele do trezoru Vaší organizace zadáním e-mailové adresy jeho účtu na Komboeu. Pokud ještě nemá účet na Komboeu, bude vyzván k vytvoření nového účtu.",
     "description": "VFO1 (shared folder terminology) variant of inviteUserDesc, shown when the vfo1-foundation flag is enabled."
   },
   "inviteMultipleEmailDesc": {
@@ -5766,7 +5766,7 @@
     "message": "CLI"
   },
   "bitWebVault": {
-    "message": "Webový trezor Bitwardenu"
+    "message": "Webový trezor Komboeu"
   },
   "bitSecretsManager": {
     "message": "Správce tajných klíčů Komboe"
@@ -7082,7 +7082,7 @@
     "message": "Klepněte zde pro přidání platební metody."
   },
   "freeTrialSalesAssistedContactRep": {
-    "message": "Obraťte se na svého zástupce pro prodej Bitwardenu pro nastavení fakturace."
+    "message": "Obraťte se na svého zástupce pro prodej Komboeu pro nastavení fakturace."
   },
   "joinOrganization": {
     "message": "Přidat se k organizaci"
@@ -7115,7 +7115,7 @@
     "message": "Zpět k registraci"
   },
   "joinOrganizationDesc": {
-    "message": "Byli jste pozváni do výše uvedené organizace. Chcete-li přijmout pozvánku, musíte se přihlásit nebo vytvořit nový účet na Bitwardenu."
+    "message": "Byli jste pozváni do výše uvedené organizace. Chcete-li přijmout pozvánku, musíte se přihlásit nebo vytvořit nový účet na Komboeu."
   },
   "finishJoiningThisOrganizationBySettingAMasterPassword": {
     "message": "Dokončete připojení k této organizaci nastavením hlavního hesla."
@@ -7256,10 +7256,10 @@
     "message": "Pokud Váš účet existuje, poslali jsme Vám e-mail s dalšími pokyny."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Požádali jste o smazání svého účtu na Bitwardenu. Pro potvrzení použijte tlačítko níže."
+    "message": "Požádali jste o smazání svého účtu na Komboeu. Pro potvrzení použijte tlačítko níže."
   },
   "deleteRecoverOrgConfirmDesc": {
-    "message": "Požádali jste o smazání Vaší organizace u Bitwardenu."
+    "message": "Požádali jste o smazání Vaší organizace u Komboeu."
   },
   "myOrganization": {
     "message": "Moje organizace"
@@ -7593,7 +7593,7 @@
     }
   },
   "updateEncryptionKeyWarning": {
-    "message": "Po aktualizace šifrovacího klíče dojde k odhlášení a budete se muset opětovně přihlásit do všech aplikací Bitwardenu, které aktuálně používáte (např. mobilní aplikace či rozšíření pro prohlížeč). Nezdaří-li se odhlášení a opětovné přihlášení (během něhož bude stažen nový šifrovací klíč), může dojít k poškození dat. Pokusíme se Vás automaticky odhlásit, nicméně, může to chvíli trvat."
+    "message": "Po aktualizace šifrovacího klíče dojde k odhlášení a budete se muset opětovně přihlásit do všech aplikací Komboeu, které aktuálně používáte (např. mobilní aplikace či rozšíření pro prohlížeč). Nezdaří-li se odhlášení a opětovné přihlášení (během něhož bude stažen nový šifrovací klíč), může dojít k poškození dat. Pokusíme se Vás automaticky odhlásit, nicméně, může to chvíli trvat."
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Všechny uložené exporty s omezením účtu se stanou neplatnými."
@@ -7629,7 +7629,7 @@
     "message": "Nevybrali jste žádné položky."
   },
   "receiveMarketingEmails": {
-    "message": "Přijímejte aktualizace od Bitwardenu do doručené pošty."
+    "message": "Přijímejte aktualizace od Komboeu do doručené pošty."
   },
   "subscribe": {
     "message": "Předplatné"
@@ -7730,7 +7730,7 @@
     "message": "Zkopírujte odkaz a vložte jej tam, kde ho Váš tým najde: do kontrolního seznamu pro onboarding, do kanálu #new-joiners na Slacku, do dokumentů v Notionu nebo do e-mailové šablony."
   },
   "viewBitwardenOnboardingGuide": {
-    "message": "Zobrazit průvodce onboardingem do Bitwardenu"
+    "message": "Zobrazit průvodce onboardingem do Komboeu"
   },
   "coachMarkStepOfTotal": {
     "message": "$CURRENT$ z $TOTAL$",
@@ -7974,7 +7974,7 @@
     "message": "Klíč API"
   },
   "apiKeyDesc": {
-    "message": "Váš klíč API může být použit pro ověření přístupu k veřejnému API Bitwardenu."
+    "message": "Váš klíč API může být použit pro ověření přístupu k veřejnému API Komboeu."
   },
   "apiKeyRotateDesc": {
     "message": "Změna klíče API zruší platnost předchozího klíče. Klíč API můžete změnit, pokud se domníváte, že aktuální klíč již není bezpečný."
@@ -8333,7 +8333,7 @@
     "description": "VFO1 terminology variant of 'singleOrgPolicyDescV2'"
   },
   "singleOrgBlockCreateMessage": {
-    "message": "Vaše aktuální organizace má pravidla, která Vám nedovolují připojit se k více než jedné organizaci. Obraťte se na správce organizace nebo se zaregistrujte z jiného účtu na Bitwardenu."
+    "message": "Vaše aktuální organizace má pravidla, která Vám nedovolují připojit se k více než jedné organizaci. Obraťte se na správce organizace nebo se zaregistrujte z jiného účtu na Komboeu."
   },
   "singleOrgPolicyMemberWarning": {
     "message": "Nevyhovující členové budou zařazeni do statusu odvolaných členů, dokud neopustí všechny ostatní organizace. Správci jsou osvobozeni a mohou obnovit členy, jakmile je splněna podmínka shody."
@@ -8645,7 +8645,7 @@
     "message": "Upravit nouzový kontakt"
   },
   "inviteEmergencyContactDesc": {
-    "message": "Pozvěte nový nouzový kontakt zadáním uvedené e-mailové adresy účtu na Bitwardenu. Pokud nemá účet na Bitwardenu, bude vyzván k vytvoření nového účtu."
+    "message": "Pozvěte nový nouzový kontakt zadáním uvedené e-mailové adresy účtu na Komboeu. Pokud nemá účet na Komboeu, bude vyzván k vytvoření nového účtu."
   },
   "emergencyAccessRecoveryInitiated": {
     "message": "Nouzový přístup byl zahájen"
@@ -8684,7 +8684,7 @@
     "message": "Uživatel byl pozván."
   },
   "acceptEmergencyAccess": {
-    "message": "Byli jste pozváni, abyste se stali nouzovým kontaktem pro výše uvedeného uživatele. Chcete-li přijmout pozvánku, musíte se přihlásit nebo vytvořit nový účet na Bitwardenu."
+    "message": "Byli jste pozváni, abyste se stali nouzovým kontaktem pro výše uvedeného uživatele. Chcete-li přijmout pozvánku, musíte se přihlásit nebo vytvořit nový účet na Komboeu."
   },
   "emergencyInviteAcceptFailed": {
     "message": "Pozvánku nelze přijmout. Požádejte uživatele o zaslání nové pozvánky."
@@ -9121,7 +9121,7 @@
     "message": "Výchozí"
   },
   "fillAssistRuleSourceDefaultDesc": {
-    "message": "Použije Bitwardenem kontrolované pravidlo automatického vyplňování."
+    "message": "Použije Komboeem kontrolované pravidlo automatického vyplňování."
   },
   "fillAssistRuleSourceCustom": {
     "message": "Vlastní"
@@ -9319,7 +9319,7 @@
     "message": "Správce tajných klíčů Komboe"
   },
   "moreProductsFromBitwarden": {
-    "message": "Více produktů od Bitwardenu"
+    "message": "Více produktů od Komboeu"
   },
   "requestAccessToSecretsManager": {
     "message": "Požádat o přístup ke Správci tajných klíčů"
@@ -9390,7 +9390,7 @@
     "description": "Toast message shown when a user clicks the resend code link on the Send access page. 'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "viewSendHiddenEmailWarning": {
-    "message": "Uživatel Bitwardenu, který vytvořil tento Send, se rozhodl skrýt svou e-mailovou adresu. Před použitím nebo stažením jeho obsahu byste se měli ujistit, že zdroji tohoto odkazu důvěřujete.",
+    "message": "Uživatel Komboeu, který vytvořil tento Send, se rozhodl skrýt svou e-mailovou adresu. Před použitím nebo stažením jeho obsahu byste se měli ujistit, že zdroji tohoto odkazu důvěřujete.",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "expirationDateIsInvalid": {
@@ -9788,7 +9788,7 @@
     "message": "Nastavení poskytovatele"
   },
   "setupProviderLoginDesc": {
-    "message": "Byli jste pozváni k nastavení nového poskytovatele. Chcete-li pokračovat, musíte se přihlásit nebo vytvořit nový účet na Bitwardenu."
+    "message": "Byli jste pozváni k nastavení nového poskytovatele. Chcete-li pokračovat, musíte se přihlásit nebo vytvořit nový účet na Komboeu."
   },
   "setupProviderDesc": {
     "message": "Pro dokončení nastavení poskytovatele, zadejte níže uvedené údaje. Pokud máte nějaké dotazy, kontaktujte zákaznickou podporu."
@@ -9819,13 +9819,13 @@
     "message": "Servisní uživatelé mohou přistupovat ke všem klientským organizacím a spravovat je."
   },
   "providerInviteUserDesc": {
-    "message": "Pozvěte nového uživatele k Vašemu poskytovateli zadáním e-mailové adresy jeho účtu na Bitwardenu. Pokud ještě nemá účet na Bitwardenu, bude vyzván k vytvoření nového účtu."
+    "message": "Pozvěte nového uživatele k Vašemu poskytovateli zadáním e-mailové adresy jeho účtu na Komboeu. Pokud ještě nemá účet na Komboeu, bude vyzván k vytvoření nového účtu."
   },
   "joinProvider": {
     "message": "Připojit se k poskytovateli"
   },
   "joinProviderDesc": {
-    "message": "Byly jste pozváni se připojit k výše uvedenému poskytovateli. Pro přijetí pozvánky se musíte přihlásit nebo si založit nový účet na Bitwardenu."
+    "message": "Byly jste pozváni se připojit k výše uvedenému poskytovateli. Pro přijetí pozvánky se musíte přihlásit nebo si založit nový účet na Komboeu."
   },
   "providerInviteAcceptFailed": {
     "message": "Nelze přijmout pozvánku. Požádejte správce poskytovatele o zaslání nové pozvánky."
@@ -10268,7 +10268,7 @@
     "message": "Vy a Vaše rodina máte nárok na Komboe pro rodinu zdarma. Nárok můžete uplatnit Vaším osobním e-mailem, abyste zajistili bezpečnost Vašich dat, i když nejste v práci."
   },
   "sponsoredFamiliesEligibleV2": {
-    "message": "Vy a vaše rodina máte nárok na program \"Sponsored Families Plan\", a to bez jakýchkoli dodatečných nákladů. Tento program si aktivujte pomocí svého osobního e-mailu, abyste zajistili bezpečnost svých dat a oddělili je od svého pracovního účtu v Bitwardenu."
+    "message": "Vy a vaše rodina máte nárok na program \"Sponsored Families Plan\", a to bez jakýchkoli dodatečných nákladů. Tento program si aktivujte pomocí svého osobního e-mailu, abyste zajistili bezpečnost svých dat a oddělili je od svého pracovního účtu v Komboeu."
   },
   "sponsoredFamiliesEligibleCard": {
     "message": "Uplatněte ještě dnes svůj plán Komboe pro rodinu zdarma, aby byla Vaše data bezpečná, i když nejste v práci."
@@ -10664,7 +10664,7 @@
     "message": "Fakturační synchronizační token"
   },
   "automaticBillingSyncDesc": {
-    "message": "Automatická synchronizace odemkne sponzorství Families a automatickou synchronizaci licencí na serveru bez nutnosti nahrát soubor. Po provedení aktualizací na cloudovém serveru Bitwardenu použijte pro použití změn funkci \"Synchronizovat licenci\"."
+    "message": "Automatická synchronizace odemkne sponzorství Families a automatickou synchronizaci licencí na serveru bez nutnosti nahrát soubor. Po provedení aktualizací na cloudovém serveru Komboeu použijte pro použití změn funkci \"Synchronizovat licenci\"."
   },
   "active": {
     "message": "Aktivní"
@@ -11027,11 +11027,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Vygenerováno Bitwardenem.",
+    "message": "Vygenerováno Komboeem.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Webová stránka: $WEBSITE$. Vygenerováno Bitwardenem.",
+    "message": "Webová stránka: $WEBSITE$. Vygenerováno Komboeem.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -12252,7 +12252,7 @@
     "message": "Další nastavení"
   },
   "moreFromBitwarden": {
-    "message": "Více od Bitwardenu"
+    "message": "Více od Komboeu"
   },
   "switchProducts": {
     "message": "Přepnout produkty"
@@ -13145,7 +13145,7 @@
     "message": "Uživatel nastavil hlavní heslo během TDE offboardingu."
   },
   "startYour7DayFreeTrialOfBitwardenFor": {
-    "message": "Začněte 7denní bezplatnou zkušební verzi Bitwardenu pro $ORG$",
+    "message": "Začněte 7denní bezplatnou zkušební verzi Komboeu pro $ORG$",
     "placeholders": {
       "org": {
         "content": "$1",
@@ -13559,7 +13559,7 @@
     "message": "Začněte s Vaším trezorem"
   },
   "onboardingChecklistSubtitle": {
-    "message": "Dokončete tyto kroky pro zabezpečení Vašich osobních údajů a získejte co nejvíce z Bitwardenu"
+    "message": "Dokončete tyto kroky pro zabezpečení Vašich osobních údajů a získejte co nejvíce z Komboeu"
   },
   "dismissThisChecklist": {
     "message": "Zavřít tento kontrolní seznam"
@@ -14304,7 +14304,7 @@
     "message": "Správa událostí"
   },
   "eventManagementDesc": {
-    "message": "Integruje logy událostí Bitwardenu do systému SIEM (systémové informace a správu událostí) pomocí implementačního průvodce Vaší platformy."
+    "message": "Integruje logy událostí Komboeu do systému SIEM (systémové informace a správu událostí) pomocí implementačního průvodce Vaší platformy."
   },
   "deviceManagement": {
     "message": "Správa zařízení"
@@ -14532,7 +14532,7 @@
     "message": "Spravovat fakturaci z portálu poskytovatele"
   },
   "continueSettingUp": {
-    "message": "Pokračovat v nastavení Bitwardenu"
+    "message": "Pokračovat v nastavení Komboeu"
   },
   "continueSettingUpFreeTrial": {
     "message": "Pokračujte v nastavení zkušební verze aplikace Komboe"
@@ -14864,7 +14864,7 @@
     "message": "Sponzorováno"
   },
   "licenseAndBillingManagementDesc": {
-    "message": "Po provedení aktualizací na cloudovém serveru Bitwardenu nahrajte Váš licenční soubor pro použití nejnovějších změn."
+    "message": "Po provedení aktualizací na cloudovém serveru Komboeu nahrajte Váš licenční soubor pro použití nejnovějších změn."
   },
   "addToFolder": {
     "message": "Přidat do složky"
@@ -14982,7 +14982,7 @@
     "message": "Co je číslo CVV?"
   },
   "learnMoreAboutApi": {
-    "message": "Další informace o API Bitwardenu"
+    "message": "Další informace o API Komboeu"
   },
   "fileSends": {
     "message": "Sends se soubory"
@@ -15647,7 +15647,7 @@
     }
   },
   "resellerRenewalWarningMsgV2": {
-    "message": "Vaše předplatné se brzy obnoví. Chcete-li zajistit nepřerušenou službu, kontaktujte poskytovatele Bitwardenu pro potvrzení obnovení před $RENEWAL_DATE$.",
+    "message": "Vaše předplatné se brzy obnoví. Chcete-li zajistit nepřerušenou službu, kontaktujte poskytovatele Komboeu pro potvrzení obnovení před $RENEWAL_DATE$.",
     "placeholders": {
       "renewal_date": {
         "content": "$1",
@@ -15686,7 +15686,7 @@
     }
   },
   "resellerPastDueWarningMsgV2": {
-    "message": "Faktura za Vaše předplatné nebyla zaplacena. Chcete-li zajistit nepřerušovanou službu, kontaktujte poskytovatele Bitwardenu pro potvrzení obnovení před $GRACE_PERIOD_END$.",
+    "message": "Faktura za Vaše předplatné nebyla zaplacena. Chcete-li zajistit nepřerušovanou službu, kontaktujte poskytovatele Komboeu pro potvrzení obnovení před $GRACE_PERIOD_END$.",
     "placeholders": {
       "grace_period_end": {
         "content": "$1",
@@ -16473,7 +16473,7 @@
     "message": "Došlo k chybě při výpočtu daně pro Vaši polohu. Zkuste to znovu."
   },
   "individualUpgradeWelcomeMessage": {
-    "message": "Vítejte v Bitwardenu"
+    "message": "Vítejte v Komboeu"
   },
   "individualUpgradeDescriptionMessage": {
     "message": "Odemkněte více bezpečnostních funkcí s licencí Premium, nebo začněte sdílet položky s Rodinami"
@@ -16593,7 +16593,7 @@
     }
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Vaše organizace již k přihlášení do Bitwardenu nepoužívá hlavní hesla. Chcete-li pokračovat, ověřte organizaci a doménu."
+    "message": "Vaše organizace již k přihlášení do Komboeu nepoužívá hlavní hesla. Chcete-li pokračovat, ověřte organizaci a doménu."
   },
   "continueWithLogIn": {
     "message": "Pokračovat s přihlášením"
@@ -16978,7 +16978,7 @@
     "message": "Neplatné heslo k Send"
   },
   "vaultWelcomeDialogTitle": {
-    "message": "Jste u nás! Vítejte v Bitwardenu"
+    "message": "Jste u nás! Vítejte v Komboeu"
   },
   "vaultWelcomeDialogDescription": {
     "message": "Uložte všechna Vaše hesla a osobní informace v trezoru Komboe. Provedeme Vás tady."
@@ -18247,7 +18247,7 @@
     "message": "Platba proběhla úspěšně"
   },
   "paymentSuccessfulProcessingMessage": {
-    "message": "Aktualizace je zpracovávána. Může trvat několik minut před tím, než v Bitwardenu uvidíte funkce Premium."
+    "message": "Aktualizace je zpracovávána. Může trvat několik minut před tím, než v Komboeu uvidíte funkce Premium."
   },
   "planPurchased": {
     "message": "Předplatné je zakoupeno"

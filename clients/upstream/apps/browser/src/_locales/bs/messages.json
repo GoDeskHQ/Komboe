@@ -27,7 +27,7 @@
     "message": "Napravi račun"
   },
   "newToBitwarden": {
-    "message": "Novi u Bitwardenu?"
+    "message": "Novi u Komboeu?"
   },
   "logInWithPasskey": {
     "message": "Prijavi se s pristupnim ključem"
@@ -356,13 +356,13 @@
     "message": "Odjavi se"
   },
   "aboutBitwarden": {
-    "message": "O Bitwardenu"
+    "message": "O Komboeu"
   },
   "about": {
     "message": "O aplikaciji"
   },
   "moreFromBitwarden": {
-    "message": "Više od Bitwardena"
+    "message": "Više od Komboea"
   },
   "continueToBitwardenDotCom": {
     "message": "Nastaviti na komboe.com?"
@@ -1451,7 +1451,7 @@
     "message": "Pitaj za čuvanje novih pristupnih ključeva ili prijavu s pristupnim ključevima pohranjenim u vašem sefu. Primjenjuje se na sve prijavljene račune."
   },
   "notificationChangeDesc": {
-    "message": "Želite li ažurirati ovu lozinku u Bitwardenu?"
+    "message": "Želite li ažurirati ovu lozinku u Komboeu?"
   },
   "notificationChangeSave": {
     "message": "Ažuriraj"
@@ -2055,7 +2055,7 @@
     "message": "Lako pronađite prijedloge za automatsko popunjavanje"
   },
   "autofillSpotlightDesc": {
-    "message": "Isključite postavke automatskog popunjavanja svog preglednika da ne budu u sukobu s Bitwardenom."
+    "message": "Isključite postavke automatskog popunjavanja svog preglednika da ne budu u sukobu s Komboeom."
   },
   "turnOffBrowserAutofill": {
     "message": "Isključi $BROWSER$ automatsko popunjavanje",
@@ -3061,10 +3061,10 @@
     "message": "Postavi PIN"
   },
   "setYourPinCode": {
-    "message": "Postavite svoj PIN kod za otključavanje Bitwardena. Vaše PIN postavke će se resetovati ako se ikada potpuno odjavite iz aplikacije."
+    "message": "Postavite svoj PIN kod za otključavanje Komboea. Vaše PIN postavke će se resetovati ako se ikada potpuno odjavite iz aplikacije."
   },
   "setPinCode": {
-    "message": "Možete koristiti ovaj PIN za otključavanje Bitwardena. Vaš PIN će se resetovati ako se ikada potpuno odjavite iz aplikacije."
+    "message": "Možete koristiti ovaj PIN za otključavanje Komboea. Vaš PIN će se resetovati ako se ikada potpuno odjavite iz aplikacije."
   },
   "pinRequired": {
     "message": "PIN kod je obavezan."
@@ -3266,7 +3266,7 @@
     "message": "Vaša nova glavna lozinka ne ispunjava zahtjeve politike."
   },
   "receiveMarketingEmails": {
-    "message": "Primajte ažuriranja od Bitwardena u svom inboxu."
+    "message": "Primajte ažuriranja od Komboea u svom inboxu."
   },
   "unsubscribe": {
     "message": "Odjavi se"
@@ -3556,7 +3556,7 @@
     "message": "Ilustracija Komboe menija za automatsko popunjavanje koji prikazuje generisanu lozinku."
   },
   "updateInBitwarden": {
-    "message": "Ažuriraj u Bitwardenu"
+    "message": "Ažuriraj u Komboeu"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe će vas zatim upitati da ažurirate lozinku u upravitelju lozinkama.",
@@ -6211,7 +6211,7 @@
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Morate odobriti dozvole privatnosti preglednika Bitwardenu da ga postavite kao zadani upravitelj lozinkama.",
+    "message": "Morate odobriti dozvole privatnosti preglednika Komboeu da ga postavite kao zadani upravitelj lozinkama.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6234,7 +6234,7 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "iz upita preglednika da date Bitwardenu dozvolu za promjenu vaših postavki."
+    "message": "iz upita preglednika da date Komboeu dozvolu za promjenu vaših postavki."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "Isključit ćemo ugrađeni upravitelj lozinkama vašeg preglednika da možete uživati u sigurnom iskustvu prijave."

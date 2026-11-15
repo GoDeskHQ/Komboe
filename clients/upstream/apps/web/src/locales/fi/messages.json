@@ -3215,7 +3215,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Liian korkea KDF-toistojen määrä saattaa hidastaa Bitwardeniin kirjautumista (ja lukituksen avausta) heikkotehoisilla tai vanhoilla laitteilla. Arvoja kannattaa korottaa $INCREMENT$ välein ja muutoksia kokeilla kaikilla laitteilla.",
+    "message": "Liian korkea KDF-toistojen määrä saattaa hidastaa Komboeiin kirjautumista (ja lukituksen avausta) heikkotehoisilla tai vanhoilla laitteilla. Arvoja kannattaa korottaa $INCREMENT$ välein ja muutoksia kokeilla kaikilla laitteilla.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -3228,7 +3228,7 @@
     "description": "Memory refers to computer memory (RAM). MB is short for megabytes."
   },
   "argon2Warning": {
-    "message": "Liian korkea KDF-toistojen, -muistin ja -rinnakkaisuuksien määrät saattavat hidastaa Bitwardeniin kirjautumista (ja lukituksen avausta) heikkotehoisilla tai vanhoilla laitteilla. Arvoja kannattaa korottaa vain vähän kerrallaan ja muutoksia kokeilla kaikilla laitteilla."
+    "message": "Liian korkea KDF-toistojen, -muistin ja -rinnakkaisuuksien määrät saattavat hidastaa Komboeiin kirjautumista (ja lukituksen avausta) heikkotehoisilla tai vanhoilla laitteilla. Arvoja kannattaa korottaa vain vähän kerrallaan ja muutoksia kokeilla kaikilla laitteilla."
   },
   "kdfParallelism": {
     "message": "KDF-rinnakkaisuus"
@@ -4039,7 +4039,7 @@
     "message": "Ota kaksivaiheinen kirjautuminen käyttöön organisaatiollesi."
   },
   "twoStepLoginEnterpriseDescStart": {
-    "message": "Pakota jäsenet määrittämään Bitwardenin kaksivaiheinen kirjautuminen käytännöllä: ",
+    "message": "Pakota jäsenet määrittämään Komboein kaksivaiheinen kirjautuminen käytännöllä: ",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Bitwarden Two-step Login options for members by using the Two-step Login Policy.'"
   },
   "twoStepLoginPolicy": {
@@ -4052,7 +4052,7 @@
     "message": "Jos olet määrittänyt kertakirjautumisen tai aiot määrittää sen, on kaksivaiheinen kirjautuminen saatettu jo pakottaa identiteettitoimittajasi kautta."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Kaksivaiheisen kirjautumisen käyttöönotto voi lukita sinut ulos Komboe-tililtäsi pysyvästi. Palautuskoodi mahdollistaa pääsyn tilillesi myös silloin, kun et voi käyttää normaaleja kaksivaiheisen tunnistautumisen vahvistustapoja (esim. kadotat suojausavaimesi tai se varastetaan). Bitwardenin asiakaspalvelukaan ei voi auttaa sinua, jos menetät pääsyn tillesi. Suosittelemme, että kirjoitat palautuskoodin muistiin tai tulostat sen ja säilytät turvallisessa paikassa (esim. kassakaapissa tai pankin tallelokerossa)."
+    "message": "Kaksivaiheisen kirjautumisen käyttöönotto voi lukita sinut ulos Komboe-tililtäsi pysyvästi. Palautuskoodi mahdollistaa pääsyn tilillesi myös silloin, kun et voi käyttää normaaleja kaksivaiheisen tunnistautumisen vahvistustapoja (esim. kadotat suojausavaimesi tai se varastetaan). Komboein asiakaspalvelukaan ei voi auttaa sinua, jos menetät pääsyn tillesi. Suosittelemme, että kirjoitat palautuskoodin muistiin tai tulostat sen ja säilytät turvallisessa paikassa (esim. kassakaapissa tai pankin tallelokerossa)."
   },
   "restrictedItemTypePolicy": {
     "message": "Remove card item type"
@@ -4172,7 +4172,7 @@
     }
   },
   "continueToExternalUrlDesc": {
-    "message": "Olet poistumassa Bitwardenista ja avaamassa ulkoisen verkkosivuston uudessa ikkunassa."
+    "message": "Olet poistumassa Komboeista ja avaamassa ulkoisen verkkosivuston uudessa ikkunassa."
   },
   "twoStepContinueToBitwardenUrlTitle": {
     "message": "Avataanko komboe.com?"
@@ -4337,7 +4337,7 @@
     "message": "Suojausavainta luettaessa havaittiin ongelma. Yritä uudelleen."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Bitwardenin kaksivaiheisen kirjautumisen palautuskoodisi"
+    "message": "Komboein kaksivaiheisen kirjautumisen palautuskoodisi"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Et ole vielä ottanut käyttöön yhtään kaksivaiheisen kirjautumisen todentajaa. Otettuasi todentajan käyttöön, löydät palautuskoodisi täältä."
@@ -4390,7 +4390,7 @@
     "message": "Tunnusten 2FA-tila"
   },
   "inactive2faReportDesc": {
-    "message": "Kaksivaiheinen kirjautuminen (2FA) lisää tileillesi yhden suojaustason. Määritä kaksivaiheinen kirjautuminen näille tileille Bitwardenin todentajalla tai käytä vaihtoehtoisia menetelmiä."
+    "message": "Kaksivaiheinen kirjautuminen (2FA) lisää tileillesi yhden suojaustason. Määritä kaksivaiheinen kirjautuminen näille tileille Komboein todentajalla tai käytä vaihtoehtoisia menetelmiä."
   },
   "inactive2faFound": {
     "message": "Löytyi kirjautumistietoja, joille ei ole määritetty kaksivaiheista kirjautumista"
@@ -7974,7 +7974,7 @@
     "message": "API-avain"
   },
   "apiKeyDesc": {
-    "message": "API-avainta voidaan käyttää tunnistautumiseen Bitwardenin julkista rajapintaa vasten."
+    "message": "API-avainta voidaan käyttää tunnistautumiseen Komboein julkista rajapintaa vasten."
   },
   "apiKeyRotateDesc": {
     "message": "API-avaimen uudistus mitätöi edellisen avaimen. Voit uudistaa API-avaimen, jos uskot, ettei nykyisen avaimen käyttö ole enää turvallista."
@@ -7983,7 +7983,7 @@
     "message": "API-avaimellasi on organisaation täydet käyttöoikeudet ja se tulee pitää turvassa."
   },
   "userApiKeyDesc": {
-    "message": "API-avainta voidaan käyttää tunnistautumiseen Bitwardenin komentokehotteessa (CLI)."
+    "message": "API-avainta voidaan käyttää tunnistautumiseen Komboein komentokehotteessa (CLI)."
   },
   "userApiKeyWarning": {
     "message": "API-avaimesi on vaihtoehtoinen todennusmekanismi. Avain tulee pitää turvassa."
@@ -9319,7 +9319,7 @@
     "message": "Komboe Salaisuushallinta"
   },
   "moreProductsFromBitwarden": {
-    "message": "Lisää tuotteita Bitwardenilta"
+    "message": "Lisää tuotteita Komboeilta"
   },
   "requestAccessToSecretsManager": {
     "message": "Pyydä Salaisuushallinnan käyttöoikeutta"
@@ -9331,7 +9331,7 @@
     "message": "Salaisuushallinnan käyttöoikeuspyyntö lähetettiin ylläpidolle sähköpostitse."
   },
   "requestAccessSMDefaultEmailContent": {
-    "message": "Hei,\n\nPyydän tiimillemme Komboe Salaisuushallinnan tilausta ja arvostaisin tukeasi merkittävästi!\n\nKomboe Salaisuushallinta on päästä päähän salattu sailaisuuksien hallintaratkaisu niiden turvalliseen säilytykseen ja jakamiseen sekä API-avainten, tietokantojen salasanojen ja todennusvarmenteiden kaltaisten laitetunnisteiden jakeluun.\n\nSalaisuushallinnan avulla:\n- parannamme tietoturvaa\n- suoraviivastamme toimintoja\n- estämme kalliita salaisuusvuotoja\n\nOle ilmaisesta kokeilusta yhteydessä Bitwardeniin.\n\nKiitos avustasi!"
+    "message": "Hei,\n\nPyydän tiimillemme Komboe Salaisuushallinnan tilausta ja arvostaisin tukeasi merkittävästi!\n\nKomboe Salaisuushallinta on päästä päähän salattu sailaisuuksien hallintaratkaisu niiden turvalliseen säilytykseen ja jakamiseen sekä API-avainten, tietokantojen salasanojen ja todennusvarmenteiden kaltaisten laitetunnisteiden jakeluun.\n\nSalaisuushallinnan avulla:\n- parannamme tietoturvaa\n- suoraviivastamme toimintoja\n- estämme kalliita salaisuusvuotoja\n\nOle ilmaisesta kokeilusta yhteydessä Komboeiin.\n\nKiitos avustasi!"
   },
   "giveMembersAccess": {
     "message": "Myönnä jäsenille käyttöoikeus:"
@@ -10506,7 +10506,7 @@
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Bitwarden Support for set up assistance.'"
   },
   "memberDecryptionKeyConnectorDescEnd": {
-    "message": "vaaditaan Key Connector -salauksenpurun käyttöönottoon. Ole yhteydessä Bitwardenin asiakaspalveluun saadaksesi apua määritykseen.",
+    "message": "vaaditaan Key Connector -salauksenpurun käyttöönottoon. Ole yhteydessä Komboein asiakaspalveluun saadaksesi apua määritykseen.",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Connect login with SSO to your self-hosted decryption key server. Using this option, members won’t need to use their master passwords to decrypt vault data. The require SSO authentication and single organization policies are required to set up Key Connector decryption. Contact Bitwarden Support for set up assistance.'"
   },
   "keyConnectorPolicyRestriction": {
@@ -10664,7 +10664,7 @@
     "message": "Laskutuksen synkronointitunniste"
   },
   "automaticBillingSyncDesc": {
-    "message": "Automaattinen synkronointi avaa Families-sponsoroinnin ja mahdollistaa lisenssisi automaattisen synkronoinnin ilman tiedostolatausta. Tehtyäsi muutokset Bitwardenin pilvipalvelimelle, ota ne käyttöön valitsemalla \"Synkronoi lisenssi\"."
+    "message": "Automaattinen synkronointi avaa Families-sponsoroinnin ja mahdollistaa lisenssisi automaattisen synkronoinnin ilman tiedostolatausta. Tehtyäsi muutokset Komboein pilvipalvelimelle, ota ne käyttöön valitsemalla \"Synkronoi lisenssi\"."
   },
   "active": {
     "message": "Aktiivinen"
@@ -11027,11 +11027,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Bitwardenin luoma.",
+    "message": "Komboein luoma.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Verkkosivusto: $WEBSITE$. Bitwardenin luoma.",
+    "message": "Verkkosivusto: $WEBSITE$. Komboein luoma.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -12252,7 +12252,7 @@
     "message": "More settings"
   },
   "moreFromBitwarden": {
-    "message": "Lisää Bitwardenilta"
+    "message": "Lisää Komboeilta"
   },
   "switchProducts": {
     "message": "Vaihda tuotteita"
@@ -13706,7 +13706,7 @@
     "message": "Sähköpostivahvistus lähetettiin osoitteeseen "
   },
   "sorryToSeeYouGo": {
-    "message": "Harmillista, että päätit lopettaa tilauksesi! Auta meitä parantamaan Bitwardenia kertomalla miksi.",
+    "message": "Harmillista, että päätit lopettaa tilauksesi! Auta meitä parantamaan Komboeia kertomalla miksi.",
     "description": "A message shown to users as part of an offboarding survey asking them to provide more information on their subscription cancelation."
   },
   "selectCancellationReason": {
@@ -14264,13 +14264,13 @@
     "message": "Integraatiot"
   },
   "integrationsDesc": {
-    "message": "Synkronoi salaisuudet automaattisesti Bitwardenin Salaisuushallinnan ja ulkopuolisen palvelun välillä."
+    "message": "Synkronoi salaisuudet automaattisesti Komboein Salaisuushallinnan ja ulkopuolisen palvelun välillä."
   },
   "sdks": {
     "message": "SDK:t"
   },
   "sdksDesc": {
-    "message": "Bitwardenin Salaisuushallinnan SDK:n avulla voit kehittää omia sovelluksiasi seuraavilla ohjelmointikielillä."
+    "message": "Komboein Salaisuushallinnan SDK:n avulla voit kehittää omia sovelluksiasi seuraavilla ohjelmointikielillä."
   },
   "ssoDescStart": {
     "message": "Konfiguroi",
@@ -14857,14 +14857,14 @@
     "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'Notice: Later this month, client vault privacy will be improved and provider members will no longer have direct access to client vault items. For questions, please contact Bitwarden support'."
   },
   "contactBitwardenSupport": {
-    "message": "Bitwardenin asiakaspalvelusta.",
+    "message": "Komboein asiakaspalvelusta.",
     "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'Notice: Later this month, client vault privacy will be improved and provider members will no longer have direct access to client vault items. For questions, please contact Bitwarden support'. 'Bitwarden' should not be translated"
   },
   "sponsored": {
     "message": "Sponsoroitu"
   },
   "licenseAndBillingManagementDesc": {
-    "message": "Ota uusimmat muutokset käyttöön lisäämällä lisenssitiedostosi tehtyäsi Bitwardenin pilvipalvelimen muutokset."
+    "message": "Ota uusimmat muutokset käyttöön lisäämällä lisenssitiedostosi tehtyäsi Komboein pilvipalvelimen muutokset."
   },
   "addToFolder": {
     "message": "Lisää kansioon"
@@ -14982,7 +14982,7 @@
     "message": "Mikä on CVC-/CVV-numero?"
   },
   "learnMoreAboutApi": {
-    "message": "Lisätietoja Bitwardenin API:sta"
+    "message": "Lisätietoja Komboein API:sta"
   },
   "fileSends": {
     "message": "Tiedosto-Sendit"

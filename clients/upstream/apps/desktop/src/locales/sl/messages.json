@@ -1465,7 +1465,7 @@
     "message": "Ustvari račun"
   },
   "newToBitwarden": {
-    "message": "Ste novi v Bitwardenu?"
+    "message": "Ste novi v Komboeu?"
   },
   "setAStrongPassword": {
     "message": "Nastavite močno geslo"
@@ -2514,7 +2514,7 @@
     "description": "Bring all windows to front (foreground)"
   },
   "aboutBitwarden": {
-    "message": "O Bitwardenu"
+    "message": "O Komboeu"
   },
   "services": {
     "message": "Storitve"
@@ -2529,7 +2529,7 @@
     "message": "Pokaži vse"
   },
   "quitBitwarden": {
-    "message": "Izhod iz Bitwardena"
+    "message": "Izhod iz Komboea"
   },
   "valueCopied": {
     "message": "$VALUE$ kopirano",
@@ -2752,7 +2752,7 @@
     "message": "Odkleni s PIN kodo"
   },
   "setYourPinCode": {
-    "message": "Nastavite svojo PIN kodo za odklepanje Bitwardena. Vaše nastavitve PIN bodo ponastavljene, če se popolnoma odjavite iz aplikacije."
+    "message": "Nastavite svojo PIN kodo za odklepanje Komboea. Vaše nastavitve PIN bodo ponastavljene, če se popolnoma odjavite iz aplikacije."
   },
   "pinRequired": {
     "message": "Potrebna je PIN koda."
@@ -3101,7 +3101,7 @@
     "message": "Ena ali več organizacijskih politik zahteva, da glavno geslo izpolnjuje naslednje zahteve:"
   },
   "receiveMarketingEmails": {
-    "message": "Prejemajte posodobitve od Bitwardena v svojem nabiralniku."
+    "message": "Prejemajte posodobitve od Komboea v svojem nabiralniku."
   },
   "unsubscribe": {
     "message": "Odjava"
@@ -3137,7 +3137,7 @@
     "message": "Odobri"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ se želi povezati z Bitwardenom",
+    "message": "$APPID$ se želi povezati z Komboeom",
     "placeholders": {
       "appid": {
         "content": "$1",

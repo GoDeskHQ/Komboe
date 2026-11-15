@@ -7,7 +7,7 @@
   "productName": "Komboe Beta",
   "appId": "io.komboe.beta.desktop",
   "buildDependenciesFromSource": true,
-  "copyright": "Copyright © 2026 Komboe.",
+  "copyright": "Copyright © 2026 Komboe. Komboe is based on Bitwarden clients (GPL-3.0).",
   "directories": {
     "buildResources": "resources",
     "output": "dist",
@@ -185,8 +185,8 @@
     "minVersion": "10.0.14393.0",
     "maxVersionTested": "10.0.26100.0",
     "applicationId": "komboedesktop",
-    "identityName": "GoDesk.Komboe",
-    "publisher": "CN=GoDesk",
+    "identityName": "Komboe.Komboe",
+    "publisher": "CN=Komboe",
     "publisherDisplayName": "Komboe",
     "languages": [
       "en-US",

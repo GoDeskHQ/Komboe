@@ -91,7 +91,7 @@ describe("CliDesktopIpcTransport", () => {
     } as OutgoingMessage);
     proxy.process.emit("exit", 1, null);
 
-    await expect(send).rejects.toThrow("Bitwarden Desktop proxy exited with code 1");
+    await expect(send).rejects.toThrow("Komboe Desktop proxy exited with code 1");
   });
 
   it("terminates the proxy and reports an explicit disconnect", async () => {

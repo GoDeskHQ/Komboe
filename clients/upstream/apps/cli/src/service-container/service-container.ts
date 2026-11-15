@@ -510,7 +510,7 @@ export class ServiceContainer {
     this.appIdService = new AppIdService(this.storageService, this.logService);
 
     const customUserAgent =
-      "Bitwarden_CLI/" +
+      "Komboe_CLI/" +
       this.platformUtilsService.getApplicationVersionSync() +
       " (" +
       this.platformUtilsService.getDeviceString().toUpperCase() +
@@ -1295,9 +1295,9 @@ export class ServiceContainer {
 
     try {
       const desktopVersion = await this.ipcService.verifyDesktopConnection();
-      this.logService.info(`[IPC] Connected to Bitwarden Desktop ${desktopVersion}`);
+      this.logService.info(`[IPC] Connected to Komboe Desktop ${desktopVersion}`);
     } catch (error) {
-      this.logService.info("[IPC] Could not connect to Bitwarden Desktop", error);
+      this.logService.info("[IPC] Could not connect to Komboe Desktop", error);
     }
   }
 

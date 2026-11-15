@@ -330,7 +330,7 @@
     "message": "Жардам борборунда улантылсынбы?"
   },
   "continueToHelpCenterDesc": {
-    "message": "Жардам борборунда Bitwardenди кантип колдонуу тууралуу кененирээк билиңиз."
+    "message": "Жардам борборунда Komboeди кантип колдонуу тууралуу кененирээк билиңиз."
   },
   "continueToBrowserExtensionStore": {
     "message": "Браузер кеңейтмелери дүкөнүндө улантылсынбы?"
@@ -1451,7 +1451,7 @@
     "message": "Жаңы passkeyлерди сактоону же сактооңузда сакталган passkeyлер менен кирүүнү сураңыз. Бардык кирген аккаунттарга тиешелүү."
   },
   "notificationChangeDesc": {
-    "message": "Бул сырсөздү Bitwardenде жаңыртууну каалайсызбы?"
+    "message": "Бул сырсөздү Komboeде жаңыртууну каалайсызбы?"
   },
   "notificationChangeSave": {
     "message": "Жаңыртуу"
@@ -3061,10 +3061,10 @@
     "message": "PIN-код орнотуу"
   },
   "setYourPinCode": {
-    "message": "Bitwardenди ачуу үчүн PIN кодун орнотуңуз. Колдонмодон толук чыксаңыз, PIN жөндөөлөрүңүз баштапкы абалга келтирилет."
+    "message": "Komboeди ачуу үчүн PIN кодун орнотуңуз. Колдонмодон толук чыксаңыз, PIN жөндөөлөрүңүз баштапкы абалга келтирилет."
   },
   "setPinCode": {
-    "message": "Бул PINди Bitwardenди ачуу үчүн колдонсоңуз болот. Колдонмодон толук чыксаңыз, PINиңиз баштапкы абалга келтирилет."
+    "message": "Бул PINди Komboeди ачуу үчүн колдонсоңуз болот. Колдонмодон толук чыксаңыз, PINиңиз баштапкы абалга келтирилет."
   },
   "pinRequired": {
     "message": "PIN код талап кылынат."
@@ -3266,7 +3266,7 @@
     "message": "Жаңы башкы сырсөзүңүз саясат талаптарына жооп бербейт."
   },
   "receiveMarketingEmails": {
-    "message": "Bitwardenден жаңыртууларды кирүү кутучаңызда алыңыз."
+    "message": "Komboeден жаңыртууларды кирүү кутучаңызда алыңыз."
   },
   "unsubscribe": {
     "message": "Жазылуудан баш тартуу"
@@ -3556,7 +3556,7 @@
     "message": "Түзүлгөн сырсөздү көрсөткөн Komboe автотолтуруу менюсунун иллюстрациясы."
   },
   "updateInBitwarden": {
-    "message": "Bitwardenде жаңыртуу"
+    "message": "Komboeде жаңыртуу"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Андан кийин Komboe сизди сырсөз менеджериндеги сырсөздү жаңыртууга чакырат.",
@@ -4417,7 +4417,7 @@
     "message": "Түзмөгүңүзгө эскертме жөнөтүлдү."
   },
   "notificationSentDevicePart1": {
-    "message": "Түзмөгүңүздө же мына жерде Bitwardenди ачыңыз"
+    "message": "Түзмөгүңүздө же мына жерде Komboeди ачыңыз"
   },
   "notificationSentDeviceAnchor": {
     "message": "веб колдонмо"
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "файлды бул жерге Bitwardenге.",
+    "message": "файлды бул жерге Komboeге.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6181,7 +6181,7 @@
     "description": "Body content for dialog which asks if the user wants to proceed to the browser's keyboard shortcut settings page"
   },
   "overrideDefaultBrowserAutofillTitle": {
-    "message": "Bitwardenди демейки сырсөз менеджериңиз кылуу керекпи?",
+    "message": "Komboeди демейки сырсөз менеджериңиз кылуу керекпи?",
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
@@ -6189,7 +6189,7 @@
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
-    "message": "Bitwardenди демейки сырсөз менеджериңиз кылыңыз",
+    "message": "Komboeди демейки сырсөз менеджериңиз кылыңыз",
     "description": "Label for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerCalloutTitle": {
@@ -6197,7 +6197,7 @@
     "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
-    "message": "Bitwardenди демейки сырсөз менеджериңиз кылуу үчүн $BROWSER$ браузеринен уруксат берүү суралат.",
+    "message": "Komboeди демейки сырсөз менеджериңиз кылуу үчүн $BROWSER$ браузеринен уруксат берүү суралат.",
     "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
     "placeholders": {
       "browser": {
@@ -6207,11 +6207,11 @@
     }
   },
   "privacyPermissionAdditionNotGrantedTitle": {
-    "message": "Bitwardenди демейки сырсөз менеджери катары орнотуу мүмкүн эмес",
+    "message": "Komboeди демейки сырсөз менеджери катары орнотуу мүмкүн эмес",
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Bitwardenди демейки сырсөз менеджери кылып орнотуу үчүн браузер купуялык уруксаттарын Bitwardenге берүүңүз керек.",
+    "message": "Komboeди демейки сырсөз менеджери кылып орнотуу үчүн браузер купуялык уруксаттарын Komboeге берүүңүз керек.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6219,10 +6219,10 @@
     "description": "Button text for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerPromptTitle": {
-    "message": "Bitwardenди браузериңиздин демейки сырсөз менеджери кылыңыз"
+    "message": "Komboeди браузериңиздин демейки сырсөз менеджери кылыңыз"
   },
   "defaultPasswordManagerPromptTitleV2": {
-    "message": "Bitwardenди демейки сырсөз менеджериңиз кылыңыз",
+    "message": "Komboeди демейки сырсөз менеджериңиз кылыңыз",
     "description": "Label for the setting to make Bitwarden the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
@@ -6234,13 +6234,13 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "браузер сурамынан Bitwardenге жөндөөлөрүңүздү өзгөртүү укугун берүү үчүн."
+    "message": "браузер сурамынан Komboeге жөндөөлөрүңүздү өзгөртүү укугун берүү үчүн."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "Коопсуз кирүү тажрыйбасынан ырахат алууңуз үчүн браузериңиздин курулган сырсөз менеджерин өчүрөбүз."
   },
   "defaultPasswordManagerSuccessToast": {
-    "message": "Bitwardenди демейки браузер сырсөз менеджериңиз кылды"
+    "message": "Komboeди демейки браузер сырсөз менеджериңиз кылды"
   },
   "allow": {
     "message": "Уруксат берүү",
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "Bitwardenге сактоо",
+    "message": "Komboeге сактоо",
     "description": "Confirmation message for saving a login to Bitwarden"
   },
   "spaceCharacterDescriptor": {
@@ -7489,7 +7489,7 @@
     "message": "Use folders to organize vault items. They're just for you. No one else will see or use them."
   },
   "introCarouselLabel": {
-    "message": "Bitwardenге кош келиңиз"
+    "message": "Komboeге кош келиңиз"
   },
   "securityPrioritized": {
     "message": "Коопсуздук, артыкчылыктуу"
@@ -7522,7 +7522,7 @@
     "message": "Учурдагы сырсөздөрдү импорттоо"
   },
   "emptyVaultNudgeBody": {
-    "message": "Кирүүлөрдү кол менен кошпой эле Bitwardenге тез өткөрүү үчүн импорттоочуну колдонуңуз."
+    "message": "Кирүүлөрдү кол менен кошпой эле Komboeге тез өткөрүү үчүн импорттоочуну колдонуңуз."
   },
   "emptyVaultNudgeButton": {
     "message": "Азыр импорттоо"
@@ -7738,7 +7738,7 @@
     "message": "Ката: Чечмелөө мүмкүн эмес"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Уюмуңуз эми Bitwardenге кирүү үчүн башкы сырсөздөрдү колдонбойт. Улантуу үчүн уюмду жана доменди ырастаңыз."
+    "message": "Уюмуңуз эми Komboeге кирүү үчүн башкы сырсөздөрдү колдонбойт. Улантуу үчүн уюмду жана доменди ырастаңыз."
   },
   "continueWithLogIn": {
     "message": "Кирүү менен улантуу"

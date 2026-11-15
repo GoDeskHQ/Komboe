@@ -27,7 +27,7 @@
     "message": "ఖాతా సృష్టించండి"
   },
   "newToBitwarden": {
-    "message": "Bitwardenకు కొత్తవారా?"
+    "message": "Komboeకు కొత్తవారా?"
   },
   "logInWithPasskey": {
     "message": "పాస్‌కీతో లాగిన్ చేయి"
@@ -330,7 +330,7 @@
     "message": "సహాయ కేంద్రానికి కొనసాగించాలా?"
   },
   "continueToHelpCenterDesc": {
-    "message": "Bitwardenను ఎలా ఉపయోగించాలో సహాయ కేంద్రంలో మరింత తెలుసుకోండి."
+    "message": "Komboeను ఎలా ఉపయోగించాలో సహాయ కేంద్రంలో మరింత తెలుసుకోండి."
   },
   "continueToBrowserExtensionStore": {
     "message": "బ్రౌజర్ ఎక్స్‌టెన్షన్ స్టోర్‌కు కొనసాగించాలా?"
@@ -1349,11 +1349,11 @@
     }
   },
   "notificationLoginSaveConfirmation": {
-    "message": "Bitwardenకు సేవ్ చేయబడింది.",
+    "message": "Komboeకు సేవ్ చేయబడింది.",
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "Bitwardenలో అప్‌డేట్ చేయబడింది.",
+    "message": "Komboeలో అప్‌డేట్ చేయబడింది.",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
@@ -1451,7 +1451,7 @@
     "message": "కొత్త పాస్‌కీలను సేవ్ చేయమని లేదా మీ వాల్ట్‌లో నిల్వ చేసిన పాస్‌కీలతో లాగిన్ చేయమని అడగండి. అన్ని లాగిన్ చేసిన ఖాతాలకు వర్తిస్తుంది."
   },
   "notificationChangeDesc": {
-    "message": "Bitwardenలో ఈ పాస్‌వర్డ్‌ను అప్‌డేట్ చేయాలనుకుంటున్నారా?"
+    "message": "Komboeలో ఈ పాస్‌వర్డ్‌ను అప్‌డేట్ చేయాలనుకుంటున్నారా?"
   },
   "notificationChangeSave": {
     "message": "అప్‌డేట్"
@@ -2055,7 +2055,7 @@
     "message": "ఆటోఫిల్ సూచనలను సులభంగా కనుగొనండి"
   },
   "autofillSpotlightDesc": {
-    "message": "Bitwardenతో వైరుధ్యం కలగకుండా మీ బ్రౌజర్ యొక్క ఆటోఫిల్ సెట్టింగ్‌లను ఆఫ్ చేయండి."
+    "message": "Komboeతో వైరుధ్యం కలగకుండా మీ బ్రౌజర్ యొక్క ఆటోఫిల్ సెట్టింగ్‌లను ఆఫ్ చేయండి."
   },
   "turnOffBrowserAutofill": {
     "message": "$BROWSER$ ఆటోఫిల్ ఆఫ్ చేయి",
@@ -3061,10 +3061,10 @@
     "message": "PIN సెట్ చేయి"
   },
   "setYourPinCode": {
-    "message": "Bitwardenను అన్‌లాక్ చేయడానికి మీ PIN కోడ్‌ను సెట్ చేయండి. మీరు ఎప్పుడైనా అప్లికేషన్ నుండి పూర్తిగా లాగ్ అవుట్ చేస్తే మీ PIN సెట్టింగ్‌లు రీసెట్ చేయబడతాయి."
+    "message": "Komboeను అన్‌లాక్ చేయడానికి మీ PIN కోడ్‌ను సెట్ చేయండి. మీరు ఎప్పుడైనా అప్లికేషన్ నుండి పూర్తిగా లాగ్ అవుట్ చేస్తే మీ PIN సెట్టింగ్‌లు రీసెట్ చేయబడతాయి."
   },
   "setPinCode": {
-    "message": "Bitwardenను అన్‌లాక్ చేయడానికి మీరు ఈ PINని ఉపయోగించవచ్చు. మీరు ఎప్పుడైనా అప్లికేషన్ నుండి పూర్తిగా లాగ్ అవుట్ చేస్తే మీ PIN రీసెట్ చేయబడుతుంది."
+    "message": "Komboeను అన్‌లాక్ చేయడానికి మీరు ఈ PINని ఉపయోగించవచ్చు. మీరు ఎప్పుడైనా అప్లికేషన్ నుండి పూర్తిగా లాగ్ అవుట్ చేస్తే మీ PIN రీసెట్ చేయబడుతుంది."
   },
   "pinRequired": {
     "message": "PIN కోడ్ అవసరం."
@@ -3556,7 +3556,7 @@
     "message": "జనరేట్ చేసిన పాస్‌వర్డ్‌ను ప్రదర్శిస్తున్న Komboe ఆటోఫిల్ మెనూ యొక్క చిత్రణ."
   },
   "updateInBitwarden": {
-    "message": "Bitwardenలో అప్‌డేట్ చేయి"
+    "message": "Komboeలో అప్‌డేట్ చేయి"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe అప్పుడు పాస్‌వర్డ్ మేనేజర్‌లో పాస్‌వర్డ్‌ను అప్‌డేట్ చేయమని మిమ్మల్ని ప్రాంప్ట్ చేస్తుంది.",
@@ -4417,7 +4417,7 @@
     "message": "మీ పరికరానికి నోటిఫికేషన్ పంపబడింది."
   },
   "notificationSentDevicePart1": {
-    "message": "మీ పరికరంలో లేదా దీనిలో Bitwardenను అన్‌లాక్ చేయండి"
+    "message": "మీ పరికరంలో లేదా దీనిలో Komboeను అన్‌లాక్ చేయండి"
   },
   "notificationSentDeviceAnchor": {
     "message": "వెబ్ యాప్"
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "ఫైల్‌ను ఇక్కడ Bitwardenకు.",
+    "message": "ఫైల్‌ను ఇక్కడ Komboeకు.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6181,7 +6181,7 @@
     "description": "Body content for dialog which asks if the user wants to proceed to the browser's keyboard shortcut settings page"
   },
   "overrideDefaultBrowserAutofillTitle": {
-    "message": "Bitwardenను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయాలా?",
+    "message": "Komboeను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయాలా?",
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
@@ -6189,7 +6189,7 @@
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
-    "message": "Bitwardenను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయండి",
+    "message": "Komboeను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయండి",
     "description": "Label for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerCalloutTitle": {
@@ -6197,7 +6197,7 @@
     "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
-    "message": "Bitwardenను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయడానికి $BROWSER$ బ్రౌజర్ అనుమతిని మంజూరు చేయమని మిమ్మల్ని అడగబడుతుంది.",
+    "message": "Komboeను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయడానికి $BROWSER$ బ్రౌజర్ అనుమతిని మంజూరు చేయమని మిమ్మల్ని అడగబడుతుంది.",
     "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
     "placeholders": {
       "browser": {
@@ -6207,11 +6207,11 @@
     }
   },
   "privacyPermissionAdditionNotGrantedTitle": {
-    "message": "Bitwardenను డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా సెట్ చేయలేము",
+    "message": "Komboeను డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా సెట్ చేయలేము",
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Bitwardenను డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా సెట్ చేయడానికి మీరు దానికి బ్రౌజర్ గోప్యతా అనుమతులను మంజూరు చేయాలి.",
+    "message": "Komboeను డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా సెట్ చేయడానికి మీరు దానికి బ్రౌజర్ గోప్యతా అనుమతులను మంజూరు చేయాలి.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6219,10 +6219,10 @@
     "description": "Button text for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerPromptTitle": {
-    "message": "Bitwardenను మీ బ్రౌజర్ యొక్క డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయండి"
+    "message": "Komboeను మీ బ్రౌజర్ యొక్క డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయండి"
   },
   "defaultPasswordManagerPromptTitleV2": {
-    "message": "Bitwardenను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయండి",
+    "message": "Komboeను మీ డిఫాల్ట్ పాస్‌వర్డ్ మేనేజర్‌గా చేయండి",
     "description": "Label for the setting to make Bitwarden the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
@@ -6234,13 +6234,13 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "మీ సెట్టింగ్‌లను మార్చడానికి Bitwardenకు అనుమతి ఇవ్వడానికి బ్రౌజర్ ప్రాంప్ట్ నుండి."
+    "message": "మీ సెట్టింగ్‌లను మార్చడానికి Komboeకు అనుమతి ఇవ్వడానికి బ్రౌజర్ ప్రాంప్ట్ నుండి."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "మీరు సురక్షిత లాగిన్ అనుభవాన్ని ఆస్వాదించగలిగేలా మేము మీ బ్రౌజర్ యొక్క అంతర్నిర్మిత పాస్‌వర్డ్ మేనేజర్‌ను ఆఫ్ చేస్తాము."
   },
   "defaultPasswordManagerSuccessToast": {
-    "message": "Bitwardenను మీ డిఫాల్ట్ బ్రౌజర్ పాస్‌వర్డ్ మేనేజర్‌గా చేసాము"
+    "message": "Komboeను మీ డిఫాల్ట్ బ్రౌజర్ పాస్‌వర్డ్ మేనేజర్‌గా చేసాము"
   },
   "allow": {
     "message": "అనుమతించు",
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "Bitwardenకు సేవ్ చేయి",
+    "message": "Komboeకు సేవ్ చేయి",
     "description": "Confirmation message for saving a login to Bitwarden"
   },
   "spaceCharacterDescriptor": {
@@ -7489,7 +7489,7 @@
     "message": "Use folders to organize vault items. They're just for you. No one else will see or use them."
   },
   "introCarouselLabel": {
-    "message": "Bitwardenకు స్వాగతం"
+    "message": "Komboeకు స్వాగతం"
   },
   "securityPrioritized": {
     "message": "భద్రతకు ప్రాధాన్యత"
@@ -7522,7 +7522,7 @@
     "message": "ఇప్పటికే ఉన్న పాస్‌వర్డ్‌లను దిగుమతి చేయండి"
   },
   "emptyVaultNudgeBody": {
-    "message": "మాన్యువల్‌గా జోడించకుండా లాగిన్‌లను Bitwardenకు త్వరగా బదిలీ చేయడానికి దిగుమతిదారుని ఉపయోగించండి."
+    "message": "మాన్యువల్‌గా జోడించకుండా లాగిన్‌లను Komboeకు త్వరగా బదిలీ చేయడానికి దిగుమతిదారుని ఉపయోగించండి."
   },
   "emptyVaultNudgeButton": {
     "message": "ఇప్పుడే దిగుమతి చేయి"
@@ -7738,7 +7738,7 @@
     "message": "లోపం: డిక్రిప్ట్ చేయలేము"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "మీ సంస్థ ఇకపై Bitwardenలో లాగిన్ చేయడానికి మాస్టర్ పాస్‌వర్డ్‌లను ఉపయోగించడం లేదు. కొనసాగించడానికి, సంస్థ మరియు డొమైన్‌ను ధృవీకరించండి."
+    "message": "మీ సంస్థ ఇకపై Komboeలో లాగిన్ చేయడానికి మాస్టర్ పాస్‌వర్డ్‌లను ఉపయోగించడం లేదు. కొనసాగించడానికి, సంస్థ మరియు డొమైన్‌ను ధృవీకరించండి."
   },
   "continueWithLogIn": {
     "message": "లాగిన్‌తో కొనసాగించు"

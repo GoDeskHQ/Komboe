@@ -1953,7 +1953,7 @@
     "message": "Vil du fortsette til nettappen?"
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "Du kan endre hovedpassordet ditt i Bitwardens nettapp."
+    "message": "Du kan endre hovedpassordet ditt i Komboes nettapp."
   },
   "fingerprintPhrase": {
     "message": "Fingeravtrykksfrase",
@@ -2117,7 +2117,7 @@
     "message": "Start automatisk ved innlogging"
   },
   "openAtLoginDesc": {
-    "message": "Start Bitwardens skrivebordsprogram automatisk ved innlogging."
+    "message": "Start Komboes skrivebordsprogram automatisk ved innlogging."
   },
   "language": {
     "message": "Språk"

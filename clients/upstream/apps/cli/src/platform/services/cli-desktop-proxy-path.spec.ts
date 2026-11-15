@@ -13,26 +13,24 @@ describe("getDesktopProxyPaths", () => {
         "ProgramFiles(x86)": "C:\\Program Files (x86)",
       }),
     ).toEqual([
-      "C:\\Users\\alice\\AppData\\Local\\Programs\\Bitwarden\\desktop_proxy.exe",
-      "C:\\Program Files\\Bitwarden\\desktop_proxy.exe",
-      "C:\\Program Files (x86)\\Bitwarden\\desktop_proxy.exe",
+      "C:\\Users\\alice\\AppData\\Local\\Programs\\Komboe\\desktop_proxy.exe",
+      "C:\\Program Files\\Komboe\\desktop_proxy.exe",
+      "C:\\Program Files (x86)\\Komboe\\desktop_proxy.exe",
     ]);
   });
 
   it("returns system and per-user macOS application paths", () => {
     expect(getDesktopProxyPaths("darwin", "/Users/alice", {})).toEqual([
-      "/Applications/Bitwarden.app/Contents/MacOS/desktop_proxy",
-      "/Users/alice/Applications/Bitwarden.app/Contents/MacOS/desktop_proxy",
+      "/Applications/Komboe.app/Contents/MacOS/desktop_proxy",
+      "/Users/alice/Applications/Komboe.app/Contents/MacOS/desktop_proxy",
     ]);
   });
 
   it("returns standard desktop installation paths on Linux", () => {
     expect(getDesktopProxyPaths("linux", "/home/alice", {})).toEqual([
-      "/opt/Bitwarden/desktop_proxy",
-      "/app/Bitwarden/desktop_proxy",
-      "/usr/lib/bitwarden/desktop_proxy",
-      "/usr/lib/bitwarden-desktop/desktop_proxy",
-      "/snap/bitwarden/current/desktop_proxy",
+      "/opt/Komboe/desktop_proxy",
+      "/usr/lib/komboe/desktop_proxy",
+      "/snap/komboe/current/desktop_proxy",
     ]);
   });
 });

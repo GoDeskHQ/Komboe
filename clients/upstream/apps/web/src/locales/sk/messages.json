@@ -2326,7 +2326,7 @@
     "message": "Vytvoriť účet"
   },
   "newToBitwarden": {
-    "message": "Ste noví na Bitwardene?"
+    "message": "Ste noví na Komboee?"
   },
   "setAStrongPassword": {
     "message": "Nastavte silné heslo"
@@ -3215,7 +3215,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Ak nastavíte KDF iterácie príliš vysoko, môže to viesť k zníženému výkonu pri prihlasovaní do Bitwardenu (a pri jeho odomykaní) na zariadeniach s pomalšimi procesormi. Odporúčame navyšovať túto hodnotu po $INCREMENT$ inkrementoch a následne otestovať na všetkých vašich zariadeniach.",
+    "message": "Ak nastavíte KDF iterácie príliš vysoko, môže to viesť k zníženému výkonu pri prihlasovaní do Komboeu (a pri jeho odomykaní) na zariadeniach s pomalšimi procesormi. Odporúčame navyšovať túto hodnotu po $INCREMENT$ inkrementoch a následne otestovať na všetkých vašich zariadeniach.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -5563,7 +5563,7 @@
     "message": "Externé ID SSO"
   },
   "ssoExternalIdDesc": {
-    "message": "Externé ID SSO je nešifrovaný odkaz medzi Bitwardenom a nakonfigurovaným poskytovateľom SSO."
+    "message": "Externé ID SSO je nešifrovaný odkaz medzi Komboeom a nakonfigurovaným poskytovateľom SSO."
   },
   "nestCollectionUnder": {
     "message": "Zaradiť zbierku pod"
@@ -7974,7 +7974,7 @@
     "message": "API kľúč"
   },
   "apiKeyDesc": {
-    "message": "Váš API kľúč je možné použiť na autentifikáciu do verejného API Bitwardenu."
+    "message": "Váš API kľúč je možné použiť na autentifikáciu do verejného API Komboeu."
   },
   "apiKeyRotateDesc": {
     "message": "Obnovením kľúča API zneplatníte predchádzajúci API kľúč. API kľúč môžete obnoviť ak si myslíte že súčasný kľúč už nie je bezpečný."
@@ -7983,7 +7983,7 @@
     "message": "API kľúč má plný prístup k organizácii. To by by ste ho udržať v bezpečí."
   },
   "userApiKeyDesc": {
-    "message": "Váš API kľúč je možné použiť na autentifikáciu v API Bitwardenu."
+    "message": "Váš API kľúč je možné použiť na autentifikáciu v API Komboeu."
   },
   "userApiKeyWarning": {
     "message": "Váš API kľúč je alternatívnym autentifikačným mechanizmom. Mali by ste si ho udržať v tajnosti."
@@ -8584,7 +8584,7 @@
     "message": "Zaznamenali ste problém? Stiahnite a zdieľajte diagnostický report s"
   },
   "bitwardenSupport": {
-    "message": "podporou Bitwardenu",
+    "message": "podporou Komboeu",
     "description": "Link text that follows the troubleshooting description sentence. 'Bitwarden' should not be translated."
   },
   "download": {
@@ -9390,7 +9390,7 @@
     "description": "Toast message shown when a user clicks the resend code link on the Send access page. 'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "viewSendHiddenEmailWarning": {
-    "message": "Používateľ Bitwardenu, ktorý vytvoril tento Send, skryl e-mailové adresy pred príjemcami. Mali by ste zvážiť, či dôverujete zdrojovému odkazu pred jeho použitím alebo stiahnutím jeho obsahu.",
+    "message": "Používateľ Komboeu, ktorý vytvoril tento Send, skryl e-mailové adresy pred príjemcami. Mali by ste zvážiť, či dôverujete zdrojovému odkazu pred jeho použitím alebo stiahnutím jeho obsahu.",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "expirationDateIsInvalid": {
@@ -13145,7 +13145,7 @@
     "message": "Používateľ nastavil hlavné heslo počas odhlasovania z TDE."
   },
   "startYour7DayFreeTrialOfBitwardenFor": {
-    "message": "Začnite 7-dňovú skúšobnú dobu Bitwardenu zadarmo pre $ORG$",
+    "message": "Začnite 7-dňovú skúšobnú dobu Komboeu zadarmo pre $ORG$",
     "placeholders": {
       "org": {
         "content": "$1",
@@ -14291,7 +14291,7 @@
     "description": "This represents the beginning of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
   },
   "scimIntegrationDescEnd": {
-    "message": "(System for Cross-domain Identity Management) pre automatické vytváranie používateľov a skupiny v Bitwardene pomocou implementačnej príručky pre vášho poskytovateľa identít.",
+    "message": "(System for Cross-domain Identity Management) pre automatické vytváranie používateľov a skupiny v Komboee pomocou implementačnej príručky pre vášho poskytovateľa identít.",
     "description": "This represents the end of a sentence, broken up to include links. The full sentence will be 'Configure SCIM (System for Cross-domain Identity Management) to automatically provision users and groups to Bitwarden using the implementation guide for your Identity Provider"
   },
   "bwdc": {
@@ -14535,7 +14535,7 @@
     "message": "Continue setting up Komboe"
   },
   "continueSettingUpFreeTrial": {
-    "message": "Pokračujte v nastavovaní vašej bezplatnej skúšobnej doby Bitwardenu"
+    "message": "Pokračujte v nastavovaní vašej bezplatnej skúšobnej doby Komboeu"
   },
   "continueSettingUpPasswordManager": {
     "message": "Continue setting up Komboe Password Manager"
@@ -16473,7 +16473,7 @@
     "message": "Pri výpočte dane pre vašu lokalitu došlo k chybe. Prosím skúste to znova."
   },
   "individualUpgradeWelcomeMessage": {
-    "message": "Vítajte v Bitwardene"
+    "message": "Vítajte v Komboee"
   },
   "individualUpgradeDescriptionMessage": {
     "message": "Odomknite ďalšie bezpečnostné funkcie s Prémium, alebo začnite zdieľať položky s predplatným Rodiny"
@@ -16593,7 +16593,7 @@
     }
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Vaša organizácia už nepoužíva hlavné heslá na prihlásenie do Bitwardenu. Ak chcete pokračovať, overte organizáciu a doménu."
+    "message": "Vaša organizácia už nepoužíva hlavné heslá na prihlásenie do Komboeu. Ak chcete pokračovať, overte organizáciu a doménu."
   },
   "continueWithLogIn": {
     "message": "Pokračujte prihlásením"

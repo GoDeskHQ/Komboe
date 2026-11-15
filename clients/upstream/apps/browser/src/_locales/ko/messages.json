@@ -14,7 +14,7 @@
     "description": "Extension name for the beta channel, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "집에서도, 직장에서도, 이동 중에도 Bitwarden은 비밀번호, 패스키, 민감 정보를 쉽게 보호합니다.",
+    "message": "집에서도, 직장에서도, 이동 중에도 Komboe은 비밀번호, 패스키, 민감 정보를 쉽게 보호합니다.",
     "description": "Extension description, MUST be less than 112 characters (Safari restriction)"
   },
   "loginOrCreateNewAccount": {
@@ -27,7 +27,7 @@
     "message": "계정 만들기"
   },
   "newToBitwarden": {
-    "message": "Bitwarden을 처음 이용하시나요?"
+    "message": "Komboe을 처음 이용하시나요?"
   },
   "logInWithPasskey": {
     "message": "패스키를 사용하여 로그인하기"
@@ -330,13 +330,13 @@
     "message": "도움말 센터로 이동"
   },
   "continueToHelpCenterDesc": {
-    "message": "Bitwarden의 자세한 사용법은 도움말 센터에서 확인하세요."
+    "message": "Komboe의 자세한 사용법은 도움말 센터에서 확인하세요."
   },
   "continueToBrowserExtensionStore": {
     "message": "브라우저 확장 스토어로 이동하시겠습니까?"
   },
   "continueToBrowserExtensionStoreDesc": {
-    "message": "다른 사람들이 Bitwarden이 적합한지 알 수 있도록 도와주세요. 당신의 브라우저 확장 스토어로 방문하여 별점을 남겨주세요."
+    "message": "다른 사람들이 Komboe이 적합한지 알 수 있도록 도와주세요. 당신의 브라우저 확장 스토어로 방문하여 별점을 남겨주세요."
   },
   "changeMasterPasswordOnWebConfirmation": {
     "message": "Komboe 웹 앱에서 마스터 비밀번호를 변경할 수 있습니다."
@@ -362,7 +362,7 @@
     "message": "정보"
   },
   "moreFromBitwarden": {
-    "message": "Bitwarden에 대한 더 많은 정보"
+    "message": "Komboe에 대한 더 많은 정보"
   },
   "continueToBitwardenDotCom": {
     "message": "komboe.com 으로 이동할까요?"
@@ -1067,10 +1067,10 @@
     "message": "간편하게 2단계 인증을 만들기"
   },
   "totpHelper": {
-    "message": "Bitwarden은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 키를 복사하여 이 필드에 붙여넣으세요."
+    "message": "Komboe은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 키를 복사하여 이 필드에 붙여넣으세요."
   },
   "totpHelperWithCapture": {
-    "message": "Bitwarden은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 카메라 아이콘을 선택하고, 이 웹사이트의 인증 도구 QR코드를 스크린샷을 찍거나, 키를 복사하여 이 필드에 붙여넣으세요."
+    "message": "Komboe은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 카메라 아이콘을 선택하고, 이 웹사이트의 인증 도구 QR코드를 스크린샷을 찍거나, 키를 복사하여 이 필드에 붙여넣으세요."
   },
   "learnMoreAboutAuthenticators": {
     "message": "인증 도구에 대해 더 알아보기"
@@ -1313,7 +1313,7 @@
     "message": "설정으로 이동"
   },
   "notificationAddDesc": {
-    "message": "Bitwarden이 이 비밀번호를 기억하도록 하시겠습니까?"
+    "message": "Komboe이 이 비밀번호를 기억하도록 하시겠습니까?"
   },
   "notificationAddSave": {
     "message": "예, 지금 저장하겠습니다."
@@ -1349,11 +1349,11 @@
     }
   },
   "notificationLoginSaveConfirmation": {
-    "message": "Bitwarden에 저장되었습니다.",
+    "message": "Komboe에 저장되었습니다.",
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "Bitwarden에서 업데이트되었습니다.",
+    "message": "Komboe에서 업데이트되었습니다.",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
@@ -1451,7 +1451,7 @@
     "message": "보관함에 새 패스키를 저장하거나 로그인할지 물어봅니다. 모든 로그인된 계정에 적용됩니다."
   },
   "notificationChangeDesc": {
-    "message": "Bitwarden에 저장되어 있는 비밀번호를 이 비밀번호로 변경하시겠습니까?"
+    "message": "Komboe에 저장되어 있는 비밀번호를 이 비밀번호로 변경하시겠습니까?"
   },
   "notificationChangeSave": {
     "message": "예, 지금 변경하겠습니다."
@@ -1661,7 +1661,7 @@
     "message": "공유 폴더 추가"
   },
   "bitwardenForBusinessPageDesc": {
-    "message": "비지니스용 Bitwarden은 조직을 사용하여 보관함 항목들을 다른 사람과 공유할 수 있게 해줍니다. 자세한 내용은 komboe.com 사이트에서 확인해주세요"
+    "message": "비지니스용 Komboe은 조직을 사용하여 보관함 항목들을 다른 사람과 공유할 수 있게 해줍니다. 자세한 내용은 komboe.com 사이트에서 확인해주세요"
   },
   "moveToOrganization": {
     "message": "조직으로 이동하기"
@@ -2002,7 +2002,7 @@
     "message": "자체 호스팅 환경"
   },
   "selfHostedBaseUrlHint": {
-    "message": "온-프레미스 Bitwarden이 호스팅되고 있는 서버의 기본 URL을 지정하세요. 예: https://komboe.company.com"
+    "message": "온-프레미스 Komboe이 호스팅되고 있는 서버의 기본 URL을 지정하세요. 예: https://komboe.company.com"
   },
   "selfHostedCustomEnvHeader": {
     "message": "고급 구성의 경우 각 서비스의 기본 URL을 독립적으로 지정할 수 있습니다."
@@ -2055,7 +2055,7 @@
     "message": "쉽게 자동 완성 제안 찾기"
   },
   "autofillSpotlightDesc": {
-    "message": "브라우저의 자동 완성 설정을 꺼서, Bitwarden과 충돌하지 않도록 하세요."
+    "message": "브라우저의 자동 완성 설정을 꺼서, Komboe과 충돌하지 않도록 하세요."
   },
   "turnOffBrowserAutofill": {
     "message": "$BROWSER$ 자동 완성 끄기",
@@ -2112,7 +2112,7 @@
     "message": "양식 필드에 자동 완성 제안 표시"
   },
   "howDoesBitwardenProtectFromPhishing": {
-    "message": "Bitwarden은 피싱으로부터 데이터를 어떻게 보호하나요?"
+    "message": "Komboe은 피싱으로부터 데이터를 어떻게 보호하나요?"
   },
   "currentWebsite": {
     "message": "현재 웹사이트"
@@ -3064,7 +3064,7 @@
     "message": "Komboe 잠금해제에 사용될 PIN 코드를 설정합니다. 이 애플리케이션에서 완전히 로그아웃할 경우 PIN 설정이 초기화됩니다."
   },
   "setPinCode": {
-    "message": "이 PIN을 사용해 Bitwarden의 잠금을 해제할 수 있습니다. 이 애플리케이션에서 완전히 로그아웃할 경우 PIN이 초기화됩니다."
+    "message": "이 PIN을 사용해 Komboe의 잠금을 해제할 수 있습니다. 이 애플리케이션에서 완전히 로그아웃할 경우 PIN이 초기화됩니다."
   },
   "pinRequired": {
     "message": "PIN 코드가 필요합니다."
@@ -3200,7 +3200,7 @@
     "message": "양식은 저장된 로그인의 URI가 아닌 다른 도메인에서 호스팅됩니다. 그래도 자동 완성을 사용하시려면 OK, 아니라면 취소 버튼을 선택해주세요."
   },
   "autofillIframeWarningTip": {
-    "message": "향후 이 경고를 방지하려면 이 URI인 $HOSTNAME$(을)를 Bitwarden로그인 항목에 저장하세요.",
+    "message": "향후 이 경고를 방지하려면 이 URI인 $HOSTNAME$(을)를 Komboe로그인 항목에 저장하세요.",
     "placeholders": {
       "hostname": {
         "content": "$1",
@@ -3266,7 +3266,7 @@
     "message": "새 마스터 비밀번호가 정책 요구 사항을 따르지 않습니다."
   },
   "receiveMarketingEmails": {
-    "message": "받은 편지함에서 Bitwarden의 최신 소식을 받아 보세요."
+    "message": "받은 편지함에서 Komboe의 최신 소식을 받아 보세요."
   },
   "unsubscribe": {
     "message": "구독 취소"
@@ -3414,7 +3414,7 @@
     "message": "제외된 도메인"
   },
   "excludedDomainsDesc": {
-    "message": "Bitwarden은 이 도메인들에 대해 로그인 정보를 저장할 것인지 묻지 않습니다. 페이지를 새로고침해야 변경된 내용이 적용됩니다."
+    "message": "Komboe은 이 도메인들에 대해 로그인 정보를 저장할 것인지 묻지 않습니다. 페이지를 새로고침해야 변경된 내용이 적용됩니다."
   },
   "blockedDomainsDesc": {
     "message": "해당 웹사이트에서는 자동 채우기나 관련 기타 기능들을 사용하지 않습니다. 페이지를 새로고침해야 변경된 내용이 적용됩니다."
@@ -3556,14 +3556,14 @@
     "message": "생성된 비밀번호를 표시하고 있는 Komboe 자동 완성 메뉴에 대한 삽화."
   },
   "updateInBitwarden": {
-    "message": "Bitwarden에서 업데이트"
+    "message": "Komboe에서 업데이트"
   },
   "updateInBitwardenSlideDesc": {
-    "message": "그 후 Bitwarden에서 비밀번호 관리자의 비밀번호를 업데이트할지 물어볼 것입니다.",
+    "message": "그 후 Komboe에서 비밀번호 관리자의 비밀번호를 업데이트할지 물어볼 것입니다.",
     "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
-    "message": "로그인 변경을 권유하는 Bitwarden의 알림에 대한 삽화."
+    "message": "로그인 변경을 권유하는 Komboe의 알림에 대한 삽화."
   },
   "turnOnAutofill": {
     "message": "자동 완성 켜기"
@@ -4191,11 +4191,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Bitwarden에서 생성됨",
+    "message": "Komboe에서 생성됨",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "웹사이트: $WEBSITE$. Bitwarden에서 생성됨",
+    "message": "웹사이트: $WEBSITE$. Komboe에서 생성됨",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -4423,7 +4423,7 @@
     "message": "웹 앱"
   },
   "notificationSentDevicePart2": {
-    "message": "에서 Bitwarden을 잠금 해제하세요. 승인하기 전 지문 구절이 아래와 맞는지 확인하세요."
+    "message": "에서 Komboe을 잠금 해제하세요. 승인하기 전 지문 구절이 아래와 맞는지 확인하세요."
   },
   "aNotificationWasSentToYourDevice": {
     "message": "기기에 알림이 전송되었습니다."
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "파일을 Bitwarden으로 업로드하세요.",
+    "message": "파일을 Komboe으로 업로드하세요.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6137,7 +6137,7 @@
     "description": "Label indicating the most common import formats"
   },
   "uriMatchDefaultStrategyHint": {
-    "message": "Bitwarden에서 자동 채우기 제안을 식별하는 방법은 URI 일치 감지입니다.",
+    "message": "Komboe에서 자동 채우기 제안을 식별하는 방법은 URI 일치 감지입니다.",
     "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
@@ -6181,7 +6181,7 @@
     "description": "Body content for dialog which asks if the user wants to proceed to the browser's keyboard shortcut settings page"
   },
   "overrideDefaultBrowserAutofillTitle": {
-    "message": "Bitwarden을 기본 비밀번호 관리자로 지정하시겠습니까?",
+    "message": "Komboe을 기본 비밀번호 관리자로 지정하시겠습니까?",
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
@@ -6189,7 +6189,7 @@
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
-    "message": "Bitwarden을 기본 비밀번호 관리자로 지정",
+    "message": "Komboe을 기본 비밀번호 관리자로 지정",
     "description": "Label for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerCalloutTitle": {
@@ -6197,7 +6197,7 @@
     "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
-    "message": "Bitwarden을 기본 비밀번호 관리자로 설정하기 위해 $BROWSER$ 브라우저 권한을 부여하도록 요청받게 됩니다.",
+    "message": "Komboe을 기본 비밀번호 관리자로 설정하기 위해 $BROWSER$ 브라우저 권한을 부여하도록 요청받게 됩니다.",
     "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
     "placeholders": {
       "browser": {
@@ -6207,11 +6207,11 @@
     }
   },
   "privacyPermissionAdditionNotGrantedTitle": {
-    "message": "Bitwarden을 기본 비밀번호 관리자로 설정할 수 없습니다",
+    "message": "Komboe을 기본 비밀번호 관리자로 설정할 수 없습니다",
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "기본 비밀번호 관리자로 설정하려면 Bitwarden에게 브라우저 개인정보 보호 권한을 부여해야 합니다.",
+    "message": "기본 비밀번호 관리자로 설정하려면 Komboe에게 브라우저 개인정보 보호 권한을 부여해야 합니다.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -6219,10 +6219,10 @@
     "description": "Button text for the setting that allows overriding the default browser autofill settings"
   },
   "defaultPasswordManagerPromptTitle": {
-    "message": "Bitwarden을 브라우저의 기본 비밀번호 관리자로 지정"
+    "message": "Komboe을 브라우저의 기본 비밀번호 관리자로 지정"
   },
   "defaultPasswordManagerPromptTitleV2": {
-    "message": "Bitwarden을 기본 비밀번호 관리자로 지정",
+    "message": "Komboe을 기본 비밀번호 관리자로 지정",
     "description": "Label for the setting to make Bitwarden the default password manager"
   },
   "defaultPasswordManagerSettingHintV2": {
@@ -6234,13 +6234,13 @@
     "description": "Link text to browser autofill settings in the default password manager setting hint."
   },
   "defaultPasswordManagerPromptStep2AfterAllow": {
-    "message": "브라우저의 대화 상자에서 Bitwarden에 설정 변경 권한을 부여하세요."
+    "message": "브라우저의 대화 상자에서 Komboe에 설정 변경 권한을 부여하세요."
   },
   "defaultPasswordManagerPromptStep3": {
     "message": "안전한 로그인 환경을 즐기실 수 있도록 브라우저 내장 비밀번호 관리자를 끄게 됩니다."
   },
   "defaultPasswordManagerSuccessToast": {
-    "message": "Bitwarden을 브라우저 기본 비밀번호 관리자로 지정함"
+    "message": "Komboe을 브라우저 기본 비밀번호 관리자로 지정함"
   },
   "allow": {
     "message": "허용",
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "Bitwarden에 저장",
+    "message": "Komboe에 저장",
     "description": "Confirmation message for saving a login to Bitwarden"
   },
   "spaceCharacterDescriptor": {
@@ -7495,7 +7495,7 @@
     "message": "보안 우선"
   },
   "securityPrioritizedBody": {
-    "message": "비밀번호, 카드와 신원을 암호화된 보관함에 저장하세요. Bitwarden은 영지식 종단간 암호화 기술을 사용하여 당신에게 중요한 정보를 보호합니다."
+    "message": "비밀번호, 카드와 신원을 암호화된 보관함에 저장하세요. Komboe은 영지식 종단간 암호화 기술을 사용하여 당신에게 중요한 정보를 보호합니다."
   },
   "quickLogin": {
     "message": "쉽고 빠른 로그인"
@@ -7522,7 +7522,7 @@
     "message": "기존 비밀번호 가져오기"
   },
   "emptyVaultNudgeBody": {
-    "message": "로그인 정보를 수동으로 추가하지 말고 가져오기 도구를 이용해 Bitwarden으로 빠르게 전송하세요."
+    "message": "로그인 정보를 수동으로 추가하지 말고 가져오기 도구를 이용해 Komboe으로 빠르게 전송하세요."
   },
   "emptyVaultNudgeButton": {
     "message": "지금 가져오기"
@@ -7641,7 +7641,7 @@
     "message": "설정 정보"
   },
   "permitCipherDetailsDescription": {
-    "message": "Bitwarden이 사용자 경험을 개선하기 위해 저장된 로그인 URI를 사용하여 어떤 아이콘이나 비밀번호 변경 URL을 사용해야 하는지 파악합니다. 이 서비스를 사용할 때 수집되거나 저장되는 정보는 없습니다."
+    "message": "Komboe이 사용자 경험을 개선하기 위해 저장된 로그인 URI를 사용하여 어떤 아이콘이나 비밀번호 변경 URL을 사용해야 하는지 파악합니다. 이 서비스를 사용할 때 수집되거나 저장되는 정보는 없습니다."
   },
   "showQuickCopyActionsDetailsDescription": {
     "message": "항목 옆에 사용자 이름, 비밀번호, 인증 코드를 클립보드로 복사할 수 있는 빠른 복사 버튼 3개를 추가합니다."
@@ -7738,7 +7738,7 @@
     "message": "오류: 복호화 불가"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "조직에서 더 이상 마스터 비밀번호로 Bitwarden에 로그인하지 않습니다. 계속하려면 조직과 도메인을 인증하세요."
+    "message": "조직에서 더 이상 마스터 비밀번호로 Komboe에 로그인하지 않습니다. 계속하려면 조직과 도메인을 인증하세요."
   },
   "continueWithLogIn": {
     "message": "로그인하여 계속"
@@ -7960,13 +7960,13 @@
     "message": "새 권한 필요"
   },
   "sharedUnlockDesktopPermissionDesc": {
-    "message": "잠금 해제 상태 공유를 사용하려면, Bitwarden이 데스크톱 앱과 상호작용할 권한이 필요합니다. 계속 진행하면 브라우저에서 승인을 요청할 것입니다."
+    "message": "잠금 해제 상태 공유를 사용하려면, Komboe이 데스크톱 앱과 상호작용할 권한이 필요합니다. 계속 진행하면 브라우저에서 승인을 요청할 것입니다."
   },
   "sharedUnlockDesktopPermissionWarning": {
-    "message": "Bitwarden을 잠그고 다시 불러옵니다. 승인한 뒤에는 확장을 다시 불러오며 보관함이 잠기게 됩니다."
+    "message": "Komboe을 잠그고 다시 불러옵니다. 승인한 뒤에는 확장을 다시 불러오며 보관함이 잠기게 됩니다."
   },
   "biometricPermissionDesc": {
-    "message": "생체 인식 잠금 해제를 사용하려면, Bitwarden이 데스크톱 앱과 상호작용할 권한이 필요합니다. 계속 진행하면 브라우저에서 승인을 요청할 것입니다."
+    "message": "생체 인식 잠금 해제를 사용하려면, Komboe이 데스크톱 앱과 상호작용할 권한이 필요합니다. 계속 진행하면 브라우저에서 승인을 요청할 것입니다."
   },
   "enterMonth": {
     "message": "월을 입력하세요."

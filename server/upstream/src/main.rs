@@ -233,7 +233,7 @@ fn launch_info() {
     println!(
         "\
         /--------------------------------------------------------------------\\\n\
-        |                        Starting Vaultwarden                        |"
+        |                           Starting Komboe                          |"
     );
 
     if let Some(version) = VERSION {
@@ -243,13 +243,9 @@ fn launch_info() {
     println!(
         "\
         |--------------------------------------------------------------------|\n\
-        | This is an *unofficial* Bitwarden implementation, DO NOT use the   |\n\
-        | official channels to report bugs/features, regardless of client.   |\n\
-        | Send usage/configuration questions or feature requests to:         |\n\
-        |   https://github.com/dani-garcia/vaultwarden/discussions or        |\n\
-        |   https://vaultwarden.discourse.group/                             |\n\
-        | Report suspected bugs/issues in the software itself at:            |\n\
-        |   https://github.com/dani-garcia/vaultwarden/issues/new            |\n\
+        | Komboe is based on Vaultwarden (AGPL-3.0). It is not affiliated    |\n\
+        | with or endorsed by Bitwarden, Inc. Report bugs at:                |\n\
+        |   https://github.com/GoDeskio/Komboe/issues                        |\n\
         \\--------------------------------------------------------------------/\n"
     );
 }

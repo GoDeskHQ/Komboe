@@ -560,7 +560,7 @@ export class VaultProgram extends BaseProgram {
       .option("--format <format>", "Export file format.")
       .option(
         "--password [password]",
-        "Use password to encrypt instead of your Bitwarden account encryption key. Applies to the encrypted_json and kdbx formats.",
+        "Use password to encrypt instead of your Komboe account encryption key. Applies to the encrypted_json and kdbx formats.",
       )
       .option("--organizationid <organizationid>", "Organization id for an organization.")
       .on("--help", () => {

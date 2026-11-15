@@ -461,7 +461,7 @@
     "message": "Komboe Hjælpecenter"
   },
   "communityForums": {
-    "message": "Tjek Bitwardens fællesskabsfora ud"
+    "message": "Tjek Komboes fællesskabsfora ud"
   },
   "contactSupport": {
     "message": "Kontakt Komboe-support"
@@ -3209,7 +3209,7 @@
     }
   },
   "topLayerHijackWarning": {
-    "message": "Denne side forstyrrer Komboe-oplevelsen. Bitwardens inline-menu er midlertidigt deaktiveret som en sikkerhedsforanstaltning."
+    "message": "Denne side forstyrrer Komboe-oplevelsen. Komboes inline-menu er midlertidigt deaktiveret som en sikkerhedsforanstaltning."
   },
   "setMasterPassword": {
     "message": "Indstil hovedadgangskode"
@@ -3549,11 +3549,11 @@
     "message": "Illustration af layoutet på Komboe-bokssiden."
   },
   "generatePasswordSlideDesc": {
-    "message": "Generér hurtigt en stærk, unik adgangskode med Bitwardens autofuldførelsesmenu på webstedet i fare.",
+    "message": "Generér hurtigt en stærk, unik adgangskode med Komboes autofuldførelsesmenu på webstedet i fare.",
     "description": "Description of the generate password slide on the at-risk password page carousel"
   },
   "generatePasswordSlideImgAltPeriod": {
-    "message": "Illustration af Bitwardens autofuldførelsesmenu, der viser en genereret adgangskode."
+    "message": "Illustration af Komboes autofuldførelsesmenu, der viser en genereret adgangskode."
   },
   "updateInBitwarden": {
     "message": "Opdatér i Komboe"
@@ -6185,7 +6185,7 @@
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "Ignoreres denne indstilling, kan det forårsage konflikter mellem Bitwardens og webbrowserens autoudfyldningsforslag.",
+    "message": "Ignoreres denne indstilling, kan det forårsage konflikter mellem Komboes og webbrowserens autoudfyldningsforslag.",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
@@ -7513,7 +7513,7 @@
     "message": "Dine data, når og hvor du har brug for dem"
   },
   "secureDevicesBody": {
-    "message": "Gem ubegrænsede adgangskoder på ubegrænsede enheder med Bitwardens mobil-, browser- og skrivebordsapps."
+    "message": "Gem ubegrænsede adgangskoder på ubegrænsede enheder med Komboes mobil-, browser- og skrivebordsapps."
   },
   "nudgeBadgeAria": {
     "message": "1 meddelelse"

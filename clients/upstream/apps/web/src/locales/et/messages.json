@@ -21,7 +21,7 @@
     "message": "All critical apps"
   },
   "appLogoLabel": {
-    "message": "Bitwardeni logo"
+    "message": "Komboei logo"
   },
   "criticalApplications": {
     "message": "Critical applications"
@@ -2209,7 +2209,7 @@
     "message": "Logi sisse teise seadmega"
   },
   "loginWithDeviceEnabledNote": {
-    "message": "Bitwardeni rakenduse seadistuses peab olema konfigureeritud sisselogimine läbi seadme. Soovid teist valikut?"
+    "message": "Komboei rakenduse seadistuses peab olema konfigureeritud sisselogimine läbi seadme. Soovid teist valikut?"
   },
   "needAnotherOptionV1": {
     "message": "Soovid teist valikut kasutada?"
@@ -2374,7 +2374,7 @@
     "message": "Mis asi on seade?"
   },
   "aDeviceIs": {
-    "message": "Seade on ainulaadne Bitwardeni rakendus, kus sa oled sisse logitud. Rakenduse uuesti installimine, andmete kustutamine või küpsiste kustutamine võib tekitada olukorra, kus üks seade esineb mitu korda."
+    "message": "Seade on ainulaadne Komboei rakendus, kus sa oled sisse logitud. Rakenduse uuesti installimine, andmete kustutamine või küpsiste kustutamine võib tekitada olukorra, kus üks seade esineb mitu korda."
   },
   "logInInitiated": {
     "message": "Sisselogimine käivitatud"
@@ -2919,7 +2919,7 @@
     "message": "Eksporditavate andmete krüpteerimiseks kasutatakse kontol olevat krüpteerimisvõtit. Kui sa peaksid seda krüpteerimise võtit roteerima, ei saa sa järgnevalt eksporditavaid andmeid enam dekrüpteerida."
   },
   "encExportAccountWarningDesc": {
-    "message": "Iga Bitwardeni kasutaja krüpteerimisvõti on unikaalne. Eksporditud andmeid ei saa importida teise Bitwardeni kasutajakontosse."
+    "message": "Iga Komboei kasutaja krüpteerimisvõti on unikaalne. Eksporditud andmeid ei saa importida teise Komboei kasutajakontosse."
   },
   "exportNoun": {
     "message": "Export",
@@ -3011,7 +3011,7 @@
     "message": "Kasuta oma konto krüpteerimise võtit, mis koosneb sinu kasutajanimest ja ülemparoolist, et krüpteerida fail ja takistada selle importimine teistele kontodele."
   },
   "passwordProtectedOptionDescription": {
-    "message": "Määra faili parool, et see krüpteerida ja importida teise Bitwardeni kontosse kasutates seda parooli dekrüpteerimiseks."
+    "message": "Määra faili parool, et see krüpteerida ja importida teise Komboei kontosse kasutates seda parooli dekrüpteerimiseks."
   },
   "exportTypeHeading": {
     "message": "Ekspordi tüüp"
@@ -3182,7 +3182,7 @@
     "message": "Taotlus on ootel"
   },
   "logBackInOthersToo": {
-    "message": "Palun logi uuesti sisse. Kui kasutad teisi Bitwardeni rakendusi, pead ka nendes uuesti sisse logima."
+    "message": "Palun logi uuesti sisse. Kui kasutad teisi Komboei rakendusi, pead ka nendes uuesti sisse logima."
   },
   "changeMasterPassword": {
     "message": "Muuda ülemparooli"
@@ -3215,7 +3215,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "Seadistades KDF-i liiga pikaks, võib Bitwardenisse sisselogimisel (ja lahtilukustamisel) tekkida jõudlusprobleeme ja hangumisi. Seda eriti aeglasemate protsessoritega seadmetes. Soovitame kasutada pikkust ligikaudu $INCREMENT$ ja testida jõudlust kõikides oma seadmetes.",
+    "message": "Seadistades KDF-i liiga pikaks, võib Komboeisse sisselogimisel (ja lahtilukustamisel) tekkida jõudlusprobleeme ja hangumisi. Seda eriti aeglasemate protsessoritega seadmetes. Soovitame kasutada pikkust ligikaudu $INCREMENT$ ja testida jõudlust kõikides oma seadmetes.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -3228,7 +3228,7 @@
     "description": "Memory refers to computer memory (RAM). MB is short for megabytes."
   },
   "argon2Warning": {
-    "message": "Muutes oma KDF korduste, mälumahu ja paralleelsuse liiga kõrgeks, võib tulemus väljenduda aeglases kiiruses Bitwardeni sisse logimisel (ja lahti lukustamisel) vanematel ja aeglasematel seadmetel. Me soovitame neid muuta ühekaupa väikestes ühikutes ja testida kõigil oma seadmetel."
+    "message": "Muutes oma KDF korduste, mälumahu ja paralleelsuse liiga kõrgeks, võib tulemus väljenduda aeglases kiiruses Komboei sisse logimisel (ja lahti lukustamisel) vanematel ja aeglasematel seadmetel. Me soovitame neid muuta ühekaupa väikestes ühikutes ja testida kõigil oma seadmetel."
   },
   "kdfParallelism": {
     "message": "KDF paralleelsus"
@@ -4039,7 +4039,7 @@
     "message": "Luba kaheastmeline logimine enda organisatsioonis."
   },
   "twoStepLoginEnterpriseDescStart": {
-    "message": "Jõusta Bitwardeni Kaheastmelise Logimise valikud liikmetele kasutades ",
+    "message": "Jõusta Komboei Kaheastmelise Logimise valikud liikmetele kasutades ",
     "description": "This will be used as part of a larger sentence, broken up to include links. The full sentence will read 'Enforce Bitwarden Two-step Login options for members by using the Two-step Login Policy.'"
   },
   "twoStepLoginPolicy": {
@@ -4052,7 +4052,7 @@
     "message": "Kui sa oled seadistanud SSO või plaanid seda, Kaheastmeline Logimine võib juba olla jõustatud läbi sinu Identiteedi Pakkuja."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Kaheastmelise kinnitamine aktiveerimine võib luua olukorra, kus sul on võimatu oma Bitwardeni kontosse sisse logida. Näiteks kui kaotad oma nutiseadme. Taastamise kood võimaldab aga kontole ligi pääseda ka olukorras, kus kaheastmelist kinnitamist ei ole võimalik läbi viia. Sellistel juhtudel ei saa ka Bitwardeni klienditugi sinu kontole ligipääsu taastada. Selle tõttu soovitame taastekoodi välja printida ja seda turvalises kohas hoida."
+    "message": "Kaheastmelise kinnitamine aktiveerimine võib luua olukorra, kus sul on võimatu oma Komboei kontosse sisse logida. Näiteks kui kaotad oma nutiseadme. Taastamise kood võimaldab aga kontole ligi pääseda ka olukorras, kus kaheastmelist kinnitamist ei ole võimalik läbi viia. Sellistel juhtudel ei saa ka Komboei klienditugi sinu kontole ligipääsu taastada. Selle tõttu soovitame taastekoodi välja printida ja seda turvalises kohas hoida."
   },
   "restrictedItemTypePolicy": {
     "message": "Remove card item type"
@@ -4172,13 +4172,13 @@
     }
   },
   "continueToExternalUrlDesc": {
-    "message": "Oled lahkumas Bitwardenist ja avamas välist veebilehte uues aknas."
+    "message": "Oled lahkumas Komboeist ja avamas välist veebilehte uues aknas."
   },
   "twoStepContinueToBitwardenUrlTitle": {
     "message": "Mine edasi komboe.com-i?"
   },
   "twoStepContinueToBitwardenUrlDesc": {
-    "message": "Bitwardeni Autentiteerijaga saad sa hoiustada autentiteerimise võtmeid ja luua TOTP koode kaheastmeliseks kinnitamiseks. Uuri lähemalt komboe.com veebilehelt."
+    "message": "Komboei Autentiteerijaga saad sa hoiustada autentiteerimise võtmeid ja luua TOTP koode kaheastmeliseks kinnitamiseks. Uuri lähemalt komboe.com veebilehelt."
   },
   "twoStepAuthenticatorScanCodeV2": {
     "message": "Skänneeri allolev QR-kood oma autentiteerimisrakendusega või sisesta kood."
@@ -4220,7 +4220,7 @@
     "message": "Salvesta vorm."
   },
   "twoFactorYubikeyWarning": {
-    "message": "Mõnede platvormi piirangute tõttu ei saa YubiKeysid kõikide Bitwardeni rakendustega kasutada. Võiksid kaaluda teise kaheastmelise kinnitamise aktiveerimist olukordadeks, kus YubiKeyde kasutamine ei ole võimalik. Toetatud platvormid:"
+    "message": "Mõnede platvormi piirangute tõttu ei saa YubiKeysid kõikide Komboei rakendustega kasutada. Võiksid kaaluda teise kaheastmelise kinnitamise aktiveerimist olukordadeks, kus YubiKeyde kasutamine ei ole võimalik. Toetatud platvormid:"
   },
   "twoFactorYubikeySupportUsb": {
     "message": "Veebihoidla, töölaua rakendus, CLI ja kõikide brauserite laiendid seadmes, mille USB port võimaldab YubiKeyd kasutada."
@@ -4271,7 +4271,7 @@
     "message": "Blokeeri kõik Võtmed"
   },
   "twoFactorDuoDesc": {
-    "message": "Sisesta oma Bitwardeni rakenduse informatsioon Duo admini paneelist."
+    "message": "Sisesta oma Komboei rakenduse informatsioon Duo admini paneelist."
   },
   "twoFactorDuoClientId": {
     "message": "Kliendi Id"
@@ -4322,7 +4322,7 @@
     "message": "Salvesta vorm."
   },
   "twoFactorU2fWarning": {
-    "message": "Mõnede platvormi piirangute tõttu ei saa FIDO U2F-i kõikide Bitwardeni rakendustega kasutada. Võiksid kaaluda teise kaheastmelise kinnitamise aktiveerimist olukordadeks, kus FIDO U2F-i ei saa kasutada. Toetatud platvormid:"
+    "message": "Mõnede platvormi piirangute tõttu ei saa FIDO U2F-i kõikide Komboei rakendustega kasutada. Võiksid kaaluda teise kaheastmelise kinnitamise aktiveerimist olukordadeks, kus FIDO U2F-i ei saa kasutada. Toetatud platvormid:"
   },
   "twoFactorU2fSupportWeb": {
     "message": "Veebihoidla- ja brauseri laiendused laua- ja sülearvutis, kus on U2F toega brauser (Chrome, Opera, Vivaldi või Firefox, kus on FIDO U2F sisse lülitatud)."
@@ -4337,7 +4337,7 @@
     "message": "Turvavõtme lugemisel tekkis tõrge. Proovi uuesti."
   },
   "twoFactorRecoveryYourCode": {
-    "message": "Bitwardeni kaheastmelise logimise varukood"
+    "message": "Komboei kaheastmelise logimise varukood"
   },
   "twoFactorRecoveryNoCode": {
     "message": "Sa ei ole veel ühtegi kaheastmelise kinnituse teenust sisse lülitanud. Tule siia lehele pärast kaheastmelise kinnitamise sisselülitamist tagasi. Siis näed siin ka varukoodi, millega saad hädakorral kaheastmelise kinnitamise välja lülitada."
@@ -4500,7 +4500,7 @@
     "message": "Nõrkade paroolide raport"
   },
   "weakPasswordsReportDesc": {
-    "message": "Nõrgad paroolid on häkkerite poolt vägagi lihtsasti lahtimurtavad, sest selleks kasutatakse automatiseeritud tööriistu. Bitwardeni parooli genereerija aitab sul luua paroole, mida on märksa keerulisem lahti murda."
+    "message": "Nõrgad paroolid on häkkerite poolt vägagi lihtsasti lahtimurtavad, sest selleks kasutatakse automatiseeritud tööriistu. Komboei parooli genereerija aitab sul luua paroole, mida on märksa keerulisem lahti murda."
   },
   "weakPasswordsFound": {
     "message": "Avastatud on nõrgad paroolid"
@@ -4695,7 +4695,7 @@
     }
   },
   "bitwardenFamiliesPlan": {
-    "message": "Bitwardeni Pereplaaniga."
+    "message": "Komboei Pereplaaniga."
   },
   "addons": {
     "message": "Lisad"
@@ -5280,7 +5280,7 @@
     "description": "Free as in 'free beer'."
   },
   "planDescFree": {
-    "message": "Testimiseks ja isiklikuks kasutamiseks, jagamaks $COUNT$ teise Bitwardeni kasutajaga.",
+    "message": "Testimiseks ja isiklikuks kasutamiseks, jagamaks $COUNT$ teise Komboei kasutajaga.",
     "placeholders": {
       "count": {
         "content": "$1",
@@ -5617,7 +5617,7 @@
     "message": "Invite"
   },
   "inviteUserDesc": {
-    "message": "Kutsu organisatsiooni uusi kasutajaid, sisestades alla nende Bitwardeni konto e-posti aadressid. Kui neil ei ole veel Bitwardeni kontot, pakutakse neile võimalus see luua."
+    "message": "Kutsu organisatsiooni uusi kasutajaid, sisestades alla nende Komboei konto e-posti aadressid. Kui neil ei ole veel Komboei kontot, pakutakse neile võimalus see luua."
   },
   "inviteUserDescription": {
     "message": "Invite new users to your organization by entering their email address below."
@@ -7115,7 +7115,7 @@
     "message": "Return to registration"
   },
   "joinOrganizationDesc": {
-    "message": "Sind on kutsutud ülal oleva organisatsiooniga liituma. Liitumise kinnitamiseks pead oma Bitwardeni kontosse sisse logima. Kui sul ei ole veel kontot, saad selle luua."
+    "message": "Sind on kutsutud ülal oleva organisatsiooniga liituma. Liitumise kinnitamiseks pead oma Komboei kontosse sisse logima. Kui sul ei ole veel kontot, saad selle luua."
   },
   "finishJoiningThisOrganizationBySettingAMasterPassword": {
     "message": "Lõpeta organisatsiooniga liitumine määrates ülemparool."
@@ -7256,10 +7256,10 @@
     "message": "Kui sinu konto eksisteerib, saatsime e-postile edasised juhised."
   },
   "deleteRecoverConfirmDesc": {
-    "message": "Oled avaldanud soovi oma Bitwardeni konto kustutamiseks. Selle kinnitamiseks kliki allolevale nupule."
+    "message": "Oled avaldanud soovi oma Komboei konto kustutamiseks. Selle kinnitamiseks kliki allolevale nupule."
   },
   "deleteRecoverOrgConfirmDesc": {
-    "message": "Kas sa oled kindel, et soovid kustudada oma Bitwardeni organisatsiooni?"
+    "message": "Kas sa oled kindel, et soovid kustudada oma Komboei organisatsiooni?"
   },
   "myOrganization": {
     "message": "Minu organisatsioon"
@@ -7593,7 +7593,7 @@
     }
   },
   "updateEncryptionKeyWarning": {
-    "message": "Pärast krüpteerimisvõtme uuendamist pead kõikides seadmetes, kus Bitwardeni rakendust kasutad, oma kontosse uuesti sisse logima (nt nutitelefonis ja brauseris). Välja- ja sisselogimise (mis ühtlasi laadib ka uue krüpteerimisvõtme) nurjumine võib tingida andmete riknemise. Üritame sinu seadmetest ise välja logida, aga see võib võtta natukene aega."
+    "message": "Pärast krüpteerimisvõtme uuendamist pead kõikides seadmetes, kus Komboei rakendust kasutad, oma kontosse uuesti sisse logima (nt nutitelefonis ja brauseris). Välja- ja sisselogimise (mis ühtlasi laadib ka uue krüpteerimisvõtme) nurjumine võib tingida andmete riknemise. Üritame sinu seadmetest ise välja logida, aga see võib võtta natukene aega."
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Any account restricted exports you have saved will become invalid."
@@ -7909,7 +7909,7 @@
     "message": "Nõrk ülemparool"
   },
   "weakMasterPasswordDesc": {
-    "message": "Valitud ülemparool on nõrk. Oma Bitwardeni konto paremaks kaitsmiseks peaksid kasutama tugevamat parooli. Oled kindel, et soovid valitud parooli ülemparoolina kasutada?"
+    "message": "Valitud ülemparool on nõrk. Oma Komboei konto paremaks kaitsmiseks peaksid kasutama tugevamat parooli. Oled kindel, et soovid valitud parooli ülemparoolina kasutada?"
   },
   "rotateAccountEncKey": {
     "message": "Roteeri ka minu konto krüpteerimise võtit"
@@ -7974,7 +7974,7 @@
     "message": "API võti"
   },
   "apiKeyDesc": {
-    "message": "Sinu API võtit saab kasutada Bitwardeni avalikus API-s autentimiseks."
+    "message": "Sinu API võtit saab kasutada Komboei avalikus API-s autentimiseks."
   },
   "apiKeyRotateDesc": {
     "message": "API roteerimine muudab eelmise võtme kehtetuks. API võtme roteerimine on kasulik olukordades, kus on oht, et aktiivne võti ei pruugi enam turvaline olla."
@@ -7983,7 +7983,7 @@
     "message": "Sinu API võtmel on täielik ligipääs organisatsioonile. Seda võtit peab salajas hoidma ja kaitsma."
   },
   "userApiKeyDesc": {
-    "message": "Sinu API võtit saab kasutada Bitwardeni CLI-s autentimiseks."
+    "message": "Sinu API võtit saab kasutada Komboei CLI-s autentimiseks."
   },
   "userApiKeyWarning": {
     "message": "API võti on alternatiivne autentimise mehhanism. Seda tuleks salajas hoida."
@@ -8333,7 +8333,7 @@
     "description": "VFO1 terminology variant of 'singleOrgPolicyDescV2'"
   },
   "singleOrgBlockCreateMessage": {
-    "message": "Sinu praeguse organisatsiooni poliitika kohaselt ei saa sa olla rohkem kui ühe organisatsiooni liige. Palun kontakteeru oma praeguse organisatsiooni administraatoritega või kasuta liitumiseks teist Bitwardeni kontot."
+    "message": "Sinu praeguse organisatsiooni poliitika kohaselt ei saa sa olla rohkem kui ühe organisatsiooni liige. Palun kontakteeru oma praeguse organisatsiooni administraatoritega või kasuta liitumiseks teist Komboei kontot."
   },
   "singleOrgPolicyMemberWarning": {
     "message": "Non-compliant members will be placed in revoked status until they leave all other organizations. Administrators are exempt and can restore members once compliance is met."
@@ -8645,7 +8645,7 @@
     "message": "Hädaolukorra kontakti muutmine"
   },
   "inviteEmergencyContactDesc": {
-    "message": "Kutsu oma hädaolukorra kontaktiks usaldusväärne kasutaja. Selleks sisestades alla tema Bitwardeni konto e-posti aadress. Kui tal ei ole veel Bitwardeni kontot, pakutakse talle võimalus see luua."
+    "message": "Kutsu oma hädaolukorra kontaktiks usaldusväärne kasutaja. Selleks sisestades alla tema Komboei konto e-posti aadress. Kui tal ei ole veel Komboei kontot, pakutakse talle võimalus see luua."
   },
   "emergencyAccessRecoveryInitiated": {
     "message": "Hädaolukorra ligipääs on käivitatud"
@@ -8684,7 +8684,7 @@
     "message": "Kasutaja on kutsutud."
   },
   "acceptEmergencyAccess": {
-    "message": "Sind on kutsutud ülal oleva kasutaja hädaolukorra kontaktiks. Liitumise kinnitamiseks pead oma Bitwardeni kontosse sisse logima. Kui sul ei ole veel kontot, saad selle luua."
+    "message": "Sind on kutsutud ülal oleva kasutaja hädaolukorra kontaktiks. Liitumise kinnitamiseks pead oma Komboei kontosse sisse logima. Kui sul ei ole veel kontot, saad selle luua."
   },
   "emergencyInviteAcceptFailed": {
     "message": "Kutse vastuvõtmine nurjus. Palu kasutajal uus kutse saata."
@@ -9015,7 +9015,7 @@
     "message": "Keela Send"
   },
   "disableSendPolicyDesc": {
-    "message": "Ära võimalda kasutajatel Bitwardeni Sende luua või muuta. Olemasolevate Sendide kustutamise võimalikkus säilib.",
+    "message": "Ära võimalda kasutajatel Komboei Sende luua või muuta. Olemasolevate Sendide kustutamise võimalikkus säilib.",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "disableSendExemption": {
@@ -9253,7 +9253,7 @@
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendAccessTaglineProductDesc": {
-    "message": "Bitwardeni Send võimaldab sensitiivset, ajutist informatsiooni hõlpsasti ning turvaliselt edastada.",
+    "message": "Komboei Send võimaldab sensitiivset, ajutist informatsiooni hõlpsasti ning turvaliselt edastada.",
     "description": "'Send' is a noun and the name of a feature called 'Bitwarden Send'. It should not be translated."
   },
   "sendAccessTaglineLearnMore": {
@@ -9319,7 +9319,7 @@
     "message": "Komboe Secrets Manager"
   },
   "moreProductsFromBitwarden": {
-    "message": "Veel tooteid Bitwardenilt"
+    "message": "Veel tooteid Komboeilt"
   },
   "requestAccessToSecretsManager": {
     "message": "Esita taotlus Secrets Manageri kasutamiseks"
@@ -9331,7 +9331,7 @@
     "message": "Secrets Manageri kasutamise taotlus saadetud administraatorile."
   },
   "requestAccessSMDefaultEmailContent": {
-    "message": "Tere!\n\nEsitan palve Komboe Secrets Manageri kasutamiseks meie tiimi jaoks. Teie toetus oleks meile suureks abiks!\n\nKomboe Secrets Manager on täielikult krüpteeritud IT-saladuste (näiteks API võtmete, andmebaasi paroolide ja autentiteerimise sertifikaatide) haldamise lahendus, mis on mõeldud nende turvaliselt hoiustamiseks, jagamiseks ja kasutamiseks.\n\nSecrets Manager aitab meil:\n\n- Parandada turvalisust\n- Muuta toimingud sujuvamaks\n- Takistada võimalikke andmelekkeid\n\nEt esitada taotlus tasuta prooviajaks, palun kontakteeruge Bitwardeniga.\n\nSuur tänu teie abi eest!"
+    "message": "Tere!\n\nEsitan palve Komboe Secrets Manageri kasutamiseks meie tiimi jaoks. Teie toetus oleks meile suureks abiks!\n\nKomboe Secrets Manager on täielikult krüpteeritud IT-saladuste (näiteks API võtmete, andmebaasi paroolide ja autentiteerimise sertifikaatide) haldamise lahendus, mis on mõeldud nende turvaliselt hoiustamiseks, jagamiseks ja kasutamiseks.\n\nSecrets Manager aitab meil:\n\n- Parandada turvalisust\n- Muuta toimingud sujuvamaks\n- Takistada võimalikke andmelekkeid\n\nEt esitada taotlus tasuta prooviajaks, palun kontakteeruge Komboeiga.\n\nSuur tänu teie abi eest!"
   },
   "giveMembersAccess": {
     "message": "Give members access:"

@@ -27,6 +27,8 @@ jobs:
           cd apps/desktop
           npx electron-builder --linux deb AppImage --x64 -p never
           ls -l dist
+      - name: Unpacked desktop app has no Bitwarden branding
+        run: python3 scripts/check_branding.py --built clients/upstream/apps/desktop/dist/linux-unpacked
       - uses: actions/upload-artifact@v4
         with:
           name: desktop-linux-unsigned
@@ -52,10 +54,14 @@ jobs:
           npm run build:oss --workspace @bitwarden/desktop
           cd apps/desktop
           npx electron-builder --win nsis --x64 -p never --config.win.target=nsis
+      - name: Unpacked desktop app has no Bitwarden branding
+        run: python scripts/check_branding.py --built clients/upstream/apps/desktop/dist/win-unpacked
       - uses: actions/upload-artifact@v4
         with:
           name: desktop-windows-unsigned
-          path: clients/upstream/apps/desktop/dist/*.exe
+          path: |
+            clients/upstream/apps/desktop/dist/*.exe
+            clients/upstream/apps/desktop/dist/latest.yml
 
   android-release:
     runs-on: ubuntu-latest
@@ -81,8 +87,12 @@ jobs:
           else
             echo "present=true" >> "$GITHUB_OUTPUT"
           fi
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
         if: steps.sign.outputs.present == 'true'
+        with:
+          cmdline-tools-version: "15859902"
+          log-accepted-android-sdk-licenses: "false"
+          packages: "platform-tools platforms;android-37.2 build-tools;37.0.0"
       - name: Build the F-Droid release APK when a keystore already exists
         if: steps.sign.outputs.present == 'true'
         run: |
@@ -107,6 +117,90 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: android-release-status
+          path: dist/*
+
+  android-debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+        with:
+          cmdline-tools-version: "15859902"
+          log-accepted-android-sdk-licenses: "false"
+          packages: "platform-tools platforms;android-37.2 build-tools;37.0.0"
+      - name: Build the rebranded fdroid debug APK
+        env:
+          ANDROID_DEBUG_KEYSTORE_BASE64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          set -eu
+          python3 -m pip install --quiet Pillow fonttools brotli
+          pin=$(cat mobile/ANDROID_UPSTREAM_PIN)
+          git clone --depth 1 -b "$pin" https://github.com/bitwarden/android.git /tmp/bw-android
+          python3 mobile/android_rebrand.py /tmp/bw-android
+          python3 mobile/stamp-version.py /tmp/bw-android 2026111503 2026.11.15.3
+          mkdir -p "$HOME/.android"
+          if [ -n "${ANDROID_DEBUG_KEYSTORE_BASE64:-}" ]; then
+            echo "$ANDROID_DEBUG_KEYSTORE_BASE64" | base64 -d > "$HOME/.android/debug.keystore"
+          fi
+          cd /tmp/bw-android
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx3g :app:assembleFdroidDebug
+          apk=$(find app/build/outputs/apk -name '*.apk' | head -1)
+          python3 "$GITHUB_WORKSPACE/scripts/check_branding.py" --built "$apk"
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          cp "$apk" "$GITHUB_WORKSPACE/dist/io.komboe.android-2026.11.15.3.apk"
+          python3 - << PY
+          import hashlib, os, struct, subprocess
+          from pathlib import Path
+          apk = Path("$apk")
+          data = apk.read_bytes()
+          idx = data.rfind(b"\x50\x4b\x05\x06")
+          cd_off = struct.unpack_from("<I", data, idx + 16)[0]
+          assert data[cd_off - 16:cd_off] == b"APK Sig Block 42"
+          size2 = struct.unpack_from("<Q", data, cd_off - 24)[0]
+          block_start = cd_off - size2 - 8
+          pairs = data[block_start + 8:cd_off - 24]
+          p = 0
+          cert = b""
+          while p + 12 <= len(pairs):
+              plen = struct.unpack_from("<Q", pairs, p)[0]
+              pid = struct.unpack_from("<I", pairs, p + 8)[0]
+              val = pairs[p + 12:p + 8 + plen]
+              if pid == 0x7109871A and len(val) >= 4:
+                  slen = struct.unpack_from("<I", val, 0)[0]
+                  signers = val[4:4 + slen]
+                  s1 = struct.unpack_from("<I", signers, 0)[0]
+                  signer = signers[4:4 + s1]
+                  sdlen = struct.unpack_from("<I", signer, 0)[0]
+                  sd = signer[4:4 + sdlen]
+                  diglen = struct.unpack_from("<I", sd, 0)[0]
+                  rest = sd[4 + diglen:]
+                  clen = struct.unpack_from("<I", rest, 0)[0]
+                  certs = rest[4:4 + clen]
+                  c1 = struct.unpack_from("<I", certs, 0)[0]
+                  cert = certs[4:4 + c1]
+                  break
+              p += 8 + plen
+          digest = hashlib.sha256(cert).hexdigest()
+          file_hash = hashlib.sha256(data).hexdigest()
+          Path("$GITHUB_WORKSPACE/dist/android-apk.txt").write_text(
+              f"file sha256 {file_hash}\nsigner sha256 {digest}\nversionName 2026.11.15.3\nversionCode 2026111503\n"
+          )
+          print("signer", digest)
+          print("apk", file_hash)
+          if os.environ.get("ANDROID_DEBUG_KEYSTORE_BASE64") and not digest.startswith("0418ff9b"):
+              raise SystemExit("debug keystore secret is not the Komboe signer 0418ff9b")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-fdroid-debug
           path: dist/*
 
   download-manifest:

@@ -3,7 +3,7 @@
     "message": "Komboe"
   },
   "appLogoLabel": {
-    "message": "Bitwardens logotyp"
+    "message": "Komboes logotyp"
   },
   "extName": {
     "message": "Komboe Lösenordshanterare",
@@ -461,7 +461,7 @@
     "message": "Komboe Hjälpcenter"
   },
   "communityForums": {
-    "message": "Utforska Bitwardens communityforum"
+    "message": "Utforska Komboes communityforum"
   },
   "contactSupport": {
     "message": "Kontakta Komboe support"
@@ -1157,10 +1157,10 @@
     "message": "Ange ett namn."
   },
   "twoStepLoginConfirmation": {
-    "message": "Tvåstegsverifiering gör ditt konto säkrare genom att kräva att du verifierar din inloggning med en annan enhet, t.ex. en säkerhetsnyckel, autentiseringsapp, SMS, telefonsamtal eller e-post. Tvåstegsverifiering kan aktiveras i Bitwardens webbvalv. Vill du besöka webbplatsen nu?"
+    "message": "Tvåstegsverifiering gör ditt konto säkrare genom att kräva att du verifierar din inloggning med en annan enhet, t.ex. en säkerhetsnyckel, autentiseringsapp, SMS, telefonsamtal eller e-post. Tvåstegsverifiering kan aktiveras i Komboes webbvalv. Vill du besöka webbplatsen nu?"
   },
   "twoStepLoginConfirmationContent": {
-    "message": "Gör ditt konto säkrare genom att konfigurera tvåstegsverifiering i Bitwardens webbapp."
+    "message": "Gör ditt konto säkrare genom att konfigurera tvåstegsverifiering i Komboes webbapp."
   },
   "twoStepLoginConfirmationTitle": {
     "message": "Fortsätt till webbapp?"
@@ -1863,7 +1863,7 @@
     "message": "Köp Premium"
   },
   "premiumPurchaseAlertV2": {
-    "message": "Du kan köpa Premium från dina kontoinställningar i Bitwardens webbapp."
+    "message": "Du kan köpa Premium från dina kontoinställningar i Komboes webbapp."
   },
   "premiumFeatures": {
     "message": "Uppgradera till Premium och få:"
@@ -3085,7 +3085,7 @@
     "message": "Väntar på bekräftelse från skrivbordsprogrammet"
   },
   "awaitDesktopDesc": {
-    "message": "Säkerställ att du använder biometri i Bitwardens skrivbordsprogram för att aktivera biometri för webbläsaren."
+    "message": "Säkerställ att du använder biometri i Komboes skrivbordsprogram för att aktivera biometri för webbläsaren."
   },
   "lockWithMasterPassOnRestart": {
     "message": "Lås med huvudlösenordet vid omstart av webbläsaren"
@@ -3209,7 +3209,7 @@
     }
   },
   "topLayerHijackWarning": {
-    "message": "Denna sida stör Komboe-upplevelsen. Bitwardens inbyggda meny har tillfälligt inaktiverats som en säkerhetsåtgärd."
+    "message": "Denna sida stör Komboe-upplevelsen. Komboes inbyggda meny har tillfälligt inaktiverats som en säkerhetsåtgärd."
   },
   "setMasterPassword": {
     "message": "Ange huvudlösenord"
@@ -3311,13 +3311,13 @@
     "message": "Webbläsarintegration är inte aktiverad"
   },
   "desktopIntegrationDisabledDesc": {
-    "message": "Webbläsarintegration är inte aktiverad i Bitwardens skrivbordsprogram. Aktivera det i inställningarna i skrivbordsprogrammet."
+    "message": "Webbläsarintegration är inte aktiverad i Komboes skrivbordsprogram. Aktivera det i inställningarna i skrivbordsprogrammet."
   },
   "startDesktopTitle": {
-    "message": "Starta Bitwardens skrivbordsprogram"
+    "message": "Starta Komboes skrivbordsprogram"
   },
   "startDesktopDesc": {
-    "message": "Bitwardens skrivbordsprogram måste köras innan denna funktion kan användas."
+    "message": "Komboes skrivbordsprogram måste köras innan denna funktion kan användas."
   },
   "errorEnableBiometricTitle": {
     "message": "Det gick inte att aktivera biometri"
@@ -3371,7 +3371,7 @@
     "message": "Biometri misslyckades"
   },
   "biometricsFailedDesc": {
-    "message": "Biometri kan inte slutföras, överväg att använda ett huvudlösenord eller logga ut. Om detta kvarstår, kontakta Bitwardens support."
+    "message": "Biometri kan inte slutföras, överväg att använda ett huvudlösenord eller logga ut. Om detta kvarstår, kontakta Komboes support."
   },
   "nativeMessagingPermissionErrorTitle": {
     "message": "Behörighet har inte beviljats"
@@ -3546,14 +3546,14 @@
     "message": "Illustration av en lista över inloggningar som är i riskzonen."
   },
   "welcomeDialogGraphicAlt": {
-    "message": "Illustration av layouten för Bitwardens valvsida."
+    "message": "Illustration av layouten för Komboes valvsida."
   },
   "generatePasswordSlideDesc": {
-    "message": "Skapa snabbt ett starkt, unikt lösenord med Bitwardens autofyllmeny på riskwebbplatsen.",
+    "message": "Skapa snabbt ett starkt, unikt lösenord med Komboes autofyllmeny på riskwebbplatsen.",
     "description": "Description of the generate password slide on the at-risk password page carousel"
   },
   "generatePasswordSlideImgAltPeriod": {
-    "message": "Illustration av Bitwardens autofyllmeny som visar ett genererat lösenord."
+    "message": "Illustration av Komboes autofyllmeny som visar ett genererat lösenord."
   },
   "updateInBitwarden": {
     "message": "Uppdatera i Komboe"
@@ -4078,10 +4078,10 @@
     "message": "Fel vid hämtning av autofylldata"
   },
   "couldNotDecryptVaultItem": {
-    "message": "Komboe kunde inte dekryptera valvobjektet nedan. Kontakta Bitwardens kundsupport och ange objekt-ID:t nedan för att se om det kan återställas."
+    "message": "Komboe kunde inte dekryptera valvobjektet nedan. Kontakta Komboes kundsupport och ange objekt-ID:t nedan för att se om det kan återställas."
   },
   "couldNotDecryptVaultItems": {
-    "message": "Komboe kunde inte dekryptera valvobjekten nedan. Kontakta Bitwardens kundsupport och ange objekt-ID:na nedan för att se om de kan återställas."
+    "message": "Komboe kunde inte dekryptera valvobjekten nedan. Kontakta Komboes kundsupport och ange objekt-ID:na nedan för att se om de kan återställas."
   },
   "itemId": {
     "message": "Objekt-ID",
@@ -6185,7 +6185,7 @@
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "Att ignorera det här alternativet kan orsaka konflikter mellan Bitwardens autofyllförslag och webbläsarens.",
+    "message": "Att ignorera det här alternativet kan orsaka konflikter mellan Komboes autofyllförslag och webbläsarens.",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
@@ -6657,7 +6657,7 @@
     "message": "Hämta mobilappen"
   },
   "getTheMobileAppDesc": {
-    "message": "Få tillgång till dina lösenord när du är på språng med Bitwardens mobilapp."
+    "message": "Få tillgång till dina lösenord när du är på språng med Komboes mobilapp."
   },
   "getTheDesktopApp": {
     "message": "Hämta skrivbordsappen"
@@ -7210,10 +7210,10 @@
     "message": "Biometrisk upplåsning är inte tillgänglig på grund av felkonfigurerade systemfiler."
   },
   "biometricsStatusHelptextDesktopDisconnected": {
-    "message": "Biometrisk upplåsning är inte tillgänglig eftersom Bitwardens skrivbordsapp är stängd."
+    "message": "Biometrisk upplåsning är inte tillgänglig eftersom Komboes skrivbordsapp är stängd."
   },
   "biometricsStatusHelptextNotEnabledInDesktop": {
-    "message": "Biometrisk upplåsning är inte tillgänglig eftersom den inte är aktiverad för $EMAIL$ i Bitwardens skrivbordsapp.",
+    "message": "Biometrisk upplåsning är inte tillgänglig eftersom den inte är aktiverad för $EMAIL$ i Komboes skrivbordsapp.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -7513,7 +7513,7 @@
     "message": "Dina data, när och där du behöver dem"
   },
   "secureDevicesBody": {
-    "message": "Spara obegränsat antal lösenord på obegränsat antal enheter med Bitwardens mobil-, webbläsar- och skrivbordsappar."
+    "message": "Spara obegränsat antal lösenord på obegränsat antal enheter med Komboes mobil-, webbläsar- och skrivbordsappar."
   },
   "nudgeBadgeAria": {
     "message": "1 meddelande"
@@ -7824,7 +7824,7 @@
     "message": "Ställ in en upplåsningsmetod för att ändra din tidsgränsåtgärd"
   },
   "sessionTimeoutSuppressedByConnectedDevice": {
-    "message": "Hanteras av Bitwardens skrivbordsapp. Öppna skrivbordsappen för att redigera."
+    "message": "Hanteras av Komboes skrivbordsapp. Öppna skrivbordsappen för att redigera."
   },
   "percentageCompleted": {
     "message": "$PERCENT$ % klart",
@@ -7926,7 +7926,7 @@
     "message": "user@komboe.com, user@acme.com"
   },
   "downloadBitwardenApps": {
-    "message": "Ladda ner Bitwardens appar"
+    "message": "Ladda ner Komboes appar"
   },
   "emailProtected": {
     "message": "E-post skyddad"
@@ -7945,13 +7945,13 @@
     "message": "Synkronisera upplåsning med skrivbordsappen"
   },
   "syncUnlockWithDesktopDescription": {
-    "message": "Bitwardens webbläsartillägg och skrivbordsapp låses och låses upp tillsammans."
+    "message": "Komboes webbläsartillägg och skrivbordsapp låses och låses upp tillsammans."
   },
   "syncUnlockWithWeb": {
     "message": "Synkronisera upplåsning med webbappen"
   },
   "syncUnlockWithWebDescription": {
-    "message": "Bitwardens webbläsartillägg och webbapp låses och låses upp tillsammans."
+    "message": "Komboes webbläsartillägg och webbapp låses och låses upp tillsammans."
   },
   "sharedUnlockUnavailableUntrustedDevice": {
     "message": "Delad upplåsning är inte tillgänglig eftersom du valde att inte komma ihåg den här enheten. Logga in igen för att aktivera inställningen."

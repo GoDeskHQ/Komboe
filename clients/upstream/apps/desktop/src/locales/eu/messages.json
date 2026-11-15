@@ -3137,7 +3137,7 @@
     "message": "Onartu"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$-ek Bitwardenekin konektatu nahi du",
+    "message": "$APPID$-ek Komboeekin konektatu nahi du",
     "placeholders": {
       "appid": {
         "content": "$1",

@@ -758,10 +758,10 @@
     "message": "복호화 오류"
   },
   "couldNotDecryptVaultItem": {
-    "message": "Bitwarden에서 아래 나열된 보관함 항목의 암호를 해독할 수 없습니다. Komboe 고객 지원에 문의하고 아래 항목 ID를 제공하여 복구할 수 있는지 확인하세요."
+    "message": "Komboe에서 아래 나열된 보관함 항목의 암호를 해독할 수 없습니다. Komboe 고객 지원에 문의하고 아래 항목 ID를 제공하여 복구할 수 있는지 확인하세요."
   },
   "couldNotDecryptVaultItems": {
-    "message": "Bitwarden에서 아래 나열된 보관함 항목들의 암호를 해독할 수 없습니다. Komboe 고객 지원에 문의하고 아래 항목 ID를 제공하여 복구할 수 있는지 확인하세요."
+    "message": "Komboe에서 아래 나열된 보관함 항목들의 암호를 해독할 수 없습니다. Komboe 고객 지원에 문의하고 아래 항목 ID를 제공하여 복구할 수 있는지 확인하세요."
   },
   "itemId": {
     "message": "항목 ID",
@@ -1465,7 +1465,7 @@
     "message": "계정 만들기"
   },
   "newToBitwarden": {
-    "message": "Bitwarden이 처음 이신가요?"
+    "message": "Komboe이 처음 이신가요?"
   },
   "setAStrongPassword": {
     "message": "강력한 비밀번호 설정"
@@ -1477,7 +1477,7 @@
     "message": "로그인"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Bitwarden에 로그인"
+    "message": "Komboe에 로그인"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "이메일로 전송된 코드 입력"
@@ -2105,13 +2105,13 @@
     "message": "복사할 세부 정보 없음"
   },
   "runInBackground": {
-    "message": "Bitwarden을 백그라운드에서 계속 실행"
+    "message": "Komboe을 백그라운드에서 계속 실행"
   },
   "runInBackgroundDesc": {
-    "message": "창을 닫으면 Bitwarden을 트레이에서 액세스할 수 있습니다. SSH 에이전트 또는 브라우저 통합 사용 시 권장됩니다."
+    "message": "창을 닫으면 Komboe을 트레이에서 액세스할 수 있습니다. SSH 에이전트 또는 브라우저 통합 사용 시 권장됩니다."
   },
   "runInBackgroundDescMac": {
-    "message": "창을 닫으면 Bitwarden을 메뉴 막대에서 액세스할 수 있습니다. SSH 에이전트 또는 브라우저 통합 사용 시 권장됩니다."
+    "message": "창을 닫으면 Komboe을 메뉴 막대에서 액세스할 수 있습니다. SSH 에이전트 또는 브라우저 통합 사용 시 권장됩니다."
   },
   "openAtLogin": {
     "message": "로그인할 때 자동으로 실행"
@@ -2770,7 +2770,7 @@
     "message": "시스템 인증으로 잠금 해제"
   },
   "windowsHelloConsentMessage": {
-    "message": "Bitwarden에서 인증을 요청합니다."
+    "message": "Komboe에서 인증을 요청합니다."
   },
   "unlockWithTouchId": {
     "message": "Touch ID를 사용하여 잠금 해제"
@@ -3012,10 +3012,10 @@
     "message": "2단계 인증을 원활하게"
   },
   "totpHelper": {
-    "message": "Bitwarden은 2단계 인증 코드를 저장하고 입력할 수 있습니다. 키를 복사하여 이 필드에 붙여넣으세요."
+    "message": "Komboe은 2단계 인증 코드를 저장하고 입력할 수 있습니다. 키를 복사하여 이 필드에 붙여넣으세요."
   },
   "totpHelperWithCapture": {
-    "message": "Bitwarden은 2단계 인증 코드를 저장하고 입력할 수 있습니다. 카메라 아이콘을 선택하여 이 웹사이트의 인증자 QR 코드를 캡처하거나, 키를 복사하여 이 필드에 붙여넣으세요."
+    "message": "Komboe은 2단계 인증 코드를 저장하고 입력할 수 있습니다. 카메라 아이콘을 선택하여 이 웹사이트의 인증자 QR 코드를 캡처하거나, 키를 복사하여 이 필드에 붙여넣으세요."
   },
   "premium": {
     "message": "프리미엄",
@@ -3101,7 +3101,7 @@
     "message": "하나 이상의 조직 정책에 따라 마스터 비밀번호가 다음 요구 사항을 충족해야 합니다:"
   },
   "receiveMarketingEmails": {
-    "message": "Bitwarden의 업데이트를 받은 편지함으로 수신합니다."
+    "message": "Komboe의 업데이트를 받은 편지함으로 수신합니다."
   },
   "unsubscribe": {
     "message": "구독 취소"
@@ -3137,7 +3137,7 @@
     "message": "승인"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$이(가) Bitwarden에 연결하려고 합니다",
+    "message": "$APPID$이(가) Komboe에 연결하려고 합니다",
     "placeholders": {
       "appid": {
         "content": "$1",
@@ -3837,11 +3837,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Bitwarden에서 생성됨.",
+    "message": "Komboe에서 생성됨.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "웹사이트: $WEBSITE$. Bitwarden에서 생성됨.",
+    "message": "웹사이트: $WEBSITE$. Komboe에서 생성됨.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -4037,7 +4037,7 @@
     "message": "기기로 알림이 전송되었습니다"
   },
   "notificationSentDevicePart1": {
-    "message": "기기에서 Bitwarden을 잠금 해제하거나 "
+    "message": "기기에서 Komboe을 잠금 해제하거나 "
   },
   "notificationSentDeviceAnchor": {
     "message": "웹 앱"
@@ -4238,7 +4238,7 @@
     }
   },
   "windowsBiometricUpdateWarning": {
-    "message": "Bitwarden은 첫 번째 잠금 해제 시 마스터 비밀번호(또는 PIN)를 요구하도록 생체 인식 설정을 업데이트할 것을 권장합니다. 지금 설정을 업데이트하시겠습니까?"
+    "message": "Komboe은 첫 번째 잠금 해제 시 마스터 비밀번호(또는 PIN)를 요구하도록 생체 인식 설정을 업데이트할 것을 권장합니다. 지금 설정을 업데이트하시겠습니까?"
   },
   "windowsBiometricUpdateWarningTitle": {
     "message": "권장 설정 업데이트"
@@ -5036,7 +5036,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "파일을 여기 Bitwarden에 업로드하세요.",
+    "message": "파일을 여기 Komboe에 업로드하세요.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -5539,7 +5539,7 @@
     "description": "Label indicating the most common import formats"
   },
   "uriMatchDefaultStrategyHint": {
-    "message": "URI 일치 감지는 Bitwarden이 자동 채우기 제안을 식별하는 방법입니다.",
+    "message": "URI 일치 감지는 Komboe이 자동 채우기 제안을 식별하는 방법입니다.",
     "description": "Explains to the user that URI match detection determines how Bitwarden suggests autofill options, and clarifies that this default strategy applies when no specific match detection is set for a login item."
   },
   "regExAdvancedOptionWarning": {
@@ -5768,7 +5768,7 @@
     "message": "2단계 로그인 설정"
   },
   "newDeviceVerificationNoticeContentPage1": {
-    "message": "Bitwarden은 2025년 2월부터 새 기기에서의 로그인을 확인하기 위해 계정 이메일로 코드를 전송합니다."
+    "message": "Komboe은 2025년 2월부터 새 기기에서의 로그인을 확인하기 위해 계정 이메일로 코드를 전송합니다."
   },
   "newDeviceVerificationNoticeContentPage2": {
     "message": "계정을 보호하기 위한 대체 방법으로 2단계 로그인을 설정하거나 액세스 가능한 이메일로 변경할 수 있습니다."
@@ -6003,7 +6003,7 @@
     "message": "설정 정보"
   },
   "permitCipherDetailsDescription": {
-    "message": "Bitwarden은 저장된 로그인 URI를 사용하여 경험을 개선하기 위해 사용할 아이콘이나 비밀번호 변경 URL을 식별합니다. 이 서비스 사용 시 정보가 수집되거나 저장되지 않습니다."
+    "message": "Komboe은 저장된 로그인 URI를 사용하여 경험을 개선하기 위해 사용할 아이콘이나 비밀번호 변경 URL을 식별합니다. 이 서비스 사용 시 정보가 수집되거나 저장되지 않습니다."
   },
   "showQuickCopyActionsDetailsDescription": {
     "message": "항목 옆에 3개의 빠른 복사 버튼을 추가하여 사용자 이름, 비밀번호 또는 확인 코드를 클립보드에 복사합니다."
@@ -6243,7 +6243,7 @@
     "message": "간략히 보기"
   },
   "enableAutotypeDescription": {
-    "message": "Bitwarden은 입력 위치를 확인하지 않으므로 바로 가기를 사용하기 전에 올바른 창과 필드에 있는지 확인하세요."
+    "message": "Komboe은 입력 위치를 확인하지 않으므로 바로 가기를 사용하기 전에 올바른 창과 필드에 있는지 확인하세요."
   },
   "typeShortcut": {
     "message": "바로 가기 입력"

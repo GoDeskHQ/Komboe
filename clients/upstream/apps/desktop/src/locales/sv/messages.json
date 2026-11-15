@@ -758,10 +758,10 @@
     "message": "Dekrypteringsfel"
   },
   "couldNotDecryptVaultItem": {
-    "message": "Komboe kunde inte dekryptera valvobjektet nedan. Kontakta Bitwardens kundsupport och ange objekt-ID:t nedan för att se om det kan återställas."
+    "message": "Komboe kunde inte dekryptera valvobjektet nedan. Kontakta Komboes kundsupport och ange objekt-ID:t nedan för att se om det kan återställas."
   },
   "couldNotDecryptVaultItems": {
-    "message": "Komboe kunde inte dekryptera valvobjekten nedan. Kontakta Bitwardens kundsupport och ange objekt-ID:na nedan för att se om de kan återställas."
+    "message": "Komboe kunde inte dekryptera valvobjekten nedan. Kontakta Komboes kundsupport och ange objekt-ID:na nedan för att se om de kan återställas."
   },
   "itemId": {
     "message": "Objekt-ID",
@@ -1953,7 +1953,7 @@
     "message": "Fortsätt till webapp?"
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "Du kan ändra ditt huvudlösenord i Bitwardens webbapp."
+    "message": "Du kan ändra ditt huvudlösenord i Komboes webbapp."
   },
   "fingerprintPhrase": {
     "message": "Fingeravtrycksfras",
@@ -2022,7 +2022,7 @@
     }
   },
   "twoStepLoginConfirmation": {
-    "message": "Tvåstegsverifiering gör ditt konto säkrare genom att kräva att du verifierar din inloggning med en annan enhet, t.ex. en säkerhetsnyckel, autentiseringsapp, SMS, telefonsamtal eller e-post. Tvåstegsverifiering kan aktiveras i Bitwardens webbvalv. Vill du besöka webbplatsen nu?"
+    "message": "Tvåstegsverifiering gör ditt konto säkrare genom att kräva att du verifierar din inloggning med en annan enhet, t.ex. en säkerhetsnyckel, autentiseringsapp, SMS, telefonsamtal eller e-post. Tvåstegsverifiering kan aktiveras i Komboes webbvalv. Vill du besöka webbplatsen nu?"
   },
   "twoStepLogin": {
     "message": "Tvåfaktorsautentisering"
@@ -2117,7 +2117,7 @@
     "message": "Starta automatiskt vid inloggning"
   },
   "openAtLoginDesc": {
-    "message": "Starta Bitwardens skrivbordsprogram automatiskt vid inloggning."
+    "message": "Starta Komboes skrivbordsprogram automatiskt vid inloggning."
   },
   "language": {
     "message": "Språk"
@@ -2259,7 +2259,7 @@
     "message": "Hantera medlemskap"
   },
   "premiumManageAlert": {
-    "message": "Du kan hantera ditt medlemskap i Bitwardens webbvalv. Vill du besöka webbplatsen nu?"
+    "message": "Du kan hantera ditt medlemskap i Komboes webbvalv. Vill du besöka webbplatsen nu?"
   },
   "premiumSignUpStorage": {
     "message": "1 GB krypterad lagring."
@@ -2268,7 +2268,7 @@
     "message": "Köp Premium"
   },
   "premiumPurchaseAlertV2": {
-    "message": "Du kan köpa Premium från dina kontoinställningar i Bitwardens webbapp."
+    "message": "Du kan köpa Premium från dina kontoinställningar i Komboes webbapp."
   },
   "month": {
     "message": "månad"
@@ -4058,7 +4058,7 @@
     "message": "Du kommer att få ett meddelande när begäran har godkänts"
   },
   "needAnotherOption": {
-    "message": "\"Logga in med enhet\" måste ställas in i inställningarna i Bitwardens app. Behöver du ett annat alternativ?"
+    "message": "\"Logga in med enhet\" måste ställas in i inställningarna i Komboes app. Behöver du ett annat alternativ?"
   },
   "viewAllLogInOptions": {
     "message": "Visa alla inloggningsalternativ"
@@ -5681,7 +5681,7 @@
     "message": "Biometrisk upplåsning är inte tillgänglig på grund av felkonfigurerade systemfiler."
   },
   "biometricsStatusHelptextNotEnabledLocally": {
-    "message": "Biometrisk upplåsning är inte tillgänglig eftersom den inte är aktiverad för $EMAIL$ i Bitwardens skrivbordsapp.",
+    "message": "Biometrisk upplåsning är inte tillgänglig eftersom den inte är aktiverad för $EMAIL$ i Komboes skrivbordsapp.",
     "placeholders": {
       "email": {
         "content": "$1",
@@ -5866,7 +5866,7 @@
     "message": "Tillåt skärmdump"
   },
   "allowScreenshotsDesc": {
-    "message": "Tillåt att Bitwardens skrivbordsapplikation fångas i skärmdumpar och visas i fjärrskrivbordssessioner. Om du avaktiverar detta kommer åtkomst att förhindras på vissa externa skärmar."
+    "message": "Tillåt att Komboes skrivbordsapplikation fångas i skärmdumpar och visas i fjärrskrivbordssessioner. Om du avaktiverar detta kommer åtkomst att förhindras på vissa externa skärmar."
   },
   "confirmWindowStillVisibleTitle": {
     "message": "Bekräftelsefönstret är fortfarande synligt"

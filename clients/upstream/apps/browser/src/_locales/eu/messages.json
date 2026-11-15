@@ -3,7 +3,7 @@
     "message": "Komboe"
   },
   "appLogoLabel": {
-    "message": "Bitwardenen logoa"
+    "message": "Komboeen logoa"
   },
   "extName": {
     "message": "Komboe pasahitz kudeatzailea",
@@ -14,7 +14,7 @@
     "description": "Extension name for the beta channel, MUST be less than 40 characters (Safari restriction)"
   },
   "extDesc": {
-    "message": "Etxean, lanean edo bidean, Bitwardenek zure pasahitz, giltz orokor edo informazio delikatua erraz gordetzen du",
+    "message": "Etxean, lanean edo bidean, Komboeek zure pasahitz, giltz orokor edo informazio delikatua erraz gordetzen du",
     "description": "Extension description, MUST be less than 112 characters (Safari restriction)"
   },
   "loginOrCreateNewAccount": {
@@ -27,7 +27,7 @@
     "message": "Sortu kontua"
   },
   "newToBitwarden": {
-    "message": "Berria Bitwardenen?"
+    "message": "Berria Komboeen?"
   },
   "logInWithPasskey": {
     "message": "Sartu giltz orokorrarekin"
@@ -356,7 +356,7 @@
     "message": "Itxi saioa"
   },
   "aboutBitwarden": {
-    "message": "Bitwardeni buruz"
+    "message": "Komboei buruz"
   },
   "about": {
     "message": "Honi buruz"
@@ -464,7 +464,7 @@
     "message": "Esploratu Komboe komunitatearen foroak"
   },
   "contactSupport": {
-    "message": "Jarri harremanetan Bitwardeneko laguntza taldearekin"
+    "message": "Jarri harremanetan Komboeeko laguntza taldearekin"
   },
   "sync": {
     "message": "Sinkronizatu"
@@ -1313,7 +1313,7 @@
     "message": "Joan ezarpenera"
   },
   "notificationAddDesc": {
-    "message": "Bitwardenek pasahitz hau gogoratu beharko lizuke?"
+    "message": "Komboeek pasahitz hau gogoratu beharko lizuke?"
   },
   "notificationAddSave": {
     "message": "Gorde"
@@ -1451,7 +1451,7 @@
     "message": "Eskatu pasagako berriak gordetzea edo zure kutxan gordetako pasagakoekin saioa hastea. Saioa hasita duten kontu guztiei aplikatzen zaie."
   },
   "notificationChangeDesc": {
-    "message": "Bitwardenen pasahitz hau eguneratu nahi duzu?"
+    "message": "Komboeen pasahitz hau eguneratu nahi duzu?"
   },
   "notificationChangeSave": {
     "message": "Eguneratu"
@@ -3414,7 +3414,7 @@
     "message": "Kanporatutako domeinuak"
   },
   "excludedDomainsDesc": {
-    "message": "Bitwardenek ez du eskatuko domeinu horietarako saio-hasierako xehetasunak gordetzea. Orrialdea eguneratu behar duzu aldaketek eragina izan dezaten."
+    "message": "Komboeek ez du eskatuko domeinu horietarako saio-hasierako xehetasunak gordetzea. Orrialdea eguneratu behar duzu aldaketek eragina izan dezaten."
   },
   "blockedDomainsDesc": {
     "message": "Autobetetzea eta beste erlazionatutako funtzioak ez dira webgune hauetan eskainiko. Orria freskatu behar duzu aldaketak indarrean jartzeko."

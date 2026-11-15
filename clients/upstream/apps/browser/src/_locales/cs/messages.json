@@ -27,7 +27,7 @@
     "message": "Vytvořit účet"
   },
   "newToBitwarden": {
-    "message": "Jste noví na Bitwardenu?"
+    "message": "Jste noví na Komboeu?"
   },
   "logInWithPasskey": {
     "message": "Přihlásit se pomocí přístupového klíče"
@@ -339,7 +339,7 @@
     "message": "Pomozte ostatním zjistit, zda je Komboe pro ně správný. Navštivte obchod s rozšířeními pro prohlížeč a zanechte hodnocení."
   },
   "changeMasterPasswordOnWebConfirmation": {
-    "message": "Hlavní heslo můžete změnit ve webové aplikaci Bitwardenu."
+    "message": "Hlavní heslo můžete změnit ve webové aplikaci Komboeu."
   },
   "fingerprintPhrase": {
     "message": "Fráze otisku prstu",
@@ -356,13 +356,13 @@
     "message": "Odhlásit se"
   },
   "aboutBitwarden": {
-    "message": "O Bitwardenu"
+    "message": "O Komboeu"
   },
   "about": {
     "message": "O rozšíření"
   },
   "moreFromBitwarden": {
-    "message": "Více od Bitwardenu"
+    "message": "Více od Komboeu"
   },
   "continueToBitwardenDotCom": {
     "message": "Pokračovat na komboe.com?"
@@ -377,10 +377,10 @@
     "message": "Komboe Authenticator umožňuje ukládat ověřovací klíče a generovat TOTP kódy pro 2-fázové ověřování. Další informace naleznete na stránkách komboe.com"
   },
   "bitwardenSecretsManager": {
-    "message": "Správce tajných klíčů Bitwardenu"
+    "message": "Správce tajných klíčů Komboeu"
   },
   "continueToSecretsManagerPageDesc": {
-    "message": "Bezpečně ukládá, spravuje a sdílí tajné klíče vývojáře se správcem tajných klíčů Bitwardenu. Více informací naleznete na stránkách komboe.com."
+    "message": "Bezpečně ukládá, spravuje a sdílí tajné klíče vývojáře se správcem tajných klíčů Komboeu. Více informací naleznete na stránkách komboe.com."
   },
   "passwordlessDotDev": {
     "message": "Passwordless.dev"
@@ -486,7 +486,7 @@
     "message": "Vygenerujte si silné a unikátní heslo pro přihlašovací údaje."
   },
   "bitWebVaultApp": {
-    "message": "Webová aplikace Bitwardenu"
+    "message": "Webová aplikace Komboeu"
   },
   "select": {
     "message": "Vybrat"
@@ -1349,11 +1349,11 @@
     }
   },
   "notificationLoginSaveConfirmation": {
-    "message": "uloženo do Bitwardenu.",
+    "message": "uloženo do Komboeu.",
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "aktualizováno v Bitwardenu.",
+    "message": "aktualizováno v Komboeu.",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
@@ -1451,13 +1451,13 @@
     "message": "Zeptá se na uložení nového hesla nebo se přihlásí pomocí přístupových hesel uložených ve Vašem trezoru. Platí pro všechny přihlášené účty."
   },
   "notificationChangeDesc": {
-    "message": "Chcete aktualizovat toto heslo v Bitwardenu?"
+    "message": "Chcete aktualizovat toto heslo v Komboeu?"
   },
   "notificationChangeSave": {
     "message": "Aktualizovat"
   },
   "notificationUnlockDesc": {
-    "message": "Pro dokončení požadavku na automatické vyplnění odemkněte Váš trezor na Bitwardenu."
+    "message": "Pro dokončení požadavku na automatické vyplnění odemkněte Váš trezor na Komboeu."
   },
   "notificationUnlock": {
     "message": "Odemknout"
@@ -1605,10 +1605,10 @@
     "message": "Toto heslo bude použito pro export a import tohoto souboru."
   },
   "accountRestrictedOptionDescription": {
-    "message": "Pro zašifrování exportu a omezení importu jen na aktuální účet Bitwardenu se použije šifrovací klíč Vašeho účtu odvozený z uživatelského jména a hlavního hesla."
+    "message": "Pro zašifrování exportu a omezení importu jen na aktuální účet Komboeu se použije šifrovací klíč Vašeho účtu odvozený z uživatelského jména a hlavního hesla."
   },
   "passwordProtectedOptionDescription": {
-    "message": "Nastavte heslo pro šifrování exportu a importujte ho do libovolného účtu Bitwardenu pomocí hesla pro dešifrování."
+    "message": "Nastavte heslo pro šifrování exportu a importujte ho do libovolného účtu Komboeu pomocí hesla pro dešifrování."
   },
   "exportTypeHeading": {
     "message": "Typ exportu"
@@ -1637,7 +1637,7 @@
     "message": "Tento export zašifruje Vaše data pomocí šifrovacího klíče Vašeho účtu. Pokud někdy změníte šifrovací klíč Vašeho účtu, měli byste vyexportovat data znovu, protože tento exportovaný soubor nebudete moci dešifrovat."
   },
   "encExportAccountWarningDesc": {
-    "message": "Šifrovací klíče účtu jsou pro každý uživatelský účet Bitwardenu jedinečné, takže nelze importovat šifrovaný export do jiného účtu."
+    "message": "Šifrovací klíče účtu jsou pro každý uživatelský účet Komboeu jedinečné, takže nelze importovat šifrovaný export do jiného účtu."
   },
   "exportMasterPassword": {
     "message": "Pro exportování dat zadejte své hlavní heslo."
@@ -2055,7 +2055,7 @@
     "message": "Snadné hledání návrhů automatického vyplňování"
   },
   "autofillSpotlightDesc": {
-    "message": "Vypněte nastavení automatického vyplňování prohlížeče, takže nebude v rozporu s Bitwardenem."
+    "message": "Vypněte nastavení automatického vyplňování prohlížeče, takže nebude v rozporu s Komboeem."
   },
   "turnOffBrowserAutofill": {
     "message": "Vypnout automatické vyplňování $BROWSER$",
@@ -3021,7 +3021,7 @@
     "message": "Slabé hlavní heslo"
   },
   "weakMasterPasswordDesc": {
-    "message": "Zvolené hlavní heslo je slabé. Pro správnou ochranu účtu Bitwardenu byste měli použít silné hlavní heslo (nebo heslovou frázi). Opravdu chcete toto heslo použít?"
+    "message": "Zvolené hlavní heslo je slabé. Pro správnou ochranu účtu Komboeu byste měli použít silné hlavní heslo (nebo heslovou frázi). Opravdu chcete toto heslo použít?"
   },
   "rotateAccountEncKey": {
     "message": "Měnit také šifrovací klíč k mému účtu"
@@ -3033,7 +3033,7 @@
     "message": "Opravdu chcete měnit šifrovací klíč k Vašemu účtu?"
   },
   "updateEncryptionKeyWarning": {
-    "message": "Po aktualizace šifrovacího klíče dojde k odhlášení a budete se muset opětovně přihlásit do všech aplikací Bitwardenu, které aktuálně používáte (např. mobilní aplikace či rozšíření pro prohlížeč). Nezdaří-li se odhlášení a opětovné přihlášení (během něhož bude stažen nový šifrovací klíč), může dojít k poškození dat. Pokusíme se Vás automaticky odhlásit, nicméně, může to chvíli trvat."
+    "message": "Po aktualizace šifrovacího klíče dojde k odhlášení a budete se muset opětovně přihlásit do všech aplikací Komboeu, které aktuálně používáte (např. mobilní aplikace či rozšíření pro prohlížeč). Nezdaří-li se odhlášení a opětovné přihlášení (během něhož bude stažen nový šifrovací klíč), může dojít k poškození dat. Pokusíme se Vás automaticky odhlásit, nicméně, může to chvíli trvat."
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Všechny uložené exporty s omezením účtu se stanou neplatnými."
@@ -3064,7 +3064,7 @@
     "message": "Nastavte svůj PIN kód pro odemknutí trezoru. Pokud se zcela odhlásíte z aplikace bude Váš aktuální PIN resetován."
   },
   "setPinCode": {
-    "message": "Tento PIN můžete použít k odemknutí Bitwardenu. Váš PIN bude resetován, pokud se někdy úplně odhlásíte z aplikace."
+    "message": "Tento PIN můžete použít k odemknutí Komboeu. Váš PIN bude resetován, pokud se někdy úplně odhlásíte z aplikace."
   },
   "pinRequired": {
     "message": "Je vyžadován PIN kód."
@@ -3209,7 +3209,7 @@
     }
   },
   "topLayerHijackWarning": {
-    "message": "Tato stránka narušuje zážitek z Bitwardenu. Vložené menu Komboe bylo dočasně vypnuto jako bezpečnostní opatření."
+    "message": "Tato stránka narušuje zážitek z Komboeu. Vložené menu Komboe bylo dočasně vypnuto jako bezpečnostní opatření."
   },
   "setMasterPassword": {
     "message": "Nastavit hlavní heslo"
@@ -3266,7 +3266,7 @@
     "message": "Vaše nové hlavní heslo nesplňuje požadavky zásad organizace."
   },
   "receiveMarketingEmails": {
-    "message": "Přijímejte aktualizace od Bitwardenu do doručené pošty."
+    "message": "Přijímejte aktualizace od Komboeu do doručené pošty."
   },
   "unsubscribe": {
     "message": "Odhlásit odběr"
@@ -3371,7 +3371,7 @@
     "message": "Biometrika selhala"
   },
   "biometricsFailedDesc": {
-    "message": "Biometriku nelze dokončit, zvažte použití hlavního hesla nebo odhlášení. Pokud to přetrvává, kontaktujte podporu Bitwardenu."
+    "message": "Biometriku nelze dokončit, zvažte použití hlavního hesla nebo odhlášení. Pokud to přetrvává, kontaktujte podporu Komboeu."
   },
   "nativeMessagingPermissionErrorTitle": {
     "message": "Oprávnění nebylo uděleno"
@@ -3556,14 +3556,14 @@
     "message": "Ilustrace nabídky automatického vyplňování Komboe zobrazující vygenerované heslo."
   },
   "updateInBitwarden": {
-    "message": "Aktualizovat v Bitwardenu"
+    "message": "Aktualizovat v Komboeu"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe Vás poté požádá o aktualizaci hesla ve správci hesel.",
     "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
-    "message": "Ilustrace oznámení v Bitwardenu, která uživatele vyzývá k aktualizaci přihlášení."
+    "message": "Ilustrace oznámení v Komboeu, která uživatele vyzývá k aktualizaci přihlášení."
   },
   "turnOnAutofill": {
     "message": "Zapnout automatické vyplňování"
@@ -4191,11 +4191,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Vygenerováno Bitwardenem.",
+    "message": "Vygenerováno Komboeem.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Webová stránka: $WEBSITE$. Vygenerováno Bitwardenem.",
+    "message": "Webová stránka: $WEBSITE$. Vygenerováno Komboeem.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -4917,15 +4917,15 @@
     "message": "Přeskočit na obsah"
   },
   "bitwardenOverlayButton": {
-    "message": "Tlačítko nabídky automatického vyplňování Bitwardenu",
+    "message": "Tlačítko nabídky automatického vyplňování Komboeu",
     "description": "Page title for the iframe containing the overlay button"
   },
   "toggleBitwardenVaultOverlay": {
-    "message": "Přepnout nabídku automatického vyplňování Bitwardenu",
+    "message": "Přepnout nabídku automatického vyplňování Komboeu",
     "description": "Screen reader and tool tip label for the overlay button"
   },
   "bitwardenVault": {
-    "message": "Nabídka automatického vyplňování Bitwardenu",
+    "message": "Nabídka automatického vyplňování Komboeu",
     "description": "Page title in overlay"
   },
   "unlockYourAccountToViewMatchingLogins": {
@@ -4997,7 +4997,7 @@
     "description": "Screen reader text (aria-label) for new identity button within inline menu"
   },
   "bitwardenOverlayMenuAvailable": {
-    "message": "Nabídka automatického vyplňování Bitwardenu. Pro výběr stiskněte šipku dolů.",
+    "message": "Nabídka automatického vyplňování Komboeu. Pro výběr stiskněte šipku dolů.",
     "description": "Screen reader text for announcing when the overlay opens on the page"
   },
   "turnOn": {
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "soubor sem do Bitwardenu.",
+    "message": "soubor sem do Komboeu.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6185,7 +6185,7 @@
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "Ignorování této volby může způsobit konflikty mezi nabídkou automatického vyplňování Bitwardenu a Vaším prohlížečem.",
+    "message": "Ignorování této volby může způsobit konflikty mezi nabídkou automatického vyplňování Komboeu a Vaším prohlížečem.",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
@@ -6211,7 +6211,7 @@
     "description": "Title for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "privacyPermissionAdditionNotGrantedDescription": {
-    "message": "Pro nastavení jako výchozí správce hesel musíte Bitwardenu udělit oprávnění zabezpečení v prohlížeči.",
+    "message": "Pro nastavení jako výchozí správce hesel musíte Komboeu udělit oprávnění zabezpečení v prohlížeči.",
     "description": "Description for the dialog that appears when the user has not granted the extension permission to set privacy settings"
   },
   "makeDefault": {
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "Uložit do Bitwardenu",
+    "message": "Uložit do Komboeu",
     "description": "Confirmation message for saving a login to Bitwarden"
   },
   "spaceCharacterDescriptor": {
@@ -7489,7 +7489,7 @@
     "message": "Používejte složky k organizaci položek v trezoru. Jsou jen pro Vás. Nikdo jiný je nebude vidět ani používat."
   },
   "introCarouselLabel": {
-    "message": "Vítejte v Bitwardenu"
+    "message": "Vítejte v Komboeu"
   },
   "securityPrioritized": {
     "message": "Bezpečnost, priorita"
@@ -7513,7 +7513,7 @@
     "message": "Vaše data, kdy a kde je potřebujete"
   },
   "secureDevicesBody": {
-    "message": "Uložte neomezená hesla na neomezených zařízeních s Bitwardenem na mobilu, prohlížeči a desktopové aplikaci."
+    "message": "Uložte neomezená hesla na neomezených zařízeních s Komboeem na mobilu, prohlížeči a desktopové aplikaci."
   },
   "nudgeBadgeAria": {
     "message": "1 oznámení"
@@ -7522,7 +7522,7 @@
     "message": "Importovat existující hesla"
   },
   "emptyVaultNudgeBody": {
-    "message": "Pomocí importu rychle přenesete přihlašovací údaje do Bitwardenu a to bez jejich ručního přidání."
+    "message": "Pomocí importu rychle přenesete přihlašovací údaje do Komboeu a to bez jejich ručního přidání."
   },
   "emptyVaultNudgeButton": {
     "message": "Importovat nyní"
@@ -7738,7 +7738,7 @@
     "message": "Chyba: Nelze dešifrovat"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Vaše organizace již k přihlášení do Bitwardenu nepoužívá hlavní hesla. Chcete-li pokračovat, ověřte organizaci a doménu."
+    "message": "Vaše organizace již k přihlášení do Komboeu nepoužívá hlavní hesla. Chcete-li pokračovat, ověřte organizaci a doménu."
   },
   "continueWithLogIn": {
     "message": "Pokračovat s přihlášením"

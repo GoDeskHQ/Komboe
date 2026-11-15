@@ -434,7 +434,7 @@ export class GetCommand extends DownloadCommand {
 
     return await this.saveAttachmentToFile(
       url,
-      path.basename(attachments[0].fileName ?? `BitwardenAttachment-${Date.now()}`),
+      path.basename(attachments[0].fileName ?? `KomboeAttachment-${Date.now()}`),
       decryptBufferFn,
       options.output,
     );

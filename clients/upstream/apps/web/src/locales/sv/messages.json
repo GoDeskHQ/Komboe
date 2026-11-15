@@ -21,7 +21,7 @@
     "message": "Alla kritiska appar"
   },
   "appLogoLabel": {
-    "message": "Bitwardens logotyp"
+    "message": "Komboes logotyp"
   },
   "criticalApplications": {
     "message": "Kritiska applikationer"
@@ -2209,7 +2209,7 @@
     "message": "Logga in med enhet"
   },
   "loginWithDeviceEnabledNote": {
-    "message": "\"Logga in med enhet\" måste ställas in i inställningarna i Bitwardens app. Behöver du ett annat alternativ?"
+    "message": "\"Logga in med enhet\" måste ställas in i inställningarna i Komboes app. Behöver du ett annat alternativ?"
   },
   "needAnotherOptionV1": {
     "message": "Behöver du ett annat alternativ?"
@@ -4052,7 +4052,7 @@
     "message": "Om du har konfigurerat SSO eller planerar att göra det, kan tvåstegsverifiering redan krävas av din ID-leverantör."
   },
   "twoStepLoginRecoveryWarning": {
-    "message": "Att aktivera tvåstegsverifiering kan låsa ute dig från ditt Komboe-konto permanent. En återställningskod låter dig komma åt ditt konto om du inte längre kan använda din vanliga metod för tvåstegsverifiering (t.ex. om du förlorar din enhet). Bitwardens kundservice kommer inte att kunna hjälpa dig om du förlorar åtkomst till ditt konto. Vi rekommenderar att du skriver ner eller skriver ut återställningskoden och förvarar den på ett säkert ställe."
+    "message": "Att aktivera tvåstegsverifiering kan låsa ute dig från ditt Komboe-konto permanent. En återställningskod låter dig komma åt ditt konto om du inte längre kan använda din vanliga metod för tvåstegsverifiering (t.ex. om du förlorar din enhet). Komboes kundservice kommer inte att kunna hjälpa dig om du förlorar åtkomst till ditt konto. Vi rekommenderar att du skriver ner eller skriver ut återställningskoden och förvarar den på ett säkert ställe."
   },
   "restrictedItemTypePolicy": {
     "message": "Ta bort kortets artikeltyp"
@@ -4271,7 +4271,7 @@
     "message": "Inaktivera alla nycklar"
   },
   "twoFactorDuoDesc": {
-    "message": "Ange Bitwardens applikationsinformation från din Duo Admin-panel."
+    "message": "Ange Komboes applikationsinformation från din Duo Admin-panel."
   },
   "twoFactorDuoClientId": {
     "message": "Klient-ID"
@@ -4500,7 +4500,7 @@
     "message": "Svaga lösenord"
   },
   "weakPasswordsReportDesc": {
-    "message": "Svaga lösenord kan enkelt gissas av hackare och automatiserade verktyg som används för att knäcka lösenord. Bitwardens lösenordsgenerator kan hjälpa dig att skapa starka lösenord."
+    "message": "Svaga lösenord kan enkelt gissas av hackare och automatiserade verktyg som används för att knäcka lösenord. Komboes lösenordsgenerator kan hjälpa dig att skapa starka lösenord."
   },
   "weakPasswordsFound": {
     "message": "Svaga lösenord hittades"
@@ -7730,7 +7730,7 @@
     "message": "Kopiera och klistra in länken där teamet hittar den: introduktionschecklistan, Slack-kanalen #new-joiners, Notion-dokumentation eller en e-postmall."
   },
   "viewBitwardenOnboardingGuide": {
-    "message": "Visa Bitwardens introduktionsguide"
+    "message": "Visa Komboes introduktionsguide"
   },
   "coachMarkStepOfTotal": {
     "message": "$CURRENT$ av $TOTAL$",
@@ -7974,7 +7974,7 @@
     "message": "API-nyckel"
   },
   "apiKeyDesc": {
-    "message": "Din API-nyckel kan användas för att autentisera mot Bitwardens publika API."
+    "message": "Din API-nyckel kan användas för att autentisera mot Komboes publika API."
   },
   "apiKeyRotateDesc": {
     "message": "Genom att rotera API-nyckeln ogiltigförklarar du den tidigare nyckeln. Du kan rotera din API-nyckel om du tror att din nuvarande nyckel inte längre är säker att använda."
@@ -7983,7 +7983,7 @@
     "message": "Din API-nyckel har full tillgång till organisationen. Den bör hållas hemlig."
   },
   "userApiKeyDesc": {
-    "message": "Din API-nyckel kan användas för att autentisera i Bitwardens CLI."
+    "message": "Din API-nyckel kan användas för att autentisera i Komboes CLI."
   },
   "userApiKeyWarning": {
     "message": "Din API-nyckel är en alternativ autentiseringsmekanism. Den bör hållas hemlig."
@@ -9762,10 +9762,10 @@
     "message": "Dekrypteringsfel"
   },
   "couldNotDecryptVaultItem": {
-    "message": "Komboe kunde inte dekryptera valvobjektet nedan. Kontakta Bitwardens kundsupport och uppge objekt-ID:t nedan för att se om det kan återställas."
+    "message": "Komboe kunde inte dekryptera valvobjektet nedan. Kontakta Komboes kundsupport och uppge objekt-ID:t nedan för att se om det kan återställas."
   },
   "couldNotDecryptVaultItems": {
-    "message": "Komboe kunde inte dekryptera valvobjekten nedan. Kontakta Bitwardens kundsupport och uppge objekt-ID:na nedan för att se om de kan återställas."
+    "message": "Komboe kunde inte dekryptera valvobjekten nedan. Kontakta Komboes kundsupport och uppge objekt-ID:na nedan för att se om de kan återställas."
   },
   "itemId": {
     "message": "Objekt-ID",
@@ -10664,7 +10664,7 @@
     "message": "Token för fakturasynkronisering"
   },
   "automaticBillingSyncDesc": {
-    "message": "Automatisk synkronisering låser upp Familiesponsring och låter dig synkronisera din licens utan att ladda upp en fil. När du har gjort uppdateringar i Bitwardens molnserver väljer du Synkronisera licens för att tillämpa ändringarna."
+    "message": "Automatisk synkronisering låser upp Familiesponsring och låter dig synkronisera din licens utan att ladda upp en fil. När du har gjort uppdateringar i Komboes molnserver väljer du Synkronisera licens för att tillämpa ändringarna."
   },
   "active": {
     "message": "Aktiv"
@@ -14304,7 +14304,7 @@
     "message": "Eventhantering"
   },
   "eventManagementDesc": {
-    "message": "Integrera Bitwardens händelseloggar med ditt SIEM-system (system information and event management) genom att använda implementeringsguiden för din plattform."
+    "message": "Integrera Komboes händelseloggar med ditt SIEM-system (system information and event management) genom att använda implementeringsguiden för din plattform."
   },
   "deviceManagement": {
     "message": "Hantering av enheter"
@@ -14864,7 +14864,7 @@
     "message": "Sponsrad"
   },
   "licenseAndBillingManagementDesc": {
-    "message": "När du har gjort uppdateringar i Bitwardens molnserver laddar du upp din licensfil för att tillämpa de senaste ändringarna."
+    "message": "När du har gjort uppdateringar i Komboes molnserver laddar du upp din licensfil för att tillämpa de senaste ändringarna."
   },
   "addToFolder": {
     "message": "Lägg till i mapp"
@@ -14982,7 +14982,7 @@
     "message": "Vad är ett CVV-nummer?"
   },
   "learnMoreAboutApi": {
-    "message": "Läs mer om Bitwardens API"
+    "message": "Läs mer om Komboes API"
   },
   "fileSends": {
     "message": "Skicka filer"
@@ -16069,7 +16069,7 @@
     "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Bitwarden visit the Learning Center and Help Center'"
   },
   "setupExtensionContentAlt": {
-    "message": "Med webbläsartillägget Komboe kan du enkelt skapa nya inloggningar, komma åt dina sparade inloggningar direkt från webbläsarens verktygsfält och logga in på konton snabbt med hjälp av Bitwardens autofyll."
+    "message": "Med webbläsartillägget Komboe kan du enkelt skapa nya inloggningar, komma åt dina sparade inloggningar direkt från webbläsarens verktygsfält och logga in på konton snabbt med hjälp av Komboes autofyll."
   },
   "restart": {
     "message": "Starta om"
@@ -16171,7 +16171,7 @@
     }
   },
   "restoreProviderPortalAccessViaCustomerSupport": {
-    "message": "För att återställa åtkomsten till din leverantörsportal, kontakta Bitwardens kundsupport för att förnya ditt abonnemang.",
+    "message": "För att återställa åtkomsten till din leverantörsportal, kontakta Komboes kundsupport för att förnya ditt abonnemang.",
     "description": "A message shown in a non-dismissible dialog to any user of a suspended providers."
   },
   "restoreProviderPortalAccessViaPaymentMethod": {
@@ -16213,7 +16213,7 @@
     "message": "Prenumerationen avbruten"
   },
   "providersubCanceledmessage": {
-    "message": "Kontakta Bitwardens kundtjänst för att återaktivera prenumerationen."
+    "message": "Kontakta Komboes kundtjänst för att återaktivera prenumerationen."
   },
   "showAll": {
     "message": "Visa alla"

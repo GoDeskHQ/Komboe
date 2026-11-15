@@ -847,10 +847,10 @@
     "message": "간편하게 2단계 인증을 만들기"
   },
   "totpHelper": {
-    "message": "Bitwarden은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 키를 복사하여 이 입력란에 붙여넣으세요."
+    "message": "Komboe은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 키를 복사하여 이 입력란에 붙여넣으세요."
   },
   "totpHelperWithCapture": {
-    "message": "Bitwarden은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 카메라 아이콘을 선택하고, 이 웹사이드의 인증 도구 QR코드를 스크린샷을 찍거나, 키를 복사하여 이 입력란에 붙여넣으세요."
+    "message": "Komboe은 2단계 인증 코드들을 저장하고, 채워넣을 수 있습니다. 카메라 아이콘을 선택하고, 이 웹사이드의 인증 도구 QR코드를 스크린샷을 찍거나, 키를 복사하여 이 입력란에 붙여넣으세요."
   },
   "totpCapture": {
     "message": "현재 웹페이지에서 QR 코드 스캔하기"
@@ -2326,7 +2326,7 @@
     "message": "계정 만들기"
   },
   "newToBitwarden": {
-    "message": "Bitwarden이 처음이신가요?"
+    "message": "Komboe이 처음이신가요?"
   },
   "setAStrongPassword": {
     "message": "Set a strong password"
@@ -2344,7 +2344,7 @@
     "message": "로그인"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Bitwarden에 로그인"
+    "message": "Komboe에 로그인"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Enter the code sent to your email"
@@ -3215,7 +3215,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "KDF 반복자를 너무 높게 설정하면 CPU가 느린 장치에서 Bitwarden에 로그인(및 잠금 해제)할 때 성능이 저하될 수 있습니다. $INCREMENT$ 단위로 값을 올려가며 모든 장치를 테스트하는 것이 좋습니다.",
+    "message": "KDF 반복자를 너무 높게 설정하면 CPU가 느린 장치에서 Komboe에 로그인(및 잠금 해제)할 때 성능이 저하될 수 있습니다. $INCREMENT$ 단위로 값을 올려가며 모든 장치를 테스트하는 것이 좋습니다.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -3991,7 +3991,7 @@
     "message": "도메인 규칙"
   },
   "domainRulesDesc": {
-    "message": "여러 웹 사이트 도메인에 대해 동일한 로그인이 있는 경우, 웹 사이트가 \"유사\"하다고 표시할 수 있습니다. \"전역\" 도메인은 Bitwarden에서 당신을 위해 이미 생성했습니다."
+    "message": "여러 웹 사이트 도메인에 대해 동일한 로그인이 있는 경우, 웹 사이트가 \"유사\"하다고 표시할 수 있습니다. \"전역\" 도메인은 Komboe에서 당신을 위해 이미 생성했습니다."
   },
   "globalEqDomains": {
     "message": "전역 유사 도메인"

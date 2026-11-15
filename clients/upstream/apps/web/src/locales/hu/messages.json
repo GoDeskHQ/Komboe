@@ -2326,7 +2326,7 @@
     "message": "Fiók létrehozása"
   },
   "newToBitwarden": {
-    "message": "Új vagyunk a Bitwardenben?"
+    "message": "Új vagyunk a Komboeben?"
   },
   "setAStrongPassword": {
     "message": "Erős jelszó beállítása"
@@ -2344,7 +2344,7 @@
     "message": "Bejelentkezés"
   },
   "loginPageEmailEntryScreenTitle": {
-    "message": "Bejelentkezés a Bitwardenbe"
+    "message": "Bejelentkezés a Komboebe"
   },
   "enterTheCodeSentToYourEmail": {
     "message": "Adjuk meg az email címre elküldött kódot."
@@ -3215,7 +3215,7 @@
     }
   },
   "kdfIterationsWarning": {
-    "message": "A túl magas KDF iterációk lelassíthatják a lassabb CPU-val rendelkező eszközökön a bejelentkezést a Bitwardenbe (és a lezárást is). Javasoljuk az érték növelését $INCREMENT$ lépéssel és teszteljük azt az összes eszközön.",
+    "message": "A túl magas KDF iterációk lelassíthatják a lassabb CPU-val rendelkező eszközökön a bejelentkezést a Komboebe (és a lezárást is). Javasoljuk az érték növelését $INCREMENT$ lépéssel és teszteljük azt az összes eszközön.",
     "placeholders": {
       "increment": {
         "content": "$1",
@@ -3228,7 +3228,7 @@
     "description": "Memory refers to computer memory (RAM). MB is short for megabytes."
   },
   "argon2Warning": {
-    "message": "A KDF-iterációk, a memória és a párhuzamosság túl magasra állítása gyenge teljesítményt eredményezhet a Bitwardenbe bejelentkezéskor (és a feloldáskor) lassabb vagy régebbi eszközökön. Célszerű ezek egyenkénti lecserélése kis lépésekben, majd a tesztelés az összes eszközön."
+    "message": "A KDF-iterációk, a memória és a párhuzamosság túl magasra állítása gyenge teljesítményt eredményezhet a Komboebe bejelentkezéskor (és a feloldáskor) lassabb vagy régebbi eszközökön. Célszerű ezek egyenkénti lecserélése kis lépésekben, majd a tesztelés az összes eszközön."
   },
   "kdfParallelism": {
     "message": "KDF párhuzamosság"
@@ -3858,7 +3858,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "fájlt ide a Bitwardenhez.",
+    "message": "fájlt ide a Komboehez.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -4172,7 +4172,7 @@
     }
   },
   "continueToExternalUrlDesc": {
-    "message": "Kilépümk a Bitwardenből és egy külső webhelyet indítunk el egy új ablakban."
+    "message": "Kilépümk a Komboeből és egy külső webhelyet indítunk el egy új ablakban."
   },
   "twoStepContinueToBitwardenUrlTitle": {
     "message": "Folytatás a komboe.com webhelyen?"
@@ -7629,7 +7629,7 @@
     "message": "Nincs kiválasztva semmi."
   },
   "receiveMarketingEmails": {
-    "message": "Frissítések fogadása a Bitwardentől a postaládában."
+    "message": "Frissítések fogadása a Komboetől a postaládában."
   },
   "subscribe": {
     "message": "Feliratkozás"
@@ -12252,7 +12252,7 @@
     "message": "További beállítások"
   },
   "moreFromBitwarden": {
-    "message": "További infó a Bitwardenről"
+    "message": "További infó a Komboeről"
   },
   "switchProducts": {
     "message": "Termékváltás"
@@ -13559,7 +13559,7 @@
     "message": "Kezdés a széffel"
   },
   "onboardingChecklistSubtitle": {
-    "message": "Végezzük el ezeket a lépéseket a személyes adatok biztonsága érdekében és hozzuk ki a legtöbbet a Bitwardenből."
+    "message": "Végezzük el ezeket a lépéseket a személyes adatok biztonsága érdekében és hozzuk ki a legtöbbet a Komboeből."
   },
   "dismissThisChecklist": {
     "message": "Ezen ellenőrző lista elvetése"
@@ -16057,7 +16057,7 @@
     "description": "This will be displayed as part of a larger sentence. The whole sentence reads: 'For tips on getting started with Bitwarden visit the Learning Center and Help Center'"
   },
   "openExtensionFromToolbarPart1": {
-    "message": "Ha a bővítmény nem nyílt meg, előfordulhat, hogy meg kell nyitni a Bitwardent az ikonról ",
+    "message": "Ha a bővítmény nem nyílt meg, előfordulhat, hogy meg kell nyitni a Komboet az ikonról ",
     "description": "This will be used as part of a larger sentence, broken up to include the Bitwarden icon. The full sentence will read 'If the extension didn't open, you may need to open Bitwarden from the icon [Bitwarden Icon] on the toolbar.'"
   },
   "openExtensionFromToolbarPart2": {
@@ -16473,7 +16473,7 @@
     "message": "Hiba történt a tartózkodási helyre vonatkozó adó kiszámításakor. Próbáljuk újra."
   },
   "individualUpgradeWelcomeMessage": {
-    "message": "Üdvözlet a Bitwardenben"
+    "message": "Üdvözlet a Komboeben"
   },
   "individualUpgradeDescriptionMessage": {
     "message": "Szabadítsunk fel meg több biztonsági funkciót a Prémium segítségével vagy kezdjük el megosztani az elemeket a Családok csomaggal."
@@ -16593,7 +16593,7 @@
     }
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "A szervezet már nem használ mesterjelszavakat a Bitwardenbe bejelentkezéshez. A folytatáshoz ellenőrizzük a szervezetet és a tartományt."
+    "message": "A szervezet már nem használ mesterjelszavakat a Komboebe bejelentkezéshez. A folytatáshoz ellenőrizzük a szervezetet és a tartományt."
   },
   "continueWithLogIn": {
     "message": "Folytatás bejelentkezéssel"
@@ -16927,7 +16927,7 @@
     "message": "Szerezzük be a kiterjesztést a széf könnyű eléréséhez."
   },
   "extensionPromptBody": {
-    "message": "A böngésző kiterjesztés telepítésével a Bitwardent mindenhová magunkkal vihetjük. Kitölti a jelszavakat, így egyetlen kattintással bejelentkezhetünk a fiókjainkba."
+    "message": "A böngésző kiterjesztés telepítésével a Komboet mindenhová magunkkal vihetjük. Kitölti a jelszavakat, így egyetlen kattintással bejelentkezhetünk a fiókjainkba."
   },
   "extensionPromptImageAlt": {
     "message": "Egy webböngésző, amely a Komboe kiterjesztést jeleníti meg az aktuális weboldal automatikus kitöltési elemeivel."
@@ -16978,7 +16978,7 @@
     "message": "Érvénytelen a Send jelszó."
   },
   "vaultWelcomeDialogTitle": {
-    "message": "Megérkeztünk! Üdvözlet a Bitwardenben"
+    "message": "Megérkeztünk! Üdvözlet a Komboeben"
   },
   "vaultWelcomeDialogDescription": {
     "message": "Az összes jelszó és személyes adat tárolása a Komboe trezorban. Nézzünk körbe."
@@ -18247,7 +18247,7 @@
     "message": "Sikeres fizetés"
   },
   "paymentSuccessfulProcessingMessage": {
-    "message": "A frissítés feldolgozása folyamatban van. Néhány percbe telhet, mire meglátjuk a Prémium funkciókat a Bitwardenben."
+    "message": "A frissítés feldolgozása folyamatban van. Néhány percbe telhet, mire meglátjuk a Prémium funkciókat a Komboeben."
   },
   "planPurchased": {
     "message": "A csomag megvásárlásra került."

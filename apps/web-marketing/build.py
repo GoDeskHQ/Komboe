@@ -69,8 +69,13 @@ def EXT(h):
         return t
     return re.sub(r'<a [^>]*href="https?://[^"]*"[^>]*>', f, h)
 
+def public_name(name):
+    # The public site does not print upstream product names. The repository URL stays,
+    # because that is the actual source. Legal pages keep the license attribution.
+    return {"Bitwarden": "the upstream clients", "Vaultwarden": "the upstream server"}.get(name, name)
+
 def also(name, url):
-    return f'<p class="also">Also offered by <a class="src" href="{url}">{H.escape(name)}</a></p>'
+    return f'<p class="also">Also offered by <a class="src" href="{url}">{H.escape(public_name(name))}</a></p>'
 
 def cards(items):
     parts = []
@@ -128,7 +133,7 @@ def srclinks(src, note, cat, f):
         name, url, lic = SRC[k]
         if k == "BW" and "Mobile" in f:
             url = "https://github.com/bitwarden/android"
-        out.append(f'<a class="src" href="{url}">{name}</a>')
+        out.append(f'<a class="src" href="{url}">{H.escape(public_name(name))}</a>')
     return "Also offered by " + " ".join(out)
 
 cats = []
@@ -143,7 +148,10 @@ def badge(st):
         return ' <span class="st">clean-room reimplementation</span>'
     return ""
 
-full = "".join('<h3 class="cat">' + c + '</h3><ul class="flist">' + "".join('<li class="card glass"><span class="fname">' + H.escape(f) + "</span>" + badge(st) + "<p>" + H.escape(note) + '</p><span class="srcs">' + srclinks(src, note, cc, f) + "</span></li>" for n, cc, f, src, st, note in rows if cc == c) + "</ul>" for c in cats)
+def public_note(note):
+    return note.replace("Vaultwarden", "the upstream server").replace("Bitwarden", "the upstream clients")
+
+full = "".join('<h3 class="cat">' + c + '</h3><ul class="flist">' + "".join('<li class="card glass"><span class="fname">' + H.escape(f) + "</span>" + badge(st) + "<p>" + H.escape(public_note(note)) + '</p><span class="srcs">' + srclinks(src, note, cc, f) + "</span></li>" for n, cc, f, src, st, note in rows if cc == c) + "</ul>" for c in cats)
 exl = "".join('<li class="card glass"><span class="fname">' + H.escape(f) + '</span><p>' + H.escape(note) + "</p></li>" for n, c, f, src, st, note in excl)
 features = ('<section class="hero"><div class="wrap"><h1>Features</h1><p>Everything you need to keep credentials safe and close at hand: ' + str(len(rows)) + ' features, each with the other products that offer the same idea.</p><div class="note">Komboe is pre-alpha. This is the planned feature scope.</div></div></section>'
  + '<section><div class="wrap"><h2>Highlights</h2>' + cards(FEAT) + '</div></section>'

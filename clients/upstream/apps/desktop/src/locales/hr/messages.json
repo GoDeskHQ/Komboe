@@ -1465,7 +1465,7 @@
     "message": "Stvori račun"
   },
   "newToBitwarden": {
-    "message": "Novi u Bitwardenu?"
+    "message": "Novi u Komboeu?"
   },
   "setAStrongPassword": {
     "message": "Postavi jaku lozinku"
@@ -2752,7 +2752,7 @@
     "message": "Otključaj PIN-om"
   },
   "setYourPinCode": {
-    "message": "Postavi svoj PIN kôd za otključavanje Bitwardena. Postavke PIN-a se resetiraju ako se potpuno odjaviš iz aplikacije."
+    "message": "Postavi svoj PIN kôd za otključavanje Komboea. Postavke PIN-a se resetiraju ako se potpuno odjaviš iz aplikacije."
   },
   "pinRequired": {
     "message": "Potreban je PIN."
@@ -3101,7 +3101,7 @@
     "message": "Jedno ili više organizacijskih pravila zahtijeva da glavna lozinka ispunjava sljedeće uvjete:"
   },
   "receiveMarketingEmails": {
-    "message": "Primajte novosti od Bitwardena u svoj pretinac."
+    "message": "Primajte novosti od Komboea u svoj pretinac."
   },
   "unsubscribe": {
     "message": "Poništi pretplatu"
@@ -3137,7 +3137,7 @@
     "message": "Odobri"
   },
   "verifyNativeMessagingConnectionTitle": {
-    "message": "$APPID$ se želi spojiti s Bitwardenom",
+    "message": "$APPID$ se želi spojiti s Komboeom",
     "placeholders": {
       "appid": {
         "content": "$1",

@@ -27,7 +27,7 @@
     "message": "Vytvoriť účet"
   },
   "newToBitwarden": {
-    "message": "Ste noví na Bitwardene?"
+    "message": "Ste noví na Komboee?"
   },
   "logInWithPasskey": {
     "message": "Prihlásiť sa s prístupovým kľúčom"
@@ -330,7 +330,7 @@
     "message": "Pokračovať v centre pomoci?"
   },
   "continueToHelpCenterDesc": {
-    "message": "Viac informácií o používaní Bitwardenu nájdete v centre pomoci."
+    "message": "Viac informácií o používaní Komboeu nájdete v centre pomoci."
   },
   "continueToBrowserExtensionStore": {
     "message": "Pokračovať do obchodu s rozšíreniami pre prehliadače?"
@@ -461,10 +461,10 @@
     "message": "Centrum pomoci Komboe"
   },
   "communityForums": {
-    "message": "Prehliadať komunitné fóra Bitwardenu"
+    "message": "Prehliadať komunitné fóra Komboeu"
   },
   "contactSupport": {
-    "message": "Kontaktovať podporu Bitwardenu"
+    "message": "Kontaktovať podporu Komboeu"
   },
   "sync": {
     "message": "Synchronizácia"
@@ -850,7 +850,7 @@
     "message": "Stiahnite si diagnostickú správu, a potom ju zdieľajte s"
   },
   "bitwardenSupport": {
-    "message": "podporou Bitwardenu",
+    "message": "podporou Komboeu",
     "description": "Link text following the troubleshooting description sentence. 'Bitwarden' should not be translated."
   },
   "download": {
@@ -1349,11 +1349,11 @@
     }
   },
   "notificationLoginSaveConfirmation": {
-    "message": "uložené do Bitwardenu.",
+    "message": "uložené do Komboeu.",
     "description": "Shown to user after item is saved."
   },
   "notificationLoginUpdatedConfirmation": {
-    "message": "aktualizované v Bitwardene.",
+    "message": "aktualizované v Komboee.",
     "description": "Shown to user after item is updated."
   },
   "selectItemAriaLabel": {
@@ -2055,7 +2055,7 @@
     "message": "Jednoduché vyhľadávanie návrhov na automatické vypĺňanie"
   },
   "autofillSpotlightDesc": {
-    "message": "Vypnite nastavenia automatického vypĺňania v prehliadači, aby nedošlo ku konfliktu s Bitwardenom."
+    "message": "Vypnite nastavenia automatického vypĺňania v prehliadači, aby nedošlo ku konfliktu s Komboeom."
   },
   "turnOffBrowserAutofill": {
     "message": "Vypnúť automatické vypĺňanie v $BROWSER$",
@@ -3033,7 +3033,7 @@
     "message": "Naozaj chcete rotovať šifrovací kľúč k účtu?"
   },
   "updateEncryptionKeyWarning": {
-    "message": "Po aktualizácii šifrovacieho kľúča budete požiadaný o opätovné prihlásenie sa do všetkých aplikácií Bitwardenu, ktoré momentálne používate (napríklad mobilné aplikácie, alebo rozšírenia v prehliadači). Ak sa opätovne neodhlásite (stiahnu sa nové šifrovacie kľúče), mohlo by to viesť k poškodeniu uložených údajov. Pokúsime sa vás odhlásiť automaticky, ale môže to chvíľu trvať."
+    "message": "Po aktualizácii šifrovacieho kľúča budete požiadaný o opätovné prihlásenie sa do všetkých aplikácií Komboeu, ktoré momentálne používate (napríklad mobilné aplikácie, alebo rozšírenia v prehliadači). Ak sa opätovne neodhlásite (stiahnu sa nové šifrovacie kľúče), mohlo by to viesť k poškodeniu uložených údajov. Pokúsime sa vás odhlásiť automaticky, ale môže to chvíľu trvať."
   },
   "updateEncryptionKeyAccountExportWarning": {
     "message": "Všetky exporty s obmedzeným prístupom, ktoré ste uložili, sa stanú neplatnými."
@@ -3061,10 +3061,10 @@
     "message": "Nastaviť PIN"
   },
   "setYourPinCode": {
-    "message": "Nastaviť kód PIN na odomykanie Bitwardenu. Nastavenie PIN sa vynuluje, ak sa úplne odhlásite z aplikácie."
+    "message": "Nastaviť kód PIN na odomykanie Komboeu. Nastavenie PIN sa vynuluje, ak sa úplne odhlásite z aplikácie."
   },
   "setPinCode": {
-    "message": "Tento PIN môžete použiť na odomknutie Bitwardenu. PIN sa resetuje, ak sa úplne odhlásite z aplikácie."
+    "message": "Tento PIN môžete použiť na odomknutie Komboeu. PIN sa resetuje, ak sa úplne odhlásite z aplikácie."
   },
   "pinRequired": {
     "message": "Kód PIN je povinný."
@@ -3200,7 +3200,7 @@
     "message": "Formulár je umiestnený na inej doméne ako URI vašich prihlasovacích údajov. Vyberte OK, ak chcete aj tak použiť automatické vyplnenie, alebo Zrušiť, ak chcete automatické vyplnenie zastaviť."
   },
   "autofillIframeWarningTip": {
-    "message": "Ak chcete tomuto upozorneniu v budúcnosti zabrániť, uložte URI, $HOSTNAME$, do položky prihlásenia Bitwardenu pre túto stránku.",
+    "message": "Ak chcete tomuto upozorneniu v budúcnosti zabrániť, uložte URI, $HOSTNAME$, do položky prihlásenia Komboeu pre túto stránku.",
     "placeholders": {
       "hostname": {
         "content": "$1",
@@ -3209,7 +3209,7 @@
     }
   },
   "topLayerHijackWarning": {
-    "message": "Táto stránka narúša zážitok z Bitwardenu. Inline ponuka Bitwardenu bola dočasne vypnutá ako bezpečnostné opatrenie."
+    "message": "Táto stránka narúša zážitok z Komboeu. Inline ponuka Komboeu bola dočasne vypnutá ako bezpečnostné opatrenie."
   },
   "setMasterPassword": {
     "message": "Nastaviť hlavné heslo"
@@ -3266,7 +3266,7 @@
     "message": "Vaše nové heslo nespĺňa pravidlá."
   },
   "receiveMarketingEmails": {
-    "message": "Dostávať aktualizácie od Bitwardenu do e-mailovej schránky."
+    "message": "Dostávať aktualizácie od Komboeu do e-mailovej schránky."
   },
   "unsubscribe": {
     "message": "Odhlásiť sa z odberu"
@@ -3549,21 +3549,21 @@
     "message": "Ilustrácia rozloženia stránky trezoru Komboe."
   },
   "generatePasswordSlideDesc": {
-    "message": "Rýchlo generujte silné, jedinečné heslo pomocu ponuky automatického vypĺňania Bitwardenu na ohrozených stránkach.",
+    "message": "Rýchlo generujte silné, jedinečné heslo pomocu ponuky automatického vypĺňania Komboeu na ohrozených stránkach.",
     "description": "Description of the generate password slide on the at-risk password page carousel"
   },
   "generatePasswordSlideImgAltPeriod": {
-    "message": "Príklad ponuky automatického vypĺňania Bitwardenu zobrazujúca vygenerované heslo."
+    "message": "Príklad ponuky automatického vypĺňania Komboeu zobrazujúca vygenerované heslo."
   },
   "updateInBitwarden": {
-    "message": "Aktualizovať v Bitwardene"
+    "message": "Aktualizovať v Komboee"
   },
   "updateInBitwardenSlideDesc": {
     "message": "Komboe vás vyzve na aktualizáciu hesla v správcovi hesiel.",
     "description": "Description of the update in Bitwarden slide on the at-risk password page carousel"
   },
   "updateInBitwardenSlideImgAltPeriod": {
-    "message": "Príklad upozornenia Bitwardenu na aktualizovanie prihlasovacích údajov."
+    "message": "Príklad upozornenia Komboeu na aktualizovanie prihlasovacích údajov."
   },
   "turnOnAutofill": {
     "message": "Zapnúť automatické vypĺňanie"
@@ -4191,11 +4191,11 @@
     }
   },
   "forwarderGeneratedBy": {
-    "message": "Vygenerované Bitwardenom.",
+    "message": "Vygenerované Komboeom.",
     "description": "Displayed with the address on the forwarding service's configuration screen."
   },
   "forwarderGeneratedByWithWebsite": {
-    "message": "Webstránka: $WEBSITE$. Vygenerované Bitwardenom.",
+    "message": "Webstránka: $WEBSITE$. Vygenerované Komboeom.",
     "description": "Displayed with the address on the forwarding service's configuration screen.",
     "placeholders": {
       "WEBSITE": {
@@ -4917,15 +4917,15 @@
     "message": "Preskočiť na obsah"
   },
   "bitwardenOverlayButton": {
-    "message": "Tlačidlo ponuky automatického vypĺňania Bitwardenu",
+    "message": "Tlačidlo ponuky automatického vypĺňania Komboeu",
     "description": "Page title for the iframe containing the overlay button"
   },
   "toggleBitwardenVaultOverlay": {
-    "message": "Prepnúť ponuku automatického vypĺňania Bitwardenu",
+    "message": "Prepnúť ponuku automatického vypĺňania Komboeu",
     "description": "Screen reader and tool tip label for the overlay button"
   },
   "bitwardenVault": {
-    "message": "Ponuka automatického vypĺňania Bitwardenu",
+    "message": "Ponuka automatického vypĺňania Komboeu",
     "description": "Page title in overlay"
   },
   "unlockYourAccountToViewMatchingLogins": {
@@ -4997,7 +4997,7 @@
     "description": "Screen reader text (aria-label) for new identity button within inline menu"
   },
   "bitwardenOverlayMenuAvailable": {
-    "message": "K dispozícii je ponuka automatického vyplňovania Bitwardenu. Stlačte tlačidlo so šípkou nadol a vyberte.",
+    "message": "K dispozícii je ponuka automatického vyplňovania Komboeu. Stlačte tlačidlo so šípkou nadol a vyberte.",
     "description": "Screen reader text for announcing when the overlay opens on the page"
   },
   "turnOn": {
@@ -5520,7 +5520,7 @@
     "description": "Followed by a literal filename (my_passwords.json) rendered as code."
   },
   "importGnomeInstructionsFileHere": {
-    "message": "sem do Bitwardenu.",
+    "message": "sem do Komboeu.",
     "description": "Follows the my_passwords.json filename."
   },
   "importPasswordagentInstructions": {
@@ -6185,7 +6185,7 @@
     "description": "Dialog title facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutofillDescription": {
-    "message": "Ak nenastavíte túto možnosť, môže to spôsobiť konflikty medzi ponukou automatického vypĺňania Bitwardenu a ponukou vášho prehliadača.",
+    "message": "Ak nenastavíte túto možnosť, môže to spôsobiť konflikty medzi ponukou automatického vypĺňania Komboeu a ponukou vášho prehliadača.",
     "description": "Dialog message facilitating the ability to override a chrome browser's default autofill behavior"
   },
   "overrideDefaultBrowserAutoFillSettings": {
@@ -6197,7 +6197,7 @@
     "description": "Title for the callout that prompts users to set Bitwarden as their default password manager"
   },
   "defaultPasswordManagerCalloutDesc": {
-    "message": "Budete požiadaní, aby ste prehliadaču $BROWSER$ udelili povolenie na nastavenie Bitwardenu ako predvoleného správcu hesiel.",
+    "message": "Budete požiadaní, aby ste prehliadaču $BROWSER$ udelili povolenie na nastavenie Komboeu ako predvoleného správcu hesiel.",
     "description": "Description for the callout that prompts users to set Bitwarden as their default password manager",
     "placeholders": {
       "browser": {
@@ -7245,7 +7245,7 @@
     "description": "Notification message for when a password has been regenerated"
   },
   "saveToBitwarden": {
-    "message": "Uložiť do Bitwardenu",
+    "message": "Uložiť do Komboeu",
     "description": "Confirmation message for saving a login to Bitwarden"
   },
   "spaceCharacterDescriptor": {
@@ -7489,7 +7489,7 @@
     "message": "Použite priečinky na usporiadanie položiek trezoru. Sú len pre vás. Nikto iný ich neuvidí ani nepoužije."
   },
   "introCarouselLabel": {
-    "message": "Vitajte v Bitwardene"
+    "message": "Vitajte v Komboee"
   },
   "securityPrioritized": {
     "message": "Bezpečnosť na prvom mieste"
@@ -7513,7 +7513,7 @@
     "message": "Vaše údaje, kedykoľvek a kdekoľvek ich potrebujete"
   },
   "secureDevicesBody": {
-    "message": "Ukladajte neobmedzený počet hesiel na neobmedzenom počte zariadení pomocou mobilných aplikácií, prehliadačov a desktopových aplikácií Bitwardenu."
+    "message": "Ukladajte neobmedzený počet hesiel na neobmedzenom počte zariadení pomocou mobilných aplikácií, prehliadačov a desktopových aplikácií Komboeu."
   },
   "nudgeBadgeAria": {
     "message": "1 upozornenie"
@@ -7522,7 +7522,7 @@
     "message": "Import existujúcich hesiel"
   },
   "emptyVaultNudgeBody": {
-    "message": "Pomocou nástroja na import môžete rýchlo preniesť prihlasovacie údaje do Bitwardenu bez ručného pridávania."
+    "message": "Pomocou nástroja na import môžete rýchlo preniesť prihlasovacie údaje do Komboeu bez ručného pridávania."
   },
   "emptyVaultNudgeButton": {
     "message": "Importovať teraz"
@@ -7650,7 +7650,7 @@
     "message": "Nemáte oprávnenie na zobrazenie tejto stránky. Skúste sa prihlásiť pomocou iného účtu."
   },
   "wasmNotSupported": {
-    "message": "WebAssembly nie je vo vašom prehliadači podporovaný alebo nie je povolený. Na používanie Bitwardenu sa vyžaduje WebAssembly.",
+    "message": "WebAssembly nie je vo vašom prehliadači podporovaný alebo nie je povolený. Na používanie Komboeu sa vyžaduje WebAssembly.",
     "description": "'WebAssembly' is a technical term and should not be translated."
   },
   "showMore": {
@@ -7738,7 +7738,7 @@
     "message": "Chyba: Nedá sa dešifrovať"
   },
   "removeMasterPasswordForOrgUserKeyConnector": {
-    "message": "Vaša organizácia už nepoužíva hlavné heslá na prihlásenie do Bitwardenu. Ak chcete pokračovať, overte organizáciu a doménu."
+    "message": "Vaša organizácia už nepoužíva hlavné heslá na prihlásenie do Komboeu. Ak chcete pokračovať, overte organizáciu a doménu."
   },
   "continueWithLogIn": {
     "message": "Pokračujte prihlásením"
