@@ -6,7 +6,7 @@ on:
 
 jobs:
   desktop-linux:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -66,7 +66,7 @@ jobs:
             clients/upstream/apps/desktop/dist/latest.yml
 
   android-release:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -122,7 +122,7 @@ jobs:
           path: dist/*
 
   android-debug:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -224,7 +224,7 @@ jobs:
   download-manifest:
     needs: [desktop-linux, desktop-windows, android-release, android-debug]
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4

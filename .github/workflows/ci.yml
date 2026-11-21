@@ -7,7 +7,7 @@ on:
 
 jobs:
   checks:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     steps:
       - uses: actions/checkout@v4
       - name: Sender, backup, and update checks
@@ -52,7 +52,7 @@ jobs:
           fi
 
   marketing:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
@@ -92,7 +92,7 @@ jobs:
           path: apps/web-marketing/e2e/screenshots/*
 
   angular-vault:
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
@@ -154,7 +154,7 @@ jobs:
   extension:
     # Builds the Chromium MV3 zip inside the existing clients image and uploads it.
     # Does not push to GHCR and does not publish a store listing.
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
@@ -208,7 +208,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON((github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository) && '["ubuntu-24.04"]' || vars.RUNNER || '["ubuntu-24.04"]') }}
     steps:
       - uses: actions/checkout@v4
       - uses: docker/setup-buildx-action@v3
